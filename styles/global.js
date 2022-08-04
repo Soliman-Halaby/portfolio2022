@@ -1,7 +1,7 @@
 import { css } from "@emotion/react";
 import emotionReset from "emotion-reset";
-import { mediaMax } from "../styles/mixins";
-import fontFiles from "../styles/fonts";
+import { mediaMax } from "styles/mixins";
+import fontFiles from "styles/fonts";
 
 const styles = ({ fonts }) => {
   return css`
