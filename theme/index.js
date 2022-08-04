@@ -4,8 +4,8 @@ export const colors = {
 };
 
 export const fonts = {
-  sansSerif: "Futura",
-  serif: "PlayfairDisplay",
+  sansSerif: "NeueHaas",
+  serif: "Romie",
 };
 
 export default {

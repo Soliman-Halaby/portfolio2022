@@ -1,11 +1,9 @@
-import { HeroSection } from "./style";
-const Hero = () => {
+import { HeroSection, Paragraph } from "./style";
+
+const Hero = (theme = "dark") => {
   return (
-    <HeroSection>
-      <p>Coucou</p>
-      <p>Coucou</p>
-      <p>Coucou</p>
-      <p>Coucou</p>
+    <HeroSection className={`${theme}`}>
+      <Paragraph>Coucou</Paragraph>
     </HeroSection>
   );
 };
