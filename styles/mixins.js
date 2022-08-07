@@ -1,5 +1,5 @@
 import breakpoints from "./breakpoints";
-import theme from "../theme";
+import theme from "theme";
 
 export const mediaMax = Object.keys(breakpoints)
   .map((key) => [key, breakpoints[key]])
