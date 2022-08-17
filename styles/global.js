@@ -111,6 +111,7 @@ const styles = ({ fonts }) => {
     }
     body {
       //   font-family: ${fonts.sansSerif};
+      margin: 20px 40px;
     }
   `;
 };
