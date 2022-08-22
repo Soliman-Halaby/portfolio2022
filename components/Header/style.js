@@ -16,9 +16,10 @@ export const MainLink = styled.a`
   display: flex;
   align-items: center;
   text-transform: uppercase;
+  mix-blend-mode: difference;
   font-size: 14px;
   font-family: ${({ theme }) => theme.fonts.sansSerif};
-  color: ${({ theme }) => theme.colors.grey1};
+  color: ${({ theme }) => theme.colors.grey2};
   text-decoration: none;
   font-weight: 300;
 `;
@@ -34,6 +35,7 @@ export const Nav = styled.nav`
   //   margin: 20px 40px;
   top: 20px;
   width: 95%;
+  mix-blend-mode: exclusion;
 `;
 
 export const NavItem = styled.div`
