@@ -33,9 +33,9 @@ export const Nav = styled.nav`
   //   background: red;
   width: 100%;
   position: fixed;
-  margin: 20px 40px;
+  padding: ${({ theme }) => theme.margin.medium};
   top: 20px;
-  width: 95%;
+  width: 100%;
   mix-blend-mode: exclusion;
 `;
 

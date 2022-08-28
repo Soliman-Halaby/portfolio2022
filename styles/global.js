@@ -114,9 +114,9 @@ const styles = ({ fonts }) => {
       background: ${({ theme }) => {
         theme.colors.grey2;
       }}
+      margin: 0;
       background: #f2f2f2;
         ${mediaMax.xs} {
-        // margin: 20px 10px;
       }
     }
   `;

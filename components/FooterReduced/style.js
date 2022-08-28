@@ -8,6 +8,7 @@ export const Wrapper = styled.div`
   // background: pink;
   // height: 50px;
   position: relative;
+  margin: ${({ theme }) => theme.margin.medium};
   margin-top: 300px;
 `;
 

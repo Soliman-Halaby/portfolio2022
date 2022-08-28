@@ -16,7 +16,7 @@ import {
   Text,
   Content,
   RowContainer,
-  TextContainer,
+  TitleContainer,
   ButtonContainer,
 } from "./style.js";
 
@@ -33,7 +33,10 @@ const Footer = () => {
 
   return (
     <Wrapper>
-      <Title>Soliman Al Halaby</Title>
+      <TitleContainer>
+        <Title>Soliman Al Halaby</Title>
+        <Pin label="hire me" />
+      </TitleContainer>
       <TitleSection number="01" title="Contact"></TitleSection>
       <Container>
         <SubContainer>
@@ -43,7 +46,7 @@ const Footer = () => {
               <Content>Contact</Content>
               <ButtonContainer onClick={copyToClipboard}>
                 <Button label="contact@solimanalhalaby.fr" />
-                {activeMessage && <Pin label="Copied"></Pin>}
+                {activeMessage && <Pin clipboard label="Copied"></Pin>}
               </ButtonContainer>
             </RowContainer>
             <RowContainer>
