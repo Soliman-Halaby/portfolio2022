@@ -2,6 +2,9 @@ import React, { useState, useRef } from "react";
 // import Image from "next/image";
 
 import TitleSection from "@/components/SectionTitle";
+import Button from "@/components/Buttons/Button";
+import CircularButton from "@/components/Buttons/CircularButton";
+import Pin from "@/components/Popup/Pin";
 
 import {
   Wrapper,
@@ -15,17 +18,14 @@ import {
   RowContainer,
   TextContainer,
   ButtonContainer,
-  SuccessMessage,
-  Button,
-  CircularButton,
 } from "./style.js";
 
 const Footer = () => {
   const [activeMessage, setActiveMessage] = useState(false);
 
-  const copyToClipboard = (e) => {
+  const copyToClipboard = (_) => {
     setActiveMessage(true);
-    navigator.clipboard.writeText(e.currentTarget.innerText.toLowerCase());
+    navigator.clipboard.writeText("contact@solimanalhalaby.fr");
     setTimeout(() => {
       setActiveMessage(false);
     }, 1500);
@@ -41,31 +41,29 @@ const Footer = () => {
             <Text>Feel free to contact me !</Text>
             <RowContainer>
               <Content>Contact</Content>
-              <ButtonContainer>
-                <Button onClick={copyToClipboard}>
-                  Contact@solimanalhalaby.com
-                </Button>
-                {activeMessage && <SuccessMessage>Copied</SuccessMessage>}
+              <ButtonContainer onClick={copyToClipboard}>
+                <Button label="contact@solimanalhalaby.fr" />
+                {activeMessage && <Pin label="Copied"></Pin>}
               </ButtonContainer>
             </RowContainer>
             <RowContainer>
               <Content>Find me on</Content>
               <ButtonContainer>
-                <Button rounded>Linkedin</Button>
-                <Button rounded>Github</Button>
-                <Button rounded>Twitter</Button>
+                <Button label="linkedin" rounded />
+                <Button label="github" yellow />
+                <Button label="twitter" rounded />
               </ButtonContainer>
             </RowContainer>
             <RowContainer>
               <Content>Download my resume</Content>
               <ButtonContainer>
-                <CircularButton>CV</CircularButton>
+                <CircularButton label="CV" />
               </ButtonContainer>
             </RowContainer>
           </FooterNav>
         </SubContainer>
         <SubContainer>
-          <Image src="/contact-image.png"></Image>
+          <Image src="/contact-image.png" />
         </SubContainer>
       </Container>
     </Wrapper>

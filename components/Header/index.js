@@ -11,7 +11,7 @@ const Header = () => {
       <NavItem>
         <MainLink href="/">About</MainLink>
         <MainLink href="/">Work</MainLink>
-        <MainLink href="/">Contact</MainLink>
+        <MainLink href="/contact">Contact</MainLink>
       </NavItem>
     </Nav>
   );

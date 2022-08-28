@@ -99,23 +99,6 @@ export const ButtonContainer = styled.div`
   align-items: center;
 `;
 
-export const SuccessMessage = styled.span`
-  position: absolute;
-  cursor: pointer;
-  top: 0%;
-  left: 45%;
-  transform: translate(-50%, -50%);
-  transform: rotate(-4.6deg);
-  padding: 7.5px;
-  background: ${({ theme }) => theme.colors.lime};
-  border-radius: 39px;
-  border: 1px solid ${({ theme }) => theme.colors.grey1};
-  font-family: ${({ theme }) => theme.fonts.sansSerif};
-  font-weight: 300;
-  text-transform: uppercase;
-  font-size: 10px;
-  border-style: dashed;
-`;
 export const Button = styled.a`
   display: inline-block;
   cursor: pointer;
@@ -147,23 +130,5 @@ export const Button = styled.a`
         : `${props.theme.colors.grey2}`};
     border-radius: ${({ rounded }) => (rounded ? "5px" : "5px")};
     transition: all 0.2s ease;
-  }
-`;
-
-export const CircularButton = styled.a`
-  display: inline-block;
-  cursor: pointer;
-  padding: 7.5px;
-  border: 1px solid ${({ theme }) => theme.colors.grey1};
-  border-radius: 131px;
-  font-size: 14px;
-  font-family: ${({ theme }) => theme.fonts.sansSerif};
-  font-weight: 300;
-  text-transform: uppercase;
-  transition: all 0.25s ease;
-
-  &:hover {
-    background: ${({ theme }) => theme.colors.lime};
-    color: ${({ theme }) => theme.colors.grey1};
   }
 `;
