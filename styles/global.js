@@ -110,7 +110,14 @@ const styles = ({ fonts }) => {
       scroll-behavior: smooth;
     }
     body {
-      //   font-family: ${fonts.sansSerif};
+      font-family: ${fonts.sansSerif};
+      background: ${({ theme }) => {
+        theme.colors.grey2;
+      }}
+      background: #f2f2f2;
+        ${mediaMax.xs} {
+        // margin: 20px 10px;
+      }
     }
   `;
 };
