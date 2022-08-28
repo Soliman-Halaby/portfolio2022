@@ -29,10 +29,11 @@ export const Nav = styled.nav`
   justify-content: space-between;
   position: relative;
   align-item: center;
+  z-index: 999;
   //   background: red;
   width: 100%;
   position: fixed;
-    margin: 20px 40px;
+  margin: 20px 40px;
   top: 20px;
   width: 95%;
   mix-blend-mode: exclusion;
