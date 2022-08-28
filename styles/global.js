@@ -111,7 +111,11 @@ const styles = ({ fonts }) => {
     }
     body {
       //   font-family: ${fonts.sansSerif};
-      margin: 20px 40px;
+      // margin: 20px 40px;
+      background: ${({theme}) => {theme.colors.grey2}}
+      ${mediaMax.xs}{
+        // margin: 20px 10px;
+      }
     }
   `;
 };
