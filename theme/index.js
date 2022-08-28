@@ -6,6 +6,11 @@ export const colors = {
   lime: "#D7FF39",
 };
 
+export const margin = {
+  small: "10px",
+  medium: "20px",
+  large: "30px",
+};
 export const fonts = {
   sansSerif: "NeueHaas",
   serif: "Romie",
@@ -13,5 +18,6 @@ export const fonts = {
 
 export default {
   colors,
+  margin,
   fonts,
 };

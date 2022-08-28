@@ -10,6 +10,9 @@ export const Title = styled.p`
   display: flex;
   align-items: center;
   top: 40%;
+  white-space: break-spaces;
+  margin-left: ${({ theme }) => theme.margin.medium};
+  margin-top: 48px;
   ${mediaMax.md} {
     top: 20%;
     left: 0;

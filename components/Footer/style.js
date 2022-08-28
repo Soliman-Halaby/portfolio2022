@@ -8,20 +8,31 @@ export const Wrapper = styled.div`
   // background: pink;
   // height: 50px;
   position: relative;
+  margin: ${({ theme }) => theme.margin.medium};
   margin-top: 300px;
+  margin-bottom: 0;
 `;
 
+export const SubWrapper = styled(Wrapper)`
+  margin-right: 0;
+  margi-bottom: 0;
+`;
 export const Title = styled.h3`
-  font-size: clamp(42px, 11vw, 220px);
+  font-size: clamp(42px, 11.25vw, 220px);
   font-family: ${({ theme }) => theme.fonts.serif};
   color: ${({ theme }) => theme.colors.grey1};
   font-weight: 400;
   text-align: center;
+  margin-left: ${({ theme }) => theme.margin.medium};
   letter-spacing: clamp(1px, 0.25vw, 3px);
 
+  ${mediaMax.xl} {
+    font-size: 11vw;
+  }
   ${mediaMax.md} {
     font-size: 10vw;
     text-align: start;
+    margin-left: ${({ theme }) => theme.margin.small};
   }
   ${mediaMax.xs} {
     font-size: 41px;
@@ -65,9 +76,10 @@ export const Image = styled.img``;
 
 export const FooterNav = styled.div`
   //   background: red;
-  padding-left: 5%;
-  padding-bottom: 5%;
+  // padding-left: 5%;
+  // padding-bottom: 5%;
   width: 100%;
+  margin-left: ${({ theme }) => theme.margin.medium};
 `;
 
 export const Text = styled.h3`
@@ -86,7 +98,9 @@ export const RowContainer = styled.div`
 export const Content = styled(Text)`
   width: 100px;
 `;
-export const TextContainer = styled.div``;
+export const TitleContainer = styled.div`
+  position: relative;
+`;
 
 export const ButtonContainer = styled.div`
   width: 100%;
