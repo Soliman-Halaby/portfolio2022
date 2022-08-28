@@ -6,6 +6,9 @@ export const Title = styled.p`
   font-size: 14px;
   position: absolute;
   left: 25%;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
   top: 40%;
   ${mediaMax.md} {
     top: 20%;
