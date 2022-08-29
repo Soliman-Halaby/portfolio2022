@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { mediaMax, title } from "styles/mixins";
+
 import theme from "theme";
 
 export const Title = styled.p`

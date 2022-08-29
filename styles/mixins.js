@@ -24,16 +24,18 @@ export const subtitle = () => `
   margin-bottom: 2.4rem;
 `;
 
-export const title = () => `
-  font-size: 8.6rem;
+export const TitleSection = () => `
+  position: relative;
+  font-size: ${theme.fontSizes.title.large};
+  line-height: 70px;
+  display: inline-block;
+  letter-spacing: -2;
+  text-align: initial;
+  font-family: ${theme.fonts.serif};
   font-weight: 400;
-  line-height: 8.2rem;
-  ${mediaMax.sm} {
-    font-size: 4.8rem;
-    line-height: 5.2rem;
-  }
-  i {
-    display: inline-flex;
-    font-style: italic;
+
+  ${mediaMax.xs}{
+    font-size: ${theme.fontSizes.title.small};
+    line-height: 48px;
   }
 `;

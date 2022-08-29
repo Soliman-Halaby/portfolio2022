@@ -14,13 +14,7 @@ export const Wrapper = styled.div`
   ${mediaMax.xs}{
     margin-top: 52px;
   }
-  .hero_title-section{
-    top: 20%;
-    ${mediaMax.xs}{
-      top: 40%;
-      left: 25%;
-    }
-  }
+
 `;
 
 export const Container = styled.div`
@@ -30,9 +24,6 @@ export const Container = styled.div`
   margin: ${({ theme }) => theme.margin.medium};
 `;
 
-export const TitleContainer = styled.div`
-  position: relative;
-`
 export const Title = styled.h2`
 ${TitleSection()}
 

@@ -9,7 +9,7 @@ import Hero from "@/components/HeroHome";
 export default function Home() {
   return (
     <Layout>
-      <Hero></Hero>
+      <Hero/>
       {/* <div className="coucou">
         Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
         Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum

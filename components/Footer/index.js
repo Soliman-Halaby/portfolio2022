@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 // import Image from "next/image";
 
-import TitleSection from "@/components/SectionTitle";
+import TitleSection from "@/components/Popup/SectionTitle";
 import Button from "@/components/Buttons/Button";
 import CircularButton from "@/components/Buttons/CircularButton";
 import Pin from "@/components/Popup/Pin";

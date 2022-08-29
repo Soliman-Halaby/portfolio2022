@@ -14,25 +14,13 @@ const HeroHome = ({}) => {
 
   return (
     <Wrapper>
-      <TitleSection
-        className='hero_title-section'
-        number="02"
-        title={`Based in paris, 
-from cairo`}
-      />
       <Container>
         <Title>
-          Soliman Al Halaby,
+          MovieReact
           <br />
-          creative developer
+          website
         </Title>
-        <Title alignRight>
-          Looking for an
-          <br />
-          internship
-          <Pin action={scrollToBottom} className='hero_pin-section' label='Contact me'/>
-        </Title>
-        <Image src="/home-hero-image.png"></Image>
+        <Image src="/moviereact-image.png"></Image>
       </Container>
     </Wrapper>
   );
