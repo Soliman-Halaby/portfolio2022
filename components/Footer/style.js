@@ -127,21 +127,21 @@ export const Button = styled.a`
   // background: blue;
 
   &:hover {
-    ${(props) => (props.rounded ? "33px" : "5px")};
-    background: ${(props) =>
-      props.rounded
-        ? `${props.theme.colors.lime}`
-        : `${props.theme.colors.grey1}`};
+    ${({rounded}) => (rounded ? "33px" : "5px")};
+    background: ${({rounded, theme}) =>
+      rounded
+        ? `${theme.colors.lime}`
+        : `${theme.colors.grey1}`};
     border: 1px solid
-      ${(props) =>
-        props.rounded
-          ? `${props.theme.colors.grey1}`
-          : `${props.theme.colors.lime}`};
+      ${({rounded, theme}) =>
+        rounded
+          ? `${theme.colors.grey1}`
+          : `${theme.colors.lime}`};
     border-style: dashed;
-    color: ${(props) =>
-      props.rounded
-        ? `${props.theme.colors.grey1}`
-        : `${props.theme.colors.grey2}`};
+    color: ${({rounded, theme}) =>
+      rounded
+        ? `${theme.colors.grey1}`
+        : `${theme.colors.grey2}`};
     border-radius: ${({ rounded }) => (rounded ? "5px" : "5px")};
     transition: all 0.2s ease;
   }

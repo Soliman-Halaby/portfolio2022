@@ -8,11 +8,6 @@ import Hero from "@/components/HeroHome";
 export default function Projet() {
   return (
     <Layout reducedFooter>
-      {/* <div className="coucou">
-        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum{" "}
-      </div> */}
     </Layout>
   );
 }
