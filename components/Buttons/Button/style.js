@@ -17,24 +17,24 @@ export const ButtonStyle = styled.a`
   text-transform: uppercase;
   text-decoration: none;
   transition: all 0.3s ease;
-  // background: blue;
+  line-height: 20px;
 
   &:hover {
-    ${(props) => (props.rounded ? "33px" : "5px")};
-    background: ${(props) =>
-      props.rounded || props.yellow
-        ? `${props.theme.colors.lime}`
-        : `${props.theme.colors.grey1}`};
+    ${({rounded }) => (rounded ? "33px" : "5px")};
+    background: ${({rounded, yellow, theme}) =>
+      rounded || yellow
+        ? `${theme.colors.lime}`
+        : `${theme.colors.grey1}`};
     border: 1px solid
-      ${(props) =>
-        props.rounded || props.yellow
-          ? `${props.theme.colors.grey1}`
-          : `${props.theme.colors.lime}`};
+      ${({rounded, yellow, theme}) =>
+        rounded || yellow
+          ? `${theme.colors.grey1}`
+          : `${theme.colors.lime}`};
     border-style: dashed;
-    color: ${(props) =>
-      props.rounded || props.yellow
-        ? `${props.theme.colors.grey1}`
-        : `${props.theme.colors.grey2}`};
+    color: ${({rounded, yellow, theme}) =>
+      rounded || yellow
+        ? `${theme.colors.grey1}`
+        : `${theme.colors.grey2}`};
     // border-radius: ${({ rounded }) => (rounded ? "5px" : "5px")};
     transition: all 0.3s ease;
   }

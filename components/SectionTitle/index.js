@@ -1,8 +1,8 @@
 import { Title, Number } from "./style";
 
-const SectionPart = ({ number = "", title = "" }) => {
+const SectionPart = ({ number, title, className}) => {
   return (
-    <Title>
+    <Title className={className}>
       <Number>{number}</Number>
       {title}
     </Title>
