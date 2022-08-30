@@ -46,7 +46,9 @@ const Footer = () => {
               <Content>Contact</Content>
               <ButtonContainer onClick={copyToClipboard}>
                 <Button label="contact@solimanalhalaby.fr" />
-                {activeMessage && <Pin colored label="Copied"></Pin>}
+                {activeMessage && (
+                  <Pin top="0" left="45" colored label="Copied"></Pin>
+                )}
               </ButtonContainer>
             </RowContainer>
             <RowContainer>
