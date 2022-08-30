@@ -39,3 +39,11 @@ export const TitleSection = () => `
     line-height: 48px;
   }
 `;
+
+export const Paragraph = () => `
+  font-size: 14px;
+  line-height: auto;
+  font-family: ${({ theme }) => theme.fonts.sansSerif};
+  color: ${({ theme }) => theme.colors.grey1};
+  max-width: 300px;
+`;

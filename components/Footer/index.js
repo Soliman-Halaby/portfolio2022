@@ -52,15 +52,15 @@ const Footer = () => {
             <RowContainer>
               <Content>Find me on</Content>
               <ButtonContainer>
-                <Button label="linkedin" rounded />
-                <Button label="github" colored />
-                <Button label="twitter" rounded />
+                <Button to="socials" label="linkedin" rounded />
+                <Button to="socials" label="github" colored />
+                <Button to="socials" label="twitter" rounded />
               </ButtonContainer>
             </RowContainer>
             <RowContainer>
               <Content>Download my resume</Content>
               <ButtonContainer>
-                <CircularButton label="CV" />
+                <CircularButton to="/" label="CV" />
               </ButtonContainer>
             </RowContainer>
           </FooterNav>

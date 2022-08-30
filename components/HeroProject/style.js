@@ -3,7 +3,7 @@ import { css } from "@emotion/react";
 
 // import {Title as TitleSection} from "@/components/Popup/SectionTitle/style";
 
-import { mediaMax, TitleSection } from "styles/mixins";
+import { mediaMax, TitleSection, Paragraph } from "styles/mixins";
 
 export const Wrapper = styled.div`
   width: 100%;
@@ -11,10 +11,9 @@ export const Wrapper = styled.div`
   margin: ${({ theme }) => theme.margin.medium};
   margin-top: 150px;
 
-  ${mediaMax.xs}{
+  ${mediaMax.xs} {
     margin-top: 52px;
   }
-
 `;
 
 export const Container = styled.div`
@@ -25,12 +24,12 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.h2`
-${TitleSection()}
+  ${TitleSection()}
 
-position: relative;
-  text-align: ${({alignRight}) => (alignRight ? `right` : `initial`)};
+  position: relative;
+  text-align: ${({ alignRight }) => (alignRight ? `right` : `initial`)};
 
-  .hero_pin-section{
+  .hero_pin-section {
     top: 30%;
     right: 10%;
     left: inherit;
@@ -38,62 +37,47 @@ position: relative;
 `;
 
 export const TagWrapper = styled.div`
-  // width: 50%;
+  width: 100%;
+  padding-right: 15vw;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  ${mediaMax.md} {
+    flex-direction: column;
+    gap: 2rem;
+  }
+`;
+
+export const TagContainer = styled.div`
+  display: flex;
   gap: 1rem;
-  margin-bottom: 3rem;
+  justify-content: flex-end;
+  flex-direction: column;
+`;
 
-`
+export const TagSubContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
 
-// export const TagContainer = styled.div`
-//   display: flex;
-//   flex-direction: row;
-//   gap: 1rem;
-//   align-items: center;
-  
-//   ${mediaMax.md}{
-//     flex-direction: column;
-//     align-items: flex-start;
-//   }
-// `
-
-// export const SubContainer = styled.div`
-//   display: flex;
-//   flex-direction: row;
-//   gap: 1rem;
-//   align-items: center;
-  
-//   a{
-//     margin-left: 3.5rem;
-//     ${mediaMax.md}{
-//       margin-left: 0;
-//     }
-//   }
-
-//   &.flex-end{
-//     margin-left: auto;
-//     margin-right: 13vw;
-//     // margin-right: clamp(42px, 11.25vw, 220px);30%;
-//     ${mediaMax.md}{
-//       margin-right: 3rem;
-//     }
-// `
+  .project-visit-cta {
+    margin-left: 4rem;
+  }
+`;
 
 export const Text = styled.span`
   font-size: 14px;
   font-family: ${({ theme }) => theme.fonts.sansSerif};
-  color: ${({theme }) => theme.colors.grey1 };
+  color: ${({ theme }) => theme.colors.grey1};
   text-transform: uppercase;
   font-weight: 300;
-  `
-  
-  export const Content = styled.p`
-  font-size: 14px;
-  line-height: auto;
-  font-family: ${({ theme }) => theme.fonts.sansSerif};
-  color: ${({theme }) => theme.colors.grey1 };
-  max-width: 300px;
+`;
+
+export const Content = styled.p`
+  ${Paragraph()}
+
   align-self: flex-end;
-`
-export const Image = styled.img``
+`;
+export const Image = styled.img``;

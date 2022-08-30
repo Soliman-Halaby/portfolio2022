@@ -3,7 +3,7 @@ import { css } from "@emotion/react";
 
 import { mediaMax, title } from "styles/mixins";
 
-export const ButtonStyle = styled.a`
+export const ButtonStyle = styled.span`
   display: inline-block;
   cursor: pointer;
   padding: 7.5px;
@@ -15,7 +15,7 @@ export const ButtonStyle = styled.a`
   text-transform: uppercase;
   transition: all 0.3s ease-out;
   line-height: 16px;
-  
+
   &:hover {
     background: ${({ theme }) => theme.colors.lime};
     color: ${({ theme }) => theme.colors.grey1};

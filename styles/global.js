@@ -105,6 +105,10 @@ const styles = ({ fonts }) => {
       -webkit-font-smoothing: antialiased;
       font-smoothing: antialiased;
     }
+    p, h1, h2, h3, span{
+      margin: 0;
+      padding: 0;
+    }
     html {
       overflow-x: hidden;
       scroll-behavior: smooth;
