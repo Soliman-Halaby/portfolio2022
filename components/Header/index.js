@@ -1,17 +1,19 @@
 import React, { useState } from "react";
 
+import Link from 'next/link'
+
 import { Logo, Nav, MainLink, NavItem } from "./style.js";
 const Header = () => {
   return (
     <Nav>
-      <MainLink href="/">Soliman Al Halaby</MainLink>
-      <MainLink href="/">
+      <MainLink><Link href="/">Soliman Al Halaby</Link></MainLink>
+      <Link href="/">
         <Logo src="/Logo.svg"></Logo>
-      </MainLink>
+      </Link>
       <NavItem>
-        <MainLink href="/">About</MainLink>
-        <MainLink href="/">Work</MainLink>
-        <MainLink href="/contact">Contact</MainLink>
+        <MainLink><Link href="/">About</Link></MainLink>
+        <MainLink><Link href="/projet">Work</Link></MainLink>
+        <MainLink><Link href="/contact">Contact</Link></MainLink>
       </NavItem>
     </Nav>
   );
