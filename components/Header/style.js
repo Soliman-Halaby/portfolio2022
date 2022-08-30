@@ -9,19 +9,25 @@ export const Logo = styled.img`
   height: auto;
   position: absolute;
   left: 50%;
+  cursor: pointer;
   right: 50%;
+  top: 22%;
 `;
 
-export const MainLink = styled.a`
+export const MainLink = styled.span`
   display: flex;
   align-items: center;
   text-transform: uppercase;
   mix-blend-mode: difference;
   font-size: 14px;
   font-family: ${({ theme }) => theme.fonts.sansSerif};
-  color: ${({ theme }) => theme.colors.grey2};
-  text-decoration: none;
+  // color: ${({ theme }) => theme.colors.grey2} !important;
   font-weight: 300;
+  a{
+    color: ${({ theme }) => theme.colors.grey2} !important;
+    text-decoration: none;
+
+  }
 `;
 
 export const Nav = styled.nav`

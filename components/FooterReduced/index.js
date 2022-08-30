@@ -38,25 +38,28 @@ const Footer = () => {
           <Text>Designed by</Text>
           <Button rounded to="/cc" label="ines richard" />
         </NavElement>
-        <NavElement onClick={copyToClipboard}>
-          <Element>
+        <NavElement>
+          <Element onClick={copyToClipboard}>
             <Text>Contact</Text>
             <Button label="contact@solimanalhalaby.fr" />
-            {activeMessage && <Pin label="copied"></Pin>}
+            {activeMessage && <Pin colored label="copied"></Pin>}
           </Element>
           <Element>
             <Text>Find me on</Text>
             <Button
+              to="/"
               rounded
               // to="https://linkedin.com/in/solimanalhalaby"
               label="linkedin"
             />
             <Button
-              yellow
+              to="/"
+              colored
               // to="https://linkedin.com/in/solimanalhalaby"
               label="github"
             />
             <Button
+              to="/"
               rounded
               // to="https://linkedin.com/in/solimanalhalaby"
               label="twitter"
@@ -68,7 +71,7 @@ const Footer = () => {
               <br />
               resume
             </Text>
-            <CircularButton label="CV" />
+            <CircularButton to="/" label="CV" />
           </Element>
         </NavElement>
         <NavElement>

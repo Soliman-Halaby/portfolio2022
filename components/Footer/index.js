@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 // import Image from "next/image";
 
-import TitleSection from "@/components/SectionTitle";
+import TitleSection from "@/components/Popup/SectionTitle";
 import Button from "@/components/Buttons/Button";
 import CircularButton from "@/components/Buttons/CircularButton";
 import Pin from "@/components/Popup/Pin";
@@ -52,15 +52,15 @@ const Footer = () => {
             <RowContainer>
               <Content>Find me on</Content>
               <ButtonContainer>
-                <Button label="linkedin" rounded />
-                <Button label="github" yellow />
-                <Button label="twitter" rounded />
+                <Button to="socials" label="linkedin" rounded />
+                <Button to="socials" label="github" colored />
+                <Button to="socials" label="twitter" rounded />
               </ButtonContainer>
             </RowContainer>
             <RowContainer>
               <Content>Download my resume</Content>
               <ButtonContainer>
-                <CircularButton label="CV" />
+                <CircularButton to="/" label="CV" />
               </ButtonContainer>
             </RowContainer>
           </FooterNav>

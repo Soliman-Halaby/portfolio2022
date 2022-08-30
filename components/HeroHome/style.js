@@ -1,9 +1,9 @@
 import styled from "@emotion/styled";
 import { css } from "@emotion/react";
 
-import {Title as TitleSection} from "@/components/SectionTitle/style";
+// import {Title as TitleSection} from "@/components/Popup/SectionTitle/style";
 
-import { mediaMax, title } from "styles/mixins";
+import { mediaMax, TitleSection } from "styles/mixins";
 
 export const Wrapper = styled.div`
   width: 100%;
@@ -34,14 +34,10 @@ export const TitleContainer = styled.div`
   position: relative;
 `
 export const Title = styled.h2`
+${TitleSection()}
+
 position: relative;
-  font-size: 72px;
-  line-height: 70px;
-  display: inline-block;
-  letter-spacing: -2;
   text-align: ${({alignRight}) => (alignRight ? `right` : `initial`)};
-  font-family: ${({ theme }) => theme.fonts.serif};
-  font-weight: 400;
 
   .hero_pin-section{
     top: 30%;

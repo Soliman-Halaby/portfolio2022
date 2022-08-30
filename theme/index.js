@@ -16,8 +16,17 @@ export const fonts = {
   serif: "Romie",
 };
 
+
+export const fontSizes = {
+  title: {
+    small: '48px',
+    large: '72px'
+  },
+}
+
 export default {
   colors,
   margin,
   fonts,
+  fontSizes
 };
