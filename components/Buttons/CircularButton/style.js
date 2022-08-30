@@ -13,10 +13,12 @@ export const ButtonStyle = styled.a`
   font-family: ${({ theme }) => theme.fonts.sansSerif};
   font-weight: 300;
   text-transform: uppercase;
-  transition: all 0.25s ease;
-
+  transition: all 0.3s ease-out;
+  line-height: 16px;
+  
   &:hover {
     background: ${({ theme }) => theme.colors.lime};
     color: ${({ theme }) => theme.colors.grey1};
+    transition: all 0.3s ease-out;
   }
 `;

@@ -52,7 +52,7 @@ const Footer = () => {
               label="linkedin"
             />
             <Button
-              yellow
+              colored
               // to="https://linkedin.com/in/solimanalhalaby"
               label="github"
             />

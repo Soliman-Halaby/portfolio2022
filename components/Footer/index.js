@@ -53,7 +53,7 @@ const Footer = () => {
               <Content>Find me on</Content>
               <ButtonContainer>
                 <Button label="linkedin" rounded />
-                <Button label="github" yellow />
+                <Button label="github" colored />
                 <Button label="twitter" rounded />
               </ButtonContainer>
             </RowContainer>
