@@ -31,6 +31,21 @@ const Footer = () => {
     }, 1500);
   };
 
+  const socials = [
+    {
+      label: "linkedin",
+      link: "https://www.linkedin.com/in/soliman-al-halaby/",
+    },
+    {
+      label: "linkedin",
+      link: "https://www.linkedin.com/in/soliman-al-halaby/",
+    },
+    {
+      label: "linkedin",
+      link: "https://www.linkedin.com/in/soliman-al-halaby/",
+    },
+  ];
+
   return (
     <Wrapper>
       <TitleContainer>
@@ -54,9 +69,9 @@ const Footer = () => {
             <RowContainer>
               <Content>Find me on</Content>
               <ButtonContainer>
-                <Button to="socials" label="linkedin" rounded />
-                <Button to="socials" label="github" colored />
-                <Button to="socials" label="twitter" rounded />
+                {socials.map((data, i) => (
+                  <Button to={data.link} key={i} index={i} label={data.label} />
+                ))}
               </ButtonContainer>
             </RowContainer>
             <RowContainer>

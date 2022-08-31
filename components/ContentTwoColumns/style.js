@@ -33,6 +33,7 @@ export const Title = styled.h2`
   font-family: ${({ theme }) => theme.fonts.serif};
   font-weight: 300;
   line-height: auto;
+  white-space: preline;
 `;
 
 export const SubContainer = styled.div`

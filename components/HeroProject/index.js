@@ -2,9 +2,9 @@ import React, { useState, useRef } from "react";
 
 import TitleSection from "@/components/Popup/SectionTitle";
 
-import Pin from "@/components/Popup/Pin";
 import Tag from "@/components/Popup/Tag";
 import Button from "@/components/Buttons/Button";
+
 import {
   Wrapper,
   Container,
@@ -18,19 +18,11 @@ import {
   TagSubContainer,
 } from "./style.js";
 
-const HeroHome = ({}) => {
-  const scrollToBottom = () => {
-    window.scrollTo(0, document.body.scrollHeight);
-  };
-
+const HeroProject = ({ tags, title }) => {
   return (
     <Wrapper>
       <Container>
-        <Title>
-          MovieReact
-          <br />
-          website
-        </Title>
+        <Title>{title}</Title>
         <TagWrapper>
           <TagContainer>
             <TagSubContainer>
@@ -39,8 +31,11 @@ const HeroHome = ({}) => {
             </TagSubContainer>
             <TagSubContainer>
               <Text>Using</Text>
-              <Tag rounded label="PHP" />
-              <Tag rounded label="Vanilla js" />
+              {tags.map((data, i) => {
+                return <Tag index={i} key={i} label={data.content} />;
+              })}
+              {/* <Tag rounded label="PHP" />
+              <Tag rounded label="Vanilla js" /> */}
               <Button className="project-visit-cta" to="/" label="Learn more" />
             </TagSubContainer>
           </TagContainer>
@@ -61,4 +56,4 @@ const HeroHome = ({}) => {
   );
 };
 
-export default HeroHome;
+export default HeroProject;

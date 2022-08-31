@@ -1,12 +1,20 @@
 import React, { useState, useRef } from "react";
 
-import { TagStyle } from "./style.js";
+import Link from "next/link.js";
+import { Container, TagStyle } from "./style.js";
 
-const Tag = ({ label, rounded = false, colored = false, style}) => {
+const Tag = ({ label, rounded = false, colored = false, style, index }) => {
+  console.log(index % 2);
   return (
-    <TagStyle borderStyle={style} colored={colored} rounded={rounded}>
-      {label}
-    </TagStyle>
+    <Container>
+      <TagStyle
+        borderStyle={style}
+        colored={colored}
+        rounded={index % 2 !== 0 ? !rounded : rounded}
+      >
+        {label}
+      </TagStyle>
+    </Container>
   );
 };
 

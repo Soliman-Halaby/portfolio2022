@@ -2,15 +2,23 @@ import React, { useState, useRef } from "react";
 import Link from "next/link.js";
 import { ButtonStyle, Container } from "./style.js";
 
-const Button = ({ label, rounded = false, colored = false, to, className }) => {
-  return { to } ? (
+const Button = ({
+  label,
+  rounded = false,
+  colored = false,
+  to,
+  className,
+  index,
+}) => {
+  console.log(index);
+  return (
     <Container>
       {to && (
         <Link href={to}>
           <ButtonStyle
             className={className}
             colored={colored}
-            rounded={rounded}
+            rounded={index % 2 !== 0 ? rounded : !rounded}
           >
             {label}
           </ButtonStyle>
@@ -22,10 +30,6 @@ const Button = ({ label, rounded = false, colored = false, to, className }) => {
         </ButtonStyle>
       )}
     </Container>
-  ) : (
-    <ButtonStyle className={className} colored={colored} rounded={rounded}>
-      {label}
-    </ButtonStyle>
   );
 };
 

@@ -57,11 +57,11 @@ export const SubContainer = styled.div`
     width: 100%;
   }
 
-  &:nth-child(1) {
+  &:nth-of-type(1) {
     display: flex;
     align-items: flex-end;
   }
-  &:nth-child(2) {
+  &:nth-of-type(2) {
     width: 80%;
     ${mediaMax.md} {
       width: 100%;
@@ -129,21 +129,15 @@ export const Button = styled.a`
   // background: blue;
 
   &:hover {
-    ${({rounded}) => (rounded ? "33px" : "5px")};
-    background: ${({rounded, theme}) =>
-      rounded
-        ? `${theme.colors.lime}`
-        : `${theme.colors.grey1}`};
+    ${({ rounded }) => (rounded ? "33px" : "5px")};
+    background: ${({ rounded, theme }) =>
+      rounded ? `${theme.colors.lime}` : `${theme.colors.grey1}`};
     border: 1px solid
-      ${({rounded, theme}) =>
-        rounded
-          ? `${theme.colors.grey1}`
-          : `${theme.colors.lime}`};
+      ${({ rounded, theme }) =>
+        rounded ? `${theme.colors.grey1}` : `${theme.colors.lime}`};
     border-style: dashed;
-    color: ${({rounded, theme}) =>
-      rounded
-        ? `${theme.colors.grey1}`
-        : `${theme.colors.grey2}`};
+    color: ${({ rounded, theme }) =>
+      rounded ? `${theme.colors.grey1}` : `${theme.colors.grey2}`};
     border-radius: ${({ rounded }) => (rounded ? "5px" : "5px")};
     transition: all 0.2s ease;
   }
