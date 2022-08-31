@@ -3,22 +3,19 @@ import { css } from "@emotion/react";
 
 import { mediaMax, title } from "styles/mixins";
 
-export const Container = styled.div``;
-export const TagStyle = styled.p`
+export const ButtonStyle = styled.span`
   display: inline-block;
-  padding: 7.5px 10px;
-  height: 34px;
+  cursor: pointer;
+  padding: 7.5px 15px;
   border: 1px solid ${({ theme }) => theme.colors.grey1};
-  border-style: ${({ borderStyle }) =>
-    borderStyle === "dashed" ? "dashed" : "plain"};
   color: ${({ theme }) => theme.colors.grey1};
   border-radius: ${({ rounded }) => (rounded ? "33px" : "5px")};
-  font-size: 14px;
+  font-size: 31px;
   font-family: ${({ theme }) => theme.fonts.sansSerif};
   font-weight: 300;
-  margin: 0;
-
-  &:nth-child(2) {
-    border-radius: 33px;
-  }
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.3s ease-out;
 `;
+
+export const Container = styled.div``;

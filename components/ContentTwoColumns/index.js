@@ -17,7 +17,7 @@ import {
   Content,
 } from "./style.js";
 
-const ProjectDescription = ({ title, subtitle, text1, text2 }) => {
+const ProjectDescription = ({ title, subtitle, text1, text2, label }) => {
   return (
     <Wrapper>
       <Container>
@@ -25,7 +25,7 @@ const ProjectDescription = ({ title, subtitle, text1, text2 }) => {
         <SubContainer>
           <Title>
             {title}
-            <Pin colored top="45" left="15" label="Hire me" />
+            <Pin colored top="45" left="15" label={label} />
           </Title>
           <ContentWrapper>
             <SubTitle>{subtitle}</SubTitle>

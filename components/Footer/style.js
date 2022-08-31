@@ -23,6 +23,7 @@ export const Title = styled.h3`
   color: ${({ theme }) => theme.colors.grey1};
   font-weight: 400;
   text-align: center;
+  margin: 2.5rem 0;
   margin-left: ${({ theme }) => theme.margin.medium};
   letter-spacing: clamp(1px, 0.25vw, 3px);
 
@@ -45,7 +46,7 @@ export const Container = styled.div`
   display: flex;
   gap: 3rem;
   ${mediaMax.md} {
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
 `;
 
@@ -56,11 +57,11 @@ export const SubContainer = styled.div`
     width: 100%;
   }
 
-  &:nth-child(1) {
+  &:nth-of-type(1) {
     display: flex;
     align-items: flex-end;
   }
-  &:nth-child(2) {
+  &:nth-of-type(2) {
     width: 80%;
     ${mediaMax.md} {
       width: 100%;
@@ -86,6 +87,7 @@ export const Text = styled.h3`
   font-size: 14px;
   font-family: ${({ theme }) => theme.fonts.sansSerif};
   font-weight: 300;
+  margin: 1rem 0;
   text-transform: uppercase;
   color: ${({ theme }) => theme.colors.grey1};
 `;
@@ -127,21 +129,15 @@ export const Button = styled.a`
   // background: blue;
 
   &:hover {
-    ${({rounded}) => (rounded ? "33px" : "5px")};
-    background: ${({rounded, theme}) =>
-      rounded
-        ? `${theme.colors.lime}`
-        : `${theme.colors.grey1}`};
+    ${({ rounded }) => (rounded ? "33px" : "5px")};
+    background: ${({ rounded, theme }) =>
+      rounded ? `${theme.colors.lime}` : `${theme.colors.grey1}`};
     border: 1px solid
-      ${({rounded, theme}) =>
-        rounded
-          ? `${theme.colors.grey1}`
-          : `${theme.colors.lime}`};
+      ${({ rounded, theme }) =>
+        rounded ? `${theme.colors.grey1}` : `${theme.colors.lime}`};
     border-style: dashed;
-    color: ${({rounded, theme}) =>
-      rounded
-        ? `${theme.colors.grey1}`
-        : `${theme.colors.grey2}`};
+    color: ${({ rounded, theme }) =>
+      rounded ? `${theme.colors.grey1}` : `${theme.colors.grey2}`};
     border-radius: ${({ rounded }) => (rounded ? "5px" : "5px")};
     transition: all 0.2s ease;
   }

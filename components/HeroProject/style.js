@@ -28,7 +28,7 @@ export const Title = styled.h2`
 
   position: relative;
   text-align: ${({ alignRight }) => (alignRight ? `right` : `initial`)};
-
+  // white-space: pre-line;
   .hero_pin-section {
     top: 30%;
     right: 10%;
