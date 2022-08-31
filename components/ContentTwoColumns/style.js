@@ -9,7 +9,8 @@ export const Wrapper = styled.div`
   width: 100%;
   position: relative;
   margin: ${({ theme }) => theme.margin.medium};
-  margin-top: 6rem;
+  margin-top: 12rem;
+  margin-bottom: 5rem;
 `;
 
 export const Number = styled.p`

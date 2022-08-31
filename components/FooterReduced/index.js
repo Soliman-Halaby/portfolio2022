@@ -5,7 +5,6 @@ import Button from "@/components/Buttons/Button";
 import CircularButton from "@/components/Buttons/CircularButton";
 
 import Pin from "@/components/Popup/Pin";
-
 import { Wrapper, Nav, NavElement, Text, Element, Image } from "./style.js";
 
 const Footer = () => {
