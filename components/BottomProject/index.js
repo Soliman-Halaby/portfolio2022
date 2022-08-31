@@ -10,33 +10,7 @@ import {
 } from "./style.js";
 import Tag from "@/components/Popup/Tag/index.js";
 import LinkProject from "@/components/Buttons/LargeButton";
-const BottomProject = ({}) => {
-  const projects = [
-    {
-      name: "Eclipse",
-      to: "/eclipse",
-    },
-    {
-      name: "Selfer App",
-      to: "/selfer-app",
-    },
-    {
-      name: "GTA Virtual Moduling",
-      to: "/eclipse",
-    },
-    {
-      name: "Selfer App",
-      to: "/selfer-app",
-    },
-    {
-      name: "Eclipse",
-      to: "/eclipse",
-    },
-    {
-      name: "Selfer App",
-      to: "/selfer-app",
-    },
-  ];
+const BottomProject = ({ projects }) => {
   return (
     <Wrapper>
       <Container>
