@@ -30,6 +30,7 @@ export const TitleSection = () => `
   line-height: 70px;
   display: inline-block;
   letter-spacing: -2;
+  margin: 2.5rem 0;
   text-align: initial;
   font-family: ${theme.fonts.serif};
   font-weight: 400;

@@ -23,6 +23,7 @@ export const Title = styled.h3`
   color: ${({ theme }) => theme.colors.grey1};
   font-weight: 400;
   text-align: center;
+  margin: 2.5rem 0;
   margin-left: ${({ theme }) => theme.margin.medium};
   letter-spacing: clamp(1px, 0.25vw, 3px);
 
@@ -45,7 +46,7 @@ export const Container = styled.div`
   display: flex;
   gap: 3rem;
   ${mediaMax.md} {
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
 `;
 
@@ -86,6 +87,7 @@ export const Text = styled.h3`
   font-size: 14px;
   font-family: ${({ theme }) => theme.fonts.sansSerif};
   font-weight: 300;
+  margin: 1rem 0;
   text-transform: uppercase;
   color: ${({ theme }) => theme.colors.grey1};
 `;

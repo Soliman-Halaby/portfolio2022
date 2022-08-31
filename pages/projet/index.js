@@ -6,6 +6,8 @@ import Image from "next/image";
 
 import Hero from "@/components/HeroProject";
 import Description from "@/components/ContentTwoColumns";
+import FullWidthImage from "@/components/ImageFullWidth"
+import ImageTwoColumns from "@/components/ImageTwoColumns";
 
 export default function Projet() {
   return (
@@ -17,6 +19,15 @@ export default function Projet() {
         text1="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
         text2="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
       />
+      <FullWidthImage src='project-img-1.png'/>
+      <ImageTwoColumns src='project-img-2.png' src2='project-img-3.png'/>
+      <Description
+        title="Titre de la section"
+        subtitle="Sous-titre de la section"
+        text1="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+        text2="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+      />
+      <FullWidthImage src='project-img-1.png'/>
     </Layout>
   );
 }
