@@ -1,0 +1,18 @@
+[
+  {
+    "title": "moviereact",
+    "sectionTitle": "Titre de la section",
+    "label": "Hire me",
+    "sectionSubtitle": "Sous-titre de la section",
+    "text1": "Lorem",
+    "text2": "Loorem"
+  },
+  {
+    "title": "selfer",
+    "sectionTitle": "Titre de la section",
+    "label": "Abc me",
+    "sectionSubtitle": "Sous-titre de la section",
+    "text1": "Lorem",
+    "text2": "Loorem"
+  }
+]

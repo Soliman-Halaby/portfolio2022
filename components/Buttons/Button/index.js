@@ -9,14 +9,14 @@ const Button = ({
   to,
   className,
   index,
-  target
+  target,
 }) => {
-  console.log(index);
+  // console.log(index);
   return (
     <Container>
-      {to && target &&(
+      {to && target && (
         <Link href={to} passHref>
-          <a target='_blank'>
+          <a target="_blank">
             <ButtonStyle
               className={className}
               colored={colored}
@@ -27,17 +27,18 @@ const Button = ({
           </a>
         </Link>
       )}
-            {to && !target &&(
+      {to && !target && (
         <Link href={to} passHref>
-            <ButtonStyle
-              className={className}
-              colored={colored}
-              rounded={index % 2 !== 0 ? rounded : !rounded}
-            >
-              {label}
-            </ButtonStyle>
-        </Link>)}
-      {!to && !target &&(
+          <ButtonStyle
+            className={className}
+            colored={colored}
+            rounded={index % 2 !== 0 ? rounded : !rounded}
+          >
+            {label}
+          </ButtonStyle>
+        </Link>
+      )}
+      {!to && !target && (
         <ButtonStyle colored={colored} rounded={rounded}>
           {label}
         </ButtonStyle>
