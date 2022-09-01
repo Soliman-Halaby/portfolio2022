@@ -52,7 +52,7 @@ const Footer = () => {
         </NavElement>
         <NavElement>
           <Text>Designed by</Text>
-          <Button rounded to="/cc" label="ines richard" />
+          <Button rounded target='_blank' to='/ines' label="ines richard" />
         </NavElement>
         <NavElement>
           <Element onClick={copyToClipboard}>
@@ -65,7 +65,7 @@ const Footer = () => {
           <Element>
             <Text>Find me on</Text>
             {socials.map((data, i) => (
-              <Button to={data.link} key={i} index={i + 1} label={data.label} />
+              <Button to={data.link} key={i} target={data.target} index={i + 1} label={data.label} />
             ))}
           </Element>
           <Element>

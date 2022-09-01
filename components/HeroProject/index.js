@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect} from "react";
 
 import TitleSection from "@/components/Popup/SectionTitle";
 
@@ -36,7 +36,7 @@ const HeroProject = ({ tags, title }) => {
               })}
               {/* <Tag rounded label="PHP" />
               <Tag rounded label="Vanilla js" /> */}
-              <Button className="project-visit-cta" to="/" label="Learn more" />
+              <Button className="project-visit-cta" to="/" label="See it live" >Coucou</Button>
             </TagSubContainer>
           </TagContainer>
           <TagContainer>
