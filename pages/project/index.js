@@ -9,6 +9,8 @@ import Description from "@/components/ContentTwoColumns";
 import FullWidthImage from "@/components/ImageFullWidth";
 import ImageTwoColumns from "@/components/ImageTwoColumns";
 import BottomProject from "@/components/BottomProject";
+
+import { SmoothScrollProvider } from "contexts/SmoothScroll.context";
 export default function Projet() {
   const tags = [
     {

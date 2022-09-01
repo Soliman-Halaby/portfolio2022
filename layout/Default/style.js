@@ -10,3 +10,10 @@ export const App = styled.div`
 
 `;
 
+export const Container = styled.div`
+  width: 100%;
+`
+
+export const SubContainer = styled.div`
+  margin: 20px;
+`
