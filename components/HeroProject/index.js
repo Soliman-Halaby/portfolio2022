@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect} from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 import TitleSection from "@/components/Popup/SectionTitle";
 
@@ -19,6 +19,7 @@ import {
 } from "./style.js";
 
 const HeroProject = ({ tags, title }) => {
+  // console.log(tags);
   return (
     <Wrapper>
       <Container>
@@ -32,11 +33,13 @@ const HeroProject = ({ tags, title }) => {
             <TagSubContainer>
               <Text>Using</Text>
               {tags.map((data, i) => {
-                return <Tag index={i} key={i} label={data.content} />;
+                return <Tag index={i} key={i} label={data} />;
               })}
               {/* <Tag rounded label="PHP" />
               <Tag rounded label="Vanilla js" /> */}
-              <Button className="project-visit-cta" to="/" label="See it live" >Coucou</Button>
+              <Button className="project-visit-cta" to="/" label="See it live">
+                Coucou
+              </Button>
             </TagSubContainer>
           </TagContainer>
           <TagContainer>

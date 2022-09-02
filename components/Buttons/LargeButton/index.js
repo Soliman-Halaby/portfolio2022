@@ -10,7 +10,7 @@ const ProjectButton = ({
   index,
   className,
 }) => {
-  console.log(index % 2);
+  // console.log(index % 2);
   return (
     <Container>
       <Link href={to}>

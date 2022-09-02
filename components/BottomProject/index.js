@@ -21,7 +21,12 @@ const BottomProject = ({ projects }) => {
         <ProjectsContainer>
           {projects.map((data, i) => {
             return (
-              <LinkProject to={data.to} index={i} key={i} label={data.name} />
+              <LinkProject
+                to={data.slug}
+                index={i}
+                key={i}
+                label={data.title}
+              />
             );
           })}
         </ProjectsContainer>
