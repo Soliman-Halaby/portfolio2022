@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { css } from "@emotion/react";
 
-import { mediaMax, title } from "styles/mixins";
+import { mediaMax } from "styles/mixins";
 
 export const Wrapper = styled.div`
   width: 100%;
@@ -73,7 +73,7 @@ export const SubContainer = styled.div`
     img {
       width: 100%;
       height: 100%;
-      max-height: 470px;
+      max-height: 490px;
       object-fit: cover;
     }
   }
