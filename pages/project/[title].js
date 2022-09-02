@@ -13,81 +13,53 @@ import BottomProject from "@/components/BottomProject";
 import ProjectsData from "/utils/projects.json";
 import { useRouter } from "next/router";
 
-export default function Projet() {
+export default function Projet({ project }) {
+  // Get parameters of url
   const router = useRouter();
   const { title } = router.query;
-  //   console.log(ProjectsData);
-  //   console.log(title);
 
+  // Structure returned array with all projects informations
   const data = ProjectsData.map((data, i) => ({
     title: data.title,
     sectionTitle1: data.sectionTitle,
-    pinLabel1: data.label,
-    sectionSubtitle1: data.sectionSubtitle,
-    text1: data.text1,
-    text2: data.text2,
+    tags: data.techno,
+    content1: data.content1,
+    content2: data.content2,
+    images: data.images,
   }));
 
-  const projectsData = data.find((project) => project.title === title);
-  console.log("finalData", projectsData);
+  // Get the right array of datas
+  const projectData = data.find((project) => project.title === title);
 
-  const tags = [
-    {
-      content: "PHP",
-      // rounaded: true,
-    },
-    {
-      content: "Vanilla JS",
-    },
-  ];
+  // Get projects - Next project section
+  const allProjects = data.filter((project) => project.title !== title);
 
-  const projects = [
-    {
-      name: "Eclipse",
-      to: "/eclipse",
-    },
-    {
-      name: "Selfer App",
-      to: "/selfer-app",
-    },
-    // {
-    //   name: "GTA Virtual Moduling",
-    //   to: "/eclipse",
-    // },
-    // {
-    //   name: "Selfer App",
-    //   to: "/selfer-app",
-    // },
-    // {
-    //   name: "Eclipse",
-    //   to: "/eclipse",
-    // },
-    // {
-    //   name: "Selfer App",
-    //   to: "/selfer-app",
-    // },
-  ];
-  return (
-    <Layout reducedFooter>
-      <Hero title="Movie react" tags={tags} />
-      <Description
-        title="Titre de la section"
-        label="Hire me"
-        subtitle="Sous-titre de la section"
-        text1="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
-        text2="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
-      />
-      <FullWidthImage src="project-img-1.png" />
-      <ImageTwoColumns src="project-img-2.png" src2="project-img-3.png" />
-      <Description
-        title="Titre de la section"
-        label="Hire me"
-        subtitle="Sous-titre de la section"
-        text1="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
-        text2="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
-      />
-      <FullWidthImage src="project-img-1.png" />
-      <BottomProject projects={projects} />
-    </Layout>
-  );
+  if (title) {
+    return (
+      <Layout reducedFooter>
+        <Hero title={projectData.title} tags={projectData.tags} />
+        <Description
+          title={projectData.content1.title}
+          label={projectData.content1.label}
+          subtitle={projectData.content1.subtitle}
+          text1={projectData.content1.text1}
+          text2={projectData.content1.text2}
+        />
+        <FullWidthImage src={projectData.images.fullwidth} />
+        <ImageTwoColumns
+          src={projectData.images.left}
+          src2={projectData.images.right}
+        />
+        <Description
+          title={projectData.content2.title}
+          label={projectData.content2.label}
+          subtitle={projectData.content2.subtitle}
+          text1={projectData.content2.text1}
+          text2={projectData.content2.text2}
+        />
+        <FullWidthImage src={projectData.images.fullwidth2} />
+        <BottomProject projects={allProjects} />
+      </Layout>
+    );
+  }
 }
