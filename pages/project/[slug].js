@@ -16,10 +16,11 @@ import { useRouter } from "next/router";
 export default function Projet({ project }) {
   // Get parameters of url
   const router = useRouter();
-  const { title } = router.query;
+  const { slug } = router.query;
 
   // Structure returned array with all projects informations
   const data = ProjectsData.map((data, i) => ({
+    slug: data.slug,
     title: data.title,
     sectionTitle1: data.sectionTitle,
     tags: data.techno,
@@ -28,13 +29,14 @@ export default function Projet({ project }) {
     images: data.images,
   }));
 
+  // console.log(data);
   // Get the right array of datas
-  const projectData = data.find((project) => project.title === title);
+  const projectData = data.find((project) => project.slug === slug);
 
   // Get projects - Next project section
-  const allProjects = data.filter((project) => project.title !== title);
+  const allProjects = data.filter((project) => project.slug !== slug);
 
-  if (title) {
+  if (slug) {
     return (
       <Layout reducedFooter>
         <Hero title={projectData.title} tags={projectData.tags} />

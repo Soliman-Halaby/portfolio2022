@@ -19,6 +19,7 @@ import {
 } from "./style.js";
 
 const HeroProject = ({ tags, title }) => {
+  // console.log(tags);
   return (
     <Wrapper>
       <Container>

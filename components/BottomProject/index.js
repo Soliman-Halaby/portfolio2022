@@ -22,7 +22,7 @@ const BottomProject = ({ projects }) => {
           {projects.map((data, i) => {
             return (
               <LinkProject
-                to={data.title}
+                to={data.slug}
                 index={i}
                 key={i}
                 label={data.title}
