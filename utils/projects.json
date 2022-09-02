@@ -1,9 +1,10 @@
 [
   {
     "slug": "moviereact",
+    "link": "https://www.google.com/",
     "title": "moviereact",
-    "role": "Front-end developer",
-    "date": "03/03/2018",
+    "info": ["Front-end developer", "03/03/2018"],
+    "description": "A React app that allows users to search for movies and view details about them.",
     "techno": ["PHP", "Vanilla JS"],
     "content1": {
       "title": "Titre de la section",
@@ -20,6 +21,7 @@
       "text2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
     },
     "images": {
+      "hero": "/moviereact-image.png",
       "fullwidth": "/project-img-1.png",
       "left": "/project-img-2.png",
       "right": "/project-img-3.png",
@@ -28,9 +30,10 @@
   },
   {
     "slug": "selfer",
+    "link": "https://www.google.com/",
     "title": "selfer",
-    "role": "Front-end developer",
-    "date": "03/03/2018",
+    "info": ["Front-end developer", "03/03/2018"],
+    "description": "A React app that allows users to search for movies and view details about them.",
     "techno": ["PHP", "Vanilla JS"],
     "content1": {
       "title": "Titre de la section",
@@ -47,6 +50,7 @@
       "text2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
     },
     "images": {
+      "hero": "/moviereact-image.png",
       "fullwidth": "/project-img-1.png",
       "left": "/project-img-2.png",
       "right": "/project-img-3.png",
@@ -55,9 +59,10 @@
   },
   {
     "slug": "test",
+    "link": "https://www.google.com/",
     "title": "test",
-    "role": "Front-end developer",
-    "date": "03/03/2018",
+    "info": ["Front-end developer", "03/03/2018"],
+    "description": "A React app that allows users to search for movies and view details about them.",
     "techno": ["PHP", "Vanilla JS"],
     "content1": {
       "title": "Titre de la section",
@@ -74,6 +79,7 @@
       "text2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
     },
     "images": {
+      "hero": "/moviereact-image.png",
       "fullwidth": "/project-img-1.png",
       "left": "/project-img-2.png",
       "right": "/project-img-3.png",

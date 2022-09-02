@@ -23,6 +23,7 @@ export const Container = styled.div`
 
 export const TitleContainer = styled.div`
   display: flex;
+  align-items: center;
   gap: 4rem;
 `;
 export const Title = styled.h2`
@@ -38,5 +39,6 @@ export const ProjectsContainer = styled.div`
   display: flex;
   gap: 0.75rem;
   width: clamp(300px, 100%, 850px);
+  margin-top: 3rem;
   flex-wrap: wrap;
 `;

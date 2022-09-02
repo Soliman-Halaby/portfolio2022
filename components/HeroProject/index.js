@@ -18,7 +18,16 @@ import {
   TagSubContainer,
 } from "./style.js";
 
-const HeroProject = ({ tags, title }) => {
+const HeroProject = ({
+  tags,
+  title,
+  content,
+  infos,
+  description,
+  to,
+  ctaLabel,
+  img,
+}) => {
   // console.log(tags);
   return (
     <Wrapper>
@@ -27,33 +36,31 @@ const HeroProject = ({ tags, title }) => {
         <TagWrapper>
           <TagContainer>
             <TagSubContainer>
-              <Tag rounded label="RÔLE" />
-              <Tag label="03/03/2023" />
+              {infos.map((data, i) => {
+                return (
+                  <Tag withDot dashed={true} index={i} key={i} label={data} />
+                );
+              })}
             </TagSubContainer>
             <TagSubContainer>
-              <Text>Using</Text>
+              <Text>{content}</Text>
               {tags.map((data, i) => {
                 return <Tag index={i} key={i} label={data} />;
               })}
-              {/* <Tag rounded label="PHP" />
-              <Tag rounded label="Vanilla js" /> */}
-              <Button className="project-visit-cta" to="/" label="See it live">
-                Coucou
-              </Button>
+              <Button
+                className="project-visit-cta"
+                to={to}
+                target="_blank"
+                label={ctaLabel}
+                withArrow
+              ></Button>
             </TagSubContainer>
           </TagContainer>
           <TagContainer>
-            <Content>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
-              turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus
-              nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum
-              tellus elit sed risus. Maecenas eget condimentum velit, sit amet
-              feugiat lectus. Class aptent taciti sociosqu ad litora torquent
-              per conubia nostra, per inceptos himenaeos.
-            </Content>
+            <Content>{description}</Content>
           </TagContainer>
         </TagWrapper>
-        <Image src="/moviereact-image.png"></Image>
+        <Image src={img}></Image>
       </Container>
     </Wrapper>
   );
