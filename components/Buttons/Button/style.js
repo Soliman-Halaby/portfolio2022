@@ -17,6 +17,10 @@ export const ButtonStyle = styled.span`
   text-transform: uppercase;
   text-decoration: none;
   transition: all 0.3s ease-out;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 0.5rem;
 
   &:hover {
     ${({ rounded }) => (rounded ? "33px" : "5px")};
@@ -30,6 +34,11 @@ export const ButtonStyle = styled.span`
       rounded || colored ? `${theme.colors.grey1}` : `${theme.colors.grey2}`};
     // border-radius: ${({ rounded }) => (rounded ? "5px" : "5px")};
     transition: all 0.3s ease-out;
+
+    svg path {
+      stroke: ${({ rounded, colored, theme }) =>
+        rounded || colored ? `${theme.colors.grey1}` : `${theme.colors.grey2}`};
+    }
   }
 `;
 

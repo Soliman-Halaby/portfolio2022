@@ -2,8 +2,7 @@ import Layout from "layout/Default";
 
 import Head from "next/head";
 import Image from "next/image";
-// import styles from "../styles/Home.module.css";
-import { useEffect } from "react";
+
 import Hero from "@/components/HeroProject";
 import Description from "@/components/ContentTwoColumns";
 import FullWidthImage from "@/components/ImageFullWidth";
@@ -13,7 +12,7 @@ import BottomProject from "@/components/BottomProject";
 import ProjectsData from "/utils/projects.json";
 import { useRouter } from "next/router";
 
-export default function Projet({ project }) {
+export default function Projet({}) {
   // Get parameters of url
   const router = useRouter();
   const { slug } = router.query;
@@ -22,6 +21,9 @@ export default function Projet({ project }) {
   const data = ProjectsData.map((data, i) => ({
     slug: data.slug,
     title: data.title,
+    info: data.info,
+    link: data.link,
+    description: data.description,
     sectionTitle1: data.sectionTitle,
     tags: data.techno,
     content1: data.content1,
@@ -29,7 +31,6 @@ export default function Projet({ project }) {
     images: data.images,
   }));
 
-  // console.log(data);
   // Get the right array of datas
   const projectData = data.find((project) => project.slug === slug);
 
@@ -39,7 +40,16 @@ export default function Projet({ project }) {
   if (slug) {
     return (
       <Layout reducedFooter>
-        <Hero title={projectData.title} tags={projectData.tags} />
+        <Hero
+          title={projectData.title}
+          content="Using"
+          ctaLabel="See it live"
+          infos={projectData.info}
+          img={projectData.images.hero}
+          tags={projectData.tags}
+          description={projectData.description}
+          to={projectData.link}
+        />
         <Description
           title={projectData.content1.title}
           label={projectData.content1.label}
@@ -60,7 +70,7 @@ export default function Projet({ project }) {
           text2={projectData.content2.text2}
         />
         <FullWidthImage src={projectData.images.fullwidth2} />
-        <BottomProject projects={allProjects} />
+        <BottomProject title="More projects" projects={allProjects} />
       </Layout>
     );
   }

@@ -5,12 +5,13 @@ import { mediaMax, title } from "styles/mixins";
 
 export const Container = styled.div``;
 export const TagStyle = styled.p`
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
   padding: 7.5px 10px;
   height: 34px;
   border: 1px solid ${({ theme }) => theme.colors.grey1};
-  border-style: ${({ borderStyle }) =>
-    borderStyle === "dashed" ? "dashed" : "plain"};
+  border-style: ${({ borderStyle }) => (borderStyle ? "dashed" : "plain")};
   color: ${({ theme }) => theme.colors.grey1};
   border-radius: ${({ rounded }) => (rounded ? "33px" : "5px")};
   font-size: 14px;

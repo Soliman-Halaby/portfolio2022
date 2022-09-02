@@ -113,6 +113,9 @@ const styles = ({ fonts }) => {
       overflow-x: hidden;
       scroll-behavior: smooth;
     }
+    a{
+      text-decoration: none;
+    }
     body {
       font-family: ${fonts.sansSerif};
       background: ${({ theme }) => {
