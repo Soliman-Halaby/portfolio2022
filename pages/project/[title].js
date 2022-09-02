@@ -13,7 +13,7 @@ import BottomProject from "@/components/BottomProject";
 import ProjectsData from "/utils/projects.json";
 import { useRouter } from "next/router";
 
-export default function Projet({ project }) {
+export default function Projet({}) {
   // Get parameters of url
   const router = useRouter();
   const { title } = router.query;
