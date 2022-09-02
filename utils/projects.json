@@ -1,5 +1,6 @@
 [
   {
+    "slug": "moviereact",
     "title": "moviereact",
     "role": "Front-end developer",
     "date": "03/03/2018",
@@ -26,6 +27,7 @@
     }
   },
   {
+    "slug": "selfer",
     "title": "selfer",
     "role": "Front-end developer",
     "date": "03/03/2018",
@@ -52,6 +54,7 @@
     }
   },
   {
+    "slug": "test",
     "title": "test",
     "role": "Front-end developer",
     "date": "03/03/2018",
