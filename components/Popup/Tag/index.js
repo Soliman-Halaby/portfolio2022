@@ -4,7 +4,7 @@ import Link from "next/link.js";
 import { Container, TagStyle } from "./style.js";
 
 const Tag = ({ label, rounded = false, colored = false, style, index }) => {
-  console.log(index % 2);
+  // console.log(index % 2);
   return (
     <Container>
       <TagStyle

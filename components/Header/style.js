@@ -24,8 +24,27 @@ export const MainLink = styled.span`
   // color: ${({ theme }) => theme.colors.grey2} !important;
   font-weight: 300;
   a{
-    color: ${({ theme }) => theme.colors.grey2} !important;
+    color: ${({ theme }) => theme.colors.grey2};
     text-decoration: none;
+    position: relative;
+    padding-bottom: 3px;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 80%;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: ${({ theme }) => theme.colors.grey2};
+      transition: width ease-out .3s;
+    }
+
+    &:hover{
+      &:after {
+        width: 100%;
+    }    
+  }
 
   }
 `;

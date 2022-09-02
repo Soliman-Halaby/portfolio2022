@@ -18,15 +18,33 @@ export default function Projet() {
     {
       content: "Vanilla JS",
     },
-    // {
-    //   content: "Vanilla JS",
-    // },
-    // {
-    //   content: "Vanilla JS",
-    // },
-    // {
-    //   content: "Vanilla JS",
-    // },
+  ];
+
+  const projects = [
+    {
+      name: "Eclipse",
+      to: "/eclipse",
+    },
+    {
+      name: "Selfer App",
+      to: "/selfer-app",
+    },
+    {
+      name: "GTA Virtual Moduling",
+      to: "/eclipse",
+    },
+    {
+      name: "Selfer App",
+      to: "/selfer-app",
+    },
+    {
+      name: "Eclipse",
+      to: "/eclipse",
+    },
+    {
+      name: "Selfer App",
+      to: "/selfer-app",
+    },
   ];
   return (
     <Layout reducedFooter>
@@ -48,7 +66,7 @@ export default function Projet() {
         text2="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
       />
       <FullWidthImage src="project-img-1.png" />
-      <BottomProject />
+      <BottomProject projects={projects} />
     </Layout>
   );
 }

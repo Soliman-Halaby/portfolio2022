@@ -10,33 +10,7 @@ import {
 } from "./style.js";
 import Tag from "@/components/Popup/Tag/index.js";
 import LinkProject from "@/components/Buttons/LargeButton";
-const BottomProject = ({}) => {
-  const projects = [
-    {
-      name: "Eclipse",
-      to: "/eclipse",
-    },
-    {
-      name: "Selfer App",
-      to: "/selfer-app",
-    },
-    {
-      name: "GTA Virtual Moduling",
-      to: "/eclipse",
-    },
-    {
-      name: "Selfer App",
-      to: "/selfer-app",
-    },
-    {
-      name: "Eclipse",
-      to: "/eclipse",
-    },
-    {
-      name: "Selfer App",
-      to: "/selfer-app",
-    },
-  ];
+const BottomProject = ({ projects }) => {
   return (
     <Wrapper>
       <Container>
@@ -47,7 +21,12 @@ const BottomProject = ({}) => {
         <ProjectsContainer>
           {projects.map((data, i) => {
             return (
-              <LinkProject to={data.to} index={i} key={i} label={data.name} />
+              <LinkProject
+                to={data.title}
+                index={i}
+                key={i}
+                label={data.title}
+              />
             );
           })}
         </ProjectsContainer>
