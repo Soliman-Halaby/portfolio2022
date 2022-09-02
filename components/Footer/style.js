@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { css } from "@emotion/react";
 
-import { mediaMax, title } from "styles/mixins";
+import { mediaMax } from "styles/mixins";
 
 export const Wrapper = styled.div`
   width: 100%;
@@ -9,8 +9,12 @@ export const Wrapper = styled.div`
   // height: 50px;
   position: relative;
   margin: ${({ theme }) => theme.margin.medium};
-  margin-top: 300px;
+  // margin-top: 300px;
   margin-bottom: 0;
+  min-height: 97vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
 export const SubWrapper = styled(Wrapper)`
@@ -69,6 +73,7 @@ export const SubContainer = styled.div`
     img {
       width: 100%;
       height: 100%;
+      max-height: 490px;
       object-fit: cover;
     }
   }
