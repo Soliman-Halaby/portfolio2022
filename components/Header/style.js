@@ -11,7 +11,8 @@ export const Logo = styled.img`
   left: 50%;
   cursor: pointer;
   right: 50%;
-  top: 22%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 `;
 
 export const MainLink = styled.span`
@@ -23,29 +24,28 @@ export const MainLink = styled.span`
   font-family: ${({ theme }) => theme.fonts.sansSerif};
   // color: ${({ theme }) => theme.colors.grey2} !important;
   font-weight: 300;
-  a{
+  a {
     color: ${({ theme }) => theme.colors.grey2};
     text-decoration: none;
     position: relative;
     padding-bottom: 3px;
 
     &:after {
-      content: '';
+      content: "";
       position: absolute;
       top: 80%;
       left: 0;
       width: 0;
       height: 1px;
       background: ${({ theme }) => theme.colors.grey2};
-      transition: width ease-out .3s;
+      transition: width ease-out 0.3s;
     }
 
-    &:hover{
+    &:hover {
       &:after {
         width: 100%;
-    }    
-  }
-
+      }
+    }
   }
 `;
 

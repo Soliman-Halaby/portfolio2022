@@ -4,6 +4,7 @@ import Head from "next/head";
 import Image from "next/image";
 
 import Hero from "@/components/HeroProject";
+import FourOhFour from "@/components/404";
 import Description from "@/components/ContentTwoColumns";
 import FullWidthImage from "@/components/ImageFullWidth";
 import ImageTwoColumns from "@/components/ImageTwoColumns";
@@ -37,7 +38,7 @@ export default function Projet({}) {
   // Get projects - Next project section
   const allProjects = data.filter((project) => project.slug !== slug);
 
-  if (slug) {
+  if (slug && projectData) {
     return (
       <Layout reducedFooter>
         <Hero
@@ -71,6 +72,14 @@ export default function Projet({}) {
         />
         <FullWidthImage src={projectData.images.fullwidth2} />
         <BottomProject title="More projects" projects={allProjects} />
+      </Layout>
+    );
+  }
+
+  if (slug && !projectData) {
+    return (
+      <Layout noFooter={false}>
+        <FourOhFour />
       </Layout>
     );
   }
