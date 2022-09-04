@@ -17,7 +17,7 @@ import {
   Content,
 } from "./style.js";
 
-const ProjectDescription = ({ title, subtitle, text1, text2, label }) => {
+const ContentTwoColumns = ({ title, subtitle, text1, text2, label }) => {
   return (
     <Wrapper>
       <Container>
@@ -38,4 +38,4 @@ const ProjectDescription = ({ title, subtitle, text1, text2, label }) => {
   );
 };
 
-export default ProjectDescription;
+export default ContentTwoColumns;
