@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { css } from "@emotion/react";
+import { motion } from "framer-motion";
 
 // import {Title as TitleSection} from "@/components/Popup/SectionTitle/style";
 
@@ -28,12 +29,16 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   margin: ${({ theme }) => theme.margin.medium};
+
+  .box{
+    transform-origin: center;
+  }
 `;
 
 export const TitleContainer = styled.div`
   position: relative;
 `
-export const Title = styled.h2`
+export const Title = styled(motion.h2)`
 ${TitleSection()}
 margin: 2.5rem 0;
 
@@ -47,4 +52,21 @@ position: relative;
   }
 `;
 
-export const Image = styled.img``
+export const Image = styled(motion.img)`
+  width: 100%;
+  transform-origin: center;
+`
+
+
+export const Text= styled.p`
+  text-transform: uppercase;
+  font-family: ${({theme}) => theme.fonts.sansSerif};
+  font-size: 16px;
+  margin-bottom: 8px;
+  font-weight: 300;
+  color: ${({theme}) => theme.colors.grey1};
+
+  svg{
+    margin-left: 4px;
+  }
+`

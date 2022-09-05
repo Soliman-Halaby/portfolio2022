@@ -117,6 +117,8 @@ const styles = ({ fonts }) => {
       text-decoration: none;
     }
     body {
+      white-space: pre-line;
+      // cursor: none;
       font-family: ${fonts.sansSerif};
       background: ${({ theme }) => {
         theme.colors.grey2;
@@ -126,6 +128,9 @@ const styles = ({ fonts }) => {
         ${mediaMax.xs} {
       }
     }
+
+    
+    
   `;
 };
 

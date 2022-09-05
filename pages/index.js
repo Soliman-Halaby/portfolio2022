@@ -5,6 +5,7 @@ import Head from "next/head";
 import Image from "next/image";
 // import styles from "../styles/Home.module.css";
 
+import CustomCursor from "@/components/Cursor";
 import Hero from "@/components/HeroHome";
 
 export default function Home() {
@@ -21,7 +22,7 @@ export default function Home() {
   useEffect(() => {
     id.current = window.setInterval(() => {
       setTimer((timer) => timer - 1);
-    }, 1000);
+    }, 10);
   }, []);
 
   useEffect(() => {
@@ -37,13 +38,8 @@ export default function Home() {
           <h2>Coucou</h2>
         </div>
       ) : (
-        <Hero label="Contact me" />
+        <Hero title={`Soliman Al Halaby, \ncreative developer`} subtitle={`Looking for an \ninternship`} sectionTitle={`Based in paris, \nfrom cairo`} image="/home-hero-image.png" label="Contact me" />
       )}
-      {/* <div className="coucou">
-        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum{" "}
-      </div> */}
     </Layout>
   );
 }
