@@ -48,3 +48,16 @@ position: relative;
 `;
 
 export const Image = styled.img``
+
+export const Text= styled.p`
+  text-transform: uppercase;
+  font-family: ${({theme}) => theme.fonts.sansSerif};
+  font-size: 16px;
+  margin-bottom: 8px;
+  font-weight: 300;
+  color: ${({theme}) => theme.colors.grey1};
+
+  svg{
+    margin-left: 4px;
+  }
+`

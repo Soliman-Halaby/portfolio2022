@@ -4,31 +4,26 @@ import TitleSection from "@/components/Popup/SectionTitle";
 
 import Pin from "@/components/Popup/Pin";
 
-import { Wrapper, Container, Title, TitleContainer, Image } from "./style.js";
+import { Wrapper, Container, Title, TitleContainer, Image, Text } from "./style.js";
 
-const HeroHome = ({ label }) => {
+const HeroHome = ({ title, subtitle, sectionTitle,label, image }) => {
   const scrollToBottom = () => {
     window.scrollTo(0, document.body.scrollHeight);
   };
 
   return (
-    <Wrapper>
+    <Wrapper data-scroll-section>
       <TitleSection
         className="hero_title-section"
         number="02"
-        title={`Based in paris, 
-from cairo`}
+        title={sectionTitle}
       />
       <Container>
         <Title>
-          Soliman Al Halaby,
-          <br />
-          creative developer
+          {title}
         </Title>
         <Title alignRight>
-          Looking for an
-          <br />
-          internship
+          {subtitle}
           <Pin
             top="30"
             left="90"
@@ -37,7 +32,21 @@ from cairo`}
             label={label}
           />
         </Title>
-        <Image src="/home-hero-image.png"></Image>
+        <Text>
+          Scroll
+          <svg
+            width={12}
+            height={12}
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M6 12c0-3.14 2.686-5.684 6-5.684M6 12c0-3.14-2.686-5.684-6-5.684M6 12V0"
+              stroke="#1E1E1E"
+            />
+          </svg>
+        </Text>
+        <Image src={image}></Image>
       </Container>
     </Wrapper>
   );
