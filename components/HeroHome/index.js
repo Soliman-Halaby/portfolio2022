@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import { motion } from "framer-motion";
 
 import TitleSection from "@/components/Popup/SectionTitle";
 
@@ -11,6 +12,17 @@ const HeroHome = ({ title, subtitle, sectionTitle,label, image }) => {
     window.scrollTo(0, document.body.scrollHeight);
   };
 
+  const test = {
+    hidden:{opacity: 0, y: 50},
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        ease: "easeInOut",
+        duration: 1.2
+      }
+    }
+  }
   return (
     <Wrapper data-scroll-section>
       <TitleSection
@@ -19,7 +31,12 @@ const HeroHome = ({ title, subtitle, sectionTitle,label, image }) => {
         title={sectionTitle}
       />
       <Container>
-        <Title>
+        <Title 
+          variants={test} 
+          initial='hidden' 
+          animate='visible'
+          
+        >
           {title}
         </Title>
         <Title alignRight>
@@ -46,7 +63,32 @@ const HeroHome = ({ title, subtitle, sectionTitle,label, image }) => {
             />
           </svg>
         </Text>
-        <Image src={image}></Image>
+          <Image           
+            src={image}
+            alt='Image alt'
+            key={image}
+            initial={{ scaleX: 0.25 }}
+            animate={{ scaleX: 1 }}
+            transition={{   
+              delay: 0.5,
+              transition: {
+                ease: "easeInOut",
+                duration: 1.2
+              },
+              // default: { ease: "anticipate" } 
+            }}
+          />
+        {/* <motion.img
+          className="box"
+          src={image}
+          key={image}
+          initial={{ scaleX: 0 }}
+          animate={{ scaleX: 1 }}
+          transition={{   
+            delay: 0.5,
+            transition: { duration: 2 },
+            default: { ease: "linear" } }}
+          /> */}
       </Container>
     </Wrapper>
   );

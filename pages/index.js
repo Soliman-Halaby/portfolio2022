@@ -22,7 +22,7 @@ export default function Home() {
   useEffect(() => {
     id.current = window.setInterval(() => {
       setTimer((timer) => timer - 1);
-    }, 1000);
+    }, 10);
   }, []);
 
   useEffect(() => {
