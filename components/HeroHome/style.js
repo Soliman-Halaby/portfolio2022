@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import { css } from "@emotion/react";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 
 // import {Title as TitleSection} from "@/components/Popup/SectionTitle/style";
 
@@ -38,7 +38,7 @@ export const Container = styled.div`
 export const TitleContainer = styled.div`
   position: relative;
 `
-export const Title = styled(motion.h2)`
+export const Title = styled.h2`
 ${TitleSection()}
 margin: 2.5rem 0;
 
@@ -52,7 +52,7 @@ position: relative;
   }
 `;
 
-export const Image = styled(motion.img)`
+export const Image = styled.img`
   width: 100%;
   transform-origin: center;
 `

@@ -1,7 +1,7 @@
 import {react, useRef, useEffect} from "react";
 
 import {Cursor} from './style.js'
-export default function CustomCursor() {
+export default function CustomCursor(width, height) {
   const cursorRef = useRef(null)
   useEffect(() => {
   if (cursorRef.current == null || cursorRef == null)
@@ -9,7 +9,12 @@ export default function CustomCursor() {
   document.addEventListener('mousemove', e => {
        if (cursorRef.current == null)
             return;
-       cursorRef.current.setAttribute("style", "top: " + (e.pageY) + "px; left: " + (e.pageX) + "px;")
+       cursorRef.current.setAttribute("style", "top: " + (e.pageY) + "px; left: " + (e.clientX) + "px;")
+  })
+  document.addEventListener('scroll', e => {
+     if (cursorRef.current == null)
+     return;
+     cursorRef.current.setAttribute("style", "top: " + (e.pageY) + "px; left: " + (e.clientX) + "px;")
   })
   document.addEventListener('click', () => {
   if (cursorRef.current == null)
@@ -25,8 +30,8 @@ export default function CustomCursor() {
   return (
     <Cursor ref={cursorRef}>
       <svg
-        width={16}
-        height={18}
+        width={width}
+        height={height}
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >

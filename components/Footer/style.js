@@ -22,13 +22,13 @@ export const SubWrapper = styled(Wrapper)`
   margi-bottom: 0;
 `;
 export const Title = styled.h3`
-  font-size: clamp(42px, 11.25vw, 220px);
+  font-size: clamp(42px, 11.15vw, 220px);
   font-family: ${({ theme }) => theme.fonts.serif};
   color: ${({ theme }) => theme.colors.grey1};
   font-weight: 400;
   text-align: center;
   margin: 2.5rem 0;
-  margin-left: ${({ theme }) => theme.margin.medium};
+  // margin-left: ${({ theme }) => theme.margin.medium};
   letter-spacing: clamp(1px, 0.25vw, 3px);
 
   ${mediaMax.xl} {
@@ -107,6 +107,7 @@ export const Content = styled(Text)`
 `;
 export const TitleContainer = styled.div`
   position: relative;
+  margin: 0px 20px;
 `;
 
 export const ButtonContainer = styled.div`
