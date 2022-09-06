@@ -9,10 +9,12 @@ export default function Layout({
   children,
   reducedFooter = false,
   noFooter = true,
+  cursorWidth = 16,
+  cursorHeight = 18
 }) {
   return (
     <App>
-      <CustomCursor/>
+      <CustomCursor width={cursorWidth} height={cursorHeight}/>
       <Header />
       {children}
       {!noFooter ? null : reducedFooter ? <FooterReduced /> : <Footer />}

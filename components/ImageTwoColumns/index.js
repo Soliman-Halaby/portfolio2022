@@ -3,16 +3,16 @@ import React, { useState, useRef } from "react";
 import { Wrapper, Container, Image } from './style'
 
 const ImageTwoColumns = ({
-    src='/cc',
-    src2='/cc'
+    src,
+    src2
 }) => {
   return (
       <Wrapper>
         <Container>
-            <Image src={src}></Image>
+            <Image alt='Project Image' src={src}></Image>
         </Container>
         <Container>
-            <Image src={src2}></Image>
+            <Image alt='Project Image' src={src2}></Image>
         </Container>
       </Wrapper>
   );
