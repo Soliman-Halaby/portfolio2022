@@ -12,16 +12,24 @@ export const Wrapper = styled.div`
 `;
 
 export const Nav = styled.div`
-margin: ${({ theme }) => theme.margin.medium};
+  margin: ${({ theme }) => theme.margin.medium};
   display: flex;
   //   gap: 2rem;
   justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 1rem;
+  ${mediaMax.xs} {
+    flex-direction: column;
+  }
 `;
 
 export const NavElement = styled.div`
   display: flex;
   align-items: center;
   gap: 1.5rem;
+  ${mediaMax.xs} {
+    flex-direction: column;
+  }
 `;
 
 export const Element = styled.div`
