@@ -13,6 +13,7 @@ import {
   Image,
   TagWrapper,
   TagContainer,
+  TagRow,
   Text,
   Content,
   TagSubContainer,
@@ -43,10 +44,12 @@ const HeroProject = ({
               })}
             </TagSubContainer>
             <TagSubContainer>
+              <TagRow>
               <Text>{content}</Text>
               {tags.map((data, i) => {
                 return <Tag index={i} key={i} label={data} />;
               })}
+              </TagRow>
               <Button
                 className="project-visit-cta"
                 to={to}

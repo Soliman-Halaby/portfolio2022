@@ -25,6 +25,10 @@ export const Container = styled.div`
   display: flex;
   flex-direction: row;
   gap: 15vw;
+
+  ${mediaMax.xs}{
+    width: auto;
+  }
 `;
 
 export const Title = styled.h2`

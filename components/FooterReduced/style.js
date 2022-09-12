@@ -9,6 +9,10 @@ export const Wrapper = styled.div`
   // height: 50px;
   position: relative;
   margin-top: 300px;
+
+  ${mediaMax.xs}{
+    // display: none;
+  }
 `;
 
 export const Nav = styled.div`
@@ -16,9 +20,8 @@ export const Nav = styled.div`
   display: flex;
   //   gap: 2rem;
   justify-content: space-between;
-  flex-wrap: wrap;
-  row-gap: 1rem;
-  ${mediaMax.xs} {
+
+  ${mediaMax.xs}{
     flex-direction: column;
   }
 `;
@@ -27,9 +30,20 @@ export const NavElement = styled.div`
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  ${mediaMax.xs} {
+  // background: lightblue;
+  // border-top: 1px solid red;
+  
+  ${mediaMax.xs}{
+    padding: 1rem 0px;
+    border-top: 1px solid ${({ theme }) => theme.colors.grey1};
     flex-direction: column;
+    align-items: flex-start;
+
+    &.mobile-hide{
+      display: none;
+    }
   }
+
 `;
 
 export const Element = styled.div`
@@ -37,6 +51,21 @@ export const Element = styled.div`
   align-items: center;
   position: relative;
   gap: 0.5rem;
+
+  
+  .desktop-hide{
+    display: none;
+  }
+
+  ${mediaMax.xs}{
+    &.with-arrow{
+      width: 100%;
+      justify-content: space-between;
+    }
+    .desktop-hide{
+      display: flex;
+      align-self: flex-end;
+    }
 `;
 
 export const Text = styled.p`
@@ -49,4 +78,7 @@ export const Text = styled.p`
 
 export const Image = styled.img`
   cursor: pointer;
+
+
+  }
 `;

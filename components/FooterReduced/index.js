@@ -44,15 +44,32 @@ const Footer = () => {
     <Wrapper>
       <Nav>
         <NavElement>
-          <Text>
-            Soliman Al Halaby©
-            <br />
-            All rights reserved
-          </Text>
+          <Element className="with-arrow">
+            <Text>
+              Soliman Al Halaby©
+              <br />
+              All rights reserved
+            </Text>
+            <svg
+              width={24}
+              height={24}
+              fill="none"
+              className='desktop-hide'
+              xmlns="http://www.w3.org/2000/svg"
+              onClick={scrollToTop}
+            >
+              <path
+                d="M12 0c0 6.279-5.373 11.368-12 11.368M12 0c0 6.279 5.373 11.368 12 11.368M12 0v24"
+                stroke="#1E1E1E"
+              />
+            </svg>
+          </Element>
         </NavElement>
         <NavElement>
-          <Text>Designed by</Text>
-          <Button rounded target='_blank' to='/ines' label="ines richard" />
+          <Element>
+            <Text>Designed by</Text>
+            <Button rounded target='_blank' to='/ines' label="ines richard" />
+          </Element>
         </NavElement>
         <NavElement>
           <Element onClick={copyToClipboard}>
@@ -77,7 +94,7 @@ const Footer = () => {
             <CircularButton to="/" label="CV" />
           </Element>
         </NavElement>
-        <NavElement>
+        <NavElement className='mobile-hide'>
           <Image onClick={scrollToTop} src="/arrow-up.svg" />
         </NavElement>
       </Nav>

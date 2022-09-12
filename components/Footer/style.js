@@ -37,10 +37,10 @@ export const Title = styled.h3`
   ${mediaMax.md} {
     font-size: 10vw;
     text-align: start;
-    margin-left: ${({ theme }) => theme.margin.small};
+    // margin-left: ${({ theme }) => theme.margin.small};
   }
   ${mediaMax.xs} {
-    font-size: 41px;
+    font-size: 40px;
     letter-spacing: 1px;
   }
 `;

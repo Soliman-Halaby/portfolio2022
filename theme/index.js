@@ -19,7 +19,7 @@ export const fonts = {
 
 export const fontSizes = {
   title: {
-    small: '48px',
+    small: '44px',
     large: '72px'
   },
 }

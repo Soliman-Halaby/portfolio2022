@@ -56,6 +56,12 @@ export const TagContainer = styled.div`
   flex-direction: column;
 `;
 
+export const TagRow = styled.div`
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+`
+
 export const TagSubContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -64,6 +70,16 @@ export const TagSubContainer = styled.div`
 
   .project-visit-cta {
     margin-left: 4rem;
+  }
+
+  ${mediaMax.xs}{
+    &:nth-of-type(2){
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .project-visit-cta {
+      margin-left: 0;
+    }
   }
 `;
 
@@ -80,4 +96,10 @@ export const Content = styled.p`
 
   align-self: flex-end;
 `;
-export const Image = styled.img``;
+export const Image = styled.img`
+
+  ${mediaMax.xs}{
+    height: 60vh;
+    object-fit: cover;
+  }
+`;
