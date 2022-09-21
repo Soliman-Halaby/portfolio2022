@@ -7,8 +7,12 @@ import CircularButton from "@/components/Buttons/CircularButton";
 import Pin from "@/components/Popup/Pin";
 import { Wrapper, Nav, NavElement, Text, Element, Image } from "./style.js";
 
+import useIsMobile from 'hook'
+
 const Footer = () => {
   const [activeMessage, setActiveMessage] = useState(false);
+  const isMobile = useIsMobile()
+
 
   const copyToClipboard = (_) => {
     setActiveMessage(true);
@@ -50,19 +54,21 @@ const Footer = () => {
               <br />
               All rights reserved
             </Text>
-            <svg
-              width={24}
-              height={24}
-              fill="none"
-              className='desktop-hide'
-              xmlns="http://www.w3.org/2000/svg"
-              onClick={scrollToTop}
-            >
-              <path
-                d="M12 0c0 6.279-5.373 11.368-12 11.368M12 0c0 6.279 5.373 11.368 12 11.368M12 0v24"
-                stroke="#1E1E1E"
-              />
-            </svg>
+            {isMobile && (
+              <svg
+                width={24}
+                height={24}
+                fill="none"
+                className='desktop-hide'
+                xmlns="http://www.w3.org/2000/svg"
+                onClick={scrollToTop}
+              >
+                <path
+                  d="M12 0c0 6.279-5.373 11.368-12 11.368M12 0c0 6.279 5.373 11.368 12 11.368M12 0v24"
+                  stroke="#1E1E1E"
+                />
+              </svg>
+            )}
           </Element>
         </NavElement>
         <NavElement>
@@ -94,9 +100,11 @@ const Footer = () => {
             <CircularButton to="/" label="CV" />
           </Element>
         </NavElement>
-        <NavElement className='mobile-hide'>
-          <Image onClick={scrollToTop} src="/arrow-up.svg" />
-        </NavElement>
+        {!isMobile && (
+          <NavElement>
+            <Image onClick={scrollToTop} src="/arrow-up.svg" />
+          </NavElement>
+        )}
       </Nav>
     </Wrapper>
   );

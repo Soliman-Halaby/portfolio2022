@@ -52,19 +52,12 @@ export const Element = styled.div`
   position: relative;
   gap: 0.5rem;
 
-  
-  .desktop-hide{
-    display: none;
-  }
+
 
   ${mediaMax.xs}{
     &.with-arrow{
       width: 100%;
       justify-content: space-between;
-    }
-    .desktop-hide{
-      display: flex;
-      align-self: flex-end;
     }
 `;
 
