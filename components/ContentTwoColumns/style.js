@@ -11,6 +11,11 @@ export const Wrapper = styled.div`
   margin: ${({ theme }) => theme.margin.medium};
   margin-top: 12rem;
   margin-bottom: 5rem;
+
+  ${mediaMax.xs}{
+    margin-top: 6rem;
+    margin-bottom: 2rem;
+  }
 `;
 
 export const Number = styled.p`
@@ -28,6 +33,8 @@ export const Container = styled.div`
 
   ${mediaMax.xs}{
     width: auto;
+    flex-direction: column;
+    gap: 2rem;
   }
 `;
 
@@ -58,6 +65,9 @@ export const ContentWrapper = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   gap: 4rem;
+  ${mediaMax.xs}{
+    gap: 1.5rem;
+  }
 `;
 
 export const Content = styled.p`

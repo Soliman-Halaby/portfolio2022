@@ -46,6 +46,7 @@ export const TagWrapper = styled.div`
   ${mediaMax.md} {
     flex-direction: column;
     gap: 2rem;
+    padding-right: 0;
   }
 `;
 
@@ -54,6 +55,10 @@ export const TagContainer = styled.div`
   gap: 1rem;
   justify-content: flex-end;
   flex-direction: column;
+
+  ${mediaMax.xs}{
+    justify-content: flex-start;
+  }
 `;
 
 export const TagRow = styled.div`
@@ -74,8 +79,7 @@ export const TagSubContainer = styled.div`
 
   ${mediaMax.xs}{
     &:nth-of-type(2){
-      flex-direction: column;
-      align-items: flex-start;
+      flex-direction: row;
     }
     .project-visit-cta {
       margin-left: 0;
@@ -95,6 +99,9 @@ export const Content = styled.p`
   ${Paragraph()}
 
   align-self: flex-end;
+  ${mediaMax.xs}{
+    align-self: flex-start;
+  }
 `;
 export const Image = styled.img`
 
