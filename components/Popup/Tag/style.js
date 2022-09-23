@@ -19,7 +19,7 @@ export const TagStyle = styled.p`
   font-weight: 300;
   margin: 0;
 
-  &:nth-child(2) {
+  &:nth-of-type(2) {
     border-radius: 33px;
   }
 `;

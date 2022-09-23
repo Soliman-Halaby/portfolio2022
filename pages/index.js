@@ -1,5 +1,4 @@
 import Layout from "../layout/Default";
-
 import { useState, useRef, useEffect } from "react";
 import Loader from "@/components/Loader";
 
@@ -12,6 +11,7 @@ export default function Home() {
   const [loader, setLoader] = useState(true);
 
   const [timer, setTimer] = useState(3);
+
 
   const id = useRef(null);
   const clear = () => {
@@ -31,7 +31,6 @@ export default function Home() {
     }
   }, [timer]);
 
-
   return (
     <Layout>
       {/* <Loader/> */}
@@ -43,14 +42,14 @@ export default function Home() {
       ) : (
         <Hero title={`Soliman Al Halaby, \ncreative developer`} subtitle={`Looking for an \ninternship`} sectionTitle={`Based in paris, \nfrom cairo`} image="/home-hero-image.png" label="Contact me" />
         )} */}
-        <Hero 
-          title={`Soliman Al Halaby, \ncreative developer`} 
-          subtitle={`Looking for an \ninternship`} 
-          sectionTitle={`Based in paris, \nfrom cairo`} 
-          image="/home-hero-image.png" 
-          label="Contact me" 
-        />
-        <ProjectWork/>
+      <Hero
+        title={`Soliman Al Halaby, \ncreative developer`}
+        subtitle={`Looking for an \ninternship`}
+        sectionTitle={`Based in paris, \nfrom cairo`}
+        image="/home-hero-image.png"
+        label="Contact me"
+      />
+      <ProjectWork />
     </Layout>
   );
 }

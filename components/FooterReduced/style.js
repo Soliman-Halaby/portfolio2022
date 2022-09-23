@@ -8,20 +8,42 @@ export const Wrapper = styled.div`
   // background: pink;
   // height: 50px;
   position: relative;
-  margin-top: 300px;
+  margin-top: 10rem;
+
+  ${mediaMax.xs}{
+    // display: none;
+  }
 `;
 
 export const Nav = styled.div`
-margin: ${({ theme }) => theme.margin.medium};
+  margin: ${({ theme }) => theme.margin.medium};
   display: flex;
   //   gap: 2rem;
   justify-content: space-between;
+
+  ${mediaMax.xs}{
+    flex-direction: column;
+  }
 `;
 
 export const NavElement = styled.div`
   display: flex;
   align-items: center;
   gap: 1.5rem;
+  // background: lightblue;
+  // border-top: 1px solid red;
+  
+  ${mediaMax.xs}{
+    padding: 1rem 0px;
+    border-top: 1px solid ${({ theme }) => theme.colors.grey1};
+    flex-direction: column;
+    align-items: flex-start;
+
+    &.mobile-hide{
+      display: none;
+    }
+  }
+
 `;
 
 export const Element = styled.div`
@@ -29,6 +51,14 @@ export const Element = styled.div`
   align-items: center;
   position: relative;
   gap: 0.5rem;
+
+
+
+  ${mediaMax.xs}{
+    &.with-arrow{
+      width: 100%;
+      justify-content: space-between;
+    }
 `;
 
 export const Text = styled.p`
@@ -41,4 +71,7 @@ export const Text = styled.p`
 
 export const Image = styled.img`
   cursor: pointer;
+
+
+  }
 `;

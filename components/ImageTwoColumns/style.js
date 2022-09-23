@@ -7,6 +7,10 @@ export const Wrapper = styled.div`
     width: 100%;
     display: flex;
     gap: 0rem;
+    ${mediaMax.xs}{
+        flex-direction: column;
+        gap: 2rem;
+    }
 `
 export const Container = styled.div`
     width: 50%;
@@ -15,6 +19,10 @@ export const Container = styled.div`
     justify-content: center;
     padding: 8vw 2.5vw;
     margin: 0rem 20px;
+    ${mediaMax.xs}{
+        width: auto !important;
+        padding: 8rem 1rem;
+    }
 `
 
 export const Image = styled.img`

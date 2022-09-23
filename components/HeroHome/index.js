@@ -3,15 +3,21 @@ import React, { useState, useRef, useEffect } from "react";
 import TitleSection from "@/components/Popup/SectionTitle";
 
 import Pin from "@/components/Popup/Pin";
-import gsap from "gsap";
+// import gsap from "gsap";
 
-import { Wrapper, Container, Title, TitleContainer, Image, Text } from "./style.js";
+import {
+  Wrapper,
+  Container,
+  Title,
+  TitleContainer,
+  Image,
+  Text,
+} from "./style.js";
 
-const HeroHome = ({ title, subtitle, sectionTitle,label, image }) => {
+const HeroHome = ({ title, subtitle, sectionTitle, label, image }) => {
   const scrollToBottom = () => {
     window.scrollTo(0, document.body.scrollHeight);
   };
-
 
   return (
     <Wrapper data-scroll-section>
@@ -21,9 +27,7 @@ const HeroHome = ({ title, subtitle, sectionTitle,label, image }) => {
         title={sectionTitle}
       />
       <Container>
-        <Title>
-          {title}
-        </Title>
+        <Title>{title}</Title>
         <Title alignRight>
           {subtitle}
           <Pin
@@ -48,10 +52,7 @@ const HeroHome = ({ title, subtitle, sectionTitle,label, image }) => {
             />
           </svg>
         </Text>
-            <Image           
-              src={image}
-              alt='Image alt'
-            />
+        <Image src={image} alt="Image alt" />
       </Container>
     </Wrapper>
   );

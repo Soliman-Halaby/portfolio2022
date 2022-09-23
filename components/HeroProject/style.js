@@ -46,6 +46,7 @@ export const TagWrapper = styled.div`
   ${mediaMax.md} {
     flex-direction: column;
     gap: 2rem;
+    padding-right: 0;
   }
 `;
 
@@ -54,7 +55,17 @@ export const TagContainer = styled.div`
   gap: 1rem;
   justify-content: flex-end;
   flex-direction: column;
+
+  ${mediaMax.xs}{
+    justify-content: flex-start;
+  }
 `;
+
+export const TagRow = styled.div`
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+`
 
 export const TagSubContainer = styled.div`
   display: flex;
@@ -64,6 +75,15 @@ export const TagSubContainer = styled.div`
 
   .project-visit-cta {
     margin-left: 4rem;
+  }
+
+  ${mediaMax.xs}{
+    &:nth-of-type(2){
+      flex-direction: row;
+    }
+    .project-visit-cta {
+      margin-left: 0;
+    }
   }
 `;
 
@@ -79,5 +99,14 @@ export const Content = styled.p`
   ${Paragraph()}
 
   align-self: flex-end;
+  ${mediaMax.xs}{
+    align-self: flex-start;
+  }
 `;
-export const Image = styled.img``;
+export const Image = styled.img`
+
+  ${mediaMax.xs}{
+    height: 60vh;
+    object-fit: cover;
+  }
+`;

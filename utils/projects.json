@@ -26,7 +26,15 @@
       "left": "/project-img-2.png",
       "right": "/project-img-3.png",
       "fullwidth2": "/project-img-1.png"
-    }
+    },
+    "image": [
+      "/project-display.png",
+      "/moviereact-image.png",
+      "/project-img-1.png",
+      "/project-img-2.png",
+      "/project-img-3.png",
+      "/project-img-1.png"
+    ]
   },
   {
     "slug": "selfer",
@@ -55,7 +63,15 @@
       "left": "/project-img-2.png",
       "right": "/project-img-3.png",
       "fullwidth2": "/project-img-1.png"
-    }
+    },
+    "image": [
+      "/project-display.png",
+      "/moviereact-image.png",
+      "/project-img-1.png",
+      "/project-img-2.png",
+      "/project-img-3.png",
+      "/project-img-1.png"
+    ]
   },
   {
     "slug": "test",
@@ -84,6 +100,14 @@
       "left": "/project-img-2.png",
       "right": "/project-img-3.png",
       "fullwidth2": "/project-img-1.png"
-    }
+    },
+    "image": [
+      "/project-display.png",
+      "/moviereact-image.png",
+      "/project-img-1.png",
+      "/project-img-2.png",
+      "/project-img-3.png",
+      "/project-img-1.png"
+    ]
   }
 ]

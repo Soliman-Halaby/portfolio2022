@@ -25,6 +25,10 @@ export const TitleContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 4rem;
+
+  ${mediaMax.xs}{
+    gap: 2rem;
+  }
 `;
 export const Title = styled.h2`
   ${TitleSection()}
