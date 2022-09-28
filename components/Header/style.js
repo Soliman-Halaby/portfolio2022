@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { css } from "@emotion/react";
+import Link from "next/link";
 
 import { mediaMax, title } from "styles/mixins";
 
@@ -43,12 +44,13 @@ export const MainLink = styled.span`
 
     &:hover {
       &:after {
-        width: 100%;
+        width: ${({ noAnim }) => (noAnim ? "0%" : "100%")};
       }
     }
   }
 `;
 
+export const NavLink = styled(Link)``;
 export const Nav = styled.nav`
   display: flex;
   justify-content: space-between;

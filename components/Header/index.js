@@ -1,41 +1,47 @@
 import React, { useState } from "react";
 
-import Link from "next/link";
+// import Link from "next/link";
 
+import useIsMobile from "hook";
 
-import useIsMobile from 'hook'
-
-import { Logo, Nav, MainLink, NavItem } from "./style.js";
+import { Logo, Nav, MainLink, NavItem, NavLink } from "./style.js";
 const Header = () => {
-  const isMobile = useIsMobile()
+  const isMobile = useIsMobile();
   return (
     <Nav>
-      <MainLink>
-        {!isMobile ? <Link href="/">Soliman Al Halaby</Link> :
-        <Link href="/">S. Al Halaby</Link>}
+      <MainLink noAnim>
+        {!isMobile ? (
+          <NavLink noAnim href="/">
+            Soliman Al Halaby
+          </NavLink>
+        ) : (
+          <NavLink noAnim href="/">
+            S. Al Halaby
+          </NavLink>
+        )}
       </MainLink>
-      <Link href="/">
+      <NavLink href="/">
         <Logo src="/Logo.svg"></Logo>
-      </Link>
-      {isMobile ? 
+      </NavLink>
+      {isMobile ? (
         <NavItem>
           <MainLink>
-            <Link href="/">Menu</Link>
-          </MainLink>
-        </NavItem> 
-      :
-        <NavItem>
-          <MainLink>
-            <Link href="/">About</Link>
-          </MainLink>
-          <MainLink>
-            <Link href="/project/moviereact">Work</Link>
-          </MainLink>
-          <MainLink>
-            <Link href="/contact">Contact</Link>
+            <NavLink href="/">Menu</NavLink>
           </MainLink>
         </NavItem>
-      }
+      ) : (
+        <NavItem>
+          <MainLink>
+            <NavLink href="/">About</NavLink>
+          </MainLink>
+          <MainLink>
+            <NavLink href="/project/moviereact">Work</NavLink>
+          </MainLink>
+          <MainLink>
+            <NavLink href="/contact">Contact</NavLink>
+          </MainLink>
+        </NavItem>
+      )}
     </Nav>
   );
 };
