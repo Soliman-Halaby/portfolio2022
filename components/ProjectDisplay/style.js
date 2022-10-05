@@ -5,15 +5,23 @@ import Button from "@/components/Buttons/Button/style"
 import { mediaMax, TitleSection } from "styles/mixins";
 
 export const Wrapper = styled.div`
-    position: absolute;
+    /* position: absolute;
     top: ${({top}) => top};
-    width: auto;
-    left: ${({left}) => left};
+    left: ${({left}) => left}; */
+    width: 100%;
     z-index: 999;
-    margin-left: 20px;
-    margin-right: 20px;
+    /* margin-left: 20px;
+    margin-right: 20px; */
+    grid-column: ${({col}) => col};
+    grid-row: ${({row}) => row};
     display: flex;
     flex-direction: column;
+
+    :nth-of-type(3){
+        /* background-color: pink; */
+        /* grid-column: 4; */
+        /* grid-row: 2; */
+    }
 `
 
 export const ProjectContainer = styled.div`
@@ -37,13 +45,13 @@ export const Container = styled.div`
 export const Image = styled.img`
     width: 100%;
     max-height: 154px;
-    max-width: 106px;
+    /* max-width: 106px; */
     object-fit: cover;
 `
 
 export const RowWrapper = styled.div`
     display: flex;
-    max-width: 106px;
+    /* max-width: 106px; */
     margin-top: .75rem;
     gap: .5rem;
 `

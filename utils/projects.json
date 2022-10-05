@@ -1,6 +1,8 @@
 [
   {
     "slug": "moviereact",
+    "colPos": "1",
+    "rowPos": "1",
     "link": "https://www.google.com/",
     "title": "moviereact",
     "info": ["Front-end developer", "03/03/2018"],
@@ -38,6 +40,8 @@
   },
   {
     "slug": "selfer",
+    "colPos": "2",
+    "rowPos": "1",
     "link": "https://www.google.com/",
     "title": "selfer",
     "info": ["Front-end developer", "03/03/2018"],
@@ -75,6 +79,8 @@
   },
   {
     "slug": "test",
+    "colPos": "4",
+    "rowPos": "2",
     "link": "https://www.google.com/",
     "title": "test",
     "info": ["Front-end developer", "03/03/2018"],

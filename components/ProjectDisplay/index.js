@@ -11,12 +11,12 @@ import {
 } from "./style";
 
 const ProjectDisplay = ({
-  top = "",
-  left = "",
-  title = "",
-  to = "",
+  col,
+  row,
+  title,
+  to,
   image = [],
-  index = "",
+  index,
 }) => {
   const [learnMoreCta, setLearnMoreCta] = useState(false);
   const router = useRouter();
@@ -41,8 +41,8 @@ const ProjectDisplay = ({
   return (
     <Wrapper
       onClick={() => router.push(`/project/${to}`)}
-      top={top}
-      left={left}
+      col={col}
+      row={row}
     >
       <ProjectContainer onMouseOver={updateDisplay} onMouseOut={resetDisplay}>
         {learnMoreCta && (

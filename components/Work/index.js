@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 
-import { Wrapper, Container, Title } from "./style";
+import { Wrapper, Container, Title, ContainerGrid} from "./style";
 
 import ProjectDisplay from "@/components/ProjectDisplay";
 import ProjectsData from "/utils/projects.json";
@@ -11,12 +11,14 @@ const ProjectWork = ({}) => {
     title: data.title,
     images: data.images,
     image: data.image,
+    col: data.colPos,
+    row: data.rowPos
   }));
   return (
     <Wrapper>
       <Container>
         <Title>Selected work</Title>
-        {data.map((data, i) => {
+        {/* {data.map((data, i) => {
           return (
             <ProjectDisplay
               to={data.slug}
@@ -28,7 +30,24 @@ const ProjectWork = ({}) => {
               image={data.image}
             />
           );
+        })} */}
+        <ContainerGrid>
+        {data.map((data, i) => {
+          console.log(data)
+          return (
+            <ProjectDisplay
+              to={data.slug}
+              index={i}
+              key={i}
+              col={data.col}
+              row={data.row}
+              title={data.title}
+              image={data.image}
+            />
+          );
         })}
+
+        </ContainerGrid>
       </Container>
     </Wrapper>
   );
