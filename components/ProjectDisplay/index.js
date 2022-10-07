@@ -10,46 +10,47 @@ import {
   Title,
 } from "./style";
 
-const ProjectDisplay = ({ top, left, title, to, image, index }) => {
+const ProjectDisplay = ({ col, row, title, to, image = [], index }) => {
   const [learnMoreCta, setLearnMoreCta] = useState(false);
   const router = useRouter();
 
-  // const displayCta = (to) => {
-  //   router.push(`/${to}`)
-  // }
+  const buttonRef = useRef(null);
+  const timerRef = useRef();
+  const [count, setCount] = useState(0);
 
-  const [imageArray, setImageArray] = useState(image);
+  const updateDisplay = () => {
+    setLearnMoreCta(true);
+    timerRef.current = setInterval(() => {
+      setCount((count) => count + 1);
+    }, 600);
+  };
 
-  useEffect(() => {
-    setImageArray(image);
-  }, []);
-  console.log("array", imageArray);
+  const resetDisplay = () => {
+    setLearnMoreCta(false);
+    clearInterval(timerRef.current);
+    setCount(0);
+  };
 
   return (
-    <Wrapper
-      onClick={() => router.push(`/project/${to}`)}
-      top={top}
-      left={left}
-    >
-      <ProjectContainer
-        onMouseOver={() => setLearnMoreCta(true)}
-        onMouseLeave={() => setLearnMoreCta(false)}
-      >
+    <Wrapper onClick={() => router.push(`/project/${to}`)} col={col} row={row}>
+      <ProjectContainer onMouseOver={updateDisplay} onMouseOut={resetDisplay}>
         {learnMoreCta && (
           <Button
             className="learn-more-cta"
             to="/cc"
             colored
+            innerRef={buttonRef}
             label="Learn more"
             withArrow
           />
-          // </Button>
         )}
-        {imageArray && <Image src={imageArray[0]} />}
-        <RowWrapper>
-          <Number>0{index + 1}</Number>
-          <Title>{title}</Title>
-        </RowWrapper>
+        {image && <Image src={image[count % image.length]} />}
+        {title && (
+          <RowWrapper>
+            <Number>0{index + 1}</Number>
+            <Title>{title}</Title>
+          </RowWrapper>
+        )}
       </ProjectContainer>
     </Wrapper>
   );

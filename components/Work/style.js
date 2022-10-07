@@ -4,25 +4,34 @@ import { css } from "@emotion/react";
 import { mediaMax, TitleSection } from "styles/mixins";
 
 export const Wrapper = styled.div`
-    width: 100%;
-    // margin: 15vw 0px;
-    display: flex;
-    gap: 0rem;
-    position: relative;
-    // background: pink;
-    height: 50vh;
-    margin-bottom: 10rem;
-    align-items: flex-end;
-`
+  width: 100vw;
+  padding: 0px 20px;
+  display: flex;
+  gap: 0rem;
+  margin: 10rem 0;
+  position: relative;
+  height: 100%;
+  margin-bottom: 10rem;
+  align-items: flex-end;
+`;
 
 export const Container = styled.div`
-    margin: 0px 20px;
-`
+  width: 100%;
+`;
 
 export const Title = styled.h2`
+  ${TitleSection()}
+  font-size: clamp(42px, 11.15vw, 168px);
+  margin-bottom: 5rem;
+  position: absolute;
+  bottom: 0;
+`;
 
-    ${TitleSection()}
-    font-size: clamp(42px, 11.15vw, 168px);
-    margin-bottom: 5rem;
-`
-
+export const ContainerGrid = styled.div`
+  width: 100%;
+  display: grid;
+  grid-gap: 1rem;
+  row-gap: 4rem;
+  grid-template-columns: repeat(auto-fill, minmax(106px, 1fr));
+  grid-template-rows: 1fr 1fr;
+`;

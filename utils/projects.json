@@ -1,6 +1,8 @@
 [
   {
     "slug": "moviereact",
+    "colPos": "1",
+    "rowPos": "1",
     "link": "https://www.google.com/",
     "title": "moviereact",
     "info": ["Front-end developer", "03/03/2018"],
@@ -38,6 +40,8 @@
   },
   {
     "slug": "selfer",
+    "colPos": "2",
+    "rowPos": "1",
     "link": "https://www.google.com/",
     "title": "selfer",
     "info": ["Front-end developer", "03/03/2018"],
@@ -75,6 +79,8 @@
   },
   {
     "slug": "test",
+    "colPos": "4",
+    "rowPos": "2",
     "link": "https://www.google.com/",
     "title": "test",
     "info": ["Front-end developer", "03/03/2018"],
@@ -101,13 +107,134 @@
       "right": "/project-img-3.png",
       "fullwidth2": "/project-img-1.png"
     },
-    "image": [
-      "/project-display.png",
-      "/moviereact-image.png",
-      "/project-img-1.png",
-      "/project-img-2.png",
-      "/project-img-3.png",
-      "/project-img-1.png"
-    ]
+    "image": ["/project-display.png", "/moviereact-image.png"]
+  },
+  {
+    "slug": "test",
+    "colPos": "6",
+    "rowPos": "1",
+    "link": "https://www.google.com/",
+    "title": "test",
+    "info": ["Front-end developer", "03/03/2018"],
+    "description": "A React app that allows users to search for movies and view details about them.",
+    "techno": ["PHP", "Vanilla JS"],
+    "content1": {
+      "title": "Titre de la section",
+      "subtitle": "Sous-titre de la section",
+      "label": "Hire me",
+      "text1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+      "text2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+    },
+    "content2": {
+      "title": "Titre de la section",
+      "subtitle": "Sous-titre de la section",
+      "label": "Hire me",
+      "text1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+      "text2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+    },
+    "images": {
+      "hero": "/moviereact-image.png",
+      "fullwidth": "/project-img-1.png",
+      "left": "/project-img-2.png",
+      "right": "/project-img-3.png",
+      "fullwidth2": "/project-img-1.png"
+    },
+    "image": ["/project-display.png", "/moviereact-image.png"]
+  },
+  {
+    "slug": "test",
+    "colPos": "8",
+    "rowPos": "1",
+    "link": "https://www.google.com/",
+    "title": "test",
+    "info": ["Front-end developer", "03/03/2018"],
+    "description": "A React app that allows users to search for movies and view details about them.",
+    "techno": ["PHP", "Vanilla JS"],
+    "content1": {
+      "title": "Titre de la section",
+      "subtitle": "Sous-titre de la section",
+      "label": "Hire me",
+      "text1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+      "text2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+    },
+    "content2": {
+      "title": "Titre de la section",
+      "subtitle": "Sous-titre de la section",
+      "label": "Hire me",
+      "text1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+      "text2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+    },
+    "images": {
+      "hero": "/moviereact-image.png",
+      "fullwidth": "/project-img-1.png",
+      "left": "/project-img-2.png",
+      "right": "/project-img-3.png",
+      "fullwidth2": "/project-img-1.png"
+    },
+    "image": ["/project-display.png", "/moviereact-image.png"]
+  },
+  {
+    "slug": "test",
+    "colPos": "10",
+    "rowPos": "2",
+    "link": "https://www.google.com/",
+    "title": "test",
+    "info": ["Front-end developer", "03/03/2018"],
+    "description": "A React app that allows users to search for movies and view details about them.",
+    "techno": ["PHP", "Vanilla JS"],
+    "content1": {
+      "title": "Titre de la section",
+      "subtitle": "Sous-titre de la section",
+      "label": "Hire me",
+      "text1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+      "text2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+    },
+    "content2": {
+      "title": "Titre de la section",
+      "subtitle": "Sous-titre de la section",
+      "label": "Hire me",
+      "text1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+      "text2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+    },
+    "images": {
+      "hero": "/moviereact-image.png",
+      "fullwidth": "/project-img-1.png",
+      "left": "/project-img-2.png",
+      "right": "/project-img-3.png",
+      "fullwidth2": "/project-img-1.png"
+    },
+    "image": ["/project-display.png", "/moviereact-image.png"]
+  },
+  {
+    "slug": "test",
+    "colPos": "11",
+    "rowPos": "2",
+    "link": "https://www.google.com/",
+    "title": "test",
+    "info": ["Front-end developer", "03/03/2018"],
+    "description": "A React app that allows users to search for movies and view details about them.",
+    "techno": ["PHP", "Vanilla JS"],
+    "content1": {
+      "title": "Titre de la section",
+      "subtitle": "Sous-titre de la section",
+      "label": "Hire me",
+      "text1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+      "text2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+    },
+    "content2": {
+      "title": "Titre de la section",
+      "subtitle": "Sous-titre de la section",
+      "label": "Hire me",
+      "text1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+      "text2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+    },
+    "images": {
+      "hero": "/moviereact-image.png",
+      "fullwidth": "/project-img-1.png",
+      "left": "/project-img-2.png",
+      "right": "/project-img-3.png",
+      "fullwidth2": "/project-img-1.png"
+    },
+    "image": ["/project-display.png", "/moviereact-image.png"]
   }
 ]
