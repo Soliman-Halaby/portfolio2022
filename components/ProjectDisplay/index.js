@@ -10,14 +10,7 @@ import {
   Title,
 } from "./style";
 
-const ProjectDisplay = ({
-  col,
-  row,
-  title,
-  to,
-  image = [],
-  index,
-}) => {
+const ProjectDisplay = ({ col, row, title, to, image = [], index }) => {
   const [learnMoreCta, setLearnMoreCta] = useState(false);
   const router = useRouter();
 
@@ -39,11 +32,7 @@ const ProjectDisplay = ({
   };
 
   return (
-    <Wrapper
-      onClick={() => router.push(`/project/${to}`)}
-      col={col}
-      row={row}
-    >
+    <Wrapper onClick={() => router.push(`/project/${to}`)} col={col} row={row}>
       <ProjectContainer onMouseOver={updateDisplay} onMouseOut={resetDisplay}>
         {learnMoreCta && (
           <Button
@@ -56,10 +45,12 @@ const ProjectDisplay = ({
           />
         )}
         {image && <Image src={image[count % image.length]} />}
-        <RowWrapper>
-          <Number>0{index + 1}</Number>
-          <Title>{title}</Title>
-        </RowWrapper>
+        {title && (
+          <RowWrapper>
+            <Number>0{index + 1}</Number>
+            <Title>{title}</Title>
+          </RowWrapper>
+        )}
       </ProjectContainer>
     </Wrapper>
   );
