@@ -69,7 +69,7 @@
       "fullwidth2": "/project-img-1.png"
     },
     "image": [
-      "/project-display.png",
+      "/selfer-image.png",
       "/moviereact-image.png",
       "/project-img-1.png",
       "/project-img-2.png",
@@ -107,7 +107,7 @@
       "right": "/project-img-3.png",
       "fullwidth2": "/project-img-1.png"
     },
-    "image": ["/project-display.png", "/moviereact-image.png"]
+    "image": ["/savoir-image.png", "/moviereact-image.png"]
   },
   {
     "slug": "test",
@@ -139,7 +139,7 @@
       "right": "/project-img-3.png",
       "fullwidth2": "/project-img-1.png"
     },
-    "image": ["/project-display.png", "/moviereact-image.png"]
+    "image": ["/gta-image.png", "/moviereact-image.png"]
   },
   {
     "slug": "test",
@@ -171,7 +171,7 @@
       "right": "/project-img-3.png",
       "fullwidth2": "/project-img-1.png"
     },
-    "image": ["/project-display.png", "/moviereact-image.png"]
+    "image": ["/ddalos-image.png", "/moviereact-image.png"]
   },
   {
     "slug": "test",
@@ -203,7 +203,7 @@
       "right": "/project-img-3.png",
       "fullwidth2": "/project-img-1.png"
     },
-    "image": ["/project-display.png", "/moviereact-image.png"]
+    "image": ["/canlinkme-image.png", "/moviereact-image.png"]
   },
   {
     "slug": "test",
@@ -235,6 +235,6 @@
       "right": "/project-img-3.png",
       "fullwidth2": "/project-img-1.png"
     },
-    "image": ["/project-display.png", "/moviereact-image.png"]
+    "image": ["moviereact-image.png", "/moviereact-image.png"]
   }
 ]
