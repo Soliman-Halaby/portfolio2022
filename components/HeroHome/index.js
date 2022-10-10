@@ -27,7 +27,7 @@ const HeroHome = ({ title, subtitle, sectionTitle, label, image }) => {
         title={sectionTitle}
       />
       <Container>
-        <Title>{title}</Title>
+        <Title dangerouslySetInnerHTML={{__html: title}}/>
         <Title alignRight>
           {subtitle}
           <Pin
