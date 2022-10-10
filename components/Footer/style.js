@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
   // background: pink;
   // height: 50px;
   position: relative;
-  margin: ${({ theme }) => theme.margin.medium};
+  /* margin: ${({ theme }) => theme.margin.medium}; */
   // margin-top: 300px;
   margin-bottom: 0;
   min-height: 97vh;
@@ -19,7 +19,7 @@ export const Wrapper = styled.div`
 
 export const SubWrapper = styled(Wrapper)`
   margin-right: 0;
-  margi-bottom: 0;
+  margin-bottom: 0;
 `;
 export const Title = styled.h3`
   font-size: clamp(42px, 11.15vw, 220px);
@@ -56,6 +56,7 @@ export const Container = styled.div`
 
 export const SubContainer = styled.div`
   width: 50%;
+  display: flex;
 
   ${mediaMax.md} {
     width: 100%;
