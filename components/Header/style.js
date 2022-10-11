@@ -51,8 +51,8 @@ export const MainLink = styled.span`
 `;
 
 export const NavLink = styled(Link)``;
+
 export const Nav = styled.nav`
-background: red;
   display: flex;
   justify-content: space-between;
   position: relative;
