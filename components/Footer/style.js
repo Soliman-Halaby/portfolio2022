@@ -115,7 +115,6 @@ export const ButtonContainer = styled.div`
   width: 100%;
   padding: 5px;
   max-width: 320px;
-  // background: red;
   display: flex;
   position: relative;
   gap: 0.5rem;

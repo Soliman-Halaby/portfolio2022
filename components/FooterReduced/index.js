@@ -7,12 +7,11 @@ import CircularButton from "@/components/Buttons/CircularButton";
 import Pin from "@/components/Popup/Pin";
 import { Wrapper, Nav, NavElement, Text, Element, Image } from "./style.js";
 
-import useIsMobile from 'hook'
+import useIsMobile from "hook";
 
 const Footer = () => {
   const [activeMessage, setActiveMessage] = useState(false);
-  const isMobile = useIsMobile()
-
+  const isMobile = useIsMobile();
 
   const copyToClipboard = (_) => {
     setActiveMessage(true);
@@ -45,7 +44,7 @@ const Footer = () => {
     },
   ];
   return (
-    <Wrapper>
+    <Wrapper data-scroll-section>
       <Nav>
         <NavElement>
           <Element className="with-arrow">
@@ -59,7 +58,7 @@ const Footer = () => {
                 width={24}
                 height={24}
                 fill="none"
-                className='desktop-hide'
+                className="desktop-hide"
                 xmlns="http://www.w3.org/2000/svg"
                 onClick={scrollToTop}
               >
@@ -74,7 +73,7 @@ const Footer = () => {
         <NavElement>
           <Element>
             <Text>Designed by</Text>
-            <Button rounded target='_blank' to='/ines' label="ines richard" />
+            <Button rounded target="_blank" to="/ines" label="ines richard" />
           </Element>
         </NavElement>
         <NavElement>
@@ -88,7 +87,13 @@ const Footer = () => {
           <Element>
             <Text>Find me on</Text>
             {socials.map((data, i) => (
-              <Button to={data.link} key={i} target={data.target} index={i + 1} label={data.label} />
+              <Button
+                to={data.link}
+                key={i}
+                target={data.target}
+                index={i + 1}
+                label={data.label}
+              />
             ))}
           </Element>
           <Element>

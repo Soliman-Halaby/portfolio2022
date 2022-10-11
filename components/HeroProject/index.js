@@ -31,7 +31,7 @@ const HeroProject = ({
 }) => {
   // console.log(tags);
   return (
-    <Wrapper>
+    <Wrapper data-scroll-section>
       <Container>
         <Title>{title}</Title>
         <TagWrapper>
@@ -45,10 +45,10 @@ const HeroProject = ({
             </TagSubContainer>
             <TagSubContainer>
               <TagRow>
-              <Text>{content}</Text>
-              {tags.map((data, i) => {
-                return <Tag index={i} key={i} label={data} />;
-              })}
+                <Text>{content}</Text>
+                {tags.map((data, i) => {
+                  return <Tag index={i} key={i} label={data} />;
+                })}
               </TagRow>
               <Button
                 className="project-visit-cta"

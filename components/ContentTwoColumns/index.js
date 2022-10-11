@@ -19,7 +19,7 @@ import {
 
 const ContentTwoColumns = ({ title, subtitle, text1, text2, label }) => {
   return (
-    <Wrapper>
+    <Wrapper data-scroll-section>
       <Container>
         <Number>01/</Number>
         <SubContainer>
