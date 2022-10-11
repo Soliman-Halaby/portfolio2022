@@ -13,12 +13,12 @@ export const Wrapper = styled.div`
   padding: ${({ theme }) => theme.margin.medium};
   margin-top: 150px;
 
-  ${mediaMax.xs}{
-    margin-top: 52px;
+  ${mediaMax.xs} {
+    padding-top: 52px;
   }
-  .hero_title-section{
+  .hero_title-section {
     top: 20%;
-    ${mediaMax.xs}{
+    ${mediaMax.xs} {
       top: 40%;
       left: 25%;
     }
@@ -30,22 +30,22 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
 
-  .box{
+  .box {
     transform-origin: center;
   }
 `;
 
 export const TitleContainer = styled.div`
   position: relative;
-`
+`;
 export const Title = styled.h2`
-${TitleSection()}
-margin: 2.5rem 0;
+  ${TitleSection()}
+  margin: 2.5rem 0;
 
-position: relative;
-  text-align: ${({alignRight}) => (alignRight ? `right` : `initial`)};
+  position: relative;
+  text-align: ${({ alignRight }) => (alignRight ? `right` : `initial`)};
 
-  .hero_pin-section{
+  .hero_pin-section {
     top: 30%;
     right: 10%;
     left: inherit;
@@ -55,18 +55,17 @@ position: relative;
 export const Image = styled.img`
   width: 100%;
   transform-origin: center;
-`
+`;
 
-
-export const Text= styled.p`
+export const Text = styled.p`
   text-transform: uppercase;
-  font-family: ${({theme}) => theme.fonts.sansSerif};
+  font-family: ${({ theme }) => theme.fonts.sansSerif};
   font-size: 16px;
   margin-bottom: 8px;
   font-weight: 300;
-  color: ${({theme}) => theme.colors.grey1};
+  color: ${({ theme }) => theme.colors.grey1};
 
-  svg{
+  svg {
     margin-left: 4px;
   }
-`
+`;

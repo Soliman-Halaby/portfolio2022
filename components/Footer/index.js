@@ -47,7 +47,7 @@ const Footer = () => {
   ];
 
   return (
-    <Wrapper>
+    <Wrapper data-scroll-section>
       <TitleContainer>
         <Title>Soliman Al Halaby</Title>
         <Pin label="hire me" />

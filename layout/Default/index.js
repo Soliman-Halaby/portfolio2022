@@ -1,6 +1,6 @@
 import { App, Container } from "./style";
 
-import {useRef} from "react"
+import { useRef } from "react";
 import Header from "components/Header";
 import Footer from "components/Footer";
 import FooterReduced from "components/FooterReduced";
@@ -10,16 +10,15 @@ export default function Layout({
   reducedFooter = false,
   noFooter = true,
   cursorWidth = 16,
-  cursorHeight = 18
+  cursorHeight = 18,
 }) {
   return (
     <Container>
-
       <Header />
-      <Container data-scroll-section>
+      <Container>
         <App>
           {/* <CustomCursor width={cursorWidth} height={cursorHeight}/> */}
-            {children}
+          {children}
           {!noFooter ? null : reducedFooter ? <FooterReduced /> : <Footer />}
         </App>
       </Container>

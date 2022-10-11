@@ -15,7 +15,7 @@ const ProjectWork = ({}) => {
     row: data.rowPos,
   }));
   return (
-    <Wrapper>
+    <Wrapper data-scroll-section>
       <Container>
         <Title>Selected works</Title>
         <ContainerGrid>

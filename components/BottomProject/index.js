@@ -12,7 +12,7 @@ import Tag from "@/components/Popup/Tag/index.js";
 import LinkProject from "@/components/Buttons/LargeButton";
 const BottomProject = ({ title, projects }) => {
   return (
-    <Wrapper>
+    <Wrapper data-scroll-section>
       <Container>
         <TitleContainer>
           <Title>{title}</Title>

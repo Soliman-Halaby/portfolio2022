@@ -20,14 +20,18 @@ const HeroHome = ({ title, subtitle, sectionTitle, label, image }) => {
   };
 
   return (
-    <Wrapper>
+    <Wrapper data-scroll-section>
       <TitleSection
         className="hero_title-section"
         number="02"
         title={sectionTitle}
       />
       <Container>
-        <Title dangerouslySetInnerHTML={{__html: title}}/>
+        <Title
+          data-scroll
+          data-scroll-speed="3"
+          dangerouslySetInnerHTML={{ __html: title }}
+        />
         <Title alignRight>
           {subtitle}
           <Pin
