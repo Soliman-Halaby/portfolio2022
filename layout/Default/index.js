@@ -13,11 +13,13 @@ export default function Layout({
   cursorHeight = 18
 }) {
   return (
+    <div data-scroll-section>
     <App>
-      <CustomCursor width={cursorWidth} height={cursorHeight}/>
       <Header />
-      {children}
+      {/* <CustomCursor width={cursorWidth} height={cursorHeight}/> */}
+        {children}
       {!noFooter ? null : reducedFooter ? <FooterReduced /> : <Footer />}
     </App>
+    </div>
   );
 }

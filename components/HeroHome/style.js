@@ -9,7 +9,8 @@ import { mediaMax, TitleSection } from "styles/mixins";
 export const Wrapper = styled.div`
   width: 100%;
   position: relative;
-  margin: ${({ theme }) => theme.margin.medium};
+  /* margin: ${({ theme }) => theme.margin.medium}; */
+  padding: ${({ theme }) => theme.margin.medium};
   margin-top: 150px;
 
   ${mediaMax.xs}{
@@ -28,7 +29,6 @@ export const Container = styled.div`
   width: auto;
   display: flex;
   flex-direction: column;
-  margin: ${({ theme }) => theme.margin.medium};
 
   .box{
     transform-origin: center;

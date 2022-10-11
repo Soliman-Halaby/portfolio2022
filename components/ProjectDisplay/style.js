@@ -6,7 +6,7 @@ import { mediaMax, TitleSection } from "styles/mixins";
 
 export const Wrapper = styled.div`
   max-width: 106px;
-  z-index: 999;
+  z-index: 2;
   grid-column: ${({ col }) => col};
   grid-row: ${({ row }) => row};
   display: flex;
