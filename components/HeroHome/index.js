@@ -20,7 +20,7 @@ const HeroHome = ({ title, subtitle, sectionTitle, label, image }) => {
   };
 
   return (
-    <Wrapper data-scroll-section>
+    <Wrapper>
       <TitleSection
         className="hero_title-section"
         number="02"

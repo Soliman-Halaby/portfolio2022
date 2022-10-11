@@ -52,10 +52,11 @@ export const MainLink = styled.span`
 
 export const NavLink = styled(Link)``;
 export const Nav = styled.nav`
+background: red;
   display: flex;
   justify-content: space-between;
   position: relative;
-  align-item: center;
+  align-items: center;
   z-index: 999;
   //   background: red;
   width: 100%;

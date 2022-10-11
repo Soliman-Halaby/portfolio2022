@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
   padding-left: 28px;
   position: relative;
   height: 100%;
-  margin-bottom: 10rem;
+  margin-bottom: 20rem;
   align-items: flex-end;
 `;
 
