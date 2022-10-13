@@ -10,7 +10,7 @@ export const Wrapper = styled.div`
   position: relative;
   margin: ${({ theme }) => theme.margin.medium};
   margin-top: 12rem;
-  margin-bottom: 5rem;
+  margin-bottom: 4rem;
 
   ${mediaMax.xs}{
     margin-top: 6rem;
@@ -20,6 +20,7 @@ export const Wrapper = styled.div`
 
 export const Number = styled.p`
   font-size: 16px;
+  margin-top: 12px;
   font-family: ${({ theme }) => theme.fonts.serif};
   font-weight: 300;
 `;
@@ -43,7 +44,7 @@ export const Title = styled.h2`
   position: relative;
   font-family: ${({ theme }) => theme.fonts.serif};
   font-weight: 300;
-  line-height: auto;
+  line-height: 56px;
   white-space: preline;
 `;
 

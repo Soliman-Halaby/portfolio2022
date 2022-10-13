@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
   width: 100%;
   position: relative;
   margin: ${({ theme }) => theme.margin.medium};
-  margin-top: 150px;
+  margin-top: 15rem;
 
   ${mediaMax.xs} {
     margin-top: 52px;
@@ -19,6 +19,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   margin: ${({ theme }) => theme.margin.medium};
+  margin-top: 0;
 `;
 
 export const TitleContainer = styled.div`
@@ -42,7 +43,7 @@ export const Image = styled.img``;
 export const ProjectsContainer = styled.div`
   display: flex;
   gap: 0.75rem;
-  width: clamp(300px, 100%, 850px);
+  width: clamp(300px, 100%, 700px);
   margin-top: 3rem;
   flex-wrap: wrap;
 `;

@@ -98,9 +98,9 @@ const Footer = () => {
           </Element>
           <Element>
             <Text>
-              Download my
+              Download
               <br />
-              resume
+              my resume
             </Text>
             <CircularButton to="/" label="CV" />
           </Element>

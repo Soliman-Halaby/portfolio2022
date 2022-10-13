@@ -7,7 +7,7 @@ const Pin = ({
   colored = false,
   className,
   action,
-  top = "50",
+  top = "55",
   left = "50",
 }) => {
   return (
