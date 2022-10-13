@@ -105,10 +105,22 @@ export const Content = styled.p`
     align-self: flex-start;
   }
 `;
-export const Image = styled.img`
 
+export const ImageContainer = styled.div`
+  position: relative;
+  height: 90vh;
+  overflow: hidden;
+`
+
+export const Image = styled.img`
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   ${mediaMax.xs}{
     height: 60vh;
-    object-fit: cover;
   }
 `;

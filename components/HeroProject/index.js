@@ -10,6 +10,7 @@ import {
   Container,
   Title,
   TitleContainer,
+  ImageContainer,
   Image,
   TagWrapper,
   TagContainer,
@@ -64,7 +65,9 @@ const HeroProject = ({
             <Content>{description}</Content>
           </TagContainer>
         </TagWrapper>
-        <Image src={img}></Image>
+        <ImageContainer data-scroll data-scroll-speed='2'>
+          <Image alt="Project Image" data-scroll data-scroll-speed="-1" src={img}></Image>
+        </ImageContainer>
       </Container>
     </Wrapper>
   );
