@@ -21,6 +21,8 @@ export default function App({ Component, pageProps }) {
       options={{ smooth: true }}
       watch={[route]}
       containerRef={containerRef}
+      onUpdate={({ scroll }) => scroll.scrollTo(0, { duration: 0, disableLerp: true })}
+      // onLocationChange={scroll => scroll.scrollTo(0, { duration: 0, disableLerp: true })} // If you want to reset the scroll position to 0 for example
     >
       <main data-scroll-container ref={containerRef}>
         <ThemeProvider theme={theme}>

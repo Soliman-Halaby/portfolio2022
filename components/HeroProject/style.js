@@ -4,6 +4,7 @@ import { css } from "@emotion/react";
 // import {Title as TitleSection} from "@/components/Popup/SectionTitle/style";
 
 import { mediaMax, TitleSection, Paragraph } from "styles/mixins";
+import { ButtonStyle } from "../Buttons/Button/style";
 
 export const Wrapper = styled.div`
   width: 100%;
@@ -38,9 +39,10 @@ export const Title = styled.h2`
 
 export const TagWrapper = styled.div`
   width: 100%;
-  padding-right: 15vw;
+  padding-right: 12vw;
   display: flex;
   flex-direction: row;
+  margin-top: 4rem;
   justify-content: space-between;
   margin-bottom: 2rem;
   ${mediaMax.md} {
@@ -52,7 +54,7 @@ export const TagWrapper = styled.div`
 
 export const TagContainer = styled.div`
   display: flex;
-  gap: 1rem;
+  gap: .6rem;
   justify-content: flex-end;
   flex-direction: column;
 
@@ -63,7 +65,7 @@ export const TagContainer = styled.div`
 
 export const TagRow = styled.div`
   display: flex;
-  gap: 1rem;
+  gap: .4rem;
   align-items: center;
 `
 
@@ -73,15 +75,15 @@ export const TagSubContainer = styled.div`
   align-items: center;
   gap: 1rem;
 
-  .project-visit-cta {
-    margin-left: 4rem;
+  ${ButtonStyle}{
+    margin-left: 8rem;
   }
 
   ${mediaMax.xs}{
     &:nth-of-type(2){
       flex-direction: row;
     }
-    .project-visit-cta {
+    ${ButtonStyle}{
       margin-left: 0;
     }
   }

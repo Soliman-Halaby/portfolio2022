@@ -19,6 +19,6 @@ export const SuccessMessage = styled.span`
   font-weight: 300;
   text-transform: uppercase;
   font-size: ${({ colored }) => (colored ? `10px` : `14px`)};
-  border-style: dashed;
+  /* border-style: dashed; */
   line-height: initial;
 `;

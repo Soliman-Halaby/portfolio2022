@@ -55,6 +55,7 @@ const HeroProject = ({
                 to={to}
                 target="_blank"
                 label={ctaLabel}
+                colored
                 withArrow
               ></Button>
             </TagSubContainer>

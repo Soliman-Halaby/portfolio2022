@@ -17,8 +17,8 @@ export const Container = styled.div`
     background: #e3e3e3;
     display: flex;
     justify-content: center;
-    padding: 8vw 2.5vw;
-    margin: 0rem 20px;
+    padding: 13rem 2.5vw;
+    margin: 0rem 1rem;
     ${mediaMax.xs}{
         width: auto !important;
         padding: 8rem 1rem;

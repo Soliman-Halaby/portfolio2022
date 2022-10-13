@@ -25,7 +25,7 @@ const ContentTwoColumns = ({ title, subtitle, text1, text2, label }) => {
         <SubContainer>
           <Title>
             {title}
-            <Pin colored top="45" left="15" label={label} />
+            <Pin top="55" left="15" label={label} />
           </Title>
           <ContentWrapper>
             <SubTitle>{subtitle}</SubTitle>

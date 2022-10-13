@@ -10,7 +10,7 @@ export const Container = styled.div`
     background: #e3e3e3;
     display: flex;
     justify-content: center;
-    padding: 7.5vw 10vw;
+    padding: 7.5vw;
     margin: 2rem 20px;
 `
 
