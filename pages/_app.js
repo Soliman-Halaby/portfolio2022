@@ -18,6 +18,7 @@ export default function App({ Component, pageProps }) {
       options={{
         smooth: true,
         smartphone: { smooth: true },
+        tablet: { smooth: true },
         reloadOnContextChange: true,
       }}
       watch={[route]}

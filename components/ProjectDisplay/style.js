@@ -4,6 +4,8 @@ import { css } from "@emotion/react";
 import Button from "@/components/Buttons/Button/style";
 import { mediaMax, TitleSection } from "styles/mixins";
 
+import { ButtonStyle } from "../Buttons/Button/style";
+
 export const Wrapper = styled.div`
   max-width: 106px;
   z-index: 2;
@@ -16,13 +18,16 @@ export const Wrapper = styled.div`
 export const ProjectContainer = styled.div`
   position: relative;
 
-  .learn-more-cta {
+  ${ButtonStyle} {
     position: absolute;
     background: ${({ theme }) => theme.colors.lime};
     border-style: dashed;
     pointer-events: none;
     left: -100%;
     width: 120%;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
   }
 `;
 export const Container = styled.div`

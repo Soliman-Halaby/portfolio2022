@@ -11,7 +11,7 @@ export const Wrapper = styled.div`
   /* margin: ${({ theme }) => theme.margin.medium}; */
   // margin-top: 300px;
   margin-bottom: 0;
-  min-height: 97vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

@@ -1,32 +1,34 @@
-import {react, useRef, useEffect} from "react";
+import { react, useRef, useEffect } from "react";
 
-import {Cursor} from './style.js'
+import { Cursor } from "./style.js";
 export default function CustomCursor(width, height) {
-  const cursorRef = useRef(null)
+  const cursorRef = useRef(null);
   useEffect(() => {
-  if (cursorRef.current == null || cursorRef == null)
-       return;
-  document.addEventListener('mousemove', e => {
-       if (cursorRef.current == null)
-            return;
-       cursorRef.current.setAttribute("style", "top: " + (e.pageY) + "px; left: " + (e.clientX) + "px;")
-  })
-  document.addEventListener('scroll', e => {
-     if (cursorRef.current == null)
-     return;
-     cursorRef.current.setAttribute("style", "top: " + (e.pageY) + "px; left: " + (e.clientX) + "px;")
-  })
-  document.addEventListener('click', () => {
-  if (cursorRef.current == null)
-       return;
-  cursorRef.current.classList.add("expand");
-  setTimeout(() => {
-       if (cursorRef.current == null)
-            return;
-       cursorRef.current.classList.remove("expand");
-  }, 500)
-  })
-  }, [])
+    if (cursorRef.current == null || cursorRef == null) return;
+
+    document.addEventListener("mousemove", (e) => {
+      if (cursorRef.current == null) return;
+      cursorRef.current.setAttribute(
+        "style",
+        "top: " + e.pageY + "px; left: " + e.clientX + "px;"
+      );
+    });
+    document.addEventListener("scroll", (e) => {
+      if (cursorRef.current == null) return;
+      //  cursorRef.current.setAttribute(
+      //    "style",
+      //    "top: " + e.pageY + "px; left: " + e.clientX + "px;"
+      //  );
+    });
+    document.addEventListener("click", () => {
+      if (cursorRef.current == null) return;
+      cursorRef.current.classList.add("expand");
+      setTimeout(() => {
+        if (cursorRef.current == null) return;
+        cursorRef.current.classList.remove("expand");
+      }, 500);
+    });
+  }, []);
   return (
     <Cursor ref={cursorRef}>
       <svg
@@ -41,6 +43,5 @@ export default function CustomCursor(width, height) {
         />
       </svg>
     </Cursor>
-  )
-  }
-  
+  );
+}

@@ -10,9 +10,9 @@ export const Wrapper = styled.div`
   position: relative;
   margin: ${({ theme }) => theme.margin.medium};
   margin-top: 12rem;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 
-  ${mediaMax.xs}{
+  ${mediaMax.xs} {
     margin-top: 6rem;
     margin-bottom: 2rem;
   }
@@ -32,7 +32,7 @@ export const Container = styled.div`
   flex-direction: row;
   gap: 15vw;
 
-  ${mediaMax.xs}{
+  ${mediaMax.xs} {
     width: auto;
     flex-direction: column;
     gap: 2rem;
@@ -66,7 +66,7 @@ export const ContentWrapper = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   gap: 4rem;
-  ${mediaMax.xs}{
+  ${mediaMax.xs} {
     gap: 1.5rem;
   }
 `;

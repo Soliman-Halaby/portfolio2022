@@ -8,9 +8,9 @@ export const Wrapper = styled.div`
   // background: pink;
   // height: 50px;
   position: relative;
-  margin-top: 10rem;
+  /* margin-top: 10rem; */
 
-  ${mediaMax.xs}{
+  ${mediaMax.xs} {
     // display: none;
   }
 `;
@@ -21,7 +21,7 @@ export const Nav = styled.div`
   //   gap: 2rem;
   justify-content: space-between;
 
-  ${mediaMax.xs}{
+  ${mediaMax.xs} {
     flex-direction: column;
   }
 `;
@@ -32,18 +32,17 @@ export const NavElement = styled.div`
   gap: 1.5rem;
   // background: lightblue;
   // border-top: 1px solid red;
-  
-  ${mediaMax.xs}{
+
+  ${mediaMax.xs} {
     padding: 1rem 0px;
     border-top: 1px solid ${({ theme }) => theme.colors.grey1};
     flex-direction: column;
     align-items: flex-start;
 
-    &.mobile-hide{
+    &.mobile-hide {
       display: none;
     }
   }
-
 `;
 
 export const Element = styled.div`

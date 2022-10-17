@@ -54,36 +54,38 @@ export const TagWrapper = styled.div`
 
 export const TagContainer = styled.div`
   display: flex;
-  gap: .6rem;
+  gap: 0.2rem;
   justify-content: flex-end;
   flex-direction: column;
 
-  ${mediaMax.xs}{
+  ${mediaMax.xs} {
     justify-content: flex-start;
   }
 `;
 
 export const TagRow = styled.div`
   display: flex;
-  gap: .4rem;
+  gap: 0.4rem;
   align-items: center;
-`
+`;
 
 export const TagSubContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 1rem;
+  gap: 0.75rem;
 
-  ${ButtonStyle}{
+  ${ButtonStyle} {
+    display: flex;
+    align-content: center;
     margin-left: 8rem;
   }
 
-  ${mediaMax.xs}{
-    &:nth-of-type(2){
+  ${mediaMax.xs} {
+    &:nth-of-type(2) {
       flex-direction: row;
     }
-    ${ButtonStyle}{
+    ${ButtonStyle} {
       margin-left: 0;
     }
   }
@@ -101,7 +103,7 @@ export const Content = styled.p`
   ${Paragraph()}
 
   align-self: flex-end;
-  ${mediaMax.xs}{
+  ${mediaMax.xs} {
     align-self: flex-start;
   }
 `;
@@ -110,7 +112,7 @@ export const ImageContainer = styled.div`
   position: relative;
   height: 90vh;
   overflow: hidden;
-`
+`;
 
 export const Image = styled.img`
   position: absolute;
@@ -120,7 +122,7 @@ export const Image = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-  ${mediaMax.xs}{
+  ${mediaMax.xs} {
     height: 60vh;
   }
 `;

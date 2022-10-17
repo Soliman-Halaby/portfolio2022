@@ -13,10 +13,11 @@ export const Cursor = styled.div`
     border-radius: 50%;
     position: absolute;
     pointer-events: none;
-    // transition: all 0.15s ease;
+    transition: all 0.15s ease;
     // mix-blend-mode: difference;
 
     &:after{
+
     content: "";
     width: 20px;
     height: 20px;
@@ -45,4 +46,4 @@ export const Cursor = styled.div`
         animation: cursorAnim .5s forwards;
 
     }
-`
+`;

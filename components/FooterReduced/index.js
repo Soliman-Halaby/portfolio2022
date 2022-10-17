@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 // import Image from "next/image";
 
 import Button from "@/components/Buttons/Button";
@@ -7,11 +7,19 @@ import CircularButton from "@/components/Buttons/CircularButton";
 import Pin from "@/components/Popup/Pin";
 import { Wrapper, Nav, NavElement, Text, Element, Image } from "./style.js";
 
+import { useLocomotiveScroll } from "react-locomotive-scroll";
+
 import useIsMobile from "hook";
 
 const Footer = () => {
   const [activeMessage, setActiveMessage] = useState(false);
   const isMobile = useIsMobile();
+
+  const scroll = useLocomotiveScroll();
+
+  useEffect(() => {
+    console.log(scroll);
+  }, [scroll]);
 
   const copyToClipboard = (_) => {
     setActiveMessage(true);
@@ -21,9 +29,12 @@ const Footer = () => {
     }, 1500);
   };
 
-  const scrollToTop = (_) => {
-    if (typeof window === "object")
-      window.scrollTo({ top: 0, behavior: "smooth" });
+  const scrollToTop = (scroll) => {
+    if (typeof window === "object") {
+      scroll.scroll.scrollTo(0, {
+        duration: 1000,
+      });
+    }
   };
 
   const socials = [
@@ -60,7 +71,7 @@ const Footer = () => {
                 fill="none"
                 className="desktop-hide"
                 xmlns="http://www.w3.org/2000/svg"
-                onClick={scrollToTop}
+                onClick={() => scrollToTop(scroll)}
               >
                 <path
                   d="M12 0c0 6.279-5.373 11.368-12 11.368M12 0c0 6.279 5.373 11.368 12 11.368M12 0v24"
@@ -107,7 +118,7 @@ const Footer = () => {
         </NavElement>
         {!isMobile && (
           <NavElement>
-            <Image onClick={scrollToTop} src="/arrow-up.svg" />
+            <Image onClick={() => scrollToTop(scroll)} src="/arrow-up.svg" />
           </NavElement>
         )}
       </Nav>

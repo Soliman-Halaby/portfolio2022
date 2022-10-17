@@ -16,31 +16,27 @@ export const ButtonStyle = styled.span`
   font-weight: 300;
   text-transform: uppercase;
   text-decoration: none;
+  line-height: 19px;
   transition: all 0.3s ease-out;
-  display: flex;
-  align-items: center;
+  /* display: flex;
+  align-items: center; */
   text-decoration: none;
   gap: 0.5rem;
-  transition: all 0.3s ease-out;
+  border-style: solid;
+  transition: background 0.3s ease;
 
   &:hover {
     ${({ rounded }) => (rounded ? "33px" : "5px")};
-    background: ${({ rounded, colored, theme }) =>
-      rounded || colored ? `${theme.colors.lime}` : `${theme.colors.grey1}`};
-    border: 1px solid
-      ${({ rounded, colored, theme }) =>
-        rounded || colored ? `${theme.colors.grey1}` : `${theme.colors.lime}`};
+    background: ${({ theme }) => theme.colors.lime};
+    border: 1px solid ${({ theme }) => theme.colors.grey1};
     border-style: dashed;
-    color: ${({ rounded, colored, theme }) =>
-      rounded || colored ? `${theme.colors.grey1}` : `${theme.colors.grey2}`};
-    // border-radius: ${({ rounded }) => (rounded ? "5px" : "5px")};
+    color: ${({ rounded, colored, theme }) => theme.colors.grey1};
+    transition: background 0.3s ease;
 
-  transition: all 0.3s ease-out;
-
-    svg path {
+    /* svg path {
       stroke: ${({ rounded, colored, theme }) =>
-        rounded || colored ? `${theme.colors.grey1}` : `${theme.colors.grey2}`};
-    }
+      rounded || colored ? `${theme.colors.grey1}` : `${theme.colors.grey2}`};
+    } */
   }
 `;
 
