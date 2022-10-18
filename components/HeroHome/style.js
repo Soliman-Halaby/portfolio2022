@@ -52,9 +52,16 @@ export const Title = styled.h2`
   }
 `;
 
+export const ImageWrapper = styled.div`
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+  transform-origin: center;
+`
 export const Image = styled.img`
   width: 100%;
-  transform-origin: center;
+  height: 90vh;
+  object-fit: cover;
 `;
 
 export const Text = styled.p`

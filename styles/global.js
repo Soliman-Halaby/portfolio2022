@@ -123,7 +123,7 @@ const styles = ({ fonts }) => {
       font-family: ${fonts.sansSerif};
       background: ${({ theme }) => {
         theme.colors.grey2;
-      }}
+      }};
       margin: 0;
       background: #f2f2f2;
         ${mediaMax.xs} {
@@ -131,7 +131,13 @@ const styles = ({ fonts }) => {
     }
 
     
-    
+    .line{
+      overflow: hidden;
+    }
+
+    .word{
+      padding: .5rem 0;
+    }
   `;
 };
 

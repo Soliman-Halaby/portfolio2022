@@ -3,7 +3,10 @@ import React, { useState, useRef, useEffect } from "react";
 import TitleSection from "@/components/Popup/SectionTitle";
 
 import Pin from "@/components/Popup/Pin";
-// import gsap from "gsap";
+
+import { handleEnter } from "./animation.js";
+
+import { useLocomotiveScroll } from 'react-locomotive-scroll'
 
 import {
   Wrapper,
@@ -11,16 +14,49 @@ import {
   Title,
   TitleContainer,
   Image,
+  ImageWrapper,
   Text,
 } from "./style.js";
 
 const HeroHome = ({ title, subtitle, sectionTitle, label, image }) => {
+  const { scroll } = useLocomotiveScroll()
+
+  const _subtitle = useRef(null)
+  const _el = useRef(null)
+  const _pin = useRef(null)
   const scrollToBottom = () => {
     window.scrollTo(0, document.body.scrollHeight);
   };
 
+
+  const titleRef = useRef(null)
+
+  console.log(titleRef.current)
+
+  useEffect(() => {
+   handleEnter({
+     el: _el,
+     subtitle: _subtitle,
+     text: titleRef,
+    //  pin: _pin,
+     display: 'center',
+     animText: false
+   })
+   handleEnter({
+     el: _el,
+     subtitle: _subtitle,
+     text: _subtitle,
+    //  pin: _pin,
+     display: 'left',
+     animText: false
+   })
+  }, [])
+
+
+
+  console.log(scroll)
   return (
-    <Wrapper data-scroll-section>
+    <Wrapper data-scroll-section ref={_el}>
       <TitleSection
         className="hero_title-section"
         number="02"
@@ -30,18 +66,19 @@ const HeroHome = ({ title, subtitle, sectionTitle, label, image }) => {
         <Title
           data-scroll
           data-scroll-speed="3"
+          ref={titleRef}
           dangerouslySetInnerHTML={{ __html: title }}
         />
-        <Title alignRight>
-          {subtitle}
+        <Title ref={_subtitle} alignRight dangerouslySetInnerHTML={{__html: subtitle}}/>
+          {/* {subtitle} */}
           <Pin
             top="30"
             left="90"
             action={scrollToBottom}
             className="hero_pin-section"
             label={label}
+            ref={_pin}
           />
-        </Title>
         <Text>
           Scroll
           <svg
@@ -56,7 +93,11 @@ const HeroHome = ({ title, subtitle, sectionTitle, label, image }) => {
             />
           </svg>
         </Text>
-        <Image src={image} alt="Image alt" />
+        <ImageWrapper className='image-wrapper' 
+        >
+          <Image src={image} alt='Img'
+          />
+        </ImageWrapper>
       </Container>
     </Wrapper>
   );
