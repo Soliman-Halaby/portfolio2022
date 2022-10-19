@@ -6,6 +6,6 @@ import Image from "next/image";
 
 import Footer from "@/components/Footer";
 import Hero from "@/components/HeroHome";
-export default function About() {
+export default function Contact() {
   return <Layout></Layout>;
 }

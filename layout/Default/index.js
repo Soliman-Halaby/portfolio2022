@@ -8,7 +8,7 @@ import CustomCursor from "@/components/Cursor";
 export default function Layout({
   children,
   reducedFooter = false,
-  noFooter = true,
+  noFooter = false,
   cursorWidth = 16,
   cursorHeight = 18,
 }) {
@@ -19,7 +19,7 @@ export default function Layout({
         <App>
           {/* <CustomCursor width={cursorWidth} height={cursorHeight}/> */}
           {children}
-          {!noFooter ? null : reducedFooter ? <FooterReduced /> : <Footer />}
+          {noFooter ? null : reducedFooter ? <FooterReduced /> : <Footer />}
         </App>
       </Container>
     </Container>

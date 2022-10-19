@@ -35,7 +35,7 @@ const Header = () => {
             <NavLink href="/">About</NavLink>
           </MainLink>
           <MainLink>
-            <NavLink href="/project/moviereact">Work</NavLink>
+            <NavLink href="/about">Work</NavLink>
           </MainLink>
           <MainLink>
             <NavLink href="/contact">Contact</NavLink>
