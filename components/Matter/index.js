@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 
 import {Engine, Render, Composite, World, Bodies, Mouse, MouseConstraint, Runner} from 'matter-js'
 
-import { SceneContainer } from "./style";
+import { SceneContainer, Container, Title} from "./style";
 
 
 const MatterComponent = ({}) => {
@@ -10,54 +10,65 @@ const MatterComponent = ({}) => {
     const scene = useRef()
     const engine = useRef(Engine.create({}))
 
-    console.log('mouse', Mouse, 'mouseConstraint', MouseConstraint)
+
+    // Variables
+
+    const GRAVITY = 1;
+    const WIREFRAMES = false;
+
+    const COLOR = {
+        BACKGROUND: 'transparent',
+        GROUND: '#1E1E1E'
+    }
+
+    // Scene walls
+    const wall = (x,y, width, height, stroke, fill) => {
+        return Bodies.rectangle(x, y, width, height, {
+            render:{
+                strokeStyle: stroke,
+                fillStyle: fill,
+                lineWidth: 1
+            },
+            isStatic: true,
+        })
+    }
+
+    // Function to generate rectangles in scene
+    const rect = (x, y, width, height, angle, color) => {
+        return Bodies.rectangle(x, y, width, height, {
+            restitution: 0.3,
+            angle: angle,
+            render:{
+                fillStyle: color
+            },
+            mass: 10,
+            // inverseMass: 1/10,
+            // density: 0.01,
+            // restitution: 0.9,
+            // friction: 0.1,
+            // frictionAir: 0.01
+        })
+    }
+
     useEffect(() => {
-        const clientWidth = document.body.clientWidth
-        const clientHeight = document.body.clientHeight
+        let clientWidth = document.body.clientWidth
+        let clientHeight = document.body.clientHeight
         
         const render = Render.create({
             element: scene.current,
             engine: engine.current,
             options:{
-                width: clientWidth - 100,
-                height: clientHeight  - 100,
-                wireframes: false,
-                background: '#999999',
+                width: clientWidth ,
+                height: clientHeight,
+                wireframes: WIREFRAMES,
+                background: 'transparent',
             }
         })
 
-
-        const wallTop = Bodies.rectangle(clientWidth / 2, 17, clientWidth, 30, { isStatic: true, 
-            render: {
-                fillStyle: 'red',
-                strokeStyle:'green',
-                lineWidth:3
-            } 
-        })
-
-        const wallLeft = Bodies.rectangle(17, clientHeight / 2, 30, clientHeight, { isStatic: true, 
-            render: {
-                fillStyle: 'red',
-                strokeStyle:'blue',
-                lineWidth:3
-            }
-        })
-
-        const ground = Bodies.rectangle(clientWidth / 2, clientHeight - 117, clientWidth, 30, { isStatic: true, 
-            render: {
-                fillStyle: 'red',
-                strokeStyle:'yellow',
-                lineWidth:3
-            }
-        })
-
-        const wallRight = Bodies.rectangle(clientWidth - 117, clientHeight / 2, 30, clientHeight, { isStatic: true, 
-            render: {
-                fillStyle: 'pink',
-                strokeStyle:'purple',
-                lineWidth:3,
-            },
-        })
+        const wallTop = wall(clientWidth / 2, 17, clientWidth, 150, 'red', 'blue')
+        const wallLeft = wall(-100, clientHeight / 2, 200, clientHeight, 'blue', 'red')
+        const wallRight = wall(clientWidth + 100, clientHeight / 2, 200, clientHeight, 'purple', 'pink')
+        const ground = wall(clientWidth / 2, clientHeight + 50, clientWidth, 250, COLOR.GROUND, COLOR.BACKGROUND)
 
         // Add mouse control
         let mouse = Mouse.create(render.canvas),
@@ -71,44 +82,23 @@ const MatterComponent = ({}) => {
         }
         });
 
+
+        // Datas to generate block
+        const datas = [
+            'test', 'blabla'
+        ]
+
+        console.log(datas.length)
         // Gravity on World
-        engine.current.gravity.y = 1;
+        engine.current.gravity.y = GRAVITY;
 
         // Add rectangles surface
         Composite.add(engine.current.world, [wallTop, wallLeft, ground, wallRight,
             // Rectangle elements
-            Bodies.rectangle(
-                280,
-                60,
-                100,
-                20,
-                {
-                    mass: 2,
-                    restitution: 0.9,
-                    friction: 0.1,
-                    frictionAir: 0.01,
-                    render:{
-                        fillStyle:'transparent',
-                        strokeStyle:'black',
-                    }
-                }
-            ),
-            Bodies.rectangle(
-                290,
-                60,
-                290,
-                100,
-                {
-                    mass: 10,
-                    restitution: 0.1,
-                    friction: 0.1,
-                    frictionAir: 0.02,
-                    render:{
-                        strokeStyle: '#4a485b',
-                        fillStyle:'white'
-                    }
-                }
-            )
+
+            // rect(280, 60, 100, 20, 30, 'red'),
+            rect(290, 150, 290, 100, 100, 'white'),
+        
           ])
           
 
@@ -118,6 +108,21 @@ const MatterComponent = ({}) => {
         Render.run(render)
         render.mouse = mouse
    
+
+        if(typeof window !== 'undefined' && render.canvas && render.options){
+            console.log(render.canvas)
+            window.addEventListener('resize', () => { 
+                clientWidth = document.documentElement.clientWidth
+                
+                clientHeight = document.documentElement.clientHeight
+                // render.bounds.max.x = window.innerWidth;
+                // render.bounds.max.y = window.innerHeight;
+                // render.options.width = window.innerWidth;
+                // render.options.height = window.innerHeight;
+                // render.canvas.width = window.innerWidth;
+                // render.canvas.height = window.innerHeight;
+              });
+        }
 
         return () => {
             Render.stop(render)
@@ -129,10 +134,15 @@ const MatterComponent = ({}) => {
             render.mouse = null
             render.textures = {}
         }
+
     }, [])
 
+
     return(
-        <SceneContainer ref={scene}/>
+        <Container>
+            {/* <Title>Get to know<br/>me better</Title> */}
+            <SceneContainer ref={scene}/>
+        </Container>
     )
 }
 
