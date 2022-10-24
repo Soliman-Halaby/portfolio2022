@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import { css } from "@emotion/react";
 // import { motion } from "framer-motion";
 
+import Image from "next/image";
 // import {Title as TitleSection} from "@/components/Popup/SectionTitle/style";
 
 import { mediaMax, TitleSection } from "styles/mixins";
@@ -19,8 +20,8 @@ export const Wrapper = styled.div`
   .hero_title-section {
     top: 20%;
     ${mediaMax.xs} {
-      top: 40%;
-      left: 25%;
+      top: 15%;
+      left: 10%;
     }
   }
 `;
@@ -32,6 +33,16 @@ export const Container = styled.div`
 
   .box {
     transform-origin: center;
+  }
+
+  .hero_pin-section {
+    top: 20%;
+    right: 10%;
+    left: inherit;
+    ${mediaMax.xs} {
+      top: 35%;
+      right: 25%;
+    }
   }
 `;
 
@@ -45,22 +56,32 @@ export const Title = styled.h2`
   position: relative;
   text-align: ${({ alignRight }) => (alignRight ? `right` : `initial`)};
 
-  .hero_pin-section {
-    top: 30%;
-    right: 10%;
-    left: inherit;
+  ${mediaMax.xs} {
+    margin: 4rem 0;
+
+    :nth-of-type(1) {
+      margin-top: 1rem;
+    }
   }
 `;
 
 export const ImageWrapper = styled.div`
   width: 100%;
-  height: 90vh;
+  max-height: 90vh;
   overflow: hidden;
   transform-origin: center;
-`
-export const Image = styled.img`
-  width: 100%;
-  height: 90vh;
+
+  ${mediaMax.xs} {
+    height: 60vh;
+  }
+
+  span span {
+    ${mediaMax.xs} {
+      padding-top: 60vh !important;
+    }
+  }
+`;
+export const BlockImage = styled(Image)`
   object-fit: cover;
 `;
 

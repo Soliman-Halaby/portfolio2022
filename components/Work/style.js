@@ -9,11 +9,16 @@ export const Wrapper = styled.div`
   display: flex;
   gap: 0rem;
   margin: 10rem 0;
-  padding-left: 28px;
+  /* padding-left: 28px; */
   position: relative;
   height: 100%;
   margin-bottom: 20rem;
   align-items: flex-end;
+
+  ${mediaMax.xs} {
+    margin: 5rem 0;
+    padding: 0px 10px;
+  }
 `;
 
 export const Container = styled.div`
@@ -35,4 +40,7 @@ export const ContainerGrid = styled.div`
   row-gap: 4rem;
   grid-template-columns: repeat(auto-fill, minmax(106px, 1fr));
   grid-template-rows: 1fr 1fr;
+  ${mediaMax.xs} {
+    grid-template-columns: repeat(4, 80px);
+  }
 `;

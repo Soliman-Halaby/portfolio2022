@@ -6,9 +6,11 @@ import Button from "@/components/Buttons/Button";
 import CircularButton from "@/components/Buttons/CircularButton";
 import Pin from "@/components/Popup/Pin";
 
+import useIsMobile from "hook";
+
 import {
   Wrapper,
-  Title,
+  Titlee,
   Container,
   Image,
   SubContainer,
@@ -22,6 +24,8 @@ import {
 
 const Footer = () => {
   const [activeMessage, setActiveMessage] = useState(false);
+
+  const isMobile = useIsMobile();
 
   const copyToClipboard = (_) => {
     setActiveMessage(true);
@@ -49,8 +53,12 @@ const Footer = () => {
   return (
     <Wrapper data-scroll-section>
       <TitleContainer>
-        <Title>Soliman Al Halaby</Title>
-        <Pin label="hire me" />
+        <Titlee>Soliman Al Halaby</Titlee>
+        <Pin
+          top={isMobile ? "60" : "50"}
+          left={isMobile ? "10" : "50"}
+          label="hire me"
+        />
       </TitleContainer>
       <TitleSection number="01" title="Contact"></TitleSection>
       <Container>

@@ -57,7 +57,7 @@ export const Nav = styled.nav`
   justify-content: space-between;
   position: relative;
   align-items: center;
-  z-index: 999;
+  z-index: 99999;
   //   background: red;
   width: 100%;
   position: fixed;

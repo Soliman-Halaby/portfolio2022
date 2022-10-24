@@ -5,6 +5,8 @@ import { Wrapper, Container, Title, ContainerGrid } from "./style";
 import ProjectDisplay from "@/components/ProjectDisplay";
 import ProjectsData from "/utils/projects.json";
 
+import useIsMobile from "hook";
+
 const ProjectWork = ({}) => {
   const data = ProjectsData.map((data, i) => ({
     slug: data.slug,
@@ -12,8 +14,12 @@ const ProjectWork = ({}) => {
     images: data.images,
     image: data.image,
     col: data.colPos,
+    colMob: data.mobileCol,
     row: data.rowPos,
+    colRow: data.mobileRow,
   }));
+
+  const isMobile = useIsMobile();
   return (
     <Wrapper data-scroll-section>
       <Container>
@@ -25,8 +31,8 @@ const ProjectWork = ({}) => {
                 to={data.slug}
                 index={i}
                 key={i}
-                col={data.col}
-                row={data.row}
+                col={isMobile ? data.colMob : data.col}
+                row={isMobile ? data.colRow : data.row}
                 title={data.title}
                 image={data.image}
               />

@@ -3,6 +3,8 @@ import { css } from "@emotion/react";
 
 import { mediaMax } from "styles/mixins";
 
+import { Title } from "../Popup/SectionTitle/style";
+
 export const Wrapper = styled.div`
   width: 100%;
   // background: pink;
@@ -15,13 +17,23 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  ${Title} {
+    top: 25%;
+    left: 15%;
+  }
+
+  ${mediaMax.xs} {
+    /* min-height: 110vh; */
+    height: 120vh;
+  }
 `;
 
 export const SubWrapper = styled(Wrapper)`
   margin-right: 0;
   margin-bottom: 0;
 `;
-export const Title = styled.h3`
+export const Titlee = styled.h3`
   font-size: clamp(42px, 11.15vw, 220px);
   font-family: ${({ theme }) => theme.fonts.serif};
   color: ${({ theme }) => theme.colors.grey1};
@@ -40,7 +52,9 @@ export const Title = styled.h3`
     // margin-left: ${({ theme }) => theme.margin.small};
   }
   ${mediaMax.xs} {
-    font-size: 40px;
+    font-size: 78px;
+    text-align: center;
+    line-height: 100%;
     letter-spacing: 1px;
   }
 `;
@@ -76,6 +90,11 @@ export const SubContainer = styled.div`
       height: 100%;
       max-height: 490px;
       object-fit: cover;
+
+      ${mediaMax.xs} {
+        max-height: auto;
+        height: 45vh;
+      }
     }
   }
 `;
@@ -105,6 +124,10 @@ export const RowContainer = styled.div`
 
 export const Content = styled(Text)`
   width: 100px;
+
+  ${mediaMax.xs} {
+    width: 120px;
+  }
 `;
 export const TitleContainer = styled.div`
   position: relative;
