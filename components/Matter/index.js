@@ -206,6 +206,7 @@ import {
   World,
   Bodies,
   Mouse,
+  Events,
   MouseConstraint,
   Runner,
 } from "matter-js";
@@ -261,51 +262,41 @@ const MatterComponent = ({}) => {
 
   //     // Data structure to store all rectangles
 
+  const engine = useRef(Engine.create({}));
+
+  const bodies = [];
+
   useEffect(() => {
-    // animate();
-
-    const engine = Engine.create();
-
     let clientWidth = document.body.clientWidth;
     let clientHeight = document.body.clientHeight;
-    const box = {
-      body: rect(
-        Math.random() * clientWidth,
-        Math.random() * -clientHeight,
-        250,
-        75,
-        Math.random() * 180,
-        "white"
-      ),
 
-      elem: boxRef.current[0],
-
-      render() {
-        console.log(boxRef);
-        // console.log(this.body);
-        this.elem.textContent = "Ultranoir";
-        const { x, y } = this.body.position;
-        this.elem.style.top = `${y - 20}px`;
-        this.elem.style.left = `${x - 20}px`;
-        this.elem.style.transform = `rotate(${this.body.angle}rad)`;
-      },
-    };
-
-    //     // Create rectangles with random position and size (depending on the data)
-    const generateBlock = () => {
-      return Composite.add(
-        engine.current.world,
-        rect(
+    for (let i = 0; i < datas.length; i++) {
+      const box = {
+        body: rect(
           Math.random() * clientWidth,
           Math.random() * -clientHeight,
-          290,
-          100,
+          250,
+          75,
           Math.random() * 180,
           "white"
-        )
-      );
-    };
+        ),
 
+        elem: boxRef.current[0],
+
+        render() {
+          console.log(boxRef);
+          // console.log(this.body);
+          box.elem.textContent = "Ultranoir";
+          const { x, y } = box.body.position;
+          box.elem.style.top = `${y - 20}px`;
+          box.elem.style.left = `${x - 20}px`;
+          box.elem.style.transform = `rotate(${box.body.angle}rad)`;
+        },
+      };
+      bodies.push(box);
+    }
+
+    console.log("boies", bodies);
     // Scene walls
 
     const ground = wall(
@@ -318,7 +309,7 @@ const MatterComponent = ({}) => {
     );
 
     const wallLeft = wall(
-      -100,
+      -250,
       clientHeight / 2,
       200,
       clientHeight * 2,
@@ -326,7 +317,7 @@ const MatterComponent = ({}) => {
       "red"
     );
     const wallRight = wall(
-      clientWidth + 100,
+      clientWidth + 50,
       clientHeight / 2,
       200,
       clientHeight * 2,
@@ -335,27 +326,36 @@ const MatterComponent = ({}) => {
     );
 
     // Controls box with mouse
-    const mouseConstraint = MouseConstraint.create(engine, {
+    const mouseConstraint = MouseConstraint.create(engine.current, {
       element: document.body,
     });
 
     // Add elements in the world
-    Composite.add(engine.world, [
-      box.body,
+    Composite.add(engine.current.world, [
+      bodies[0].body,
       ground,
       wallLeft,
       wallRight,
       mouseConstraint,
     ]);
-
     // Re render elements to get box position
     const rerender = () => {
-      box.render();
-      Engine.update(engine);
+      // bodies.forEach((body, i) => {
+      //   console.log(bodies[i]);
+      //   bodies[i].render();
+      // });
+      Engine.update(engine.current);
+      bodies[0].render();
       requestRef.current = requestAnimationFrame(rerender);
     };
+
     rerender();
-    return () => cancelAnimationFrame(requestRef.current);
+
+    return () => {
+      Engine.clear(engine.current);
+      Composite.clear(engine.current.world);
+      cancelAnimationFrame(requestRef.current);
+    };
   }, []);
 
   const datas = ["Paris", "test", "tigran"];
