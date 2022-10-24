@@ -2,7 +2,9 @@
   {
     "slug": "moviereact",
     "colPos": "1",
+    "mobileCol": "1",
     "rowPos": "1",
+    "mobileRow": "1",
     "link": "https://www.google.com/",
     "title": "moviereact",
     "info": ["Front-end developer", "03/03/2018"],
@@ -41,7 +43,9 @@
   {
     "slug": "cloudy-Bay",
     "colPos": "2",
+    "mobileCol": "2",
     "rowPos": "1",
+    "mobileRow": "1",
     "link": "https://www.google.com/",
     "title": "Cloudy Bay",
     "info": ["Front-end developer", "03/03/2018"],
@@ -69,9 +73,17 @@
       "fullwidth2": "/project-img-1.png"
     },
     "image": [
+      "/project-img-1.png",
+      "/project-img-1.png",
+      "/project-img-1.png",
+      "/project-img-1.png",
+      "/project-img-1.png",
+      "/project-img-1.png",
+      "/project-img-1.png",
+      "/project-img-1.png",
+      "/project-img-1.png",
       "/selfer-image.png",
       "/moviereact-image.png",
-      "/project-img-1.png",
       "/project-img-2.png",
       "/project-img-3.png",
       "/project-img-1.png"
@@ -80,7 +92,9 @@
   {
     "slug": "test",
     "colPos": "4",
+    "mobileCol": "3",
     "rowPos": "2",
+    "mobileRow": "2",
     "link": "https://www.google.com/",
     "title": "test",
     "info": ["Front-end developer", "03/03/2018"],
@@ -112,7 +126,9 @@
   {
     "slug": "test",
     "colPos": "6",
+    "mobileCol": "4",
     "rowPos": "1",
+    "mobielRow": "2",
     "link": "https://www.google.com/",
     "title": "test",
     "info": ["Front-end developer", "03/03/2018"],
@@ -144,7 +160,9 @@
   {
     "slug": "test",
     "colPos": "8",
+    "mobileCol": "1",
     "rowPos": "1",
+    "mobileRow": "3",
     "link": "https://www.google.com/",
     "title": "test",
     "info": ["Front-end developer", "03/03/2018"],
@@ -176,7 +194,9 @@
   {
     "slug": "test",
     "colPos": "10",
+    "mobileCol": "2",
     "rowPos": "2",
+    "mobileRow": "4",
     "link": "https://www.google.com/",
     "title": "test",
     "info": ["Front-end developer", "03/03/2018"],
@@ -208,7 +228,9 @@
   {
     "slug": "test",
     "colPos": "11",
+    "mobileCol": "3",
     "rowPos": "2",
+    "mobileRow": "4",
     "link": "https://www.google.com/",
     "title": "test",
     "info": ["Front-end developer", "03/03/2018"],
