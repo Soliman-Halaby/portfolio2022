@@ -9,12 +9,12 @@ export const Wrapper = styled.div`
   width: 100%;
   position: relative;
   margin: ${({ theme }) => theme.margin.medium};
-  margin-top: 12rem;
+  margin-top: 8rem;
   margin-bottom: 3rem;
 
   ${mediaMax.xs} {
-    margin-top: 6rem;
-    margin-bottom: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
   }
 `;
 

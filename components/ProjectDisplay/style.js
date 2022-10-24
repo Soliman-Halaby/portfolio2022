@@ -27,6 +27,7 @@ export const ProjectContainer = styled.div`
     width: 120%;
     display: flex;
     align-items: center;
+    z-index: 999;
     gap: 0.25rem;
   }
 `;
@@ -36,10 +37,18 @@ export const Container = styled.div`
 `;
 
 export const Image = styled.img`
+  filter: grayscale(1);
+
   width: 100%;
   max-height: 154px;
   /* max-width: 106px; */
   object-fit: contain;
+  will-change: transform;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    filter: grayscale(0);
+  }
 `;
 
 export const RowWrapper = styled.div`

@@ -10,7 +10,7 @@ export const Wrapper = styled.div`
   overflow: hidden;
   ${mediaMax.xs} {
     flex-direction: column;
-    gap: 2rem;
+    gap: 0rem;
   }
 `;
 
@@ -21,6 +21,10 @@ export const ImageContainer = styled.div`
 
   &:nth-of-type(2) {
     /* transform: translateY(50px) !important; */
+  }
+
+  ${mediaMax.xs} {
+    width: 100%;
   }
 `;
 export const Container = styled.div`
