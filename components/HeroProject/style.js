@@ -112,6 +112,10 @@ export const ImageContainer = styled.div`
   position: relative;
   height: 90vh;
   overflow: hidden;
+
+  ${mediaMax.xs} {
+    height: 60vh;
+  }
 `;
 
 export const Image = styled.img`
