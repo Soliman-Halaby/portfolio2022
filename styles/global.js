@@ -105,7 +105,11 @@ const styles = ({ fonts }) => {
       -webkit-font-smoothing: antialiased;
       font-smoothing: antialiased;
     }
-    p, h1, h2, h3, span{
+    p,
+    h1,
+    h2,
+    h3,
+    span {
       margin: 0;
       padding: 0;
     }
@@ -113,10 +117,10 @@ const styles = ({ fonts }) => {
       overflow-x: hidden;
       scroll-behavior: smooth;
     }
-    a{
+    a {
       text-decoration: none;
     }
-    
+
     body {
       white-space: pre-line;
       // cursor: none;
@@ -126,17 +130,24 @@ const styles = ({ fonts }) => {
       }};
       margin: 0;
       background: #f2f2f2;
-        ${mediaMax.xs} {
+      ${mediaMax.xs} {
       }
     }
 
-    
-    .line{
+    .line {
       overflow: hidden;
     }
 
-    .word{
-      padding: .5rem 0;
+    .word {
+      padding: 0.5rem 0;
+    }
+
+    html,
+    body {
+        position: relative;
+        height: 100%;
+        margin: 0;
+      }
     }
   `;
 };
