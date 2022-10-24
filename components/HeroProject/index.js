@@ -69,7 +69,7 @@ const HeroProject = ({
           <Image
             alt="Project Image"
             data-scroll
-            data-scroll-speed="-1"
+            data-scroll-speed="-2"
             src={img}
           ></Image>
         </ImageContainer>
