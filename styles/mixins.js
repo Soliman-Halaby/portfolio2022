@@ -1,14 +1,14 @@
 import breakpoints from "./breakpoints";
 import theme from "theme";
 
-export const mediaMax = Object.keys(breakpoints)
+export const maxMedia = Object.keys(breakpoints)
   .map((key) => [key, breakpoints[key]])
   .reduce((prev, [key, breakpoint]) => {
     prev[key] = `@media (max-width: ${breakpoint}px)`;
     return prev;
   }, {});
 
-export const mediaMin = Object.keys(breakpoints)
+export const minMedia = Object.keys(breakpoints)
   .map((key) => [key, breakpoints[key]])
   .reduce((prev, [key, breakpoint]) => {
     prev[key] = `@media (min-width: ${breakpoint}px)`;
@@ -35,7 +35,7 @@ export const TitleSection = () => `
   font-family: ${theme.fonts.serif};
   font-weight: 400;
 
-  ${mediaMax.xs}{
+  ${maxMedia.xs}{
     font-size: ${theme.fontSizes.title.small};
     line-height: 48px;
   }

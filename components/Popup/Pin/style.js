@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { css } from "@emotion/react";
 
-import { mediaMax, title } from "styles/mixins";
+import { maxMedia, title } from "styles/mixins";
 
 export const SuccessMessage = styled.span`
   position: absolute;

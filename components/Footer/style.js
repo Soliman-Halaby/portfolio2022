@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { css } from "@emotion/react";
 
-import { mediaMax } from "styles/mixins";
+import { maxMedia } from "styles/mixins";
 
 import { Title } from "../Popup/SectionTitle/style";
 
@@ -23,7 +23,7 @@ export const Wrapper = styled.div`
     left: 15%;
   }
 
-  ${mediaMax.xs} {
+  ${maxMedia.xs} {
     /* min-height: 110vh; */
     height: 120vh;
   }
@@ -43,15 +43,15 @@ export const Titlee = styled.h3`
   // margin-left: ${({ theme }) => theme.margin.medium};
   letter-spacing: clamp(1px, 0.25vw, 3px);
 
-  ${mediaMax.xl} {
+  ${maxMedia.xl} {
     font-size: 11vw;
   }
-  ${mediaMax.md} {
+  ${maxMedia.md} {
     font-size: 10vw;
     text-align: start;
     // margin-left: ${({ theme }) => theme.margin.small};
   }
-  ${mediaMax.xs} {
+  ${maxMedia.xs} {
     font-size: 78px;
     text-align: center;
     line-height: 100%;
@@ -63,7 +63,7 @@ export const Container = styled.div`
   width: 100%;
   display: flex;
   gap: 3rem;
-  ${mediaMax.md} {
+  ${maxMedia.md} {
     flex-direction: column;
   }
 `;
@@ -72,7 +72,7 @@ export const SubContainer = styled.div`
   width: 50%;
   display: flex;
 
-  ${mediaMax.md} {
+  ${maxMedia.md} {
     width: 100%;
   }
 
@@ -82,7 +82,7 @@ export const SubContainer = styled.div`
   }
   &:nth-of-type(2) {
     width: 80%;
-    ${mediaMax.md} {
+    ${maxMedia.md} {
       width: 100%;
     }
     img {
@@ -91,7 +91,7 @@ export const SubContainer = styled.div`
       max-height: 490px;
       object-fit: cover;
 
-      ${mediaMax.xs} {
+      ${maxMedia.xs} {
         max-height: auto;
         height: 45vh;
       }
@@ -125,7 +125,7 @@ export const RowContainer = styled.div`
 export const Content = styled(Text)`
   width: 100px;
 
-  ${mediaMax.xs} {
+  ${maxMedia.xs} {
     width: 120px;
   }
 `;

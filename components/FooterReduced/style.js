@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { css } from "@emotion/react";
 
-import { mediaMax, title } from "styles/mixins";
+import { maxMedia, title } from "styles/mixins";
 
 export const Wrapper = styled.div`
   width: 100%;
@@ -10,7 +10,7 @@ export const Wrapper = styled.div`
   position: relative;
   /* margin-top: 10rem; */
 
-  ${mediaMax.xs} {
+  ${maxMedia.xs} {
     // display: none;
   }
 `;
@@ -21,7 +21,7 @@ export const Nav = styled.div`
   //   gap: 2rem;
   justify-content: space-between;
 
-  ${mediaMax.xs} {
+  ${maxMedia.xs} {
     flex-direction: column;
   }
 `;
@@ -33,7 +33,7 @@ export const NavElement = styled.div`
   // background: lightblue;
   // border-top: 1px solid red;
 
-  ${mediaMax.xs} {
+  ${maxMedia.xs} {
     padding: 1rem 0px;
     border-top: 1px solid ${({ theme }) => theme.colors.grey1};
     flex-direction: column;
@@ -53,7 +53,7 @@ export const Element = styled.div`
 
 
 
-  ${mediaMax.xs}{
+  ${maxMedia.xs}{
     &.with-arrow{
       width: 100%;
       justify-content: space-between;

@@ -3,7 +3,7 @@ import { css } from "@emotion/react";
 
 // import {Title as TitleSection} from "@/components/Popup/SectionTitle/style";
 
-import { mediaMax, Paragraph } from "styles/mixins";
+import { maxMedia, Paragraph } from "styles/mixins";
 
 export const Wrapper = styled.div`
   width: 100%;
@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
   margin-top: 8rem;
   margin-bottom: 3rem;
 
-  ${mediaMax.xs} {
+  ${maxMedia.xs} {
     margin-top: 3rem;
     margin-bottom: 4rem;
   }
@@ -32,7 +32,7 @@ export const Container = styled.div`
   flex-direction: row;
   gap: 15vw;
 
-  ${mediaMax.xs} {
+  ${maxMedia.xs} {
     width: auto;
     flex-direction: column;
     gap: 2rem;
@@ -66,7 +66,7 @@ export const ContentWrapper = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   gap: 4rem;
-  ${mediaMax.xs} {
+  ${maxMedia.xs} {
     gap: 1.5rem;
   }
 `;

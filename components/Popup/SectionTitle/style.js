@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { mediaMax, title } from "styles/mixins";
+import { maxMedia, title } from "styles/mixins";
 
 import theme from "theme";
 
@@ -14,11 +14,11 @@ export const Title = styled.p`
   white-space: break-spaces;
   margin-left: ${({ theme }) => theme.margin.medium};
   margin-top: 48px;
-  ${mediaMax.md} {
+  ${maxMedia.md} {
     top: 20%;
     left: 0;
   }
-  ${mediaMax.xs} {
+  ${maxMedia.xs} {
     top: 15%;
   }
 `;

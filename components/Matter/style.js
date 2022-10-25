@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-import { mediaMax } from "styles/mixins";
+import { maxMedia } from "styles/mixins";
 
 export const Box = styled.div`
   position: absolute;
@@ -20,15 +20,15 @@ export const Box = styled.div`
   font-size: 40px;
   font-family: ${({ theme }) => theme.fonts.sansSerif};
 
-  &.rounded{
+  &.rounded {
     border-radius: 200px;
     padding: 5px 20px;
   }
 
-  ${mediaMax.xs}{
+  ${maxMedia.xs} {
     font-size: 7vw;
   }
-  `;
+`;
 
 export const Ground = styled.div`
   position: absolute;
@@ -50,7 +50,7 @@ export const Title = styled.h2`
   left: 50%;
   transform: translate(-50%, -50%);
 
-  ${mediaMax.xs}{
+  ${maxMedia.xs} {
     font-size: 20vw;
   }
 `;
@@ -58,7 +58,7 @@ export const Title = styled.h2`
 export const MatterContainer = styled.div`
   z-index: 9999;
 
-  ${mediaMax.xs}{
+  ${maxMedia.xs} {
     height: 100vh;
     overflow: hidden;
     width: 100%;

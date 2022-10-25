@@ -5,7 +5,7 @@ import { css } from "@emotion/react";
 import Image from "next/image";
 // import {Title as TitleSection} from "@/components/Popup/SectionTitle/style";
 
-import { mediaMax, TitleSection } from "styles/mixins";
+import { maxMedia, TitleSection } from "styles/mixins";
 
 export const Wrapper = styled.div`
   width: 100%;
@@ -14,12 +14,12 @@ export const Wrapper = styled.div`
   padding: ${({ theme }) => theme.margin.medium};
   margin-top: 150px;
 
-  ${mediaMax.xs} {
+  ${maxMedia.xs} {
     padding-top: 52px;
   }
   .hero_title-section {
     top: 20%;
-    ${mediaMax.xs} {
+    ${maxMedia.xs} {
       top: 15%;
       left: 10%;
     }
@@ -39,7 +39,7 @@ export const Container = styled.div`
     top: 20%;
     right: 10%;
     left: inherit;
-    ${mediaMax.xs} {
+    ${maxMedia.xs} {
       top: 35%;
       right: 25%;
     }
@@ -56,7 +56,7 @@ export const Title = styled.h2`
   position: relative;
   text-align: ${({ alignRight }) => (alignRight ? `right` : `initial`)};
 
-  ${mediaMax.xs} {
+  ${maxMedia.xs} {
     margin: 4rem 0;
 
     :nth-of-type(1) {
@@ -71,12 +71,12 @@ export const ImageWrapper = styled.div`
   overflow: hidden;
   transform-origin: center;
 
-  ${mediaMax.xs} {
+  ${maxMedia.xs} {
     height: 60vh;
   }
 
   span span {
-    ${mediaMax.xs} {
+    ${maxMedia.xs} {
       padding-top: 60vh !important;
     }
   }

@@ -1,6 +1,6 @@
 import { css } from "@emotion/react";
 import emotionReset from "emotion-reset";
-import { mediaMax } from "styles/mixins";
+import { maxMedia } from "styles/mixins";
 import fontFiles from "styles/fonts";
 
 const styles = ({ fonts }) => {
@@ -130,7 +130,7 @@ const styles = ({ fonts }) => {
       }};
       margin: 0;
       background: #f2f2f2;
-      ${mediaMax.xs} {
+      ${maxMedia.xs} {
       }
     }
 

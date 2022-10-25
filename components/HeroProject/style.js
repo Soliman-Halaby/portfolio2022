@@ -3,7 +3,7 @@ import { css } from "@emotion/react";
 
 // import {Title as TitleSection} from "@/components/Popup/SectionTitle/style";
 
-import { mediaMax, TitleSection, Paragraph } from "styles/mixins";
+import { maxMedia, TitleSection, Paragraph } from "styles/mixins";
 import { ButtonStyle } from "../Buttons/Button/style";
 
 export const Wrapper = styled.div`
@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
   margin: ${({ theme }) => theme.margin.medium};
   margin-top: 150px;
 
-  ${mediaMax.xs} {
+  ${maxMedia.xs} {
     margin-top: 52px;
   }
 `;
@@ -45,7 +45,7 @@ export const TagWrapper = styled.div`
   margin-top: 4rem;
   justify-content: space-between;
   margin-bottom: 2rem;
-  ${mediaMax.md} {
+  ${maxMedia.md} {
     flex-direction: column;
     gap: 2rem;
     padding-right: 0;
@@ -58,7 +58,7 @@ export const TagContainer = styled.div`
   justify-content: flex-end;
   flex-direction: column;
 
-  ${mediaMax.xs} {
+  ${maxMedia.xs} {
     justify-content: flex-start;
   }
 `;
@@ -81,7 +81,7 @@ export const TagSubContainer = styled.div`
     margin-left: 8rem;
   }
 
-  ${mediaMax.xs} {
+  ${maxMedia.xs} {
     &:nth-of-type(2) {
       flex-direction: row;
     }
@@ -103,7 +103,7 @@ export const Content = styled.p`
   ${Paragraph()}
 
   align-self: flex-end;
-  ${mediaMax.xs} {
+  ${maxMedia.xs} {
     align-self: flex-start;
   }
 `;
@@ -113,7 +113,7 @@ export const ImageContainer = styled.div`
   height: 90vh;
   overflow: hidden;
 
-  ${mediaMax.xs} {
+  ${maxMedia.xs} {
     height: 60vh;
   }
 `;
@@ -126,7 +126,7 @@ export const Image = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-  ${mediaMax.xs} {
+  ${maxMedia.xs} {
     height: 60vh;
   }
 `;

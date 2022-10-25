@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { css } from "@emotion/react";
 
 import Button from "@/components/Buttons/Button/style";
-import { mediaMax, TitleSection } from "styles/mixins";
+import { maxMedia, TitleSection } from "styles/mixins";
 
 import { ButtonStyle } from "../Buttons/Button/style";
 

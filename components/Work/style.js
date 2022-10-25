@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { css } from "@emotion/react";
 
-import { mediaMax, TitleSection } from "styles/mixins";
+import { maxMedia, TitleSection } from "styles/mixins";
 
 export const Wrapper = styled.div`
   width: 100vw;
@@ -15,7 +15,7 @@ export const Wrapper = styled.div`
   margin-bottom: 20rem;
   align-items: flex-end;
 
-  ${mediaMax.xs} {
+  ${maxMedia.xs} {
     margin: 5rem 0;
     padding: 0px 10px;
   }
@@ -40,7 +40,7 @@ export const ContainerGrid = styled.div`
   row-gap: 4rem;
   grid-template-columns: repeat(auto-fill, minmax(106px, 1fr));
   grid-template-rows: 1fr 1fr;
-  ${mediaMax.xs} {
+  ${maxMedia.xs} {
     grid-template-columns: repeat(4, 80px);
   }
 `;

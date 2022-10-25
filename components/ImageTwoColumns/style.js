@@ -1,14 +1,14 @@
 import styled from "@emotion/styled";
 import { css } from "@emotion/react";
 
-import { mediaMax, title } from "styles/mixins";
+import { maxMedia, title } from "styles/mixins";
 
 export const Wrapper = styled.div`
   width: 100%;
   display: flex;
   gap: 0rem;
   overflow: hidden;
-  ${mediaMax.xs} {
+  ${maxMedia.xs} {
     flex-direction: column;
     gap: 0rem;
   }
@@ -23,7 +23,7 @@ export const ImageContainer = styled.div`
     /* transform: translateY(50px) !important; */
   }
 
-  ${mediaMax.xs} {
+  ${maxMedia.xs} {
     width: 100%;
   }
 `;
@@ -33,7 +33,7 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   padding: 13rem 2.5vw;
-  ${mediaMax.xs} {
+  ${maxMedia.xs} {
     width: auto !important;
     padding: 8rem 1rem;
   }
