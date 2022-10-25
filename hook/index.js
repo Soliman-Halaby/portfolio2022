@@ -2,14 +2,10 @@ import { useEffect, useState } from 'react'
 
 function useMediaQuery(query) {
   const getMatches = (query) => {
-    // Prevents SSR issues
-    if (typeof window !== 'undefined') {
       return window.matchMedia(query).matches
-    }
-    return false
   }
 
-  const [matches, setMatches] = useState(getMatches(query))
+const [matches, setMatches] = useState(false);
 
   function handleChange() {
     setMatches(getMatches(query))
