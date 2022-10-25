@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 
+import { mediaMax } from "styles/mixins";
 
 export const Box = styled.div`
   position: absolute;
@@ -23,7 +24,11 @@ export const Box = styled.div`
     border-radius: 200px;
     padding: 5px 20px;
   }
-`;
+
+  ${mediaMax.xs}{
+    font-size: 7vw;
+  }
+  `;
 
 export const Ground = styled.div`
   position: absolute;
@@ -40,12 +45,22 @@ export const Title = styled.h2`
   font-family: ${({ theme }) => theme.fonts.serif};
   font-weight: 400;
   user-select: none;
-  font-size: 200px;
+  font-size: 10vw;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  ${mediaMax.xs}{
+    font-size: 20vw;
+  }
 `;
 
 export const MatterContainer = styled.div`
   z-index: 9999;
+
+  ${mediaMax.xs}{
+    height: 100vh;
+    overflow: hidden;
+    width: 100%;
+  }
 `;
