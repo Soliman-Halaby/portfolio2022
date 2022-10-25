@@ -197,7 +197,7 @@
 // };
 
 // export default MatterComponent;
-import React, { useState, useRef, useEffect, Fragment } from "react";
+import React, { useState, useRef, useEffect, Fragment, useLayoutEffect } from "react";
 
 import {
   Engine,
@@ -212,8 +212,6 @@ import {
 } from "matter-js";
 
 import {
-  SceneContainer,
-  Container,
   Title,
   MatterContainer,
   Box,
@@ -227,19 +225,11 @@ const MatterComponent = ({}) => {
   //   // Variables
 
   const GRAVITY = 1;
-  const WIREFRAMES = false;
-
-  const COLOR = {
-    BACKGROUND: "transparent",
-    GROUND: "#1E1E1E",
-  };
 
   // Scene walls
-  const wall = (x, y, width, height, stroke, fill) => {
+  const wall = (x, y, width, height) => {
     return Bodies.rectangle(x, y, width, height, {
       render: {
-        strokeStyle: stroke,
-        fillStyle: fill,
         lineWidth: 1,
       },
       isStatic: true,
@@ -247,11 +237,10 @@ const MatterComponent = ({}) => {
   };
 
   // Function to generate blocks in scene
-  const rect = (x, y, width, height, angle, color) => {
+  const rect = (x, y, width, height, angle) => {
     return Bodies.rectangle(x, y, width, height, {
       angle: angle,
       render: {
-        fillStyle: color,
       },
       mass: 7,
       restitution: 0.3,
@@ -265,6 +254,7 @@ const MatterComponent = ({}) => {
   const engine = useRef(Engine.create({}));
 
   const bodies = [];
+  const datas = [{label:'Paris'}, {label:'Ultranoir'}, {label: 'Hetic'}];
 
   useEffect(() => {
     let clientWidth = document.body.clientWidth;
@@ -275,18 +265,14 @@ const MatterComponent = ({}) => {
         body: rect(
           Math.random() * clientWidth,
           Math.random() * -clientHeight,
-          250,
-          75,
-          Math.random() * 180,
-          "white"
+          boxRef.current[i].offsetWidth,
+          60,
+          Math.random() *  180,
         ),
 
-        elem: boxRef.current[0],
+        elem: boxRef.current[i],
 
         render() {
-          console.log(boxRef);
-          // console.log(this.body);
-          box.elem.textContent = "Ultranoir";
           const { x, y } = box.body.position;
           box.elem.style.top = `${y - 20}px`;
           box.elem.style.left = `${x - 20}px`;
@@ -294,35 +280,37 @@ const MatterComponent = ({}) => {
         },
       };
       bodies.push(box);
+      Composite.add(engine.current.world, [
+        bodies[i].body
+      ]);
     }
 
-    console.log("boies", bodies);
     // Scene walls
 
     const ground = wall(
       clientWidth / 2,
       clientHeight + 50,
-      clientWidth,
+      clientWidth * 2,
       250,
-      "pink",
-      "pink"
     );
 
+    const wallTop = wall(
+      clientWidth / 2,
+      clientHeight * 3,
+      clientWidth,
+      150,
+    );
     const wallLeft = wall(
-      -250,
+      -150,
       clientHeight / 2,
       200,
-      clientHeight * 2,
-      "blue",
-      "red"
+      clientHeight * 3,
     );
     const wallRight = wall(
-      clientWidth + 50,
+      clientWidth + 60 ,
       clientHeight / 2,
       200,
-      clientHeight * 2,
-      "purple",
-      "pink"
+      clientHeight * 3,
     );
 
     // Controls box with mouse
@@ -330,22 +318,22 @@ const MatterComponent = ({}) => {
       element: document.body,
     });
 
+
     // Add elements in the world
     Composite.add(engine.current.world, [
-      bodies[0].body,
       ground,
+      wallTop,
       wallLeft,
       wallRight,
       mouseConstraint,
     ]);
+
     // Re render elements to get box position
     const rerender = () => {
-      // bodies.forEach((body, i) => {
-      //   console.log(bodies[i]);
-      //   bodies[i].render();
-      // });
       Engine.update(engine.current);
-      bodies[0].render();
+      for(let i = 0; i < datas.length; i++){
+        bodies[i].render();
+      }
       requestRef.current = requestAnimationFrame(rerender);
     };
 
@@ -358,13 +346,12 @@ const MatterComponent = ({}) => {
     };
   }, []);
 
-  const datas = ["Paris", "test", "tigran"];
 
   return (
     <MatterContainer>
       <Fragment>
         {datas.map((data, i) => {
-          return <Box key={i} ref={(el) => (boxRef.current[i] = el)} />;
+          return <Box className={i%2 !== 0 ? 'rounded' : ''} key={i} ref={(el) => (boxRef.current[i] = el)}>{data.label}</Box>;
         })}
         <Ground />
       </Fragment>

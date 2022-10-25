@@ -1,11 +1,5 @@
 import styled from "@emotion/styled";
 
-export const Container = styled.div`
-  width: 100%;
-  user-select: none;
-  height: 100%;
-  position: relative;
-`;
 
 export const Box = styled.div`
   position: absolute;
@@ -17,16 +11,23 @@ export const Box = styled.div`
   background: ${({ theme }) => theme.colors.grey2};
   text-transform: uppercase;
   z-index: 2;
+  font-weight: 400;
   border-radius: 8px;
+  letter-spacing: 0px;
   border: 1px solid ${({ theme }) => theme.colors.grey1};
   padding: 5px 10px;
   font-size: 40px;
   font-family: ${({ theme }) => theme.fonts.sansSerif};
+
+  &.rounded{
+    border-radius: 200px;
+    padding: 5px 20px;
+  }
 `;
 
 export const Ground = styled.div`
   position: absolute;
-  bottom: 74px;
+  bottom: 64px;
   height: 1px;
   width: 100%;
   left: 0;
