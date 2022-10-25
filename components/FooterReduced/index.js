@@ -29,13 +29,13 @@ const Footer = () => {
     }, 1500);
   };
 
-  // const scrollToTop = (scroll) => {
-  //   if (typeof window === "object") {
-  //     scroll.scroll.scrollTo(0, {
-  //       duration: 1000,
-  //     });
-  //   }
-  // };
+  const scrollToTop = (scroll) => {
+    if (typeof window === "object") {
+      scroll.scroll.scrollTo(0, {
+        duration: 1000,
+      });
+    }
+  };
 
   const socials = [
     {
