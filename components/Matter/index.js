@@ -197,7 +197,13 @@
 // };
 
 // export default MatterComponent;
-import React, { useState, useRef, useEffect, Fragment, useLayoutEffect } from "react";
+import React, {
+  useState,
+  useRef,
+  useEffect,
+  Fragment,
+  useLayoutEffect,
+} from "react";
 
 import {
   Engine,
@@ -211,12 +217,7 @@ import {
   Runner,
 } from "matter-js";
 
-import {
-  Title,
-  MatterContainer,
-  Box,
-  Ground,
-} from "./style";
+import { Title, MatterContainer, Box, Ground } from "./style";
 
 const MatterComponent = ({}) => {
   const requestRef = useRef();
@@ -240,8 +241,7 @@ const MatterComponent = ({}) => {
   const rect = (x, y, width, height, angle) => {
     return Bodies.rectangle(x, y, width, height, {
       angle: angle,
-      render: {
-      },
+      render: {},
       mass: 7,
       restitution: 0.3,
       friction: 0.2,
@@ -254,7 +254,11 @@ const MatterComponent = ({}) => {
   const engine = useRef(Engine.create({}));
 
   const bodies = [];
-  const datas = [{label:'Paris'}, {label:'Ultranoir'}, {label: 'Hetic'}];
+  const datas = [
+    { label: "Paris" },
+    { label: "Ultranoir" },
+    { label: "Hetic" },
+  ];
 
   useEffect(() => {
     let clientWidth = document.body.clientWidth;
@@ -267,7 +271,7 @@ const MatterComponent = ({}) => {
           Math.random() * -clientHeight,
           boxRef.current[i].offsetWidth,
           60,
-          Math.random() *  180,
+          Math.random() * 180
         ),
 
         elem: boxRef.current[i],
@@ -280,9 +284,7 @@ const MatterComponent = ({}) => {
         },
       };
       bodies.push(box);
-      Composite.add(engine.current.world, [
-        bodies[i].body
-      ]);
+      Composite.add(engine.current.world, [bodies[i].body]);
     }
 
     // Scene walls
@@ -291,33 +293,22 @@ const MatterComponent = ({}) => {
       clientWidth / 2,
       clientHeight + 50,
       clientWidth * 2,
-      250,
+      250
     );
 
-    const wallTop = wall(
-      clientWidth / 2,
-      clientHeight * 3,
-      clientWidth,
-      150,
-    );
-    const wallLeft = wall(
-      -150,
-      clientHeight / 2,
-      200,
-      clientHeight * 3,
-    );
+    const wallTop = wall(clientWidth / 2, clientHeight * 3, clientWidth, 150);
+    const wallLeft = wall(-150, clientHeight / 2, 200, clientHeight * 3);
     const wallRight = wall(
-      clientWidth + 60 ,
+      clientWidth + 60,
       clientHeight / 2,
       200,
-      clientHeight * 3,
+      clientHeight * 3
     );
 
     // Controls box with mouse
     const mouseConstraint = MouseConstraint.create(engine.current, {
       element: document.body,
     });
-
 
     // Add elements in the world
     Composite.add(engine.current.world, [
@@ -331,7 +322,7 @@ const MatterComponent = ({}) => {
     // Re render elements to get box position
     const rerender = () => {
       Engine.update(engine.current);
-      for(let i = 0; i < datas.length; i++){
+      for (let i = 0; i < datas.length; i++) {
         bodies[i].render();
       }
       requestRef.current = requestAnimationFrame(rerender);
@@ -346,12 +337,19 @@ const MatterComponent = ({}) => {
     };
   }, []);
 
-
   return (
     <MatterContainer>
       <Fragment>
         {datas.map((data, i) => {
-          return <Box className={i%2 !== 0 ? 'rounded' : ''} key={i} ref={(el) => (boxRef.current[i] = el)}>{data.label}</Box>;
+          return (
+            <Box
+              className={i % 2 !== 0 ? "rounded" : ""}
+              key={i}
+              ref={(el) => (boxRef.current[i] = el)}
+            >
+              {data.label}
+            </Box>
+          );
         })}
         <Ground />
       </Fragment>

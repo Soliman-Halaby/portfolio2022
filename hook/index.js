@@ -1,45 +1,45 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from "react";
 
 function useMediaQuery(query) {
   const getMatches = (query) => {
-      return window.matchMedia(query).matches
-  }
+    return window.matchMedia(query).matches;
+  };
 
-const [matches, setMatches] = useState(false);
+  const [matches, setMatches] = useState(false);
 
   function handleChange() {
-    setMatches(getMatches(query))
+    setMatches(getMatches(query));
   }
 
   useEffect(() => {
-    const matchMedia = window.matchMedia(query)
+    const matchMedia = window.matchMedia(query);
 
     // Triggered at the first client-side load and if query changes
-    handleChange()
+    handleChange();
 
     // Listen matchMedia
     if (matchMedia.addListener) {
-      matchMedia.addListener(handleChange)
+      matchMedia.addListener(handleChange);
     } else {
-      matchMedia.addEventListener('change', handleChange)
+      matchMedia.addEventListener("change", handleChange);
     }
 
     return () => {
       if (matchMedia.removeListener) {
-        matchMedia.removeListener(handleChange)
+        matchMedia.removeListener(handleChange);
       } else {
-        matchMedia.removeEventListener('change', handleChange)
+        matchMedia.removeEventListener("change", handleChange);
       }
-    }
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [query])
+  }, [query]);
 
-  return matches
-}
-
-const useIsMobile = () => {
-  const matches = useMediaQuery('(max-width: 760px)')
   return matches;
 }
 
-export default useIsMobile
+const useIsMobile = () => {
+  const matches = useMediaQuery("(max-width: 760px)");
+  return matches;
+};
+
+export default useIsMobile;
