@@ -296,13 +296,23 @@ const MatterComponent = ({}) => {
       250
     );
 
-    const wallTop = wall(clientWidth / 2, clientHeight * 3, clientWidth, 150);
-    const wallLeft = wall(-150, clientHeight / 2, 200, clientHeight * 3);
+    const wallTop = wall(
+      clientWidth / 2,
+      -clientHeight * 1.5,
+      clientWidth,
+      500
+    );
+    const wallLeft = wall(
+      -150,
+      clientHeight / 2,
+      200,
+      clientHeight * 1.5 + 150
+    );
     const wallRight = wall(
       clientWidth + 60,
       clientHeight / 2,
       200,
-      clientHeight * 3
+      clientHeight * 1.5 + 150
     );
 
     // Controls box with mouse
