@@ -10,7 +10,7 @@ import useIsMobile from "hook";
 
 import {
   Wrapper,
-  Titlee,
+  Title,
   Container,
   Image,
   SubContainer,
@@ -29,6 +29,8 @@ const Footer = () => {
 
   const copyToClipboard = (_) => {
     setActiveMessage(true);
+    setTest('clicked')
+    console.log(test)
     navigator.clipboard.writeText("contact@solimanalhalaby.fr");
     setTimeout(() => {
       setActiveMessage(false);
@@ -53,7 +55,7 @@ const Footer = () => {
   return (
     <Wrapper data-scroll-section>
       <TitleContainer>
-        <Titlee>Soliman Al Halaby</Titlee>
+        <Title>Soliman Al Halaby</Title>
         <Pin
           top={isMobile ? "60" : "50"}
           left={isMobile ? "10" : "50"}
