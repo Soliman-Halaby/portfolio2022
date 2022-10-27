@@ -4,6 +4,7 @@ import Button from "@/components/Buttons/Button";
 import {
   Wrapper,
   ProjectContainer,
+  ImageContainer,
   Image,
   RowWrapper,
   Number,
@@ -61,7 +62,7 @@ const ProjectDisplay = ({ col, row, title, to, image = [], index }) => {
             withArrow
           />
         )}
-        {image && <Image src={image[count % image.length]} />}
+        {image && <ImageContainer ><Image data-scroll data-scroll-speed={index%2 === 0 ? '-0.25' : '0.25'}  src={image[count % image.length]} /></ImageContainer>}
         {title && (
           <RowWrapper>
             <Number>0{index + 1}</Number>

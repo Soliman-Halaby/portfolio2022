@@ -24,7 +24,7 @@ const ProjectWork = ({}) => {
     <Wrapper data-scroll-section>
       <Container>
         <Title>Selected works</Title>
-        <ContainerGrid>
+        <ContainerGrid >
           {data.map((data, i) => {
             return (
               <ProjectDisplay

@@ -36,15 +36,25 @@ export const Container = styled.div`
   margin: 0px 20px;
 `;
 
+export const ImageContainer = styled.div`
+  height: 154px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+
+`
 export const Image = styled.img`
   filter: grayscale(1);
+  position: absolute;
+  top: 0;
+  left: 0;
 
   width: 100%;
-  max-height: 154px;
   /* max-width: 106px; */
-  object-fit: contain;
+  object-fit: cover;
+  height: 140%;
   will-change: transform;
-  transition: all 0.2s ease-in-out;
+  transition: filter 0.2s ease-in-out;
 
   &:hover {
     filter: grayscale(0);
