@@ -3,8 +3,6 @@ import { css } from "@emotion/react";
 
 import { maxMedia } from "styles/mixins";
 
-import { Title } from "../Popup/SectionTitle/style";
-
 export const Wrapper = styled.div`
   width: 100%;
   // background: pink;
@@ -18,14 +16,14 @@ export const Wrapper = styled.div`
   flex-direction: column;
   justify-content: space-between;
 
-  ${Title} {
+  /* ${Title} {
     top: 25%;
     left: 15%;
-  }
+  } */
 
   ${maxMedia.xs} {
     /* min-height: 110vh; */
-    height: 120vh;
+    /* height: 120vh; */
   }
 `;
 
@@ -33,29 +31,25 @@ export const SubWrapper = styled(Wrapper)`
   margin-right: 0;
   margin-bottom: 0;
 `;
-export const Titlee = styled.h3`
-  font-size: clamp(42px, 11.15vw, 220px);
+export const Title = styled.h3`
+  /* font-size: clamp(42px, 11.15vw, 220px); */
+  font-size: 16rem;
   font-family: ${({ theme }) => theme.fonts.serif};
   color: ${({ theme }) => theme.colors.grey1};
   font-weight: 400;
   text-align: center;
   margin: 2.5rem 0;
   // margin-left: ${({ theme }) => theme.margin.medium};
-  letter-spacing: clamp(1px, 0.25vw, 3px);
-
-  ${maxMedia.xl} {
-    font-size: 11vw;
-  }
-  ${maxMedia.md} {
-    font-size: 10vw;
-    text-align: start;
-    // margin-left: ${({ theme }) => theme.margin.small};
-  }
-  ${maxMedia.xs} {
-    font-size: 78px;
+  letter-spacing: .15rem;
+  ${maxMedia.small} {
+    font-size: 4.75rem;
     text-align: center;
     line-height: 100%;
     letter-spacing: 1px;
+  }
+
+  ${maxMedia.xs}{
+    font-size: 4.5rem;
   }
 `;
 
@@ -88,7 +82,7 @@ export const SubContainer = styled.div`
     img {
       width: 100%;
       height: 100%;
-      max-height: 490px;
+      max-height: 40rem;
       object-fit: cover;
 
       ${maxMedia.xs} {
@@ -109,12 +103,16 @@ export const FooterNav = styled.div`
 `;
 
 export const Text = styled.h3`
-  font-size: 14px;
+  font-size: 1.15rem;
   font-family: ${({ theme }) => theme.fonts.sansSerif};
   font-weight: 300;
   margin: 1rem 0;
   text-transform: uppercase;
   color: ${({ theme }) => theme.colors.grey1};
+
+  ${maxMedia.small}{
+    font-size: 1rem;
+  }
 `;
 
 export const RowContainer = styled.div`
@@ -132,6 +130,10 @@ export const Content = styled(Text)`
 export const TitleContainer = styled.div`
   position: relative;
   margin: 0px 20px;
+  margin-top: 3rem;
+  ${maxMedia.xs}{
+    margin-top: 4rem;
+  }
 `;
 
 export const ButtonContainer = styled.div`

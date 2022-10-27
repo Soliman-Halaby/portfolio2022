@@ -27,7 +27,7 @@ export const subtitle = () => `
 export const TitleSection = () => `
   position: relative;
   font-size: ${theme.fontSizes.title.large};
-  line-height: 70px;
+  line-height: 6rem;
   display: inline-block;
   letter-spacing: -2;
   margin: 2.5rem 0;
@@ -35,9 +35,9 @@ export const TitleSection = () => `
   font-family: ${theme.fonts.serif};
   font-weight: 400;
 
-  ${maxMedia.xs}{
+  ${maxMedia.small}{
     font-size: ${theme.fontSizes.title.small};
-    line-height: 48px;
+    line-height: 4rem;
   }
 `;
 

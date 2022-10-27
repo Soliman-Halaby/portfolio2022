@@ -97,6 +97,13 @@ const styles = ({ fonts }) => {
         url(${fontFiles.NeueHaasDisplayBlackItalic}) format("truetype");
     }
 
+
+    :root{
+      font-size: 0.6945vw;
+      ${maxMedia.small} {
+        font-size: 2.23vw;
+      }
+    }
     *,
     *::after,
     *::before {

@@ -88,12 +88,13 @@ export const BlockImage = styled(Image)`
 export const Text = styled.p`
   text-transform: uppercase;
   font-family: ${({ theme }) => theme.fonts.sansSerif};
-  font-size: 16px;
+  font-size: 1rem;
   margin-bottom: 8px;
   font-weight: 300;
   color: ${({ theme }) => theme.colors.grey1};
 
   svg {
-    margin-left: 4px;
+    margin-left: .5rem;
+    
   }
 `;

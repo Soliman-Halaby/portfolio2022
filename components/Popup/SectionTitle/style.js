@@ -4,7 +4,7 @@ import { maxMedia, title } from "styles/mixins";
 import theme from "theme";
 
 export const Title = styled.p`
-  font-size: 14px;
+  font-size: 1.15rem;
   position: absolute;
   left: 25%;
   text-transform: uppercase;
@@ -24,6 +24,6 @@ export const Title = styled.p`
 `;
 
 export const Number = styled.span`
-  font-size: 10px;
-  margin-right: 10px;
+  font-size: 1rem;
+  margin-right: 1rem;
 `;
