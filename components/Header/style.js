@@ -6,7 +6,8 @@ import { maxMedia, title } from "styles/mixins";
 
 export const Logo = styled.img`
   z-index: 2;
-  width: 1.5rem;
+  width: 2rem;
+  min-width: 20px;
   height: auto;
   position: absolute;
   left: 50%;

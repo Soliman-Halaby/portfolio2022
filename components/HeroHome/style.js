@@ -5,6 +5,7 @@ import { css } from "@emotion/react";
 import Image from "next/image";
 // import {Title as TitleSection} from "@/components/Popup/SectionTitle/style";
 
+import { SuccessMessage } from "../Popup/Pin/style";
 import { maxMedia, TitleSection } from "styles/mixins";
 
 export const Wrapper = styled.div`
@@ -17,13 +18,6 @@ export const Wrapper = styled.div`
   ${maxMedia.xs} {
     padding-top: 52px;
   }
-  .hero_title-section {
-    top: 20%;
-    ${maxMedia.xs} {
-      top: 15%;
-      left: 10%;
-    }
-  }
 `;
 
 export const Container = styled.div`
@@ -35,13 +29,13 @@ export const Container = styled.div`
     transform-origin: center;
   }
 
-  .hero_pin-section {
-    top: 20%;
-    right: 10%;
+  ${SuccessMessage} {
+    top: 30rem;
+    right: 15rem;
     left: inherit;
-    ${maxMedia.xs} {
-      top: 35%;
-      right: 25%;
+    ${maxMedia.small} {
+      top: 28rem;
+      right: 10rem;
     }
   }
 `;
@@ -94,7 +88,6 @@ export const Text = styled.p`
   color: ${({ theme }) => theme.colors.grey1};
 
   svg {
-    margin-left: .5rem;
-    
+    margin-left: 0.5rem;
   }
 `;

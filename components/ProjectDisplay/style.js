@@ -31,6 +31,7 @@ export const ProjectContainer = styled.div`
     gap: 0.25rem;
   }
 `;
+
 export const Container = styled.div`
   width: 100%;
   margin: 0px 20px;

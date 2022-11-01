@@ -10,16 +10,18 @@ export const Title = styled.p`
   text-transform: uppercase;
   display: flex;
   align-items: center;
-  top: 40%;
+  top: 20rem;
   white-space: break-spaces;
   margin-left: ${({ theme }) => theme.margin.medium};
   margin-top: 48px;
   ${maxMedia.md} {
-    top: 20%;
-    left: 0;
+    /* top: 20%;
+    left: 0; */
   }
-  ${maxMedia.xs} {
-    top: 15%;
+  ${maxMedia.small} {
+    /* top: 15%; */
+    top: 10rem;
+    font-size: 1.1rem;
   }
 `;
 

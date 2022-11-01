@@ -6,8 +6,8 @@ import { maxMedia, title } from "styles/mixins";
 export const SuccessMessage = styled.span`
   position: absolute;
   cursor: pointer;
-  top: ${({ top }) => `${top}%`};
-  left: ${({ left }) => `${left}%`};
+  top: ${({ top }) => `${top}rem`};
+  left: ${({ left }) => `${left}rem`};
   transform: translate(-50%, -50%);
   transform: rotate(-4.6deg);
   padding: 7.5px;
@@ -18,7 +18,11 @@ export const SuccessMessage = styled.span`
   font-family: ${({ theme }) => theme.fonts.sansSerif};
   font-weight: 300;
   text-transform: uppercase;
-  font-size: ${({ colored }) => (colored ? `10px` : `14px`)};
+  font-size: ${({ colored }) => (colored ? `1rem` : `1.25rem`)};
   /* border-style: dashed; */
   line-height: initial;
+
+  ${maxMedia.small} {
+    font-size: ${({ colored }) => (colored ? `1.2` : `1.25rem`)};
+  }
 `;

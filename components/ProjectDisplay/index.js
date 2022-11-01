@@ -50,14 +50,20 @@ const ProjectDisplay = ({ col, row, title, to, image = [], index }) => {
   }, []);
 
   return (
-    <Wrapper onClick={() => router.push(`/project/${to}`)} col={col} row={row}>
+    <Wrapper
+      onMouseMove={() => console.log("coucou")}
+      onClick={() => router.push(`/project/${to}`)}
+      col={col}
+      row={row}
+    >
       <ProjectContainer onMouseOver={updateDisplay} onMouseOut={resetDisplay}>
         {learnMoreCta && (
           <Button
             className="learn-more-cta"
-            to="/cc"
+            to={`/project/${to}`}
             colored
-            innerRef={buttonRef}
+            innerRef={(el) => (buttonRef.current[i] = el)}
+            // ref={(el) => (buttonRef.current[i] = el)}
             label="Learn more"
             withArrow
           />
