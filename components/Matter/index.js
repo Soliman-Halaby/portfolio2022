@@ -217,7 +217,23 @@ import {
   Runner,
 } from "matter-js";
 
-import { Title, MatterContainer, Box, Ground } from "./style";
+import {
+  Title,
+  MatterContainer,
+  Box,
+  Detail,
+  CloseBtnContainer,
+  CloseBtn,
+  DetailContainer,
+  Ground,
+  Label,
+  Description,
+  OtherFactsContainer,
+  ControlWrapper,
+  ControlContainer,
+  Control,
+  SceneContainer,
+} from "./style";
 
 const MatterComponent = ({}) => {
   const requestRef = useRef();
@@ -227,6 +243,7 @@ const MatterComponent = ({}) => {
 
   const GRAVITY = 1;
 
+  const WIREFRAMES = true;
   // Scene walls
   const wall = (x, y, width, height) => {
     return Bodies.rectangle(x, y, width, height, {
@@ -253,9 +270,15 @@ const MatterComponent = ({}) => {
 
   const engine = useRef(Engine.create({}));
 
+  const scene = useRef();
+
   const bodies = [];
   const datas = [
-    { label: "Paris" },
+    {
+      label: "Paris",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet viverra in nisl pellentesque nullam. Porttitor pellentesque pharetra, suspendisse at arcu. Netus tempus, pulvinar vel commodocondimentum turpis cursus semper. Dignissim commodo amet eleifendlibero, risus. Aliquam risus vestibulum facilisis urna tempus idcongue ac, arcu. Enim dictum nec malesuada in faucibus id nuncnec. A nisl at accumsan at vitae, vulputate odio morbi quam.Magnis ullamcorper fermentum donec tellus, vitae enim morbi egetcongue. Dictum dictumst sit vel placerat tincidunt vitae nunc.Pulvinar pharetra lectus tristique aliquam pulvinar eget.",
+    },
     { label: "Ultranoir" },
     { label: "Hetic" },
   ];
@@ -263,6 +286,19 @@ const MatterComponent = ({}) => {
   useEffect(() => {
     let clientWidth = document.body.clientWidth;
     let clientHeight = document.body.clientHeight;
+
+    const render = Render.create({
+      element: scene.current,
+      engine: engine.current,
+      options: {
+        width: clientWidth,
+        height: clientHeight,
+        wireframes: WIREFRAMES,
+        background: "transparent",
+      },
+    });
+
+    Render.run(render);
 
     for (let i = 0; i < datas.length; i++) {
       const box = {
@@ -278,12 +314,13 @@ const MatterComponent = ({}) => {
 
         render() {
           const { x, y } = box.body.position;
-          box.elem.style.top = `${y - 20}px`;
-          box.elem.style.left = `${x - 20}px`;
+          box.elem.style.top = `${y - boxRef.current[i].offsetHeight / 2}px`;
+          box.elem.style.left = `${x - boxRef.current[i].offsetWidth / 2}px`;
           box.elem.style.transform = `rotate(${box.body.angle}rad)`;
         },
       };
       bodies.push(box);
+      console.log(box.body.position);
       Composite.add(engine.current.world, [bodies[i].body]);
     }
 
@@ -302,17 +339,12 @@ const MatterComponent = ({}) => {
       clientWidth,
       500
     );
-    const wallLeft = wall(
-      -150,
-      clientHeight / 2,
-      200,
-      clientHeight * 1.5 + 150
-    );
+    const wallLeft = wall(-100, clientHeight / 2, 200, clientHeight * 3);
     const wallRight = wall(
-      clientWidth + 60,
+      clientWidth + 100,
       clientHeight / 2,
       200,
-      clientHeight * 1.5 + 150
+      clientHeight * 3
     );
 
     // Controls box with mouse
@@ -334,6 +366,7 @@ const MatterComponent = ({}) => {
       Engine.update(engine.current);
       for (let i = 0; i < datas.length; i++) {
         bodies[i].render();
+        console.log(bodies[1].body.position);
       }
       requestRef.current = requestAnimationFrame(rerender);
     };
@@ -349,6 +382,7 @@ const MatterComponent = ({}) => {
 
   return (
     <MatterContainer>
+      <SceneContainer ref={scene} />
       <Fragment>
         {datas.map((data, i) => {
           return (
@@ -361,6 +395,34 @@ const MatterComponent = ({}) => {
             </Box>
           );
         })}
+        <Detail>
+          <DetailContainer>
+            <CloseBtnContainer>
+              <CloseBtn src="/close.svg" layout="fill"></CloseBtn>
+            </CloseBtnContainer>
+            <Label>{datas[0].label}</Label>
+            <Description>{datas[0].description}</Description>
+            <OtherFactsContainer>
+              Other facts
+              <ControlWrapper>
+                <ControlContainer>
+                  <Control
+                    src="/facts-prev.svg"
+                    width="24px"
+                    height="24px"
+                  ></Control>
+                </ControlContainer>
+                <ControlContainer>
+                  <Control
+                    src="/facts-next.svg"
+                    width="24px"
+                    height="24px"
+                  ></Control>
+                </ControlContainer>
+              </ControlWrapper>
+            </OtherFactsContainer>
+          </DetailContainer>
+        </Detail>
         <Ground />
       </Fragment>
       <Title>

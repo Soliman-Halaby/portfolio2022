@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 
 import { maxMedia } from "styles/mixins";
 
+import Image from "next/image";
 export const Box = styled.div`
   position: absolute;
   /* background: #111; */
@@ -21,7 +22,7 @@ export const Box = styled.div`
   font-family: ${({ theme }) => theme.fonts.sansSerif};
 
   &.rounded {
-    border-radius: 200px;
+    /* border-radius: 200px; */
     padding: 5px 20px;
   }
 
@@ -30,9 +31,14 @@ export const Box = styled.div`
   }
 `;
 
+export const SceneContainer = styled.div`
+  canvas {
+    opacity: 0;
+  }
+`;
 export const Ground = styled.div`
   position: absolute;
-  bottom: 64px;
+  bottom: 77.5px;
   height: 1px;
   width: 100%;
   left: 0;
@@ -55,8 +61,62 @@ export const Title = styled.h2`
   }
 `;
 
+export const Detail = styled.div`
+  position: absolute;
+  bottom: 77.5px;
+  right: 0;
+  user-select: none;
+  width: 50vw;
+  height: 50vh;
+  z-index: 9;
+  padding: 3rem;
+  background: ${({ theme }) => theme.colors.lime};
+`;
+
+export const DetailContainer = styled.div`
+  position: relative;
+  height: 100%;
+`;
+
+export const Label = styled.h2`
+  font-family: ${({ theme }) => theme.fonts.sansSerif};
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  padding: 0.5rem;
+  border: 1px solid ${({ theme }) => theme.colors.grey1};
+  border-style: dashed;
+  background: ${({ theme }) => theme.colors.grey2};
+  border-radius: 8px;
+  display: inline-block;
+  text-align: left;
+`;
+
+export const Description = styled.p`
+  width: 60%;
+  font-size: 1.2rem;
+  margin-top: 3rem;
+  color: ${({ theme }) => theme.colors.black};
+`;
+
+export const OtherFactsContainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1.8rem;
+  align-items: center;
+  gap: 2rem;
+  text-transform: uppercase;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+`;
 export const MatterContainer = styled.div`
   z-index: 9999;
+  height: 100vh;
+  overflow: hidden;
 
   ${maxMedia.xs} {
     height: 100vh;
@@ -64,3 +124,31 @@ export const MatterContainer = styled.div`
     width: 100%;
   }
 `;
+
+export const CloseBtnContainer = styled.div`
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+  right: 0 !important;
+  top: 0;
+`;
+export const CloseBtn = styled(Image)``;
+
+export const ControlWrapper = styled.div`
+  display: flex;
+  gap: 1rem;
+`;
+export const ControlContainer = styled.div`
+  width: 4.5rem;
+  cursor: pointer;
+  height: 3rem;
+  background: ${({ theme }) => theme.colors.grey2};
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  border-radius: 26px;
+  border: 1px solid ${({ theme }) => theme.colors.grey1};
+`;
+
+export const Control = styled(Image)``;
