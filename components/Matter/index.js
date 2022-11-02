@@ -210,6 +210,7 @@ import {
   Render,
   Composite,
   World,
+  Body,
   Bodies,
   Mouse,
   Events,
@@ -239,6 +240,9 @@ const MatterComponent = ({}) => {
   const requestRef = useRef();
   const boxRef = useRef([]);
 
+
+  const [detail, setDetail] = useState('closed')
+  const detailRef = useRef(null)
   //   // Variables
 
   const GRAVITY = 1;
@@ -283,6 +287,18 @@ const MatterComponent = ({}) => {
     { label: "Hetic" },
   ];
 
+
+  const closeDetail = () => {
+    console.log('clsoe')
+    setDetail('closed')
+  }
+
+  const openDetail = () => {
+    console.log('opene')
+    setDetail('opened')
+  }
+
+
   useEffect(() => {
     let clientWidth = document.body.clientWidth;
     let clientHeight = document.body.clientHeight;
@@ -320,10 +336,9 @@ const MatterComponent = ({}) => {
         },
       };
       bodies.push(box);
-      console.log(box.body.position);
+      // console.log(box.body.position);
       Composite.add(engine.current.world, [bodies[i].body]);
     }
-
     // Scene walls
 
     const ground = wall(
@@ -366,7 +381,7 @@ const MatterComponent = ({}) => {
       Engine.update(engine.current);
       for (let i = 0; i < datas.length; i++) {
         bodies[i].render();
-        console.log(bodies[1].body.position);
+        // console.log(bodies[1].body.position);
       }
       requestRef.current = requestAnimationFrame(rerender);
     };
@@ -380,6 +395,29 @@ const MatterComponent = ({}) => {
     };
   }, []);
 
+
+  useEffect(() => {
+
+    let clientWidth = document.body.clientWidth;
+    let clientHeight = document.body.clientHeight;
+
+
+    const detailBox = {
+      body: wall(
+        clientWidth - 420,
+        clientHeight - 290,
+        detailRef.current.offsetWidth,
+        detailRef.current.offsetHeight,
+      ),
+  
+      elem: detailRef.current,
+      
+    }
+
+    Composite.add(engine.current.world, [detailBox.body]);
+
+    detail === 'opened' ? Body.scale(detailBox.body, 1, 1) : Body.scale(detailBox.body, 0, 0)
+  }, [detail])
   return (
     <MatterContainer>
       <SceneContainer ref={scene} />
@@ -390,15 +428,16 @@ const MatterComponent = ({}) => {
               className={i % 2 !== 0 ? "rounded" : ""}
               key={i}
               ref={(el) => (boxRef.current[i] = el)}
+              onClick={() => openDetail()}
             >
               {data.label}
             </Box>
           );
         })}
-        <Detail>
+        <Detail className={detail} ref={detailRef}>
           <DetailContainer>
             <CloseBtnContainer>
-              <CloseBtn src="/close.svg" layout="fill"></CloseBtn>
+              <CloseBtn onClick={() => closeDetail()} src="/close.svg" layout="fill"></CloseBtn>
             </CloseBtnContainer>
             <Label>{datas[0].label}</Label>
             <Description>{datas[0].description}</Description>
