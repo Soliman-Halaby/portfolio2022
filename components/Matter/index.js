@@ -216,6 +216,7 @@ import {
   Events,
   MouseConstraint,
   Runner,
+  Matter,
 } from "matter-js";
 
 import {
@@ -240,9 +241,8 @@ const MatterComponent = ({}) => {
   const requestRef = useRef();
   const boxRef = useRef([]);
 
-
-  const [detail, setDetail] = useState('closed')
-  const detailRef = useRef(null)
+  const [detail, setDetail] = useState("closed");
+  const detailRef = useRef(null);
   //   // Variables
 
   const GRAVITY = 1;
@@ -257,6 +257,19 @@ const MatterComponent = ({}) => {
       isStatic: true,
     });
   };
+
+  const datas = [
+    {
+      label: "Paris",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet viverra in nisl pellentesque nullam. Porttitor pellentesque pharetra, suspendisse at arcu. Netus tempus, pulvinar vel commodocondimentum turpis cursus semper. Dignissim commodo amet eleifendlibero, risus. Aliquam risus vestibulum facilisis urna tempus idcongue ac, arcu. Enim dictum nec malesuada in faucibus id nuncnec. A nisl at accumsan at vitae, vulputate odio morbi quam.Magnis ullamcorper fermentum donec tellus, vitae enim morbi egetcongue. Dictum dictumst sit vel placerat tincidunt vitae nunc.Pulvinar pharetra lectus tristique aliquam pulvinar eget.",
+    },
+    { label: "Ultranoir" },
+    { label: "Hetic" },
+  ];
+
+  const [title, setTitle] = useState(datas[0].label);
+  const [content, setContent] = useState(datas[0].description);
 
   // Function to generate blocks in scene
   const rect = (x, y, width, height, angle) => {
@@ -277,27 +290,31 @@ const MatterComponent = ({}) => {
   const scene = useRef();
 
   const bodies = [];
-  const datas = [
-    {
-      label: "Paris",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet viverra in nisl pellentesque nullam. Porttitor pellentesque pharetra, suspendisse at arcu. Netus tempus, pulvinar vel commodocondimentum turpis cursus semper. Dignissim commodo amet eleifendlibero, risus. Aliquam risus vestibulum facilisis urna tempus idcongue ac, arcu. Enim dictum nec malesuada in faucibus id nuncnec. A nisl at accumsan at vitae, vulputate odio morbi quam.Magnis ullamcorper fermentum donec tellus, vitae enim morbi egetcongue. Dictum dictumst sit vel placerat tincidunt vitae nunc.Pulvinar pharetra lectus tristique aliquam pulvinar eget.",
-    },
-    { label: "Ultranoir" },
-    { label: "Hetic" },
-  ];
-
 
   const closeDetail = () => {
-    console.log('clsoe')
-    setDetail('closed')
-  }
+    console.log("clsoe");
+    setDetail("closed");
+  };
 
-  const openDetail = () => {
-    console.log('opene')
-    setDetail('opened')
-  }
+  function openDetail(index) {
+    console.log("opene");
+    setDetail("opened");
 
+    // console.log(boxRe/f.current[index].textContent);
+    setTitle(boxRef.current[index].textContent);
+    // console.log(event.currentTarget);
+    console.log(index);
+
+    const getContent = datas.find(
+      (data) => data.label === boxRef.current[index].textContent
+    );
+    console.log(getContent);
+
+    setContent(getContent.description);
+    // data.label === boxRef.current[index].textContent;
+
+    // console.log(found);
+  }
 
   useEffect(() => {
     let clientWidth = document.body.clientWidth;
@@ -313,6 +330,8 @@ const MatterComponent = ({}) => {
         background: "transparent",
       },
     });
+
+    render.options.showPerformance = true;
 
     Render.run(render);
 
@@ -383,6 +402,7 @@ const MatterComponent = ({}) => {
         bodies[i].render();
         // console.log(bodies[1].body.position);
       }
+
       requestRef.current = requestAnimationFrame(rerender);
     };
 
@@ -395,29 +415,60 @@ const MatterComponent = ({}) => {
     };
   }, []);
 
-
   useEffect(() => {
-
     let clientWidth = document.body.clientWidth;
     let clientHeight = document.body.clientHeight;
-
 
     const detailBox = {
       body: wall(
         clientWidth - 420,
-        clientHeight - 290,
+        clientHeight - clientHeight / 3.1,
         detailRef.current.offsetWidth,
-        detailRef.current.offsetHeight,
+        detailRef.current.offsetHeight
       ),
-  
+
       elem: detailRef.current,
-      
-    }
+    };
 
     Composite.add(engine.current.world, [detailBox.body]);
 
-    detail === 'opened' ? Body.scale(detailBox.body, 1, 1) : Body.scale(detailBox.body, 0, 0)
-  }, [detail])
+    Body.setStatic(detailBox.body, true);
+
+    // Body.setPosition(detailBox.body, { x: 100, y: 100 });
+    Engine.update(engine.current);
+    // detail === "opened"
+    //   ? Body.scale(detailBox.body, 1, 1)
+    //   : Body.scale(detailBox.body, 1, 1);
+    const test = () => {
+      // detail === "opened"
+      //   ? Body.translate(detailBox.body, { x: -30, y: -5 })
+      //   : Body.translate(detailBox.body, {
+      //       x: detailRef.current.offsetWidth,
+      //       y: 0,
+      //     });
+
+      if (detail === "opened") {
+        Body.translate(detailBox.body, { x: -30, y: -5 });
+      }
+
+      if (detail === "closed") {
+        Body.translate(detailBox.body, {
+          x: 200,
+          y: 0,
+        });
+
+        World.remove(engine.current.world, detailBox.body);
+        console.log("yo");
+      }
+
+      console.log(detail);
+      Engine.update(engine.current);
+    };
+
+    test();
+
+    console.log(detail);
+  }, [detail]);
   return (
     <MatterContainer>
       <SceneContainer ref={scene} />
@@ -428,7 +479,7 @@ const MatterComponent = ({}) => {
               className={i % 2 !== 0 ? "rounded" : ""}
               key={i}
               ref={(el) => (boxRef.current[i] = el)}
-              onClick={() => openDetail()}
+              onClick={() => openDetail(i)}
             >
               {data.label}
             </Box>
@@ -437,10 +488,14 @@ const MatterComponent = ({}) => {
         <Detail className={detail} ref={detailRef}>
           <DetailContainer>
             <CloseBtnContainer>
-              <CloseBtn onClick={() => closeDetail()} src="/close.svg" layout="fill"></CloseBtn>
+              <CloseBtn
+                onClick={() => closeDetail()}
+                src="/close.svg"
+                layout="fill"
+              ></CloseBtn>
             </CloseBtnContainer>
-            <Label>{datas[0].label}</Label>
-            <Description>{datas[0].description}</Description>
+            <Label>{title}</Label>
+            <Description>{content}</Description>
             <OtherFactsContainer>
               Other facts
               <ControlWrapper>

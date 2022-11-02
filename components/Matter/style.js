@@ -33,11 +33,12 @@ export const Box = styled.div`
 
 export const SceneContainer = styled.div`
   canvas {
-    opacity: 0;
+    /* opacity: 0; */
   }
 `;
 export const Ground = styled.div`
   position: absolute;
+
   bottom: 77.5px;
   height: 1px;
   width: 100%;
@@ -70,7 +71,15 @@ export const Detail = styled.div`
   height: 50vh;
   z-index: 9;
   padding: 3rem;
+  /* opacity: 0.2; */
+  transform: translateX(100%);
   background: ${({ theme }) => theme.colors.lime};
+  will-change: transform;
+  transition: transform 0.5s ease-in-out;
+
+  &.opened {
+    transform: translateX(0);
+  }
 `;
 
 export const DetailContainer = styled.div`
