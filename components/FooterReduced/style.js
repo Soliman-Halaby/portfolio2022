@@ -51,13 +51,12 @@ export const Element = styled.div`
   position: relative;
   gap: 0.5rem;
 
-
-
-  ${maxMedia.xs}{
-    &.with-arrow{
+  ${maxMedia.xs} {
+    &.with-arrow {
       width: 100%;
       justify-content: space-between;
     }
+  }
 `;
 
 export const Text = styled.p`
@@ -70,7 +69,4 @@ export const Text = styled.p`
 
 export const Image = styled.img`
   cursor: pointer;
-
-
-  }
 `;

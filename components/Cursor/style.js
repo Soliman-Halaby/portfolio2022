@@ -7,7 +7,7 @@ import { maxMedia, TitleSection } from "styles/mixins";
 
 import { Container } from "../Buttons/ProjectButton/style";
 export const Cursor = styled.div`
-  width: ${({ custom }) => (custom === "simple" ? "20px" : "15rem")};
+  width: ${({ custom }) => (custom === "simple" ? "20px" : "16rem")};
   height: 20px;
   z-index: 99999;
   // border: 1px solid white;
@@ -56,7 +56,6 @@ export const CursorContainer = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-
   svg {
     transition: all 0.3s ease;
   }

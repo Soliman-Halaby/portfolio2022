@@ -22,4 +22,9 @@ export const ButtonStyle = styled.span`
     color: ${({ theme }) => theme.colors.grey1};
     transition: all 0.3s ease-out;
   }
+
+  ${maxMedia.small} {
+    font-size: 1.35rem;
+    padding: 1rem;
+  }
 `;

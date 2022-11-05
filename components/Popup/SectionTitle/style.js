@@ -21,11 +21,15 @@ export const Title = styled.p`
   ${maxMedia.small} {
     /* top: 15%; */
     top: 10rem;
-    font-size: 1.1rem;
+    font-size: 1.35rem;
   }
 `;
 
 export const Number = styled.span`
   font-size: 1rem;
   margin-right: 1rem;
+
+  ${maxMedia.small} {
+    font-size: 1.2rem;
+  }
 `;
