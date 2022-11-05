@@ -9,7 +9,7 @@ export const Title = styled.p`
   left: 25%;
   text-transform: uppercase;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   top: 20rem;
   white-space: break-spaces;
   margin-left: ${({ theme }) => theme.margin.medium};
