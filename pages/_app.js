@@ -8,7 +8,6 @@ import theme from "theme";
 import "styles/globals.css";
 
 import globalStyles from "styles/global";
-
 export default function App({ Component, pageProps }) {
   const { route } = useRouter();
   const containerRef = useRef(null);
@@ -28,10 +27,10 @@ export default function App({ Component, pageProps }) {
     //   }
     // >
     //   <main data-scroll-container ref={containerRef}>
-        <ThemeProvider theme={theme}>
-          <Global styles={globalStyles} />
-          <Component {...pageProps} />
-        </ThemeProvider>
+    <ThemeProvider theme={theme}>
+      <Global styles={globalStyles} />
+      <Component {...pageProps} />
+    </ThemeProvider>
     //   </main>
     // </LocomotiveScrollProvider>
   );

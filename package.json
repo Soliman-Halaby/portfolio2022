@@ -16,16 +16,19 @@
     "emotion-reset": "^3.0.1",
     "gsap": "^3.11.1",
     "locomotive-scroll": "^4.1.4",
+    "matter-js": "^0.18.0",
     "next": "12.2.3",
     "next-fonts": "^1.5.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-locomotive-scroll": "^0.2.2",
+    "recoil": "^0.7.6",
     "vercel": "^28.2.0"
   },
   "devDependencies": {
     "@emotion/babel-plugin": "^11.10.2",
     "eslint": "8.20.0",
-    "eslint-config-next": "12.2.3"
+    "eslint-config-next": "12.2.3",
+    "snazzy": "^9.0.0"
   }
 }

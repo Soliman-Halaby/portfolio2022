@@ -1,6 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/router";
 import Button from "@/components/Buttons/Button";
+
+import { useSetRecoilState } from "recoil";
 import {
   Wrapper,
   ProjectContainer,
@@ -10,10 +12,13 @@ import {
   Number,
   Title,
 } from "./style";
+import { cursorState } from "recoil/cursorState";
 
 const ProjectDisplay = ({ col, row, title, to, image = [], index }) => {
   const [learnMoreCta, setLearnMoreCta] = useState(false);
   const router = useRouter();
+
+  const setCursorDisplay = useSetRecoilState(cursorState);
 
   const buttonRef = useRef(null);
   const timerRef = useRef();
@@ -24,12 +29,15 @@ const ProjectDisplay = ({ col, row, title, to, image = [], index }) => {
     timerRef.current = setInterval(() => {
       setCount((count) => count + 1);
     }, 600);
+
+    setCursorDisplay("customButton");
   };
 
   const resetDisplay = () => {
     setLearnMoreCta(false);
     clearInterval(timerRef.current);
     setCount(0);
+    setCursorDisplay("simple");
   };
 
   if (buttonRef) {
@@ -57,18 +65,15 @@ const ProjectDisplay = ({ col, row, title, to, image = [], index }) => {
       row={row}
     >
       <ProjectContainer onMouseOver={updateDisplay} onMouseOut={resetDisplay}>
-        {learnMoreCta && (
-          <Button
-            className="learn-more-cta"
-            to={`/project/${to}`}
-            colored
-            innerRef={(el) => (buttonRef.current[i] = el)}
-            // ref={(el) => (buttonRef.current[i] = el)}
-            label="Learn more"
-            withArrow
-          />
+        {image && (
+          <ImageContainer>
+            <Image
+              data-scroll
+              data-scroll-speed={index % 2 === 0 ? "-0.5" : "0.5"}
+              src={image[count % image.length]}
+            />
+          </ImageContainer>
         )}
-        {image && <ImageContainer ><Image data-scroll data-scroll-speed={index%2 === 0 ? '-0.25' : '0.25'}  src={image[count % image.length]} /></ImageContainer>}
         {title && (
           <RowWrapper>
             <Number>0{index + 1}</Number>
