@@ -243,6 +243,7 @@ const MatterComponent = ({}) => {
 
   const [detail, setDetail] = useState("closed");
   const detailRef = useRef(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
   //   // Variables
 
   const GRAVITY = 1;
@@ -264,8 +265,11 @@ const MatterComponent = ({}) => {
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet viverra in nisl pellentesque nullam. Porttitor pellentesque pharetra, suspendisse at arcu. Netus tempus, pulvinar vel commodocondimentum turpis cursus semper. Dignissim commodo amet eleifendlibero, risus. Aliquam risus vestibulum facilisis urna tempus idcongue ac, arcu. Enim dictum nec malesuada in faucibus id nuncnec. A nisl at accumsan at vitae, vulputate odio morbi quam.Magnis ullamcorper fermentum donec tellus, vitae enim morbi egetcongue. Dictum dictumst sit vel placerat tincidunt vitae nunc.Pulvinar pharetra lectus tristique aliquam pulvinar eget.",
     },
-    { label: "Ultranoir" },
-    { label: "Hetic" },
+    { label: "Ultranoir", desription: "test" },
+    { label: "Hetic2", desription: "test2" },
+    { label: "Hetit3", desription: "test3" },
+    { label: "Hetic4", desription: "test4" },
+    // { label: "Hetic3", desription: "test3" },
   ];
 
   const [title, setTitle] = useState(datas[0].label);
@@ -292,23 +296,24 @@ const MatterComponent = ({}) => {
   const bodies = [];
 
   const closeDetail = () => {
-    console.log("clsoe");
+    console.log("close");
     setDetail("closed");
   };
 
   function openDetail(index) {
-    console.log("opene");
+    console.log("opened");
     setDetail("opened");
+    setCurrentIndex(index);
 
     // console.log(boxRe/f.current[index].textContent);
     setTitle(boxRef.current[index].textContent);
     // console.log(event.currentTarget);
-    console.log(index);
+    console.log(currentIndex);
+    console.log("elementIndex", index);
 
     const getContent = datas.find(
       (data) => data.label === boxRef.current[index].textContent
     );
-    console.log(getContent);
 
     setContent(getContent.description);
     // data.label === boxRef.current[index].textContent;
@@ -439,7 +444,7 @@ const MatterComponent = ({}) => {
     // detail === "opened"
     //   ? Body.scale(detailBox.body, 1, 1)
     //   : Body.scale(detailBox.body, 1, 1);
-    const test = () => {
+    const controlDetail = () => {
       // detail === "opened"
       //   ? Body.translate(detailBox.body, { x: -30, y: -5 })
       //   : Body.translate(detailBox.body, {
@@ -448,15 +453,16 @@ const MatterComponent = ({}) => {
       //     });
 
       if (detail === "opened") {
-        Body.translate(detailBox.body, { x: -30, y: -5 });
+        Body.translate(detailBox.body, { x: -30, y: -11 });
       }
 
       if (detail === "closed") {
         Body.translate(detailBox.body, {
-          x: 200,
-          y: 0,
+          x: 0,
+          y: detailRef.current.offsetHeight,
         });
 
+        Body.update(detailBox.body);
         World.remove(engine.current.world, detailBox.body);
         console.log("yo");
       }
@@ -465,10 +471,47 @@ const MatterComponent = ({}) => {
       Engine.update(engine.current);
     };
 
-    test();
+    controlDetail();
 
     console.log(detail);
   }, [detail]);
+
+  const previousDetail = () => {
+    console.log("prevous");
+    console.log(currentIndex);
+    // console.log(index);
+    setCurrentIndex(currentIndex - 1);
+
+    setContent(datas[currentIndex].description);
+    setTitle(datas[currentIndex].label);
+
+    if (currentIndex == 0) {
+      setCurrentIndex(datas.length - 1);
+      setContent(datas[currentIndex].description);
+      setTitle(datas[currentIndex].label);
+    }
+  };
+
+  const nextDetail = () => {
+    // console.log("nex");
+    if (currentIndex === datas.length) {
+      console.log("updateindex", currentIndex);
+      setContent(datas[currentIndex - 1].description);
+      setTitle(datas[currentIndex - 1].label);
+      setCurrentIndex(0);
+    }
+
+    if (currentIndex !== datas.length) {
+      setCurrentIndex(currentIndex + 1);
+
+      console.log("currentIndex", currentIndex);
+      setContent(datas[currentIndex].description);
+      setTitle(datas[currentIndex].label);
+
+      console.log("datalength", datas.length);
+      // console.log(datas.length);
+    }
+  };
   return (
     <MatterContainer>
       <SceneContainer ref={scene} />
@@ -501,6 +544,7 @@ const MatterComponent = ({}) => {
               <ControlWrapper>
                 <ControlContainer>
                   <Control
+                    onClick={() => previousDetail()}
                     src="/facts-prev.svg"
                     width="24px"
                     height="24px"
@@ -508,6 +552,7 @@ const MatterComponent = ({}) => {
                 </ControlContainer>
                 <ControlContainer>
                   <Control
+                    onClick={() => nextDetail()}
                     src="/facts-next.svg"
                     width="24px"
                     height="24px"
