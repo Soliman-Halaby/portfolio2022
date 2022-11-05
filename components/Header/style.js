@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import { css } from "@emotion/react";
 import Link from "next/link";
 
+import { Title } from "../Popup/SectionTitle/style";
 import { maxMedia, title } from "styles/mixins";
 
 export const Logo = styled.img`
@@ -21,6 +22,7 @@ export const MainLink = styled.span`
   display: flex;
   align-items: center;
   text-transform: uppercase;
+  color: ${({ theme }) => theme.colors.grey2};
   mix-blend-mode: difference;
   font-size: 1.15rem;
   font-family: ${({ theme }) => theme.fonts.sansSerif};
@@ -49,9 +51,17 @@ export const MainLink = styled.span`
       }
     }
   }
+
+  ${maxMedia.small} {
+    font-size: 1.2rem;
+    /* font-size: 16px; */
+  }
 `;
 
 export const NavLink = styled(Link)``;
+export const MenuDisplay = styled.p`
+  color: ${({ theme }) => theme.colors.grey2};
+`;
 
 export const Nav = styled.nav`
   display: flex;
@@ -71,4 +81,53 @@ export const Nav = styled.nav`
 export const NavItem = styled.div`
   display: flex;
   gap: 1rem;
+`;
+
+export const HeaderContainer = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+`;
+
+export const SubNav = styled.div`
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  top: 0;
+  z-index: 999;
+  background: ${({ theme }) => theme.colors.grey2};
+  will-change: transform;
+  transition: opacity 0.3s ease;
+  &.opened {
+    opacity: 1;
+    pointer-events: all;
+  }
+`;
+
+export const SubNavItemsContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20rem;
+  background: ${({ theme }) => theme.colors.grey2};
+  height: 80vh;
+
+  ${Title} {
+    margin: 0;
+    margin-bottom: 7rem;
+    position: inherit;
+  }
+
+  ${MainLink} {
+    margin: 2rem 0;
+    font-size: 1.8rem;
+  }
+`;
+
+export const ItemsContainer = styled.div`
+  margin-left: 10rem;
 `;
