@@ -125,11 +125,12 @@ const styles = ({ fonts }) => {
     }
     a {
       text-decoration: none;
+      cursor: none;
     }
 
     body {
       white-space: pre-line;
-      // cursor: none;
+      cursor: none;
       font-family: ${fonts.sansSerif};
       background: ${({ theme }) => {
         theme.colors.grey2;

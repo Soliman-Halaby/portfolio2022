@@ -27,10 +27,14 @@ export const Container = styled.div`
 
 export const Title = styled.h2`
   ${TitleSection()}
-  font-size: clamp(42px, 11.15vw, 168px);
+  font-size: 10rem;
   margin-bottom: 5rem;
   position: absolute;
   bottom: 0;
+
+  ${maxMedia.small} {
+    font-size: 6rem;
+  }
 `;
 
 export const ContainerGrid = styled.div`

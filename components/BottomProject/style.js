@@ -13,7 +13,7 @@ export const Wrapper = styled.div`
   align-items: center;
 
   ${maxMedia.xs} {
-    margin-top: 52px;
+    margin-top: 4rem;
   }
 `;
 

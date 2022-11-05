@@ -42,8 +42,7 @@ export const ImageContainer = styled.div`
   width: 100%;
   overflow: hidden;
   position: relative;
-
-`
+`;
 export const Image = styled.img`
   filter: grayscale(1);
   position: absolute;
@@ -70,14 +69,27 @@ export const RowWrapper = styled.div`
 `;
 
 export const Number = styled.span`
-  font-size: 12px;
+  font-size: 1rem;
   font-weight: 400;
   font-family: ${({ theme }) => theme.fonts.sansSerif};
+  ${maxMedia.md} {
+    font-size: 1.75rem;
+  }
+  ${maxMedia.small} {
+    font-size: 1rem;
+  }
 `;
 
 export const Title = styled.h3`
-  font-size: 14px;
+  font-size: 1.15rem;
   text-transform: uppercase;
   font-weight: 400;
   font-family: ${({ theme }) => theme.fonts.sansSerif};
+  ${maxMedia.md} {
+    font-size: 2.2rem;
+  }
+
+  ${maxMedia.small} {
+    font-size: 1.15rem;
+  }
 `;

@@ -42,7 +42,7 @@ export const TitleSection = () => `
 `;
 
 export const Paragraph = () => `
-  font-size: 14px;
+  font-size: 1.15rem;
   line-height: auto;
   font-family: ${({ theme }) => theme.fonts.sansSerif};
   color: ${({ theme }) => theme.colors.grey1};

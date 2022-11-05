@@ -40,7 +40,7 @@ export const Title = styled.h3`
   text-align: center;
   margin: 2.5rem 0;
   // margin-left: ${({ theme }) => theme.margin.medium};
-  letter-spacing: .15rem;
+  letter-spacing: 0.15rem;
   ${maxMedia.small} {
     font-size: 4.75rem;
     text-align: center;
@@ -48,7 +48,7 @@ export const Title = styled.h3`
     letter-spacing: 1px;
   }
 
-  ${maxMedia.xs}{
+  ${maxMedia.xs} {
     font-size: 4.5rem;
   }
 `;
@@ -110,7 +110,7 @@ export const Text = styled.h3`
   text-transform: uppercase;
   color: ${({ theme }) => theme.colors.grey1};
 
-  ${maxMedia.small}{
+  ${maxMedia.small} {
     font-size: 1rem;
   }
 `;
@@ -131,14 +131,14 @@ export const TitleContainer = styled.div`
   position: relative;
   margin: 0px 20px;
   margin-top: 3rem;
-  ${maxMedia.xs}{
+  ${maxMedia.xs} {
     margin-top: 4rem;
   }
 `;
 
 export const ButtonContainer = styled.div`
   width: 100%;
-  padding: 5px;
+  padding: 0.3rem;
   max-width: 320px;
   display: flex;
   position: relative;
@@ -149,10 +149,10 @@ export const ButtonContainer = styled.div`
 export const Button = styled.a`
   display: inline-block;
   cursor: pointer;
-  padding: 7.5px;
+  padding: 0.5rem;
   border: 1px solid ${({ theme }) => theme.colors.grey1};
   border-radius: ${({ rounded }) => (rounded ? "33px" : "5px")};
-  font-size: 14px;
+  font-size: 1.15rem;
   font-family: ${({ theme }) => theme.fonts.sansSerif};
   font-weight: 300;
   text-transform: uppercase;

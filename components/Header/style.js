@@ -22,7 +22,7 @@ export const MainLink = styled.span`
   align-items: center;
   text-transform: uppercase;
   mix-blend-mode: difference;
-  font-size: 14px;
+  font-size: 1.15rem;
   font-family: ${({ theme }) => theme.fonts.sansSerif};
   // color: ${({ theme }) => theme.colors.grey2} !important;
   font-weight: 300;

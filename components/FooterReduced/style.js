@@ -61,7 +61,7 @@ export const Element = styled.div`
 `;
 
 export const Text = styled.p`
-  font-size: 14px;
+  font-size: 1.15rem;
   font-family: ${({ theme }) => theme.fonts.sansSerif};
   font-weight: 300;
   text-transform: uppercase;

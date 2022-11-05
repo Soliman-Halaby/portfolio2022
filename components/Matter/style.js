@@ -72,13 +72,17 @@ export const Detail = styled.div`
   z-index: 9;
   padding: 3rem;
   /* opacity: 0.2; */
-  transform: translateX(100%);
+  transform: translateY(100%);
+  display: none;
+  opacity: 0;
   background: ${({ theme }) => theme.colors.lime};
   will-change: transform;
-  transition: transform 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 
   &.opened {
-    transform: translateX(0);
+    transform: translateY(0);
+    display: block;
+    opacity: 1;
   }
 `;
 

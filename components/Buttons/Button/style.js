@@ -6,17 +6,18 @@ import { maxMedia, title } from "styles/mixins";
 export const ButtonStyle = styled.span`
   display: inline-block;
   cursor: pointer;
-  padding: 7.5px;
-  height: 34px;
+  padding: 0.5rem;
+  padding-top: 0.8rem;
+  height: 3rem;
   border: 1px solid ${({ theme }) => theme.colors.grey1};
   color: ${({ theme }) => theme.colors.grey1};
   border-radius: ${({ rounded }) => (rounded ? "33px" : "5px")};
-  font-size: 14px;
+  font-size: 1.15rem;
   font-family: ${({ theme }) => theme.fonts.sansSerif};
   font-weight: 300;
   text-transform: uppercase;
   text-decoration: none;
-  line-height: 19px;
+  line-height: 1.3rem;
   transition: all 0.3s ease-out;
   /* display: flex;
   align-items: center; */
