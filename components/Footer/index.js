@@ -29,8 +29,6 @@ const Footer = () => {
 
   const copyToClipboard = (_) => {
     setActiveMessage(true);
-    setTest('clicked')
-    console.log(test)
     navigator.clipboard.writeText("contact@solimanalhalaby.fr");
     setTimeout(() => {
       setActiveMessage(false);
@@ -57,12 +55,12 @@ const Footer = () => {
       <TitleContainer>
         <Title>Soliman Al Halaby</Title>
         <Pin
-          top={isMobile ? "60" : "50"}
-          left={isMobile ? "10" : "50"}
-          label="hire me"
+          top={isMobile ? "14.5" : "13"}
+          left={isMobile ? "10" : "75"}
+          label="get in touch"
         />
       </TitleContainer>
-      <TitleSection number="01" title="Contact"></TitleSection>
+      <TitleSection top="23" left="20" number="01" title="Contact" />
       <Container>
         <SubContainer>
           <FooterNav>

@@ -113,11 +113,6 @@ const Footer = () => {
             <CircularButton to="/" label="CV" />
           </Element>
         </NavElement>
-        {!isMobile && (
-          <NavElement>
-            <Image onClick={() => scrollToTop(scroll)} src="/arrow-up.svg" />
-          </NavElement>
-        )}
       </Nav>
     </Wrapper>
   );
