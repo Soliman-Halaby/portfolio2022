@@ -20,6 +20,8 @@ export const Nav = styled.div`
   margin: ${({ theme }) => theme.margin.medium};
   display: flex;
   //   gap: 2rem;
+  flex-direction: column;
+
   justify-content: space-between;
 
   ${maxMedia.xs} {
@@ -27,31 +29,12 @@ export const Nav = styled.div`
   }
 `;
 
-export const NavElement = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  // background: lightblue;
-  // border-top: 1px solid red;
-
-  ${maxMedia.xs} {
-    padding: 1rem 0px;
-    border-top: 1px solid ${({ theme }) => theme.colors.grey1};
-    flex-direction: column;
-    align-items: flex-start;
-
-    &.mobile-hide {
-      display: none;
-    }
-  }
-`;
-
 export const Element = styled.div`
   display: flex;
   align-items: center;
+  width: 100%;
   position: relative;
   /* gap: .5rem; */
-
   ${maxMedia.xs} {
     &.with-arrow {
       width: 100%;
@@ -64,7 +47,7 @@ export const Text = styled.p`
   font-size: 1.15rem;
   font-family: ${({ theme }) => theme.fonts.sansSerif};
   font-weight: 300;
-  min-width: 70px;
+  min-width: 90px;
   text-transform: uppercase;
   color: ${({ theme }) => theme.colors.grey1};
 
@@ -73,15 +56,52 @@ export const Text = styled.p`
   }
 `;
 
+export const NavElement = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  // background: lightblue;
+  // border-top: 1px solid red;
+
+  padding: 1rem 0px;
+  border-top: 1px solid ${({ theme }) => theme.colors.grey1};
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  ${maxMedia.xs} {
+    &.mobile-hide {
+      display: none;
+    }
+  }
+
+  &:nth-of-type(1) {
+    ${Element} {
+      width: 100%;
+      justify-content: flex-end;
+
+      ${Text} {
+        &:nth-of-type(1) {
+          min-width: 140px;
+        }
+      }
+    }
+  }
+`;
+
 export const TextContent = styled(Text)`
   margin-bottom: 3rem;
-  margin-top: 2rem;
+  margin-top: 5rem;
 `;
 
 export const RowContainer = styled.div`
   display: flex;
   gap: 0.5rem;
   align-items: center;
+
+  ${Text} {
+    min-width: 75px !important;
+  }
 `;
 
 export const Image = styled.img`

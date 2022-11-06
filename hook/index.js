@@ -38,7 +38,7 @@ function useMediaQuery(query) {
 }
 
 const useIsMobile = () => {
-  const matches = useMediaQuery("(max-width: 760px)");
+  const matches = useMediaQuery("(max-width: 580px)");
   return matches;
 };
 

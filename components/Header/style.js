@@ -112,7 +112,7 @@ export const SubNavItemsContainer = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  padding-top: 20rem;
+  padding-top: 15rem;
   background: ${({ theme }) => theme.colors.grey2};
   height: 80vh;
 
@@ -125,6 +125,10 @@ export const SubNavItemsContainer = styled.div`
   ${MainLink} {
     margin: 2rem 0;
     font-size: 1.8rem;
+  }
+
+  ${maxMedia.xs} {
+    padding-top: 20rem;
   }
 `;
 

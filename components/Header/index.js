@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 // import Link from "next/link";
 
@@ -38,6 +38,12 @@ const Header = () => {
       scroll.scroll.start();
     }
   };
+
+  useEffect(() => {
+    if (!isMobile) {
+      setMenuDisplay("hidden");
+    }
+  }, [isMobile]);
   return (
     <HeaderContainer>
       <Nav>
@@ -73,7 +79,7 @@ const Header = () => {
           </NavItem>
         )}
       </Nav>
-      <SubNav className={menuDisplay}>
+      <SubNav className={`${menuDisplay}`}>
         <SubNavItemsContainer>
           <ItemsContainer>
             <SectionTitle number="01" title="Contact"></SectionTitle>
