@@ -6,11 +6,11 @@ import theme from "theme";
 export const Title = styled.p`
   font-size: 1.15rem;
   position: absolute;
-  left: 25%;
+  left: ${({ left }) => `${left}%`};
   text-transform: uppercase;
   display: flex;
   align-items: flex-start;
-  top: 20rem;
+  top: ${({ top }) => `${top}rem`};
   white-space: break-spaces;
   margin-left: ${({ theme }) => theme.margin.medium};
   margin-top: 48px;
@@ -20,8 +20,8 @@ export const Title = styled.p`
   }
   ${maxMedia.small} {
     /* top: 15%; */
-    top: 10rem;
-    font-size: 1.35rem;
+    /* top: 10rem;
+    font-size: 1.35rem; */
   }
 `;
 

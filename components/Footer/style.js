@@ -42,14 +42,14 @@ export const Title = styled.h3`
   // margin-left: ${({ theme }) => theme.margin.medium};
   letter-spacing: 0.15rem;
   ${maxMedia.small} {
-    font-size: 4.75rem;
+    font-size: 9rem;
     text-align: center;
     line-height: 100%;
     letter-spacing: 1px;
   }
 
   ${maxMedia.xs} {
-    font-size: 4.5rem;
+    font-size: 9rem;
   }
 `;
 
@@ -129,7 +129,7 @@ export const Content = styled(Text)`
 `;
 export const TitleContainer = styled.div`
   position: relative;
-  margin: 0px 20px;
+  margin: 0px 1rem;
   margin-top: 3rem;
   ${maxMedia.xs} {
     margin-top: 4rem;

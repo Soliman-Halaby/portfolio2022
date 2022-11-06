@@ -8,7 +8,7 @@ import { handleEnter } from "./animation.js";
 
 import Image from "next/image.js";
 import { useLocomotiveScroll } from "react-locomotive-scroll";
-
+import useIsMobile from "hook/index.js";
 import {
   Wrapper,
   Container,
@@ -22,6 +22,7 @@ import {
 const HeroHome = ({ title, subtitle, sectionTitle, label, image }) => {
   const { scroll } = useLocomotiveScroll();
 
+  const isMobile = useIsMobile();
   const _subtitle = useRef(null);
   const _el = useRef(null);
   const _pin = useRef(null);
@@ -56,14 +57,15 @@ const HeroHome = ({ title, subtitle, sectionTitle, label, image }) => {
   return (
     <Wrapper data-scroll-section ref={_el}>
       <TitleSection
+        top={isMobile ? "11.5" : "25"}
         className="hero_title-section"
         number="02"
         title={sectionTitle}
       />
       <Container>
         <Title
-          data-scroll
-          data-scroll-speed="3"
+          // data-scroll
+          // data-scroll-speed="3"
           ref={titleRef}
           dangerouslySetInnerHTML={{ __html: title }}
         />

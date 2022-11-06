@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
   // background: pink;
   // height: 50px;
   position: absolute;
-  bottom: 0;
+  bottom: 2rem;
   /* margin-top: 10rem; */
 
   ${maxMedia.xs} {

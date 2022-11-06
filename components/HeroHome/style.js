@@ -13,10 +13,10 @@ export const Wrapper = styled.div`
   position: relative;
   /* margin: ${({ theme }) => theme.margin.medium}; */
   padding: ${({ theme }) => theme.margin.medium};
-  margin-top: 150px;
+  margin-top: 10rem;
 
   ${maxMedia.xs} {
-    padding-top: 52px;
+    /* padding-top: 52px; */
   }
 `;
 
