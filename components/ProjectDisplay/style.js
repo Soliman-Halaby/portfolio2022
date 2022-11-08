@@ -2,7 +2,9 @@ import styled from "@emotion/styled";
 import { css } from "@emotion/react";
 
 import Button from "@/components/Buttons/Button/style";
-import { mediaMax, TitleSection } from "styles/mixins";
+import { maxMedia, TitleSection } from "styles/mixins";
+
+import { ButtonStyle } from "../Buttons/Button/style";
 
 export const Wrapper = styled.div`
   max-width: 106px;
@@ -16,25 +18,47 @@ export const Wrapper = styled.div`
 export const ProjectContainer = styled.div`
   position: relative;
 
-  .learn-more-cta {
+  ${ButtonStyle} {
     position: absolute;
     background: ${({ theme }) => theme.colors.lime};
     border-style: dashed;
     pointer-events: none;
     left: -100%;
     width: 120%;
+    display: flex;
+    align-items: center;
+    z-index: 999;
+    gap: 0.25rem;
   }
 `;
+
 export const Container = styled.div`
   width: 100%;
   margin: 0px 20px;
 `;
 
-export const Image = styled.img`
+export const ImageContainer = styled.div`
+  height: 154px;
   width: 100%;
-  max-height: 154px;
+  overflow: hidden;
+  position: relative;
+`;
+export const Image = styled.img`
+  filter: grayscale(1);
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
   /* max-width: 106px; */
-  object-fit: contain;
+  object-fit: cover;
+  height: 140%;
+  will-change: transform;
+  transition: filter 0.2s ease-in-out;
+
+  &:hover {
+    filter: grayscale(0);
+  }
 `;
 
 export const RowWrapper = styled.div`
@@ -45,14 +69,27 @@ export const RowWrapper = styled.div`
 `;
 
 export const Number = styled.span`
-  font-size: 12px;
+  font-size: 1rem;
   font-weight: 400;
   font-family: ${({ theme }) => theme.fonts.sansSerif};
+  ${maxMedia.md} {
+    font-size: 1.75rem;
+  }
+  ${maxMedia.small} {
+    font-size: 1rem;
+  }
 `;
 
 export const Title = styled.h3`
-  font-size: 14px;
+  font-size: 1.15rem;
   text-transform: uppercase;
   font-weight: 400;
   font-family: ${({ theme }) => theme.fonts.sansSerif};
+  ${maxMedia.md} {
+    font-size: 2.2rem;
+  }
+
+  ${maxMedia.small} {
+    font-size: 1.15rem;
+  }
 `;

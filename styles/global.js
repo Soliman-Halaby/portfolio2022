@@ -1,6 +1,6 @@
 import { css } from "@emotion/react";
 import emotionReset from "emotion-reset";
-import { mediaMax } from "styles/mixins";
+import { maxMedia } from "styles/mixins";
 import fontFiles from "styles/fonts";
 
 const styles = ({ fonts }) => {
@@ -97,6 +97,12 @@ const styles = ({ fonts }) => {
         url(${fontFiles.NeueHaasDisplayBlackItalic}) format("truetype");
     }
 
+    :root {
+      font-size: 0.7vw;
+      ${maxMedia.small} {
+        font-size: 2.3vw;
+      }
+    }
     *,
     *::after,
     *::before {
@@ -105,7 +111,11 @@ const styles = ({ fonts }) => {
       -webkit-font-smoothing: antialiased;
       font-smoothing: antialiased;
     }
-    p, h1, h2, h3, span{
+    p,
+    h1,
+    h2,
+    h3,
+    span {
       margin: 0;
       padding: 0;
     }
@@ -113,25 +123,38 @@ const styles = ({ fonts }) => {
       overflow-x: hidden;
       scroll-behavior: smooth;
     }
-    a{
+    a {
       text-decoration: none;
+      cursor: none;
     }
-    
+
     body {
       white-space: pre-line;
-      // cursor: none;
+      cursor: none;
       font-family: ${fonts.sansSerif};
       background: ${({ theme }) => {
         theme.colors.grey2;
-      }}
+      }};
       margin: 0;
       background: #f2f2f2;
-        ${mediaMax.xs} {
+      ${maxMedia.xs} {
       }
     }
 
-    
-    
+    .line {
+      overflow: hidden;
+    }
+
+    .word {
+      padding: 0.5rem 0;
+    }
+
+    html,
+    body {
+      position: relative;
+      height: 100%;
+      margin: 0;
+    }
   `;
 };
 

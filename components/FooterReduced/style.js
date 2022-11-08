@@ -1,16 +1,16 @@
 import styled from "@emotion/styled";
 import { css } from "@emotion/react";
 
-import { mediaMax, title } from "styles/mixins";
+import { maxMedia, title } from "styles/mixins";
 
 export const Wrapper = styled.div`
   width: 100%;
   // background: pink;
   // height: 50px;
   position: relative;
-  margin-top: 10rem;
+  /* margin-top: 10rem; */
 
-  ${mediaMax.xs}{
+  ${maxMedia.xs} {
     // display: none;
   }
 `;
@@ -21,7 +21,7 @@ export const Nav = styled.div`
   //   gap: 2rem;
   justify-content: space-between;
 
-  ${mediaMax.xs}{
+  ${maxMedia.xs} {
     flex-direction: column;
   }
 `;
@@ -32,18 +32,17 @@ export const NavElement = styled.div`
   gap: 1.5rem;
   // background: lightblue;
   // border-top: 1px solid red;
-  
-  ${mediaMax.xs}{
+
+  ${maxMedia.xs} {
     padding: 1rem 0px;
     border-top: 1px solid ${({ theme }) => theme.colors.grey1};
     flex-direction: column;
     align-items: flex-start;
 
-    &.mobile-hide{
+    &.mobile-hide {
       display: none;
     }
   }
-
 `;
 
 export const Element = styled.div`
@@ -52,17 +51,16 @@ export const Element = styled.div`
   position: relative;
   gap: 0.5rem;
 
-
-
-  ${mediaMax.xs}{
-    &.with-arrow{
+  ${maxMedia.xs} {
+    &.with-arrow {
       width: 100%;
       justify-content: space-between;
     }
+  }
 `;
 
 export const Text = styled.p`
-  font-size: 14px;
+  font-size: 1.15rem;
   font-family: ${({ theme }) => theme.fonts.sansSerif};
   font-weight: 300;
   text-transform: uppercase;
@@ -71,7 +69,4 @@ export const Text = styled.p`
 
 export const Image = styled.img`
   cursor: pointer;
-
-
-  }
 `;

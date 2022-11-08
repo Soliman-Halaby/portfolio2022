@@ -1,12 +1,12 @@
 import styled from "@emotion/styled";
 import { css } from "@emotion/react";
 
-import { mediaMax, title } from "styles/mixins";
+import { maxMedia, title } from "styles/mixins";
 
 export const ButtonStyle = styled.span`
   display: inline-block;
   cursor: pointer;
-  padding: 7.5px 15px;
+  padding: 0.5rem 0.75rem;
   border: 1px solid ${({ theme }) => theme.colors.grey1};
   color: ${({ theme }) => theme.colors.grey1};
   border-radius: ${({ rounded }) => (rounded ? "33px" : "5px")};

@@ -7,9 +7,9 @@ export const colors = {
 };
 
 export const margin = {
-  small: "10px",
-  medium: "20px",
-  large: "30px",
+  small: "1rem",
+  medium: "2rem",
+  large: "3rem",
 };
 export const fonts = {
   sansSerif: "NeueHaas",
@@ -19,8 +19,8 @@ export const fonts = {
 
 export const fontSizes = {
   title: {
-    small: '44px',
-    large: '72px'
+    small: '4rem',
+    large: '6rem'
   },
 }
 

@@ -3,45 +3,86 @@ import React, { useState, useRef, useEffect } from "react";
 import TitleSection from "@/components/Popup/SectionTitle";
 
 import Pin from "@/components/Popup/Pin";
-// import gsap from "gsap";
 
+import { handleEnter } from "./animation.js";
+
+import Image from "next/image.js";
+import { useLocomotiveScroll } from "react-locomotive-scroll";
+import useIsMobile from "hook/index.js";
 import {
   Wrapper,
   Container,
   Title,
   TitleContainer,
-  Image,
+  BlockImage,
+  ImageWrapper,
   Text,
 } from "./style.js";
 
 const HeroHome = ({ title, subtitle, sectionTitle, label, image }) => {
+  const { scroll } = useLocomotiveScroll();
+
+  const isMobile = useIsMobile();
+  const _subtitle = useRef(null);
+  const _el = useRef(null);
+  const _pin = useRef(null);
   const scrollToBottom = () => {
     window.scrollTo(0, document.body.scrollHeight);
   };
 
+  const titleRef = useRef(null);
+
+  console.log(titleRef.current);
+
+  useEffect(() => {
+    handleEnter({
+      el: _el,
+      subtitle: _subtitle,
+      text: titleRef,
+      //  pin: _pin,
+      display: "center",
+      animText: false,
+    });
+    handleEnter({
+      el: _el,
+      subtitle: _subtitle,
+      text: _subtitle,
+      //  pin: _pin,
+      display: "left",
+      animText: false,
+    });
+  }, []);
+
+  console.log(scroll);
   return (
-    <Wrapper data-scroll-section>
+    <Wrapper data-scroll-section ref={_el}>
       <TitleSection
+        top={isMobile ? "11.5" : "25"}
         className="hero_title-section"
         number="02"
         title={sectionTitle}
       />
       <Container>
         <Title
-          data-scroll
-          data-scroll-speed="3"
+          // data-scroll
+          // data-scroll-speed="3"
+          ref={titleRef}
           dangerouslySetInnerHTML={{ __html: title }}
         />
-        <Title alignRight>
-          {subtitle}
-          <Pin
-            top="30"
-            left="90"
-            action={scrollToBottom}
-            className="hero_pin-section"
-            label={label}
-          />
-        </Title>
+        <Title
+          ref={_subtitle}
+          alignRight
+          dangerouslySetInnerHTML={{ __html: subtitle }}
+        />
+        {/* {subtitle} */}
+        <Pin
+          top="30"
+          left="90"
+          action={scrollToBottom}
+          className="hero_pin-section"
+          label={label}
+          ref={_pin}
+        />
         <Text>
           Scroll
           <svg
@@ -56,7 +97,16 @@ const HeroHome = ({ title, subtitle, sectionTitle, label, image }) => {
             />
           </svg>
         </Text>
-        <Image src={image} alt="Image alt" />
+        <ImageWrapper className="image-wrapper">
+          <BlockImage
+            layout="responsive"
+            placeholder="blur"
+            width={"100%"}
+            height={"90vh"}
+            src={image}
+            alt="Img"
+          />
+        </ImageWrapper>
       </Container>
     </Wrapper>
   );

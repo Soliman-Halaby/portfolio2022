@@ -2,6 +2,7 @@ import Layout from "../layout/Default";
 import { useState, useRef, useEffect } from "react";
 import Loader from "@/components/Loader";
 
+import image from "../public/project2-img.png";
 // import styles from "../styles/Home.module.css";
 
 import CustomCursor from "@/components/Cursor";
@@ -11,7 +12,6 @@ export default function Home() {
   const [loader, setLoader] = useState(true);
 
   const [timer, setTimer] = useState(3);
-
 
   const id = useRef(null);
   const clear = () => {
@@ -43,10 +43,10 @@ export default function Home() {
         <Hero title={`Soliman Al Halaby, \ncreative developer`} subtitle={`Looking for an \ninternship`} sectionTitle={`Based in paris, \nfrom cairo`} image="/home-hero-image.png" label="Contact me" />
         )} */}
       <Hero
-        title={`Soliman Al Halaby, <br>creative developer`}
-        subtitle={`Looking for an \ninternship`}
+        title={`Soliman Al Halaby, creative developer`}
+        subtitle={`Looking for an <br/>internship`}
         sectionTitle={`Based in paris, \nfrom cairo`}
-        image="/home-hero-image.png"
+        image={image}
         label="Contact me"
       />
       <ProjectWork />

@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { css } from "@emotion/react";
 
-import { mediaMax, TitleSection } from "styles/mixins";
+import { maxMedia, TitleSection } from "styles/mixins";
 
 export const Wrapper = styled.div`
   width: 100vw;
@@ -9,11 +9,16 @@ export const Wrapper = styled.div`
   display: flex;
   gap: 0rem;
   margin: 10rem 0;
-  padding-left: 28px;
+  /* padding-left: 28px; */
   position: relative;
   height: 100%;
   margin-bottom: 20rem;
   align-items: flex-end;
+
+  ${maxMedia.xs} {
+    margin: 5rem 0;
+    padding: 0px 10px;
+  }
 `;
 
 export const Container = styled.div`
@@ -22,10 +27,14 @@ export const Container = styled.div`
 
 export const Title = styled.h2`
   ${TitleSection()}
-  font-size: clamp(42px, 11.15vw, 168px);
+  font-size: 10rem;
   margin-bottom: 5rem;
   position: absolute;
   bottom: 0;
+
+  ${maxMedia.small} {
+    font-size: 6rem;
+  }
 `;
 
 export const ContainerGrid = styled.div`
@@ -35,4 +44,7 @@ export const ContainerGrid = styled.div`
   row-gap: 4rem;
   grid-template-columns: repeat(auto-fill, minmax(106px, 1fr));
   grid-template-rows: 1fr 1fr;
+  ${maxMedia.xs} {
+    grid-template-columns: repeat(4, 80px);
+  }
 `;

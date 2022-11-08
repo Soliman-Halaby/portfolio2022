@@ -1,16 +1,19 @@
 import styled from "@emotion/styled";
 import { css } from "@emotion/react";
 
-import { mediaMax, TitleSection, Paragraph } from "styles/mixins";
+import { maxMedia, TitleSection, Paragraph } from "styles/mixins";
 
 export const Wrapper = styled.div`
   width: 100%;
   position: relative;
   margin: ${({ theme }) => theme.margin.medium};
-  margin-top: 15rem;
+  /* margin-top: 17rem; */
+  height: 85vh;
+  display: flex;
+  align-items: center;
 
-  ${mediaMax.xs} {
-    margin-top: 52px;
+  ${maxMedia.xs} {
+    margin-top: 4rem;
   }
 `;
 
@@ -27,7 +30,7 @@ export const TitleContainer = styled.div`
   align-items: center;
   gap: 4rem;
 
-  ${mediaMax.xs}{
+  ${maxMedia.xs} {
     gap: 2rem;
   }
 `;

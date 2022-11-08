@@ -3,7 +3,7 @@ import { css } from "@emotion/react";
 
 // import {Title as TitleSection} from "@/components/Popup/SectionTitle/style";
 
-import { mediaMax, TitleSection, Paragraph } from "styles/mixins";
+import { maxMedia, TitleSection, Paragraph } from "styles/mixins";
 import { ButtonStyle } from "../Buttons/Button/style";
 
 export const Wrapper = styled.div`
@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
   margin: ${({ theme }) => theme.margin.medium};
   margin-top: 150px;
 
-  ${mediaMax.xs} {
+  ${maxMedia.xs} {
     margin-top: 52px;
   }
 `;
@@ -45,7 +45,7 @@ export const TagWrapper = styled.div`
   margin-top: 4rem;
   justify-content: space-between;
   margin-bottom: 2rem;
-  ${mediaMax.md} {
+  ${maxMedia.md} {
     flex-direction: column;
     gap: 2rem;
     padding-right: 0;
@@ -54,36 +54,38 @@ export const TagWrapper = styled.div`
 
 export const TagContainer = styled.div`
   display: flex;
-  gap: .6rem;
+  gap: 0.2rem;
   justify-content: flex-end;
   flex-direction: column;
 
-  ${mediaMax.xs}{
+  ${maxMedia.xs} {
     justify-content: flex-start;
   }
 `;
 
 export const TagRow = styled.div`
   display: flex;
-  gap: .4rem;
+  gap: 0.4rem;
   align-items: center;
-`
+`;
 
 export const TagSubContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 1rem;
+  gap: 0.75rem;
 
-  ${ButtonStyle}{
+  ${ButtonStyle} {
+    display: flex;
+    align-content: center;
     margin-left: 8rem;
   }
 
-  ${mediaMax.xs}{
-    &:nth-of-type(2){
+  ${maxMedia.xs} {
+    &:nth-of-type(2) {
       flex-direction: row;
     }
-    ${ButtonStyle}{
+    ${ButtonStyle} {
       margin-left: 0;
     }
   }
@@ -101,7 +103,7 @@ export const Content = styled.p`
   ${Paragraph()}
 
   align-self: flex-end;
-  ${mediaMax.xs}{
+  ${maxMedia.xs} {
     align-self: flex-start;
   }
 `;
@@ -110,7 +112,11 @@ export const ImageContainer = styled.div`
   position: relative;
   height: 90vh;
   overflow: hidden;
-`
+
+  ${maxMedia.xs} {
+    height: 60vh;
+  }
+`;
 
 export const Image = styled.img`
   position: absolute;
@@ -120,7 +126,7 @@ export const Image = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-  ${mediaMax.xs}{
+  ${maxMedia.xs} {
     height: 60vh;
   }
 `;

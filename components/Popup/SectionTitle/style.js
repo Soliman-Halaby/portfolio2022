@@ -1,29 +1,35 @@
 import styled from "@emotion/styled";
-import { mediaMax, title } from "styles/mixins";
+import { maxMedia, title } from "styles/mixins";
 
 import theme from "theme";
 
 export const Title = styled.p`
-  font-size: 14px;
+  font-size: 1.15rem;
   position: absolute;
-  left: 25%;
+  left: ${({ left }) => `${left}%`};
   text-transform: uppercase;
   display: flex;
-  align-items: center;
-  top: 40%;
+  align-items: flex-start;
+  top: ${({ top }) => `${top}rem`};
   white-space: break-spaces;
   margin-left: ${({ theme }) => theme.margin.medium};
   margin-top: 48px;
-  ${mediaMax.md} {
-    top: 20%;
-    left: 0;
+  ${maxMedia.md} {
+    /* top: 20%;
+    left: 0; */
   }
-  ${mediaMax.xs} {
-    top: 15%;
+  ${maxMedia.small} {
+    /* top: 15%; */
+    /* top: 10rem;
+    font-size: 1.35rem; */
   }
 `;
 
 export const Number = styled.span`
-  font-size: 10px;
-  margin-right: 10px;
+  font-size: 1rem;
+  margin-right: 1rem;
+
+  ${maxMedia.small} {
+    font-size: 1.2rem;
+  }
 `;

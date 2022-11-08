@@ -17,7 +17,7 @@ const Tag = ({
       <TagStyle
         borderStyle={dashed}
         colored={colored}
-        rounded={index % 2 !== 0 ? !rounded : rounded}
+        rounded={index % 2 !== 0 ? rounded : !rounded}
       >
         {withDot && (
           <svg

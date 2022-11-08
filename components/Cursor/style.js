@@ -3,32 +3,33 @@ import { css } from "@emotion/react";
 
 // import {Title as TitleSection} from "@/components/Popup/SectionTitle/style";
 
-import { mediaMax, TitleSection } from "styles/mixins";
+import { maxMedia, TitleSection } from "styles/mixins";
 
+import { Container } from "../Buttons/ProjectButton/style";
 export const Cursor = styled.div`
-    width: 20px;
-    height: 20px;
-    z-index:99999;
-    // border: 1px solid white;
-    border-radius: 50%;
-    position: absolute;
-    pointer-events: none;
-    // transition: all 0.15s ease;
-    // mix-blend-mode: difference;
+  width: ${({ custom }) => (custom === "simple" ? "20px" : "16rem")};
+  height: 20px;
+  z-index: 99999;
+  // border: 1px solid white;
+  border-radius: 50%;
+  position: absolute;
+  pointer-events: none;
+  /* transition: all 0.1s linear; */
+  // mix-blend-mode: difference;
 
-    &:after{
+  &:after {
     content: "";
     width: 20px;
     height: 20px;
     position: absolute;
     // border: 2px solid blue;
     // border-radius: 50%;
-    opacity: .5;
+    opacity: 0.5;
     top: -8px;
     left: -8px;
-    }
+  }
 
-    @keyframes cursorAnim {
+  /* @keyframes cursorAnim {
         0% {
             transform: rotate(0deg):
         }
@@ -44,5 +45,18 @@ export const Cursor = styled.div`
     &.expand{
         animation: cursorAnim .5s forwards;
 
-    }
-`
+    } */
+`;
+
+export const CursorWrapper = styled.div`
+  position: relative;
+`;
+
+export const CursorContainer = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  svg {
+    transition: all 0.3s ease;
+  }
+`;

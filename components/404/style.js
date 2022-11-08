@@ -3,7 +3,7 @@ import { css } from "@emotion/react";
 
 // import {Title as TitleSection} from "@/components/Popup/SectionTitle/style";
 
-import { mediaMax, Paragraph } from "styles/mixins";
+import { maxMedia, Paragraph } from "styles/mixins";
 
 export const Wrapper = styled.div`
   width: 100%;
@@ -53,7 +53,7 @@ export const Title = styled.h2`
   font-family: ${({ theme }) => theme.fonts.sansSerif};
   color: ${({ theme }) => theme.colors.grey1};
   font-weight: 300;
-  ${mediaMax.xs} {
+  ${maxMedia.xs} {
     font-size: 32px;
   }
 `;
@@ -65,7 +65,7 @@ export const Subtitle = styled.p`
   color: ${({ theme }) => theme.colors.grey1};
   margin-bottom: 36px;
   margin-top: 12px;
-  ${mediaMax.xs} {
+  ${maxMedia.xs} {
     padding: 0px 20%;
     text-align: center;
   }
