@@ -37,7 +37,7 @@ export const Container = styled.div`
   background: #e3e3e3;
   display: flex;
   justify-content: center;
-  padding: 13rem 4rem;
+  padding: 13rem 2rem;
   ${maxMedia.xs} {
     width: auto !important;
     padding: 8rem 1rem;

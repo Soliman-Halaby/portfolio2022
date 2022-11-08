@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
   margin: ${({ theme }) => theme.margin.medium};
   margin-top: 150px;
 
-  ${maxMedia.xs} {
+  ${maxMedia.small} {
     margin-top: 52px;
   }
 `;
@@ -54,12 +54,18 @@ export const TagWrapper = styled.div`
 
 export const TagContainer = styled.div`
   display: flex;
-  gap: 0.2rem;
+  gap: 7.5px;
   justify-content: flex-end;
   flex-direction: column;
 
-  ${maxMedia.xs} {
+  ${maxMedia.small} {
     justify-content: flex-start;
+  }
+
+  &:nth-of-type(2) {
+    ${maxMedia.small} {
+      margin-top: 10rem;
+    }
   }
 `;
 
@@ -78,12 +84,13 @@ export const TagSubContainer = styled.div`
   ${ButtonStyle} {
     display: flex;
     align-content: center;
-    margin-left: 8rem;
+    margin-left: 12rem;
   }
 
-  ${maxMedia.xs} {
+  ${maxMedia.small} {
     &:nth-of-type(2) {
       flex-direction: row;
+      justify-content: space-between;
     }
     ${ButtonStyle} {
       margin-left: 0;
@@ -103,7 +110,7 @@ export const Content = styled.p`
   ${Paragraph()}
 
   align-self: flex-end;
-  ${maxMedia.xs} {
+  ${maxMedia.small} {
     align-self: flex-start;
   }
 `;
@@ -113,8 +120,8 @@ export const ImageContainer = styled.div`
   height: 90vh;
   overflow: hidden;
 
-  ${maxMedia.xs} {
-    height: 60vh;
+  ${maxMedia.small} {
+    height: 70vh;
   }
 `;
 
@@ -126,7 +133,7 @@ export const Image = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-  ${maxMedia.xs} {
+  ${maxMedia.small} {
     height: 60vh;
   }
 `;
