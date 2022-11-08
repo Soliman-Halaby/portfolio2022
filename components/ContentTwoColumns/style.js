@@ -9,8 +9,8 @@ export const Wrapper = styled.div`
   width: 100%;
   position: relative;
   margin: ${({ theme }) => theme.margin.medium};
-  margin-top: 8rem;
-  margin-bottom: 3rem;
+  margin-top: 10rem;
+  margin-bottom: 6rem;
 
   ${maxMedia.xs} {
     margin-top: 3rem;
@@ -39,8 +39,8 @@ export const Container = styled.div`
   }
 
   ${maxMedia.small} {
-    padding-right: 3rem;
-    margin-left: 2rem;
+    padding-left: 2rem;
+    padding-right: 0;
   }
 `;
 
@@ -51,6 +51,10 @@ export const Title = styled.h2`
   font-weight: 300;
   line-height: 5rem;
   white-space: preline;
+
+  ${maxMedia.small} {
+    font-size: 3.25rem;
+  }
 `;
 
 export const SubContainer = styled.div`
@@ -64,6 +68,10 @@ export const SubTitle = styled.h3`
   text-transform: uppercase;
   font-weight: 300;
   font-size: 1.15rem;
+
+  ${maxMedia.xs} {
+    font-size: 1.25rem;
+  }
 `;
 
 export const ContentWrapper = styled.div`

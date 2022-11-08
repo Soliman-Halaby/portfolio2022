@@ -16,20 +16,7 @@ export const Wrapper = styled.div`
 `;
 
 export const ProjectContainer = styled.div`
-  position: relative;
-
-  ${ButtonStyle} {
-    position: absolute;
-    background: ${({ theme }) => theme.colors.lime};
-    border-style: dashed;
-    pointer-events: none;
-    left: -100%;
-    width: 120%;
-    display: flex;
-    align-items: center;
-    z-index: 999;
-    gap: 0.25rem;
-  }
+  /* position: relative; */
 `;
 
 export const Container = styled.div`
@@ -45,7 +32,6 @@ export const ImageContainer = styled.div`
 `;
 export const Image = styled.img`
   filter: grayscale(1);
-  position: absolute;
   top: 0;
   left: 0;
 
