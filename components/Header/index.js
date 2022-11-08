@@ -44,6 +44,25 @@ const Header = () => {
       setMenuDisplay("hidden");
     }
   }, [isMobile]);
+
+  const navDatas = [
+    {
+      label: "Home",
+      link: "/",
+    },
+    {
+      label: "About",
+      link: "/about",
+    },
+    {
+      label: "Work",
+      link: "project/cloudy-Bay",
+    },
+  ];
+
+  const subnavSelected = () => {
+    console.log("subnav selected");
+  };
   return (
     <HeaderContainer>
       <Nav>
@@ -67,26 +86,29 @@ const Header = () => {
           </NavItem>
         ) : (
           <NavItem>
-            <MainLink>
-              <NavLink href="/">About</NavLink>
-            </MainLink>
-            <MainLink>
-              <NavLink href="/about">Work</NavLink>
-            </MainLink>
-            <MainLink>
-              <NavLink href="/contact">Contact</NavLink>
-            </MainLink>
+            {navDatas.map((data, index) => {
+              return (
+                <MainLink key={index}>
+                  <NavLink href={data.link}>{data.label}</NavLink>
+                </MainLink>
+              );
+            })}
           </NavItem>
         )}
       </Nav>
       <SubNav className={`${menuDisplay}`}>
         <SubNavItemsContainer>
           <ItemsContainer>
-            <SectionTitle number="01" title="Contact"></SectionTitle>
-            <MainLink>Home</MainLink>
-            <MainLink>About</MainLink>
-            <MainLink>Work</MainLink>
-            <MainLink>Contact</MainLink>
+            <SectionTitle number="01" title="Menu"></SectionTitle>
+            {navDatas.map((data, index) => {
+              return (
+                <MainLink key={index}>
+                  <NavLink onClick={() => subnavSelected()} href={data.link}>
+                    {data.label}
+                  </NavLink>
+                </MainLink>
+              );
+            })}
           </ItemsContainer>
           <FooterNav />
         </SubNavItemsContainer>
