@@ -30,7 +30,12 @@ const Header = () => {
     scroll.scroll.stop();
     if (menuDisplay === "hidden") {
       setMenuDisplay("opened");
+      document.body.style.overflow = "visible";
       scroll.scroll.stop();
+
+      if (isMobile) {
+        document.body.style.overflow = "hidden";
+      }
     }
 
     if (menuDisplay === "opened") {
@@ -39,6 +44,9 @@ const Header = () => {
     }
   };
 
+  useEffect(() => {
+    document.body.style.overflow = "visible";
+  }, []);
   useEffect(() => {
     if (!isMobile) {
       setMenuDisplay("hidden");
@@ -62,6 +70,7 @@ const Header = () => {
 
   const subnavSelected = () => {
     console.log("subnav selected");
+    document.body.style.overflow = "visible";
   };
   return (
     <HeaderContainer>
@@ -107,10 +116,8 @@ const Header = () => {
             </MainLink>
             {navDatas.map((data, index) => {
               return (
-                <MainLink key={index}>
-                  <NavLink onClick={() => subnavSelected()} href={data.link}>
-                    {data.label}
-                  </NavLink>
+                <MainLink onClick={() => subnavSelected()} key={index}>
+                  <NavLink href={data.link}>{data.label}</NavLink>
                 </MainLink>
               );
             })}
