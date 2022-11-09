@@ -19,11 +19,16 @@ import {
   ItemsContainer,
 } from "./style.js";
 
+import { cursorHover } from "recoil/cursorState.js";
+import { useSetRecoilState, useResetRecoilState } from "recoil";
 import FooterNav from "@/components/FooterNav/index.js";
 const Header = () => {
   const isMobile = useIsMobile();
   const [menuDisplay, setMenuDisplay] = useState("hidden");
   const scroll = useLocomotiveScroll();
+  const setCursorHover = useSetRecoilState(cursorHover);
+  const resetCursor = useResetRecoilState(cursorHover);
+
   const displayMenu = () => {
     // console.log("menu");
     console.log(scroll.scroll);
@@ -72,10 +77,23 @@ const Header = () => {
     console.log("subnav selected");
     document.body.style.overflow = "visible";
   };
+
+  const cursorRotation = () => {
+    setCursorHover("expand");
+  };
+
+  const resetCursorHover = () => {
+    setCursorHover("");
+  };
+
   return (
     <HeaderContainer>
       <Nav>
-        <MainLink noAnim>
+        <MainLink
+          onMouseEnter={() => cursorRotation()}
+          onMouseLeave={resetCursor}
+          noAnim
+        >
           {!isMobile ? (
             <NavLink noAnim href="/">
               Soliman Al Halaby
@@ -87,7 +105,11 @@ const Header = () => {
           )}
         </MainLink>
         <NavLink href="/">
-          <Logo src="/Logo.svg"></Logo>
+          <Logo
+            onMouseEnter={() => cursorRotation()}
+            onMouseLeave={resetCursor}
+            src="/Logo.svg"
+          ></Logo>
         </NavLink>
         {isMobile ? (
           <NavItem>
@@ -97,7 +119,11 @@ const Header = () => {
           <NavItem>
             {navDatas.map((data, index) => {
               return (
-                <MainLink key={index}>
+                <MainLink
+                  onMouseLeave={resetCursor}
+                  onMouseEnter={() => cursorRotation()}
+                  key={index}
+                >
                   <NavLink href={data.link}>{data.label}</NavLink>
                 </MainLink>
               );

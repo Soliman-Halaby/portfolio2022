@@ -3,6 +3,8 @@ import React, { forwardRef } from "react";
 import Link from "next/link.js";
 import { ButtonStyle, Container } from "./style.js";
 
+import { cursorHover } from "recoil/cursorState.js";
+import { useSetRecoilState, useResetRecoilState } from "recoil";
 const Button = forwardRef(
   (
     {
@@ -19,9 +21,19 @@ const Button = forwardRef(
   ) => {
     console.log("ref", ref);
 
+    const setCursorHover = useSetRecoilState(cursorHover);
+    const resetCursor = useResetRecoilState(cursorHover);
+
+    const cursorRotation = () => {
+      setCursorHover("expand");
+    };
+
     // console.log(index);
     return (
-      <Container>
+      <Container
+        onMouseEnter={() => cursorRotation()}
+        onMouseLeave={resetCursor}
+      >
         {to && target && (
           <Link href={to} passHref>
             <a target="_blank">

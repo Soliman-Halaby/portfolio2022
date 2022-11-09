@@ -5,8 +5,8 @@ import { maxMedia, title } from "styles/mixins";
 
 export const ButtonStyle = styled.span`
   display: inline-block;
-  cursor: pointer;
   padding: 0.5rem 1rem;
+  cursor: none;
   border: 1px solid ${({ theme }) => theme.colors.grey1};
   color: ${({ theme }) => theme.colors.grey1};
   border-radius: ${({ rounded }) => (rounded ? "33px" : "5px")};

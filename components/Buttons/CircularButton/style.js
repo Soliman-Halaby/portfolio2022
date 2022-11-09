@@ -6,8 +6,8 @@ import { maxMedia, title } from "styles/mixins";
 export const Container = styled.div``;
 export const ButtonStyle = styled.span`
   display: inline-block;
-  cursor: pointer;
   padding: 0.5rem;
+  cursor: none;
   border: 1px solid ${({ theme }) => theme.colors.grey1};
   border-radius: 50%;
   font-size: 1.15rem;

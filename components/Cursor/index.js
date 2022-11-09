@@ -3,13 +3,15 @@ import { react, useRef, useEffect, createContext } from "react";
 import { useRecoilValue } from "recoil";
 import { Cursor, CursorWrapper, CursorContainer } from "./style.js";
 import ProjectButton from "../Buttons/ProjectButton/index.js";
-import { cursorState } from "recoil/cursorState.js";
+import { cursorState, cursorHover } from "recoil/cursorState.js";
 
 export default function CustomCursor(width, height, custom = false) {
   const cursorRef = useRef(null);
 
   const cursorWrapper = useRef(null);
   const cursorDisplay = useRecoilValue(cursorState);
+  const cursorRotation = useRecoilValue(cursorHover);
+
   console.log(cursorDisplay);
   function onMouseMove(e) {
     const cursor = cursorRef.current;
@@ -48,7 +50,10 @@ export default function CustomCursor(width, height, custom = false) {
   return (
     <Cursor ref={cursorRef}>
       <CursorWrapper>
-        <CursorContainer ref={cursorWrapper} className={cursorDisplay}>
+        <CursorContainer
+          ref={cursorWrapper}
+          className={`${cursorDisplay} ${cursorRotation}`}
+        >
           <svg
             width={17}
             height={20}

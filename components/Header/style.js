@@ -31,6 +31,7 @@ export const MainLink = styled.span`
     color: ${({ theme }) => theme.colors.grey2};
     text-decoration: none;
     position: relative;
+    cursor: none;
     padding-bottom: 3px;
 
     &:after {
@@ -57,7 +58,9 @@ export const MainLink = styled.span`
   }
 `;
 
-export const NavLink = styled(Link)``;
+export const NavLink = styled(Link)`
+  cursor: none;
+`;
 export const MenuDisplay = styled.p`
   color: ${({ theme }) => theme.colors.grey2};
 `;
