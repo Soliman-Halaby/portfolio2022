@@ -69,6 +69,4 @@ export const Text = styled.p`
   color: ${({ theme }) => theme.colors.grey1};
 `;
 
-export const Image = styled.img`
-  cursor: pointer;
-`;
+export const Image = styled.img``;

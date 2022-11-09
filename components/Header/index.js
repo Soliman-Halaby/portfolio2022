@@ -25,7 +25,7 @@ const Header = () => {
   const [menuDisplay, setMenuDisplay] = useState("hidden");
   const scroll = useLocomotiveScroll();
   const displayMenu = () => {
-    console.log("menu");
+    // console.log("menu");
     console.log(scroll.scroll);
     scroll.scroll.stop();
     if (menuDisplay === "hidden") {
@@ -47,16 +47,16 @@ const Header = () => {
 
   const navDatas = [
     {
-      label: "Home",
-      link: "/",
-    },
-    {
       label: "About",
       link: "/about",
     },
     {
       label: "Work",
       link: "project/cloudy-Bay",
+    },
+    {
+      label: "Contact",
+      link: "/contact",
     },
   ];
 
@@ -100,6 +100,11 @@ const Header = () => {
         <SubNavItemsContainer>
           <ItemsContainer>
             <SectionTitle number="01" title="Menu"></SectionTitle>
+            <MainLink>
+              <NavLink onClick={() => subnavSelected()} href="/">
+                Home
+              </NavLink>
+            </MainLink>
             {navDatas.map((data, index) => {
               return (
                 <MainLink key={index}>

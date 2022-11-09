@@ -10,7 +10,7 @@ import Cursor from "@/components/Cursor";
 
 import { useRouter } from "next/router";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
-
+import useIsMobile from "hook";
 export default function Layout({
   children,
   reducedFooter = false,
@@ -18,16 +18,18 @@ export default function Layout({
   scroll = true,
   cursorWidth = 16,
   cursorHeight = 18,
+  display = "normal",
 }) {
   const { route } = useRouter();
   const containerRef = useRef(null);
 
+  const isMobile = useIsMobile();
   return (
     <RecoilRoot>
       <LocomotiveScrollProvider
         options={{
           smooth: true,
-          smartphone: { smooth: true },
+          smartphone: { smooth: false },
           tablet: { smooth: true },
           reloadOnContextChange: true,
         }}
@@ -39,12 +41,16 @@ export default function Layout({
       >
         <main data-scroll-container ref={containerRef}>
           <Header />
-          <Container>
+          <Container ref={containerRef}>
             <App>
               {/* <CustomCursor width={cursorWidth} height={cursorHeight}/> */}
               {children}
-              {noFooter ? null : reducedFooter ? <FooterReduced /> : <Footer />}
-              <Cursor />
+              {noFooter ? null : reducedFooter ? (
+                <FooterReduced />
+              ) : (
+                <Footer display={display} />
+              )}
+              {!isMobile && <Cursor />}
             </App>
           </Container>
         </main>

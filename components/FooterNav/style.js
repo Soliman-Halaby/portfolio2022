@@ -104,6 +104,4 @@ export const RowContainer = styled.div`
   }
 `;
 
-export const Image = styled.img`
-  cursor: pointer;
-`;
+export const Image = styled.img``;

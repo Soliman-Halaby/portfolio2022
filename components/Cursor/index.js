@@ -8,6 +8,7 @@ import { cursorState } from "recoil/cursorState.js";
 export default function CustomCursor(width, height, custom = false) {
   const cursorRef = useRef(null);
 
+  const cursorWrapper = useRef(null);
   const cursorDisplay = useRecoilValue(cursorState);
   console.log(cursorDisplay);
   function onMouseMove(e) {
@@ -37,20 +38,20 @@ export default function CustomCursor(width, height, custom = false) {
     });
     document.addEventListener("click", () => {
       if (cursorRef.current == null) return;
-      cursorRef.current.classList.add("expand");
+      cursorWrapper.current.classList.add("expand");
       setTimeout(() => {
         if (cursorRef.current == null) return;
-        cursorRef.current.classList.remove("expand");
+        cursorWrapper.current.classList.remove("expand");
       }, 500);
     });
   }, []);
   return (
     <Cursor ref={cursorRef}>
       <CursorWrapper>
-        <CursorContainer className={cursorDisplay}>
+        <CursorContainer ref={cursorWrapper} className={cursorDisplay}>
           <svg
-            width={48}
-            height={48}
+            width={17}
+            height={20}
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
