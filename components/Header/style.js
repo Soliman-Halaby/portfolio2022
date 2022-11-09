@@ -95,7 +95,7 @@ export const HeaderContainer = styled.div`
 export const SubNav = styled.div`
   width: 100%;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   opacity: 0;
   pointer-events: none;
   top: 0;

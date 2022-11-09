@@ -52,7 +52,7 @@ const HeroProject = ({
                 })}
               </TagRow>
               <Button
-                className="project-visit-cta"
+                // className="project-visit-cta"
                 to={to}
                 target="_blank"
                 label={ctaLabel}

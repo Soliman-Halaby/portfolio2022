@@ -87,6 +87,9 @@ export const TagSubContainer = styled.div`
     margin-left: 12rem;
   }
 
+  a {
+    cursor: none;
+  }
   ${maxMedia.small} {
     &:nth-of-type(2) {
       flex-direction: row;

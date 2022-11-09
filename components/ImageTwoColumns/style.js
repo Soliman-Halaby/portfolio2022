@@ -24,7 +24,12 @@ export const ImageContainer = styled.div`
     margin: 1rem 0;
   }
 
+  &:nth-of-type(1) {
+    padding-left: 2rem;
+  }
+
   &:nth-of-type(2) {
+    padding-right: 2rem;
     /* transform: translateY(50px) !important; */
   }
 
