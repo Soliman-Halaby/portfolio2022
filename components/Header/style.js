@@ -12,7 +12,6 @@ export const Logo = styled.img`
   height: auto;
   position: absolute;
   left: 50%;
-  cursor: pointer;
   right: 50%;
   top: 50%;
   transform: translate(-50%, -50%);

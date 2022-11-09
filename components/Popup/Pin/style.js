@@ -5,7 +5,6 @@ import { maxMedia, title } from "styles/mixins";
 
 export const SuccessMessage = styled.span`
   position: absolute;
-  cursor: pointer;
   top: ${({ top }) => `${top}rem`};
   left: ${({ left }) => `${left}rem`};
   transform: translate(-50%, -50%);
