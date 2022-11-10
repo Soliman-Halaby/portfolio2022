@@ -1,14 +1,14 @@
 import React, { useState, useRef, useEffect } from "react";
+import Image from "next/image.js";
+import { useLocomotiveScroll } from "react-locomotive-scroll";
 
 import TitleSection from "@/components/Popup/SectionTitle";
-
 import Pin from "@/components/Popup/Pin";
 
 import { handleEnter } from "./animation.js";
 
-import Image from "next/image.js";
-import { useLocomotiveScroll } from "react-locomotive-scroll";
 import useIsMobile from "hook/index.js";
+
 import {
   Wrapper,
   Container,
@@ -32,8 +32,6 @@ const HeroHome = ({ title, subtitle, sectionTitle, label, image }) => {
 
   const titleRef = useRef(null);
 
-  console.log(titleRef.current);
-
   useEffect(() => {
     handleEnter({
       el: _el,
@@ -53,7 +51,6 @@ const HeroHome = ({ title, subtitle, sectionTitle, label, image }) => {
     });
   }, []);
 
-  console.log(scroll);
   return (
     <Wrapper data-scroll-section ref={_el}>
       <TitleSection

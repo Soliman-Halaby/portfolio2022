@@ -4,8 +4,6 @@ import React, { forwardRef } from "react";
 import { ButtonStyle, Container } from "./style.js";
 
 const Button = forwardRef(({ label, className }, ref) => {
-  console.log("ref", ref);
-
   // console.log(index);
   return (
     <Container className={className}>

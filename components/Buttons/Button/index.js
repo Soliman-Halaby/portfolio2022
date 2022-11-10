@@ -19,8 +19,6 @@ const Button = forwardRef(
     },
     ref
   ) => {
-    console.log("ref", ref);
-
     const setCursorHover = useSetRecoilState(cursorHover);
     const resetCursor = useResetRecoilState(cursorHover);
 
