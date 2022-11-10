@@ -130,7 +130,7 @@ export const SubNavItemsContainer = styled.div`
   }
 
   ${maxMedia.xs} {
-    padding-top: 20rem;
+    padding-top: 12rem;
   }
 `;
 
