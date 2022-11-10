@@ -158,13 +158,13 @@
     "image": ["/gta-image.png", "/moviereact-image.png"]
   },
   {
-    "slug": "Selfer",
+    "slug": "selfer",
     "colPos": "8",
     "mobileCol": "1",
     "rowPos": "1",
     "mobileRow": "3",
     "link": "https://www.google.com/",
-    "title": "test",
+    "title": "Selfer",
     "info": ["Front-end developer", "03/03/2018"],
     "description": "A React app that allows users to search for movies and view details about them.",
     "techno": ["PHP", "Vanilla JS"],
@@ -192,13 +192,13 @@
     "image": ["/ddalos-image.png", "/moviereact-image.png"]
   },
   {
-    "slug": "D'Dalos",
+    "slug": "ddalos",
     "colPos": "10",
     "mobileCol": "2",
     "rowPos": "2",
     "mobileRow": "4",
     "link": "https://www.google.com/",
-    "title": "test",
+    "title": "D'Dalos",
     "info": ["Front-end developer", "03/03/2018"],
     "description": "A React app that allows users to search for movies and view details about them.",
     "techno": ["PHP", "Vanilla JS"],
@@ -226,13 +226,13 @@
     "image": ["/canlinkme-image.png", "/moviereact-image.png"]
   },
   {
-    "slug": "Eclipse",
+    "slug": "eclipse",
     "colPos": "11",
     "mobileCol": "3",
     "rowPos": "2",
     "mobileRow": "4",
     "link": "https://www.google.com/",
-    "title": "test",
+    "title": "Eclipse",
     "info": ["Front-end developer", "03/03/2018"],
     "description": "A React app that allows users to search for movies and view details about them.",
     "techno": ["PHP", "Vanilla JS"],
