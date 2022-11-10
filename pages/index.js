@@ -8,9 +8,6 @@ import Hero from "@/components/HeroHome";
 import ProjectWork from "@/components/Work";
 
 export default function Home() {
-  const [loader, setLoader] = useState(true);
-  const [loaderDisplay, setLoaderDisplay] = useState(false);
-  console.log(CursorContext);
   const [timer, setTimer] = useState(3);
 
   const id = useRef(null);
@@ -32,7 +29,6 @@ export default function Home() {
     }
   }, [timer]);
 
-  console.log("loader display", loaderDisplay);
   return (
     <Layout display="wide">
       {/* {loader ? (
