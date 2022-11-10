@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from "react";
+import { useLocomotiveScroll } from "react-locomotive-scroll";
 
 // import Link from "next/link";
 
+import SectionTitle from "@/components/Popup/SectionTitle";
+import FooterNav from "@/components/FooterNav/index.js";
+
+import { cursorHover } from "recoil/cursorState.js";
+import { useSetRecoilState, useResetRecoilState } from "recoil";
+
 import useIsMobile from "hook";
 
-import SectionTitle from "@/components/Popup/SectionTitle";
-import { useLocomotiveScroll } from "react-locomotive-scroll";
 import {
   Logo,
   HeaderContainer,
@@ -19,9 +24,6 @@ import {
   ItemsContainer,
 } from "./style.js";
 
-import { cursorHover } from "recoil/cursorState.js";
-import { useSetRecoilState, useResetRecoilState } from "recoil";
-import FooterNav from "@/components/FooterNav/index.js";
 const Header = () => {
   const isMobile = useIsMobile();
   const [menuDisplay, setMenuDisplay] = useState("hidden");
@@ -35,7 +37,7 @@ const Header = () => {
     scroll.scroll.stop();
     if (menuDisplay === "hidden") {
       setMenuDisplay("opened");
-      document.body.style.overflow = "visible";
+      document.body.style.overflow = "hidden";
       scroll.scroll.stop();
 
       if (isMobile) {
@@ -46,6 +48,7 @@ const Header = () => {
     if (menuDisplay === "opened") {
       setMenuDisplay("hidden");
       scroll.scroll.start();
+      document.body.style.overflow = "visible";
     }
   };
 
@@ -54,6 +57,7 @@ const Header = () => {
   }, []);
   useEffect(() => {
     if (!isMobile) {
+      document.body.style.overflow = "visible";
       setMenuDisplay("hidden");
     }
   }, [isMobile]);
