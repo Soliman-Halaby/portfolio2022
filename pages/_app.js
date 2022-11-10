@@ -4,6 +4,7 @@ import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import { useRef } from "react";
 import { useRouter } from "next/router";
 
+import { RecoilRoot } from "recoil";
 import theme from "theme";
 import "styles/globals.css";
 
@@ -27,10 +28,12 @@ export default function App({ Component, pageProps }) {
     //   }
     // >
     //   <main data-scroll-container ref={containerRef}>
-    <ThemeProvider theme={theme}>
-      <Global styles={globalStyles} />
-      <Component {...pageProps} />
-    </ThemeProvider>
+    <RecoilRoot>
+      <ThemeProvider theme={theme}>
+        <Global styles={globalStyles} />
+        <Component {...pageProps} />
+      </ThemeProvider>
+    </RecoilRoot>
     //   </main>
     // </LocomotiveScrollProvider>
   );
