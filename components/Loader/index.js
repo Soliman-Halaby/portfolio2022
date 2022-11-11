@@ -13,17 +13,37 @@ import {
 
 const Loader = ({}) => {
   const [progress, setProgress] = useState(0);
-
   const setLoaderDisplay = useSetRecoilState(loaderState);
   const loaderDisplay = useRecoilValue(loaderState);
+  const containerRef = useRef(null);
+
+  function handleMouse(e) {
+    const container = containerRef.current;
+    if (!container) return;
+
+    if (loaderDisplay) {
+      container.style.left = `${e.clientX - container.offsetWidth * 2}px`;
+      container.style.top = `${e.clientY - container.offsetHeight}px`;
+    }
+  }
 
   useEffect(() => {
-    setLoaderDisplay(localStorage.getItem("loader"));
+    document.addEventListener("mousemove", handleMouse);
+
+    document.addEventListener("scroll", (e) => {
+      if (containerRef.current == null) return;
+    });
+  }, []);
+  useEffect(() => {
+    // if (localStorage.getItem("loader") === null) {
+    //   setLoaderDisplay(localStorage.getItem("loader"));
+    // }
 
     const timer = setInterval(() => {
       setProgress((oldProgress) => {
         if (oldProgress === 100) {
-          setLoaderDisplay(localStorage.getItem("loader"));
+          // setLoaderDisplay(localStorage.getItem("loader"));
+          setLoaderDisplay("false");
           return 100;
         }
 
@@ -47,7 +67,7 @@ const Loader = ({}) => {
 
   return (
     <Wrapper className={loaderDisplay}>
-      <Container className={loaderDisplay}>
+      <Container ref={containerRef} className={loaderDisplay}>
         <ImgContainer className={loaderDisplay}>
           <svg
             width={443}

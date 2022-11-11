@@ -11,6 +11,10 @@ export const Wrapper = styled.div`
   height: 100vh;
   z-index: 999999;
   overflow: hidden;
+  background: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition-delay: 1s;
   transition-property: visibility opacity;
 
@@ -27,10 +31,12 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
     position: relative;
+    top: 0;
+    left: 0;
     transition-delay: 1s;
     transition-property: transform;
+    transition: top left 0.1s ease;
 
     @keyframes cursorAnim {
         0% {
@@ -40,12 +46,12 @@ export const Container = styled.div`
             // transform: rotate(90deg);
         }
         100%{
-            transform: rotate(360deg);
+            transform: rotate(180deg);
         }
     }
     
     svg{
-        animation: cursorAnim 2s infinite;
+        animation: cursorAnim 2.5s infinite;
     }
     
     &.false{

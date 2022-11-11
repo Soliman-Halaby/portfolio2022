@@ -1,17 +1,19 @@
-import { App, Container } from "./style";
+import { useRef, useEffect } from "react";
+import { useRouter } from "next/router";
+import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 
 import { RecoilRoot, useRecoilValue } from "recoil";
 import { loaderState } from "recoil/loaderState";
-import { useRef } from "react";
+
 import Header from "components/Header";
 import Footer from "components/Footer";
 import FooterReduced from "components/FooterReduced";
 import Cursor from "@/components/Cursor";
 
 import Loader from "@/components/Loader";
-import { useRouter } from "next/router";
-import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import useIsMobile from "hook";
+
+import { App, Container } from "./style";
 
 export default function Layout({
   children,
@@ -26,9 +28,8 @@ export default function Layout({
   const containerRef = useRef(null);
 
   const loaderDisplay = useRecoilValue(loaderState);
-
-  console.log("je display", loaderDisplay);
   const isMobile = useIsMobile();
+
   return (
     <LocomotiveScrollProvider
       options={{
@@ -43,7 +44,7 @@ export default function Layout({
         scroll.scrollTo(0, { duration: 0, disableLerp: true })
       }
     >
-      <Loader />
+      {loaderDisplay && <Loader />}
       <main data-scroll-container ref={containerRef}>
         <Header />
         <Container ref={containerRef}>

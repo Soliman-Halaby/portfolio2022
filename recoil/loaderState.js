@@ -7,5 +7,5 @@ export const LOADER_KEY = "LoaderManager";
 
 export const loaderState = atom({
   key: LOADER_KEY,
-  default: "",
+  default: true,
 });
