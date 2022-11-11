@@ -42,6 +42,7 @@ const Loader = ({}) => {
     const timer = setInterval(() => {
       setProgress((oldProgress) => {
         if (oldProgress === 100) {
+          document.body.style.overflow = "visible";
           // setLoaderDisplay(localStorage.getItem("loader"));
           setLoaderDisplay("false");
           return 100;
@@ -49,6 +50,7 @@ const Loader = ({}) => {
 
         const diff = Math.random() * 10;
         if (oldProgress <= 100) {
+          document.body.style.overflow = "hidden";
           return Math.min(oldProgress + Math.round(diff), 100);
         }
       });

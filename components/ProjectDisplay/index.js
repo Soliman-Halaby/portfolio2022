@@ -47,7 +47,11 @@ const ProjectDisplay = ({ col, row, title, to, image = [], index }) => {
       col={col}
       row={row}
     >
-      <ProjectContainer onMouseOver={updateDisplay} onMouseOut={resetDisplay}>
+      <ProjectContainer
+        onClick={resetDisplay}
+        onMouseOver={updateDisplay}
+        onMouseOut={resetDisplay}
+      >
         {image && (
           <ImageContainer>
             <Image
