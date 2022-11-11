@@ -12,7 +12,6 @@ export const Logo = styled.img`
   height: auto;
   position: absolute;
   left: 50%;
-  cursor: pointer;
   right: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -32,6 +31,7 @@ export const MainLink = styled.span`
     color: ${({ theme }) => theme.colors.grey2};
     text-decoration: none;
     position: relative;
+    cursor: none;
     padding-bottom: 3px;
 
     &:after {
@@ -58,7 +58,9 @@ export const MainLink = styled.span`
   }
 `;
 
-export const NavLink = styled(Link)``;
+export const NavLink = styled(Link)`
+  cursor: none;
+`;
 export const MenuDisplay = styled.p`
   color: ${({ theme }) => theme.colors.grey2};
 `;
@@ -93,7 +95,7 @@ export const HeaderContainer = styled.div`
 export const SubNav = styled.div`
   width: 100%;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   opacity: 0;
   pointer-events: none;
   top: 0;
@@ -128,7 +130,7 @@ export const SubNavItemsContainer = styled.div`
   }
 
   ${maxMedia.xs} {
-    padding-top: 20rem;
+    padding-top: 12rem;
   }
 `;
 

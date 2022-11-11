@@ -47,4 +47,9 @@ export const Paragraph = () => `
   font-family: ${({ theme }) => theme.fonts.sansSerif};
   color: ${({ theme }) => theme.colors.grey1};
   max-width: 300px;
+
+  ${maxMedia.small} {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
 `;

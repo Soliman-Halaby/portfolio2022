@@ -6,12 +6,14 @@ const ImageTwoColumns = ({ src, src2 }) => {
   return (
     <Wrapper data-scroll-section>
       <ImageContainer>
-        <Container data-scroll data-scroll-speed="1">
+        {/* <Container data-scroll data-scroll-speed="1"> */}
+        <Container>
           <Image alt="Project Image" src={src}></Image>
         </Container>
       </ImageContainer>
       <ImageContainer>
-        <Container data-scroll data-scroll-speed="2">
+        {/* <Container data-scroll data-scroll-speed="2"> */}
+        <Container>
           <Image alt="Project Image" src={src2}></Image>
         </Container>
       </ImageContainer>

@@ -8,12 +8,19 @@ export const Wrapper = styled.div`
   position: relative;
   margin: ${({ theme }) => theme.margin.medium};
   /* margin-top: 17rem; */
-  height: 85vh;
-  display: flex;
-  align-items: center;
+  min-height: 75vh;
+  /* display: flex;
+  align-items: center; */
+  padding-top: 15rem;
+  padding-bottom: 10rem;
 
   ${maxMedia.xs} {
     margin-top: 4rem;
+  }
+
+  ${maxMedia.small} {
+    min-height: 60vh;
+    padding-top: 8rem;
   }
 `;
 

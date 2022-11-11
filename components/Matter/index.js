@@ -453,17 +453,21 @@ const MatterComponent = ({}) => {
       //     });
 
       if (detail === "opened") {
-        Body.translate(detailBox.body, { x: -30, y: -11 });
+        // Body.translate(detailBox.body, { x: -30, y: -11 });
       }
 
+      Body.translate(detailBox.body, {
+        x: 0,
+        y: detailRef.current.offsetHeight,
+      });
       if (detail === "closed") {
-        Body.translate(detailBox.body, {
-          x: 0,
-          y: detailRef.current.offsetHeight,
-        });
+        // Body.translate(detailBox.body, {
+        //   x: 0,
+        //   y: detailRef.current.offsetHeight,
+        // });
 
-        Body.update(detailBox.body);
-        World.remove(engine.current.world, detailBox.body);
+        // Body.update(detailBox.body);
+        // World.remove(engine.current.world, detailBox.body);
         console.log("yo");
       }
 

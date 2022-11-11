@@ -17,9 +17,19 @@ export const Wrapper = styled.div`
 export const ImageContainer = styled.div`
   width: 50%;
   height: 100%;
-  margin: 0rem 1.25vw;
+  padding: 0rem 1rem;
+
+  ${maxMedia.small} {
+    padding: 0 2rem;
+    margin: 1rem 0;
+  }
+
+  &:nth-of-type(1) {
+    padding-left: 2rem;
+  }
 
   &:nth-of-type(2) {
+    padding-right: 2rem;
     /* transform: translateY(50px) !important; */
   }
 
@@ -32,7 +42,7 @@ export const Container = styled.div`
   background: #e3e3e3;
   display: flex;
   justify-content: center;
-  padding: 13rem 2.5vw;
+  padding: 13rem 2rem;
   ${maxMedia.xs} {
     width: auto !important;
     padding: 8rem 1rem;

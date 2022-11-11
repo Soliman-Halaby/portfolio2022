@@ -5,8 +5,12 @@ import { maxMedia, title } from "styles/mixins";
 
 export const Wrapper = styled.div`
   width: 100%;
-  padding: 2rem 20px;
+  padding: 2rem;
   padding-top: 0;
+
+  ${maxMedia.small} {
+    padding: 1rem 2rem;
+  }
 `;
 
 export const ContainerWrapper = styled.div`
@@ -20,7 +24,11 @@ export const Container = styled.div`
   /* height: 105vh; */
   display: flex;
   justify-content: center;
-  padding: 5vw;
+  padding: 7rem;
+
+  ${maxMedia.small} {
+    padding: 4rem 3rem;
+  }
 `;
 
 export const ImageContainer = styled.div`

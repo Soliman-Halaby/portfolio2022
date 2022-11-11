@@ -1,17 +1,18 @@
 import React, { useState, useRef, useEffect } from "react";
-// import Image from "next/image";
+import { useLocomotiveScroll } from "react-locomotive-scroll";
 
 import Button from "@/components/Buttons/Button";
 import CircularButton from "@/components/Buttons/CircularButton";
-
 import Pin from "@/components/Popup/Pin";
-import { Wrapper, Nav, NavElement, Text, Element, Image } from "./style.js";
 
-import { useLocomotiveScroll } from "react-locomotive-scroll";
+import { useSetRecoilState, useResetRecoilState } from "recoil";
+import { cursorHover } from "recoil/cursorState.js";
 
 import useIsMobile from "hook";
 
-const Footer = () => {
+import { Wrapper, Nav, NavElement, Text, Element, Image } from "./style.js";
+
+const Footer = ({}) => {
   const [activeMessage, setActiveMessage] = useState(false);
   const isMobile = useIsMobile();
 
@@ -54,6 +55,14 @@ const Footer = () => {
       target: "_blank",
     },
   ];
+
+  const setCursorHover = useSetRecoilState(cursorHover);
+  const resetCursor = useResetRecoilState(cursorHover);
+
+  const cursorRotation = () => {
+    setCursorHover("expand");
+  };
+
   return (
     <Wrapper data-scroll-section>
       <Nav>
@@ -118,7 +127,13 @@ const Footer = () => {
         </NavElement>
         {!isMobile && (
           <NavElement>
-            <Image onClick={() => scrollToTop(scroll)} src="/arrow-up.svg" />
+            <Image
+              onMouseEnter={() => cursorRotation()}
+              onMouseLeave={resetCursor}
+              onClick={() => scrollToTop(scroll)}
+              src="/arrow-up.svg"
+              alt="Arrow up"
+            />
           </NavElement>
         )}
       </Nav>

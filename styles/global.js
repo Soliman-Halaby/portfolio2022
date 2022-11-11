@@ -125,7 +125,6 @@ const styles = ({ fonts }) => {
     }
     a {
       text-decoration: none;
-      cursor: none;
     }
 
     body {
@@ -137,7 +136,8 @@ const styles = ({ fonts }) => {
       }};
       margin: 0;
       background: #f2f2f2;
-      ${maxMedia.xs} {
+      ${maxMedia.small} {
+        cursor: inherit;
       }
     }
 

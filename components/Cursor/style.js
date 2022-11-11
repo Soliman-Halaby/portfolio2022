@@ -28,8 +28,26 @@ export const Cursor = styled.div`
     top: -8px;
     left: -8px;
   }
+`;
 
-  /* @keyframes cursorAnim {
+export const CursorWrapper = styled.div`
+  position: relative;
+`;
+
+export const CursorContainer = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  svg {
+    transition: all 0.3s ease;
+  }
+
+  &:nth-of-type(1){
+    width: 17px;
+  height: 20px;
+  }
+
+  @keyframes cursorAnim {
         0% {
             transform: rotate(0deg):
         }
@@ -45,18 +63,5 @@ export const Cursor = styled.div`
     &.expand{
         animation: cursorAnim .5s forwards;
 
-    } */
-`;
-
-export const CursorWrapper = styled.div`
-  position: relative;
-`;
-
-export const CursorContainer = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  svg {
-    transition: all 0.3s ease;
-  }
+    }
 `;

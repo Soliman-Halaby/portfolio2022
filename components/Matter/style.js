@@ -32,8 +32,9 @@ export const Box = styled.div`
 `;
 
 export const SceneContainer = styled.div`
+  width: 100vw;
   canvas {
-    /* opacity: 0; */
+    opacity: 0;
   }
 `;
 export const Ground = styled.div`
@@ -65,24 +66,32 @@ export const Title = styled.h2`
 export const Detail = styled.div`
   position: absolute;
   bottom: 77.5px;
+  pointer-events: none;
   right: 0;
   user-select: none;
   width: 50vw;
-  height: 50vh;
+  height: 60vh;
   z-index: 9;
+  margin-right: 2rem;
   padding: 3rem;
-  /* opacity: 0.2; */
-  transform: translateY(100%);
-  display: none;
+  /* transform: translateY(100%); */
+  /* display: none; */
   opacity: 0;
   background: ${({ theme }) => theme.colors.lime};
   will-change: transform;
-  transition: all 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
 
   &.opened {
-    transform: translateY(0);
-    display: block;
+    pointer-events: all;
+    transform: translateY(0%);
+    /* display: block; */
     opacity: 1;
+  }
+
+  ${maxMedia.small} {
+    width: calc(100% - 2rem);
+    margin-right: 0;
+    height: 70vh;
   }
 `;
 
@@ -128,6 +137,7 @@ export const OtherFactsContainer = styled.div`
 `;
 export const MatterContainer = styled.div`
   z-index: 9999;
+  width: 100vw;
   height: 100vh;
   overflow: hidden;
 

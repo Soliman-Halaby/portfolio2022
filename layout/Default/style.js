@@ -9,15 +9,14 @@ export const App = styled.div`
   align-items: center;
   justify-content: center;
   background: ${({ theme }) => {
-        theme.colors.grey2;
-      }};
+    theme.colors.grey2;
+  }};
   flex-direction: column;
-
 `;
 
 export const Container = styled.div`
   width: 100%;
   background: ${({ theme }) => {
-        theme.colors.grey2;
-      }};
-`
+    theme.colors.grey2;
+  }};
+`;

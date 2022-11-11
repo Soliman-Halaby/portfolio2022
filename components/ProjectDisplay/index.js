@@ -40,23 +40,6 @@ const ProjectDisplay = ({ col, row, title, to, image = [], index }) => {
     setCursorDisplay("simple");
   };
 
-  if (buttonRef) {
-    console.log(buttonRef);
-  }
-  console.log(buttonRef);
-  useEffect(() => {
-    console.log(buttonRef);
-    if (buttonRef.current == null || buttonRef == null) return;
-
-    document.addEventListener("mousemove", (e) => {
-      if (buttonRef.current == null) return;
-      buttonRef.current.setAttribute(
-        "style",
-        "top: " + e.pageY + "px; left: " + e.clientX + "px;"
-      );
-    });
-  }, []);
-
   return (
     <Wrapper
       onMouseMove={() => console.log("coucou")}
@@ -64,7 +47,11 @@ const ProjectDisplay = ({ col, row, title, to, image = [], index }) => {
       col={col}
       row={row}
     >
-      <ProjectContainer onMouseOver={updateDisplay} onMouseOut={resetDisplay}>
+      <ProjectContainer
+        onClick={resetDisplay}
+        onMouseOver={updateDisplay}
+        onMouseOut={resetDisplay}
+      >
         {image && (
           <ImageContainer>
             <Image

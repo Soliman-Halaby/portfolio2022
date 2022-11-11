@@ -3,12 +3,15 @@ import { react, useRef, useEffect, createContext } from "react";
 import { useRecoilValue } from "recoil";
 import { Cursor, CursorWrapper, CursorContainer } from "./style.js";
 import ProjectButton from "../Buttons/ProjectButton/index.js";
-import { cursorState } from "recoil/cursorState.js";
+import { cursorState, cursorHover } from "recoil/cursorState.js";
 
 export default function CustomCursor(width, height, custom = false) {
   const cursorRef = useRef(null);
 
+  const cursorWrapper = useRef(null);
   const cursorDisplay = useRecoilValue(cursorState);
+  const cursorRotation = useRecoilValue(cursorHover);
+
   console.log(cursorDisplay);
   function onMouseMove(e) {
     const cursor = cursorRef.current;
@@ -37,20 +40,23 @@ export default function CustomCursor(width, height, custom = false) {
     });
     document.addEventListener("click", () => {
       if (cursorRef.current == null) return;
-      cursorRef.current.classList.add("expand");
+      cursorWrapper.current.classList.add("expand");
       setTimeout(() => {
         if (cursorRef.current == null) return;
-        cursorRef.current.classList.remove("expand");
+        cursorWrapper.current.classList.remove("expand");
       }, 500);
     });
   }, []);
   return (
     <Cursor ref={cursorRef}>
       <CursorWrapper>
-        <CursorContainer className={cursorDisplay}>
+        <CursorContainer
+          ref={cursorWrapper}
+          className={`${cursorDisplay} ${cursorRotation}`}
+        >
           <svg
-            width={48}
-            height={48}
+            width={17}
+            height={20}
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >

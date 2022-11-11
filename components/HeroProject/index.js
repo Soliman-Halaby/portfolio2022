@@ -1,7 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
 
-import TitleSection from "@/components/Popup/SectionTitle";
-
 import Tag from "@/components/Popup/Tag";
 import Button from "@/components/Buttons/Button";
 
@@ -52,7 +50,7 @@ const HeroProject = ({
                 })}
               </TagRow>
               <Button
-                className="project-visit-cta"
+                // className="project-visit-cta"
                 to={to}
                 target="_blank"
                 label={ctaLabel}

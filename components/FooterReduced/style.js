@@ -20,8 +20,9 @@ export const Nav = styled.div`
   display: flex;
   //   gap: 2rem;
   justify-content: space-between;
+  flex-wrap: wrap;
 
-  ${maxMedia.xs} {
+  ${maxMedia.small} {
     flex-direction: column;
   }
 `;
@@ -29,6 +30,7 @@ export const Nav = styled.div`
 export const NavElement = styled.div`
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 1.5rem;
   // background: lightblue;
   // border-top: 1px solid red;
@@ -67,6 +69,4 @@ export const Text = styled.p`
   color: ${({ theme }) => theme.colors.grey1};
 `;
 
-export const Image = styled.img`
-  cursor: pointer;
-`;
+export const Image = styled.img``;
