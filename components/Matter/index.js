@@ -265,11 +265,43 @@ const MatterComponent = ({}) => {
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet viverra in nisl pellentesque nullam. Porttitor pellentesque pharetra, suspendisse at arcu. Netus tempus, pulvinar vel commodocondimentum turpis cursus semper. Dignissim commodo amet eleifendlibero, risus. Aliquam risus vestibulum facilisis urna tempus idcongue ac, arcu. Enim dictum nec malesuada in faucibus id nuncnec. A nisl at accumsan at vitae, vulputate odio morbi quam.Magnis ullamcorper fermentum donec tellus, vitae enim morbi egetcongue. Dictum dictumst sit vel placerat tincidunt vitae nunc.Pulvinar pharetra lectus tristique aliquam pulvinar eget.",
     },
-    { label: "Ultranoir", desription: "test" },
-    { label: "Hetic2", desription: "test2" },
-    { label: "Hetit3", desription: "test3" },
-    { label: "Hetic4", desription: "test4" },
-    // { label: "Hetic3", desription: "test3" },
+    {
+      label: "Ultranoir",
+      description:
+        "In May 2022, a new adventure began at Ultranoir during a 6 month internship. I had the opportunity to work on various projects and to deepen my knowledge of React.</br>This internship was very formative and is one of the reasons why I decided to do my portfolio in Next. The whole dev team was there to coach me and train me on the different topics. It was my first 'real' experience in an agency, since my previous internship was in full remote.",
+    },
+    {
+      label: "Football (PSG)",
+      description:
+        "I'm a big soccer fan, I played pro football for a large part of my youth and now I only play soccer with friends (which is not bad)! I support PSG (this year will be the good one...)",
+    },
+    {
+      label: "Sailing",
+      description:
+        "Since I was 8 years old, until I was 18, I practiced sailing in Saint Raphael, in the South of France. I had the opportunity to sail on several boats (pico, catamaran, ludic). My goal was to be an instructor during the summer period but it was not done because of lack of time. I managed to reach the level 4 (there are 5 levels) certified by the FFV.",
+    },
+    {
+      label: "Dreamline Studio",
+      description:
+        "From June to September 2021, I did an internship at Dreamline Studio. It was my first professional experience because I had not done an internship before. I had the opportunity to deepen my knowledge on WordPress and to master this tool as it should be. The internship was full remote.",
+    },
+    {
+      label: "Cairo",
+      description:
+        "Until I was 18, I was born and raised in Cairo. I did all my schooling at the French Lycée in Cairo. I often return to Egypt during the year when possible to meet up with my family and friends.</br></br>Growing up in Egypt and traveling whenever I could, allowed me to become fluent in Arabic and to adapt to any kind of environment.",
+    },
+    { label: "Karate", description: "test4" },
+    {
+      label: "HETIC",
+      description:
+        "I am a 4th year student at Hetic where we learn web development, web design and communication. </br></br>Despite the fact that I have deepened the web development, in order to understand and be able to touch everything, I have not neglected the design as well as the communication, because in my point of vue it’s important to understand all the aspect of a project and to be able to discuss it with my teammates.</br></br>Moreover, I'm used to working in a team since Hetic trains us to do so by setting up many projects in groups.",
+    },
+    {
+      label: "New York",
+      description:
+        "New York is one of the cities I want to discover the most. I also want to go there to improve my English and discover a new continent.</br>So why not do it if I can do it while working in the field I love.</br>It would be a great opportunity for me to go there, especially since I have never been to America.",
+    },
+    // { label: "Hetic3", description: "test3" },
   ];
 
   const [title, setTitle] = useState(datas[0].label);
@@ -303,6 +335,7 @@ const MatterComponent = ({}) => {
   function openDetail(index) {
     console.log("opened");
     setDetail("opened");
+    console.log(index);
     setCurrentIndex(index);
 
     // console.log(boxRe/f.current[index].textContent);
@@ -315,6 +348,7 @@ const MatterComponent = ({}) => {
       (data) => data.label === boxRef.current[index].textContent
     );
 
+    console.log(getContent.description);
     setContent(getContent.description);
     // data.label === boxRef.current[index].textContent;
 
@@ -542,7 +576,7 @@ const MatterComponent = ({}) => {
               ></CloseBtn>
             </CloseBtnContainer>
             <Label>{title}</Label>
-            <Description>{content}</Description>
+            <Description dangerouslySetInnerHTML={{ __html: content }} />
             <OtherFactsContainer>
               Other facts
               <ControlWrapper>
