@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
   margin-top: 10rem;
   margin-bottom: 6rem;
 
-  ${maxMedia.xs} {
+  ${maxMedia.small} {
     margin-top: 3rem;
     margin-bottom: 4rem;
   }
@@ -26,13 +26,13 @@ export const Number = styled.p`
 `;
 export const Container = styled.div`
   width: 100%;
-  padding-right: 20rem;
+  padding-right: 10rem;
   padding-left: 8rem;
   display: flex;
   flex-direction: row;
   gap: 15vw;
 
-  ${maxMedia.xs} {
+  ${maxMedia.small} {
     width: auto;
     flex-direction: column;
     gap: 2rem;
@@ -69,7 +69,7 @@ export const SubTitle = styled.h3`
   font-weight: 300;
   font-size: 1.15rem;
 
-  ${maxMedia.xs} {
+  ${maxMedia.small} {
     font-size: 1.25rem;
   }
 `;
@@ -78,9 +78,17 @@ export const ContentWrapper = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 4rem;
-  ${maxMedia.xs} {
+  gap: 7rem;
+  ${maxMedia.small} {
     gap: 1.5rem;
+  }
+`;
+
+export const ContentContainer = styled.div`
+  display: flex;
+  gap: 3rem;
+  ${maxMedia.small} {
+    flex-direction: column;
   }
 `;
 

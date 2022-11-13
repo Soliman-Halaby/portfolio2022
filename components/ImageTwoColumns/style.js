@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
   display: flex;
   gap: 0rem;
   overflow: hidden;
-  ${maxMedia.xs} {
+  ${maxMedia.small} {
     flex-direction: column;
     gap: 0rem;
   }
@@ -33,7 +33,7 @@ export const ImageContainer = styled.div`
     /* transform: translateY(50px) !important; */
   }
 
-  ${maxMedia.xs} {
+  ${maxMedia.small} {
     width: 100%;
   }
 `;
@@ -43,7 +43,7 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   padding: 13rem 2rem;
-  ${maxMedia.xs} {
+  ${maxMedia.small} {
     width: auto !important;
     padding: 8rem 1rem;
   }

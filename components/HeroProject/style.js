@@ -43,6 +43,7 @@ export const TagWrapper = styled.div`
   display: flex;
   flex-direction: row;
   margin-top: 4rem;
+  position: relative;
   justify-content: space-between;
   margin-bottom: 2rem;
   ${maxMedia.md} {
@@ -111,6 +112,7 @@ export const Text = styled.span`
 
 export const Content = styled.p`
   ${Paragraph()}
+  position: absolute;
 
   align-self: flex-end;
   ${maxMedia.small} {

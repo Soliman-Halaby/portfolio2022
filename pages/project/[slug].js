@@ -20,6 +20,7 @@ export default function Projet({}) {
 
   // Structure returned array with all projects informations
   const data = ProjectsData.map((data, i) => ({
+    index: i,
     slug: data.slug,
     title: data.title,
     info: data.info,
@@ -41,37 +42,39 @@ export default function Projet({}) {
   if (slug && projectData) {
     return (
       <Layout reducedFooter>
-          <Hero
-            title={projectData.title}
-            content="Using"
-            ctaLabel="See it live"
-            infos={projectData.info}
-            img={projectData.images.hero}
-            tags={projectData.tags}
-            description={projectData.description}
-            to={projectData.link}
-          />
-          <Description
-            title={projectData.content1.title}
-            label={projectData.content1.label}
-            subtitle={projectData.content1.subtitle}
-            text1={projectData.content1.text1}
-            text2={projectData.content1.text2}
-          />
-          <FullWidthImage src={projectData.images.fullwidth} />
-          <ImageTwoColumns
-            src={projectData.images.left}
-            src2={projectData.images.right}
-          />
-          <Description
-            title={projectData.content2.title}
-            label={projectData.content2.label}
-            subtitle={projectData.content2.subtitle}
-            text1={projectData.content2.text1}
-            text2={projectData.content2.text2}
-          />
-          <FullWidthImage src={projectData.images.fullwidth2} />
-          <BottomProject title="More projects" projects={allProjects} />
+        <Hero
+          title={projectData.title}
+          content="Using"
+          ctaLabel="See it live"
+          infos={projectData.info}
+          img={projectData.images.hero}
+          tags={projectData.tags}
+          description={projectData.description}
+          to={projectData.link}
+        />
+        <Description
+          number="01"
+          title={projectData.content1.title}
+          label={projectData.content1.label}
+          subtitle={projectData.content1.subtitle}
+          text1={projectData.content1.text1}
+          text2={projectData.content1.text2}
+        />
+        <FullWidthImage src={projectData.images.fullwidth} />
+        <ImageTwoColumns
+          src={projectData.images.left}
+          src2={projectData.images.right}
+        />
+        <Description
+          number="02"
+          title={projectData.content2.title}
+          label={projectData.content2.label}
+          subtitle={projectData.content2.subtitle}
+          text1={projectData.content2.text1}
+          text2={projectData.content2.text2}
+        />
+        <FullWidthImage src={projectData.images.fullwidth2} />
+        <BottomProject title="More projects" projects={allProjects} />
       </Layout>
     );
   }

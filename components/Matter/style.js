@@ -33,8 +33,9 @@ export const Box = styled.div`
 
 export const SceneContainer = styled.div`
   width: 100vw;
+  /* overflow: hidden; */
   canvas {
-    opacity: 0;
+    /* opacity: 0; */
   }
 `;
 export const Ground = styled.div`
@@ -74,15 +75,17 @@ export const Detail = styled.div`
   z-index: 9;
   margin-right: 2rem;
   padding: 3rem;
-  /* transform: translateY(100%); */
+  transform: translateY(100%);
+  visibility: hidden;
   /* display: none; */
   opacity: 0;
   background: ${({ theme }) => theme.colors.lime};
   will-change: transform;
-  transition: opacity 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 
   &.opened {
     pointer-events: all;
+    visibility: visible;
     transform: translateY(0%);
     /* display: block; */
     opacity: 1;

@@ -22,7 +22,7 @@ export default function Layout({
   scroll = true,
   cursorWidth = 16,
   cursorHeight = 18,
-  display = "normal",
+  number = "01",
 }) {
   const { route } = useRouter();
   const containerRef = useRef(null);
@@ -34,7 +34,7 @@ export default function Layout({
     <LocomotiveScrollProvider
       options={{
         smooth: true,
-        smartphone: { smooth: false },
+        smartphone: { smooth: true },
         tablet: { smooth: true },
         reloadOnContextChange: true,
       }}
@@ -47,14 +47,14 @@ export default function Layout({
       {loaderDisplay && <Loader />}
       <main data-scroll-container ref={containerRef}>
         <Header />
-        <Container ref={containerRef}>
+        <Container>
           <App>
             {/* <CustomCursor width={cursorWidth} height={cursorHeight}/> */}
             {children}
             {noFooter ? null : reducedFooter ? (
               <FooterReduced />
             ) : (
-              <Footer display={display} />
+              <Footer number={number} />
             )}
             {!isMobile && <Cursor />}
           </App>

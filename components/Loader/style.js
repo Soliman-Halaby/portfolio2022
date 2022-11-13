@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { css } from "@emotion/react";
 
 import { maxMedia, TitleSection } from "styles/mixins";
-
+import { Title } from "../Popup/SectionTitle/style";
 export const Wrapper = styled.div`
   position: absolute;
   top: 0;
@@ -60,6 +60,20 @@ export const Container = styled.div`
             transform: scale(0.5);
             animation: none;
         } */
+    }
+
+    ${Title}{
+      width: 15rem;
+      top: -5rem;
+      mix-blend-mode: exclusion;
+      color: ${({ theme }) => theme.colors.grey2};
+      left: -35rem;
+      z-index: 999;
+
+      ${maxMedia.small}{
+        top: 0;
+        left: -10rem;
+      }
     }
 `;
 

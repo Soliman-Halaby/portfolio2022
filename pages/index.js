@@ -30,7 +30,7 @@ export default function Home() {
   }, [timer]);
 
   return (
-    <Layout display="wide">
+    <Layout number="03">
       {/* {loader ? (
         <div className="loader-wrapper absolute">
           <h1>Loader</h1>
