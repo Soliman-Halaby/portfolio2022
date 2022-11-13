@@ -64,9 +64,13 @@ export const Container = styled.div`
 `;
 
 export const ImgContainer = styled.div`
-  transition: all 0.3s ease;
-  transition-delay: 1s;
-  transition-property: transform;
+  transition: top left 0.1s ease;
+  /* transition-delay: 1s; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* transition-property: transform; */
   /* &.false {
     transform: rotate(180deg);
   } */

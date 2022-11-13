@@ -69,8 +69,8 @@ const Loader = ({}) => {
 
   return (
     <Wrapper className={loaderDisplay}>
-      <Container ref={containerRef} className={loaderDisplay}>
-        <ImgContainer className={loaderDisplay}>
+      <Container className={loaderDisplay}>
+        <ImgContainer ref={containerRef} className={loaderDisplay}>
           <svg
             width={443}
             height={501}
