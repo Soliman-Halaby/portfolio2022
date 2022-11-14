@@ -1,209 +1,4 @@
-// import React, { useState, useRef, useEffect } from "react";
-
-// import {
-//   Engine,
-//   Render,
-//   Composite,
-//   World,
-//   Bodies,
-//   Mouse,
-//   MouseConstraint,
-//   Runner,
-// } from "matter-js";
-
-// import { SceneContainer, Container, Title } from "./style";
-
-// const MatterComponent = ({}) => {
-//   const scene = useRef();
-//   const engine = useRef(Engine.create({}));
-
-//   // Variables
-
-//   const GRAVITY = 1;
-//   const WIREFRAMES = false;
-
-//   const COLOR = {
-//     BACKGROUND: "transparent",
-//     GROUND: "#1E1E1E",
-//   };
-
-//   // Scene walls
-//   const wall = (x, y, width, height, stroke, fill) => {
-//     return Bodies.rectangle(x, y, width, height, {
-//       render: {
-//strokeStyle: stroke,
-//         fillStyle: fill,
-//         lineWidth: 1,
-//       },
-//       isStatic: true,
-//     });
-//   };
-
-//   // Function to generate rectangles in scene
-//   const rect = (x, y, width, height, angle, color) => {
-//     return Bodies.rectangle(x, y, width, height, {
-//       angle: angle,
-//       render: {
-//         fillStyle: color,
-//       },
-//       mass: 7,
-//       restitution: 0.3,
-//       friction: 0.2,
-//       frictionAir: 0.01,
-//     });
-//   };
-
-//   useEffect(() => {
-//     let clientWidth = document.body.clientWidth;
-//     let clientHeight = document.body.clientHeight;
-
-//     const render = Render.create({
-//       element: scene.current,
-//       engine: engine.current,
-//       options: {
-//         width: clientWidth,
-//         height: clientHeight,
-//         wireframes: WIREFRAMES,
-//         background: "transparent",
-//       },
-//     });
-
-//     // const wallTop = wall(
-//     //   clientWidth / 2,
-//     //   17,
-//     //   clientWidth,
-//     //   150,
-//     //   "red",
-//     //   "transparent"
-//     // );
-
-//     // Scene walls
-//     const wallLeft = wall(
-//       -100,
-//       clientHeight / 2,
-//       200,
-//       clientHeight * 2,
-//       "blue",
-//       "red"
-//     );
-//     const wallRight = wall(
-//       clientWidth + 100,
-//       clientHeight / 2,
-//       200,
-//       clientHeight * 2,
-//       "purple",
-//       "pink"
-//     );
-//     const ground = wall(
-//       clientWidth / 2,
-//       clientHeight + 50,
-//       clientWidth,
-//       250,
-//       COLOR.GROUND,
-//       COLOR.BACKGROUND
-//     );
-
-//     // Add mouse control
-//     let mouse = Mouse.create(render.canvas),
-//       mouseConstraint = MouseConstraint.create(engine.current, {
-//         mouse: mouse,
-//         constraint: {
-//           stiffness: 0.2,
-//           render: {
-//             visible: false,
-//           },
-//         },
-//       });
-
-//     // Data structure to store all rectangles
-//     const datas = ["Paris", "test", "tigran"];
-
-//     // Create rectangles with random position and size (depending on the data)
-//     const generateBlock = () => {
-//       return Composite.add(
-//         engine.current.world,
-//         rect(
-//           Math.random() * clientWidth,
-//           Math.random() * -clientHeight,
-//           290,
-//           100,
-//           Math.random() * 180,
-//           "white"
-//         )
-//       );
-//     };
-
-//     // Add all generated rectangles to the scene
-//     datas.map((data, i) => {
-//       generateBlock();
-//     });
-
-//     // Gravity on World
-//     engine.current.gravity.y = GRAVITY;
-
-//     // Add rectangles surface
-//     Composite.add(engine.current.world, [
-//       // wallTop,
-//       wallLeft,
-//       ground,
-//       wallRight,
-//     ]);
-
-//     // Add mouse mouse control to the scene
-//     Composite.add(engine.current.world, mouseConstraint);
-
-//     // Run the engine
-//     Runner.run(engine.current);
-//     Render.run(render);
-
-//     render.mouse = mouse;
-//     render.options.showPerformance = true;
-//     // if (typeof window !== "undefined" && render.canvas && render.options) {
-//     //   console.log(render.canvas);
-//     //   window.addEventListener("resize", () => {
-//     //     clientWidth = document.documentElement.clientWidth;
-
-//     //     clientHeight = document.documentElement.clientHeight;
-//     //     // render.bounds.max.x = window.innerWidth;
-//     //     // render.bounds.max.y = window.innerHeight;
-//     //     // render.options.width = window.innerWidth;
-//     //     // render.options.height = window.innerHeight;
-//     //     // render.canvas.width = window.innerWidth;
-//     //     // render.canvas.height = window.innerHeight;
-//     //   });
-//     // }
-
-//     return () => {
-//       Render.stop(render);
-//       Composite.clear(engine.current.world);
-//       Engine.clear(engine.current);
-//       render.canvas.remove();
-//       render.canvas = null;
-//       render.context = null;
-//       render.mouse = null;
-//     };
-//   }, []);
-
-//   return (
-//     <Container>
-//       <Title>
-//         Get to know
-//         <br />
-//         me better
-//       </Title>
-//       <SceneContainer ref={scene} />
-//     </Container>
-//   );
-// };
-
-// export default MatterComponent;
-import React, {
-  useState,
-  useRef,
-  useEffect,
-  Fragment,
-  useLayoutEffect,
-} from "react";
+import React, { useState, useRef, useEffect, Fragment } from "react";
 
 import {
   Engine,
@@ -263,7 +58,7 @@ const MatterComponent = ({}) => {
     {
       label: "Paris",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet viverra in nisl pellentesque nullam. Porttitor pellentesque pharetra, suspendisse at arcu. Netus tempus, pulvinar vel commodocondimentum turpis cursus semper. Dignissim commodo amet eleifendlibero, risus. Aliquam risus vestibulum facilisis urna tempus idcongue ac, arcu. Enim dictum nec malesuada in faucibus id nuncnec. A nisl at accumsan at vitae, vulputate odio morbi quam.Magnis ullamcorper fermentum donec tellus, vitae enim morbi egetcongue. Dictum dictumst sit vel placerat tincidunt vitae nunc.Pulvinar pharetra lectus tristique aliquam pulvinar eget.",
+        "I arrived in Paris in 2019 for my higher education and I don't regret this choice! I like this city very much because it is possible to find a balance on several points, between sports, activities and work atmosphere.",
     },
     {
       label: "Ultranoir",
@@ -290,7 +85,11 @@ const MatterComponent = ({}) => {
       description:
         "Until I was 18, I was born and raised in Cairo. I did all my schooling at the French Lycée in Cairo. I often return to Egypt during the year when possible to meet up with my family and friends.</br></br>Growing up in Egypt and traveling whenever I could, allowed me to become fluent in Arabic and to adapt to any kind of environment.",
     },
-    { label: "Karate", description: "test4" },
+    {
+      label: "Karate",
+      description:
+        "From the age of 5 to 17 I practiced karate in Egypt with the same Sensai. With time and training, this allowed me to obtain my first dan black belt. Karate was a big part of my daily life when I was in Egypt as I trained 2 to 3 times a week in addition to other sports. ",
+    },
     {
       label: "HETIC",
       description:
@@ -300,6 +99,20 @@ const MatterComponent = ({}) => {
       label: "New York",
       description:
         "New York is one of the cities I want to discover the most. I also want to go there to improve my English and discover a new continent.</br>So why not do it if I can do it while working in the field I love.</br>It would be a great opportunity for me to go there, especially since I have never been to America.",
+    },
+    {
+      label: "Piano",
+      description:
+        "I always wanted to learn the piano and the guitar since I was a child. I made a choice and turned to the piano which I practiced for several years at the Russian cultural center in Egypt. For those who are looking for it, you can find a video on youtube of little Soliman playing the piano! ",
+    },
+    {
+      label: "Aikido",
+      description:
+        "In addition to karate, I wanted to learn a new philosophy. With the same Sensai, I had the chance to learn Aikido, the art of using the power of the other to defend oneself. It was a very important complement for me and very interesting in the way of thinking and in the application. Although I don't practice it anymore, all my learning is not forgotten and is still present. ",
+    },
+    {
+      label: "Three.js Journey",
+      description: "Threejs",
     },
     // { label: "Hetic3", description: "test3" },
   ];
@@ -312,7 +125,7 @@ const MatterComponent = ({}) => {
     return Bodies.rectangle(x, y, width, height, {
       angle: angle,
       render: {},
-      mass: 7,
+      mass: 10,
       restitution: 0.3,
       friction: 0.2,
       frictionAir: 0.01,
@@ -357,6 +170,8 @@ const MatterComponent = ({}) => {
 
   useEffect(() => {
     let clientWidth = document.body.clientWidth;
+
+    console.log(clientWidth);
     let clientHeight = document.body.clientHeight;
 
     const render = Render.create({
@@ -380,8 +195,8 @@ const MatterComponent = ({}) => {
           Math.random() * clientWidth,
           Math.random() * -clientHeight,
           boxRef.current[i].offsetWidth,
-          60,
-          Math.random() * 180
+          boxRef.current[i].offsetHeight,
+          Math.random() * 360
         ),
 
         elem: boxRef.current[i],
@@ -469,9 +284,9 @@ const MatterComponent = ({}) => {
       elem: detailRef.current,
     };
 
-    Composite.add(engine.current.world, [detailBox.body]);
+    // Composite.add(engine.current.world, [detailBox.body]);
 
-    Body.setStatic(detailBox.body, true);
+    // Body.setStatic(detailBox.body, true);
 
     // Body.setPosition(detailBox.body, { x: 100, y: 100 });
     Engine.update(engine.current);
@@ -490,10 +305,10 @@ const MatterComponent = ({}) => {
         // Body.translate(detailBox.body, { x: -30, y: -11 });
       }
 
-      Body.translate(detailBox.body, {
-        x: 0,
-        y: detailRef.current.offsetHeight,
-      });
+      // Body.translate(detailBox.body, {
+      //   x: 0,
+      //   y: detailRef.current.offsetHeight,
+      // });
       if (detail === "closed") {
         // Body.translate(detailBox.body, {
         //   x: 0,
