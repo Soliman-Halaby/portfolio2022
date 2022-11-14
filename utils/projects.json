@@ -45,6 +45,7 @@
     "colPos": "2",
     "mobileCol": "2",
     "rowPos": "1",
+    "color": "#E8EAE7",
     "mobileRow": "1",
     "link": "https://www.cloudybay.com/",
     "title": "Cloudy Bay",
@@ -66,11 +67,14 @@
       "text2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
     },
     "images": {
-      "hero": "/project2-img.png",
-      "fullwidth": "/project-img-1.png",
-      "left": "/project-img-2.png",
-      "right": "/project-img-3.png",
-      "fullwidth2": "/project-img-1.png"
+      "hero": "/cloudy-bay/hero-section.png",
+      "fullwidth": "/cloudy-bay/full-width-1.png",
+      "left": "/cloudy-bay/img-1-col.png",
+      "right": "/cloudy-bay/img-2-col.png",
+      "fullwidth2": "/cloudy-bay/full-width-2.png",
+      "left2": "/cloudy-bay/img-3-col.png",
+      "right2": "/cloudy-bay/img-4-col.png",
+      "fullwidth3": "/cloudy-bay/full-width-3.png"
     },
     "image": [
       "/project-img-1.png",
