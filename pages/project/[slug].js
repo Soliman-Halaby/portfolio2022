@@ -24,6 +24,7 @@ export default function Projet({}) {
     slug: data.slug,
     title: data.title,
     info: data.info,
+    color: data?.color,
     link: data.link,
     description: data.description,
     sectionTitle1: data.sectionTitle,
@@ -60,8 +61,12 @@ export default function Projet({}) {
           text1={projectData.content1.text1}
           text2={projectData.content1.text2}
         />
-        <FullWidthImage src={projectData.images.fullwidth} />
+        <FullWidthImage
+          color={projectData?.color}
+          src={projectData.images.fullwidth}
+        />
         <ImageTwoColumns
+          color={projectData?.color}
           src={projectData.images.left}
           src2={projectData.images.right}
         />
@@ -73,7 +78,23 @@ export default function Projet({}) {
           text1={projectData.content2.text1}
           text2={projectData.content2.text2}
         />
-        <FullWidthImage src={projectData.images.fullwidth2} />
+        <FullWidthImage
+          color={projectData?.color}
+          src={projectData.images.fullwidth2}
+        />
+        {projectData.images.right2 && projectData.images.left2 && (
+          <ImageTwoColumns
+            color={projectData?.color}
+            src={projectData.images.left2}
+            src2={projectData.images.right2}
+          />
+        )}
+        {projectData.images.fullwidth3 && (
+          <FullWidthImage
+            color={projectData?.color}
+            src={projectData.images.fullwidth3}
+          />
+        )}
         <BottomProject title="More projects" projects={allProjects} />
       </Layout>
     );

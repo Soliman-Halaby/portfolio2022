@@ -20,7 +20,7 @@ export const ContainerWrapper = styled.div`
   object-position: center;
 `;
 export const Container = styled.div`
-  background: #e3e3e3;
+  background: ${({ color }) => (color ? color : "#e3e3e3")};
   /* height: 105vh; */
   display: flex;
   justify-content: center;

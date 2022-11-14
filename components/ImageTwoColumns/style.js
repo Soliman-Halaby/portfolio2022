@@ -7,6 +7,7 @@ export const Wrapper = styled.div`
   width: 100%;
   display: flex;
   gap: 0rem;
+  margin-bottom: 2rem;
   overflow: hidden;
   ${maxMedia.small} {
     flex-direction: column;
@@ -39,7 +40,7 @@ export const ImageContainer = styled.div`
 `;
 export const Container = styled.div`
   width: 100%;
-  background: #e3e3e3;
+  background: ${({ color }) => (color ? color : "#e3e3e3")};
   display: flex;
   justify-content: center;
   padding: 13rem 2rem;
