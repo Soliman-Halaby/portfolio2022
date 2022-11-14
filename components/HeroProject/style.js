@@ -65,7 +65,7 @@ export const TagContainer = styled.div`
 
   &:nth-of-type(2) {
     ${maxMedia.small} {
-      margin-top: 10rem;
+      margin-top: 8rem;
     }
   }
 `;
@@ -80,6 +80,7 @@ export const TagSubContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  flex-wrap: wrap;
   gap: 0.75rem;
 
   ${ButtonStyle} {
@@ -95,6 +96,7 @@ export const TagSubContainer = styled.div`
     &:nth-of-type(2) {
       flex-direction: row;
       justify-content: space-between;
+      row-gap: 2rem;
     }
     ${ButtonStyle} {
       margin-left: 0;
@@ -117,6 +119,7 @@ export const Content = styled.p`
   align-self: flex-end;
   ${maxMedia.small} {
     align-self: flex-start;
+    position: inherit;
   }
 `;
 

@@ -139,7 +139,7 @@ export const OtherFactsContainer = styled.div`
   bottom: 0;
 `;
 export const MatterContainer = styled.div`
-  z-index: 9999;
+  z-index: 1;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
