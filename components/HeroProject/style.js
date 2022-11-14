@@ -129,7 +129,7 @@ export const ImageContainer = styled.div`
   overflow: hidden;
 
   ${maxMedia.small} {
-    height: 70vh;
+    height: 60vh;
   }
 `;
 
