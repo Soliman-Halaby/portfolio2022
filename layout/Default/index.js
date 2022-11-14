@@ -34,7 +34,7 @@ export default function Layout({
     <LocomotiveScrollProvider
       options={{
         smooth: true,
-        smartphone: { smooth: true },
+        smartphone: { smooth: false },
         tablet: { smooth: true },
         reloadOnContextChange: true,
       }}
