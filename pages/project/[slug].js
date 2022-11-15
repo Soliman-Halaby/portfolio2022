@@ -31,6 +31,7 @@ export default function Projet({}) {
     tags: data.techno,
     content1: data.content1,
     content2: data.content2,
+    content3: data?.content3,
     images: data.images,
   }));
 
@@ -65,11 +66,18 @@ export default function Projet({}) {
           color={projectData?.color}
           src={projectData.images.fullwidth}
         />
-        <ImageTwoColumns
-          color={projectData?.color}
-          src={projectData.images.left}
-          src2={projectData.images.right}
-        />
+        {projectData.images.left && projectData.images.right ? (
+          <ImageTwoColumns
+            color={projectData?.color}
+            src={projectData.images.left}
+            src2={projectData.images.right}
+          />
+        ) : (
+          <FullWidthImage
+            color={projectData?.color}
+            src={projectData.images.left}
+          />
+        )}
         <Description
           number="02"
           title={projectData.content2.title}
@@ -82,17 +90,45 @@ export default function Projet({}) {
           color={projectData?.color}
           src={projectData.images.fullwidth2}
         />
-        {projectData.images.right2 && projectData.images.left2 && (
+        {projectData.images.right2 && projectData.images.left2 ? (
           <ImageTwoColumns
             color={projectData?.color}
             src={projectData.images.left2}
             src2={projectData.images.right2}
+          />
+        ) : (
+          <FullWidthImage
+            color={projectData?.color}
+            src={projectData.images.left2}
+          />
+        )}
+        {projectData.content3 && (
+          <Description
+            number="03"
+            title={projectData.content3.title}
+            label={projectData.content3.label}
+            subtitle={projectData.content3.subtitle}
+            text1={projectData.content3.text1}
+            text2={projectData.content3.text2}
           />
         )}
         {projectData.images.fullwidth3 && (
           <FullWidthImage
             color={projectData?.color}
             src={projectData.images.fullwidth3}
+          />
+        )}
+        {projectData.images.right3 && projectData.images.left3 && (
+          <ImageTwoColumns
+            color={projectData?.color}
+            src={projectData.images.left3}
+            src2={projectData.images.right3}
+          />
+        )}
+        {projectData.images.fullwidth4 && (
+          <FullWidthImage
+            color={projectData?.color}
+            src={projectData.images.fullwidth4}
           />
         )}
         <BottomProject title="More projects" projects={allProjects} />
