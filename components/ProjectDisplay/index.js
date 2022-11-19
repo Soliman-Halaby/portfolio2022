@@ -36,7 +36,7 @@ const ProjectDisplay = ({ col, row, title, to, image = [], index }) => {
   const resetDisplay = () => {
     setLearnMoreCta(false);
     clearInterval(timerRef.current);
-    setCount(0);
+    // setCount(0);
     setCursorDisplay("simple");
   };
 

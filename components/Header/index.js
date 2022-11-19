@@ -69,7 +69,7 @@ const Header = () => {
     },
     {
       label: "Work",
-      link: "../project/cloudy-Bay",
+      link: "../project/cloudy-bay",
     },
     {
       label: "Contact",

@@ -1,7 +1,7 @@
 import Layout from "../layout/Default";
 import { useState, useRef, useEffect } from "react";
 
-import image from "../public/cloudy-bay/hero-section.png";
+import image from "../public/index-hero.png";
 
 import CustomCursor from "@/components/Cursor";
 import Hero from "@/components/HeroHome";

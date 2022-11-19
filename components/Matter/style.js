@@ -8,6 +8,7 @@ export const Box = styled.div`
   /* background: #111; */
   /* height: 40px;
       width: 40px; */
+  white-space: nowrap;
   user-select: none;
   cursor: pointer;
   background: ${({ theme }) => theme.colors.grey2};
@@ -76,7 +77,7 @@ export const Detail = styled.div`
   pointer-events: none;
   right: 0;
   user-select: none;
-  display: none;
+  /* display: none; */
   width: 50vw;
   height: 60vh;
   z-index: 9;

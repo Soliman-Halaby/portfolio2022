@@ -66,7 +66,7 @@ const MatterComponent = ({}) => {
         "In May 2022, a new adventure began at Ultranoir during a 6 month internship. I had the opportunity to work on various projects and to deepen my knowledge of React.</br>This internship was very formative and is one of the reasons why I decided to do my portfolio in Next. The whole dev team was there to coach me and train me on the different topics. It was my first 'real' experience in an agency, since my previous internship was in full remote.",
     },
     {
-      label: "Football (PSG)",
+      label: "Football",
       description:
         "I'm a big soccer fan, I played pro football for a large part of my youth and now I only play soccer with friends (which is not bad)! I support PSG (this year will be the good one...)",
     },

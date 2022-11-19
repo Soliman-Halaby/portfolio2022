@@ -52,6 +52,7 @@ export const Container = styled.div`
 
 export const Image = styled.img`
   /* width: 100%; */
+  max-width: 100%;
   max-height: 40rem;
   ${maxMedia.small} {
     width: 100%;
