@@ -66,13 +66,14 @@ export default function Projet({}) {
           color={projectData?.color}
           src={projectData.images.fullwidth}
         />
-        {projectData.images.left && projectData.images.right ? (
+        {projectData.images.left && projectData.images.right && (
           <ImageTwoColumns
             color={projectData?.color}
             src={projectData.images.left}
             src2={projectData.images.right}
           />
-        ) : (
+        )}
+        {projectData.images.left && !projectData.images.right && (
           <FullWidthImage
             color={projectData?.color}
             src={projectData.images.left}
@@ -86,17 +87,20 @@ export default function Projet({}) {
           text1={projectData.content2.text1}
           text2={projectData.content2.text2}
         />
-        <FullWidthImage
-          color={projectData?.color}
-          src={projectData.images.fullwidth2}
-        />
-        {projectData.images.right2 && projectData.images.left2 ? (
+        {projectData.images.fullwidth2 && (
+          <FullWidthImage
+            color={projectData?.color}
+            src={projectData.images.fullwidth2}
+          />
+        )}
+        {projectData.images.right2 && projectData.images.left2 && (
           <ImageTwoColumns
             color={projectData?.color}
             src={projectData.images.left2}
             src2={projectData.images.right2}
           />
-        ) : (
+        )}
+        {projectData.images.left2 && !projectData.images.right2 && (
           <FullWidthImage
             color={projectData?.color}
             src={projectData.images.left2}

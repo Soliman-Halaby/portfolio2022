@@ -24,6 +24,8 @@ export const Container = styled.div`
   margin: ${({ theme }) => theme.margin.medium};
 `;
 
+export const TitleContainer = styled.div``;
+
 export const Title = styled.h2`
   ${TitleSection()}
 

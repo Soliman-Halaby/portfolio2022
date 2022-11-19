@@ -95,6 +95,8 @@ const HeroHome = ({ title, subtitle, sectionTitle, label, image }) => {
         </Text>
         <ImageWrapper className="image-wrapper">
           <BlockImage
+            data-scroll
+            data-scroll-speed="-2"
             layout="responsive"
             placeholder="blur"
             width={"100%"}
