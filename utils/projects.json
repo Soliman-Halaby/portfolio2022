@@ -1,15 +1,16 @@
 [
   {
-    "slug": "Cloudy",
+    "slug": "vis-ma-ville",
     "colPos": "1",
     "mobileCol": "1",
     "rowPos": "1",
     "mobileRow": "1",
+    "color": "#DDE3EF",
     "link": "https://www.google.com/",
-    "title": "moviereact",
+    "title": "Vis ma ville",
     "info": ["Front-end developer", "03/03/2018"],
     "description": "A React app that allows users to search for movies and view details about them.",
-    "techno": ["PHP", "Vanilla JS"],
+    "techno": ["React native", "Node.js"],
     "content1": {
       "title": "Titre de la section",
       "subtitle": "Sous-titre de la section",
@@ -25,11 +26,13 @@
       "text2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
     },
     "images": {
-      "hero": "/project-moviereact.png",
-      "fullwidth": "/project-img-1.png",
-      "left": "/project-img-2.png",
-      "right": "/project-img-3.png",
-      "fullwidth2": "/project-img-1.png"
+      "hero": "/vis-ma-ville/hero-section.png",
+      "fullwidth": "/vis-ma-ville/full-width-1.png",
+      "left": "/vis-ma-ville/img-1-col.png",
+      "right": "/vis-ma-ville/img-2-col.png",
+      "fullwidth2": "/vis-ma-ville/full-width-2.png",
+      "left2": "/vis-ma-ville/img-3-col.png",
+      "right2": "/vis-ma-ville/img-4-col.png"
     },
     "image": [
       "/project-display.png",
@@ -41,36 +44,40 @@
     ]
   },
   {
-    "slug": "cloudy-Bay",
+    "slug": "cloudy-bay",
     "colPos": "2",
     "mobileCol": "2",
     "rowPos": "1",
     "mobileRow": "1",
-    "link": "https://www.google.com/",
+    "color": "#E8EAE7",
+    "link": "https://www.cloudybay.com/",
     "title": "Cloudy Bay",
     "info": ["Front-end developer", "03/03/2018"],
-    "description": "A React app that allows users to search for movies and view details about them.",
-    "techno": ["PHP", "Vanilla JS"],
+    "description": "Cloudy Bay is an e-commerce website designed in React JS / Gatsby using Drupal as a back-office. This site is produced for a subsidiary of the Moet Hennesy group. You can buy different exceptional wines. It is also possible to book your place for the numerous events organized by Cloudy Bay, in their 2 different locations. I contributed to the development of this site during my internship at ultranoir with the different devs of the team.",
+    "techno": ["React JS", "Gatsby"],
     "content1": {
-      "title": "Titre de la section",
+      "title": "Some of the features",
       "subtitle": "Sous-titre de la section",
       "label": "Hire me",
-      "text1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
-      "text2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+      "text1": "As you browse the site you will be able to discover the different e-retailers / partner stores selling Cloudy Bay wines. It is also possible to follow the Instagram news of this site and choose the different wines according to the year. Another complexity of this site is the fact of dealing with the different markets, while displaying / hiding some elements according to the chosen market.",
+      "text2": "For those who are hesitant, it is possible to use the Wine Finder (produced by a dev of ultranoir) which will allow you to choose the ideal wine according to the different criteria that you give it. The purchase of wines is not done on the platform, it is connected to WineDirect which will allow you to buy the selected wines. "
     },
     "content2": {
       "title": "Titre de la section",
       "subtitle": "Sous-titre de la section",
       "label": "Hire me",
-      "text1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+      "text1": "As you browse the site you will be able to discover the different e-retailers / partner stores selling Cloudy Bay wines. It is also possible to follow the Instagram news of this site and choose the different wines according to the year.",
       "text2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
     },
     "images": {
-      "hero": "/project2-img.png",
-      "fullwidth": "/project-img-1.png",
-      "left": "/project-img-2.png",
-      "right": "/project-img-3.png",
-      "fullwidth2": "/project-img-1.png"
+      "hero": "/cloudy-bay/hero-section.png",
+      "fullwidth": "/cloudy-bay/full-width-1.png",
+      "left": "/cloudy-bay/img-1-col.png",
+      "right": "/cloudy-bay/img-2-col.png",
+      "fullwidth2": "/cloudy-bay/full-width-2.png",
+      "left2": "/cloudy-bay/img-3-col.png",
+      "right2": "/cloudy-bay/img-4-col.png",
+      "fullwidth3": "/cloudy-bay/full-width-3.png"
     },
     "image": [
       "/project-img-1.png",
@@ -95,11 +102,11 @@
     "mobileCol": "3",
     "rowPos": "2",
     "mobileRow": "2",
-    "link": "https://www.google.com/",
+    "link": "https://www.solimanalhalaby.fr/",
     "title": "Portfolio 2021",
     "info": ["Front-end developer", "03/03/2018"],
-    "description": "A React app that allows users to search for movies and view details about them.",
-    "techno": ["PHP", "Vanilla JS"],
+    "description": "My old portfolio, 2021 was designed in html / css / js with Vite set up as dev environment. It was my first big personal project where I already had several challenges that I wanted to execute. I used GSAP to design the different animations.",
+    "techno": ["HTML", "CSS", "JS"],
     "content1": {
       "title": "Titre de la section",
       "subtitle": "Sous-titre de la section",
@@ -114,26 +121,39 @@
       "text1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
       "text2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
     },
+    "content3": {
+      "title": "Titre de la section",
+      "subtitle": "Sous-titre de la section",
+      "label": "Hire me",
+      "text1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+      "text2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+    },
     "images": {
       "hero": "/moviereact-image.png",
-      "fullwidth": "/project-img-1.png",
-      "left": "/project-img-2.png",
-      "right": "/project-img-3.png",
-      "fullwidth2": "/project-img-1.png"
+      "fullwidth": "/portfolio-2021/full-width-1.png",
+      "left": "/portfolio-2021/img-1-col.png",
+      "right": "/portfolio-2021/img-2-col.png",
+      "fullwidth2": "/portfolio-2021/full-width-2.png",
+      "left2": "/portfolio-2021/img-3-col.png",
+      "right2": "/portfolio-2021/img-4-col.png",
+      "fullwidth3": "/portfolio-2021/full-width-3.png",
+      "left3": "/portfolio-2021/img-5-col.png",
+      "right3": "/portfolio-2021/img-6-col.png",
+      "fullwidth4": "/portfolio-2021/full-width-4.png"
     },
     "image": ["/savoir-image.png", "/moviereact-image.png"]
   },
   {
-    "slug": "test",
+    "slug": "canlink-me",
     "colPos": "6",
     "mobileCol": "4",
     "rowPos": "1",
     "mobielRow": "2",
     "link": "https://www.google.com/",
-    "title": "test",
+    "title": "Canlink Me",
     "info": ["Front-end developer", "03/03/2018"],
     "description": "A React app that allows users to search for movies and view details about them.",
-    "techno": ["PHP", "Vanilla JS"],
+    "techno": ["PHP", "HTML", "CSS", "Javascript"],
     "content1": {
       "title": "Titre de la section",
       "subtitle": "Sous-titre de la section",
@@ -149,7 +169,7 @@
       "text2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
     },
     "images": {
-      "hero": "/moviereact-image.png",
+      "hero": "/canlink-me/hero-section.png",
       "fullwidth": "/project-img-1.png",
       "left": "/project-img-2.png",
       "right": "/project-img-3.png",
@@ -158,32 +178,32 @@
     "image": ["/gta-image.png", "/moviereact-image.png"]
   },
   {
-    "slug": "selfer",
+    "slug": "selfer-app",
     "colPos": "8",
     "mobileCol": "1",
     "rowPos": "1",
     "mobileRow": "3",
-    "link": "https://www.google.com/",
-    "title": "Selfer",
+    "link": "https://app.selfer.fr/projects",
+    "title": "Selfer App",
     "info": ["Front-end developer", "03/03/2018"],
-    "description": "A React app that allows users to search for movies and view details about them.",
-    "techno": ["PHP", "Vanilla JS"],
+    "description": "Selfer is a web app designed using React JS for the front-end and Symfony for the back-end. This Web App is a kind of CMS based on the Notion API. Via Selfer it is possible to generate a static site. A back-office is set up to edit / update the content that will be updated directly on the site. This Web App has been realized in a 10 days project.  We are still working on Selfer and plan to implement different features in the future.",
+    "techno": ["React JS", "TypeScript", "Symfony"],
     "content1": {
-      "title": "Titre de la section",
-      "subtitle": "Sous-titre de la section",
-      "label": "Hire me",
-      "text1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
-      "text2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+      "title": "Easy and customizable",
+      "subtitle": "The Selfer Web App is very</br>easy to use and very scalable.",
+      "label": "Flexible",
+      "text1": "In the available back-office, once connected to the Notion account, all the Workspaces you have authorized will be displayed, it will then be possible to retrieve the content of each Workspace / Page as well as the type of block to then update the color, style or font. Everything is managed with Context, this style is then sent back to our Database which will store it to return a static site corresponding to the back-office.",
+      "text2": "Selfer is easy to use, you just have to create a page in your Workspace, enter the content / image you want in the blocks Notions. On the front side we take care of everything, you just have to edit your content via our App, which will then propose to go live and put your static site online."
     },
     "content2": {
-      "title": "Titre de la section",
-      "subtitle": "Sous-titre de la section",
-      "label": "Hire me",
-      "text1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
-      "text2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+      "title": "Code structure",
+      "subtitle": "A code</br>fragmented in 2 parts",
+      "label": "Code",
+      "text1": "For the back-end, to create and update the content, we used Symfony and a MySQL database. Different routes exist to communicate with the front-end. To update the DB, the data returned as parameters by the frontend are retrieved, processed (to check that there are no elements we don't want to return) and then sent to the database.",
+      "text2": "As for the front end, we used React with TypeScript. TypeScript seemed to be essential in our case, since we were going to manipulate several types of content and return them. The retrieval of information from the back is done using a call on the different routes created. To store and manipulate these variables properly, we have set up different context that we use on different components. "
     },
     "images": {
-      "hero": "/moviereact-image.png",
+      "hero": "/selfer/hero-section.png",
       "fullwidth": "/project-img-1.png",
       "left": "/project-img-2.png",
       "right": "/project-img-3.png",
@@ -197,17 +217,17 @@
     "mobileCol": "2",
     "rowPos": "2",
     "mobileRow": "4",
-    "link": "https://www.google.com/",
+    "link": "https://ddalos.vercel.app/",
     "title": "D'Dalos",
     "info": ["Front-end developer", "03/03/2018"],
-    "description": "A React app that allows users to search for movies and view details about them.",
-    "techno": ["PHP", "Vanilla JS"],
+    "description": "Ddalos is an immersive website aiming to showcase several models of boats made on Blender. This site was produced using Three JS. You can lock your mouse and then use the keys to discover the different 3D models.",
+    "techno": ["Three.js"],
     "content1": {
-      "title": "Titre de la section",
-      "subtitle": "Sous-titre de la section",
-      "label": "Hire me",
-      "text1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
-      "text2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+      "title": "It's all about the light",
+      "subtitle": "Close to reality",
+      "label": "Light",
+      "text1": "To produce this rendering, we had to export the different 3D models which are then imported (the 3D model is not optimized, hence the long loading time). Then, classic scheme, the scene is setup, the model is imported, the lights are placed correctly and we navigate in the scene.",
+      "text2": "Unfortunately, due to lack of time, the collisions and shadows have not been implemented but is still planned as part of the improvement of this project. To avoid staying in a black screen during the loading time of the scene, in the background, a kind of sunrise is visible."
     },
     "content2": {
       "title": "Titre de la section",
@@ -217,11 +237,11 @@
       "text2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
     },
     "images": {
-      "hero": "/moviereact-image.png",
-      "fullwidth": "/project-img-1.png",
-      "left": "/project-img-2.png",
-      "right": "/project-img-3.png",
-      "fullwidth2": "/project-img-1.png"
+      "hero": "/ddalos/hero-section.png",
+      "fullwidth": "/ddalos/full-width-1.png",
+      "left": "/ddalos/img-col-1.png",
+      "fullwidth2": "/ddalos/full-width-2.png",
+      "left2": "/ddalos/img-col-3.png"
     },
     "image": ["/canlinkme-image.png", "/moviereact-image.png"]
   },
@@ -231,11 +251,11 @@
     "mobileCol": "3",
     "rowPos": "2",
     "mobileRow": "4",
-    "link": "https://www.google.com/",
+    "link": "https://eclipse-one.vercel.app/",
     "title": "Eclipse",
     "info": ["Front-end developer", "03/03/2018"],
     "description": "A React app that allows users to search for movies and view details about them.",
-    "techno": ["PHP", "Vanilla JS"],
+    "techno": ["HTML", "CSS", "JS", "Three.js"],
     "content1": {
       "title": "Titre de la section",
       "subtitle": "Sous-titre de la section",
@@ -251,11 +271,10 @@
       "text2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
     },
     "images": {
-      "hero": "/project-moviereact.png",
+      "hero": "/eclipse/hero-section.png",
       "fullwidth": "/project-img-1.png",
       "left": "/project-img-2.png",
-      "right": "/project-img-3.png",
-      "fullwidth2": "/project-img-1.png"
+      "right": "/project-img-3.png"
     },
     "image": ["/moviereact-image.png", "/moviereact-image.png"]
   }

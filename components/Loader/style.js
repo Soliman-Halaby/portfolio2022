@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { css } from "@emotion/react";
 
 import { maxMedia, TitleSection } from "styles/mixins";
-
+import { Title } from "../Popup/SectionTitle/style";
 export const Wrapper = styled.div`
   position: absolute;
   top: 0;
@@ -61,12 +61,30 @@ export const Container = styled.div`
             animation: none;
         } */
     }
+
+    ${Title}{
+      width: 15rem;
+      top: -5rem;
+      mix-blend-mode: exclusion;
+      color: ${({ theme }) => theme.colors.grey2};
+      left: -35rem;
+      z-index: 999;
+
+      ${maxMedia.small}{
+        top: 0;
+        left: -10rem;
+      }
+    }
 `;
 
 export const ImgContainer = styled.div`
-  transition: all 0.3s ease;
-  transition-delay: 1s;
-  transition-property: transform;
+  transition: top left 0.1s ease;
+  /* transition-delay: 1s; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* transition-property: transform; */
   /* &.false {
     transform: rotate(180deg);
   } */

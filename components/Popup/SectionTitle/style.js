@@ -11,7 +11,7 @@ export const Title = styled.p`
   display: flex;
   align-items: flex-start;
   top: ${({ top }) => `${top}rem`};
-  white-space: break-spaces;
+  /* white-space: break-spaces; */
   margin-left: ${({ theme }) => theme.margin.medium};
   margin-top: 48px;
   ${maxMedia.md} {

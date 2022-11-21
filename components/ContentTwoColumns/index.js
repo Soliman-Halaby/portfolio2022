@@ -15,22 +15,32 @@ import {
   ContentWrapper,
   SubTitle,
   Content,
+  ContentContainer,
 } from "./style.js";
 
-const ContentTwoColumns = ({ title, subtitle, text1, text2, label }) => {
+const ContentTwoColumns = ({
+  number,
+  title,
+  subtitle,
+  text1,
+  text2,
+  label,
+}) => {
   return (
     <Wrapper data-scroll-section>
       <Container>
-        <Number>01/</Number>
+        <Number>{number} /</Number>
         <SubContainer>
           <Title>
             {title}
-            <Pin top="55" left="15" label={label} />
+            <Pin top="1.5" left="15" label={label} />
           </Title>
           <ContentWrapper>
-            <SubTitle>{subtitle}</SubTitle>
-            <Content>{text1}</Content>
-            <Content>{text2}</Content>
+            <SubTitle dangerouslySetInnerHTML={{ __html: subtitle }} />
+            <ContentContainer>
+              <Content dangerouslySetInnerHTML={{ __html: text1 }} />
+              <Content dangerouslySetInnerHTML={{ __html: text2 }} />
+            </ContentContainer>
           </ContentWrapper>
         </SubContainer>
       </Container>

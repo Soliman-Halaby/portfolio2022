@@ -5,7 +5,6 @@ import { maxMedia, title } from "styles/mixins";
 
 export const ButtonStyle = styled.span`
   display: inline-block;
-  cursor: pointer;
   padding: 0.5rem;
   /* padding-top: 0.8rem; */
   height: clamp(30px, 3rem, 3rem);
@@ -20,7 +19,6 @@ export const ButtonStyle = styled.span`
   text-transform: uppercase;
   text-decoration: none;
   line-height: clamp(21px, 100%, 1.3rem);
-  cursor: none;
   transition: all 0.3s ease-out;
   /* display: flex;
   align-items: center; */
@@ -31,10 +29,14 @@ export const ButtonStyle = styled.span`
 
   &:hover {
     ${({ rounded }) => (rounded ? "33px" : "5px")};
-    background: ${({ theme }) => theme.colors.lime};
-    border: 1px solid ${({ theme }) => theme.colors.grey1};
+    background: ${({ emailBg, theme }) =>
+      emailBg ? theme.colors.black : theme.colors.lime};
+    border: 1px solid
+      ${({ emailBg, theme }) =>
+        emailBg ? theme.colors.lime : theme.colors.grey1};
     border-style: dashed;
-    color: ${({ rounded, colored, theme }) => theme.colors.grey1};
+    color: ${({ emailBg, theme }) =>
+      emailBg ? theme.colors.grey2 : theme.colors.grey1};
     transition: background 0.3s ease;
 
     /* svg path {

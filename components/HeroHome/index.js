@@ -55,8 +55,7 @@ const HeroHome = ({ title, subtitle, sectionTitle, label, image }) => {
     <Wrapper data-scroll-section ref={_el}>
       <TitleSection
         top={isMobile ? "11.5" : "25"}
-        className="hero_title-section"
-        number="02"
+        number="01"
         title={sectionTitle}
       />
       <Container>
@@ -96,6 +95,8 @@ const HeroHome = ({ title, subtitle, sectionTitle, label, image }) => {
         </Text>
         <ImageWrapper className="image-wrapper">
           <BlockImage
+            data-scroll
+            data-scroll-speed="-2"
             layout="responsive"
             placeholder="blur"
             width={"100%"}

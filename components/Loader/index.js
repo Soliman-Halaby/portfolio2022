@@ -3,6 +3,8 @@ import React, { useState, useRef, useEffect } from "react";
 import { useRecoilValue, useSetRecoilState } from "recoil";
 import { loaderState } from "recoil/loaderState";
 
+import TitleSection from "@/components/Popup/SectionTitle";
+
 import {
   Wrapper,
   Container,
@@ -69,8 +71,13 @@ const Loader = ({}) => {
 
   return (
     <Wrapper className={loaderDisplay}>
-      <Container ref={containerRef} className={loaderDisplay}>
-        <ImgContainer className={loaderDisplay}>
+      <Container className={loaderDisplay}>
+        <TitleSection
+          // top={isMobile ? "11.5" : "25"}
+          number="01"
+          title="Soliman Al Halaby Creative Developer"
+        />
+        <ImgContainer ref={containerRef} className={loaderDisplay}>
           <svg
             width={443}
             height={501}

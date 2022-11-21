@@ -13,6 +13,9 @@ import Cursor from "@/components/Cursor";
 import Loader from "@/components/Loader";
 import useIsMobile from "hook";
 
+import { SwitchTransition, Transition } from "react-transition-group";
+
+import gsap from "gsap";
 import { App, Container } from "./style";
 
 export default function Layout({
@@ -22,13 +25,52 @@ export default function Layout({
   scroll = true,
   cursorWidth = 16,
   cursorHeight = 18,
-  display = "normal",
+  number = "01",
 }) {
-  const { route } = useRouter();
   const containerRef = useRef(null);
 
+  const router = useRouter();
+  console.log(router);
   const loaderDisplay = useRecoilValue(loaderState);
   const isMobile = useIsMobile();
+
+  const onPageEnter = (element) => {
+    console.log("enter");
+    gsap.fromTo(
+      element,
+      {
+        y: 50,
+        autoAlpha: 0,
+        ease: "power3.out",
+      },
+      {
+        y: 0,
+        autoAlpha: 1,
+        duration: 1,
+        ease: "power3.out",
+      }
+    );
+  };
+
+  const onPageExit = (element) => {
+    console.log("exit");
+    gsap.fromTo(
+      element,
+      {
+        y: 0,
+        autoAlpha: 1,
+        ease: "power3.out",
+      },
+      {
+        y: -50,
+        autoAlpha: 0,
+        duration: 0.5,
+        ease: "power3.inOut",
+      }
+    );
+  };
+
+  // console.log(route);
 
   return (
     <LocomotiveScrollProvider
@@ -38,7 +80,7 @@ export default function Layout({
         tablet: { smooth: true },
         reloadOnContextChange: true,
       }}
-      watch={[route]}
+      watch={[router.asPath]}
       containerRef={containerRef}
       onUpdate={({ scroll }) =>
         scroll.scrollTo(0, { duration: 0, disableLerp: true })
@@ -47,17 +89,30 @@ export default function Layout({
       {loaderDisplay && <Loader />}
       <main data-scroll-container ref={containerRef}>
         <Header />
-        <Container ref={containerRef}>
-          <App>
-            {/* <CustomCursor width={cursorWidth} height={cursorHeight}/> */}
-            {children}
-            {noFooter ? null : reducedFooter ? (
-              <FooterReduced />
-            ) : (
-              <Footer display={display} />
-            )}
-            {!isMobile && <Cursor />}
-          </App>
+        <Container>
+          <SwitchTransition>
+            <Transition
+              key={router.asPath}
+              timeout={500}
+              in={true}
+              onEnter={onPageEnter}
+              onExit={onPageExit}
+              mountOnEnter={true}
+              appear={true}
+              unmountOnExit={true}
+            >
+              <App>
+                {/* <CustomCursor width={cursorWidth} height={cursorHeight}/> */}
+                {children}
+                {noFooter ? null : reducedFooter ? (
+                  <FooterReduced />
+                ) : (
+                  <Footer number={number} />
+                )}
+                {!isMobile && <Cursor />}
+              </App>
+            </Transition>
+          </SwitchTransition>
         </Container>
       </main>
     </LocomotiveScrollProvider>

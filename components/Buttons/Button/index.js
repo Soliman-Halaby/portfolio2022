@@ -16,6 +16,7 @@ const Button = forwardRef(
       index,
       target,
       withArrow = false,
+      email,
     },
     ref
   ) => {
@@ -39,6 +40,7 @@ const Button = forwardRef(
                 className={className}
                 colored={colored}
                 rounded={index % 2 !== 0 ? rounded : !rounded}
+                emailBg={email}
               >
                 {label}
                 {withArrow && (
@@ -64,6 +66,7 @@ const Button = forwardRef(
               className={className}
               colored={colored}
               rounded={index % 2 !== 0 ? rounded : !rounded}
+              emailBg={email}
             >
               {label}
               {withArrow && (
@@ -83,7 +86,7 @@ const Button = forwardRef(
           </Link>
         )}
         {!to && !target && (
-          <ButtonStyle colored={colored} rounded={rounded}>
+          <ButtonStyle colored={colored} rounded={rounded} emailBg={email}>
             {label}
           </ButtonStyle>
         )}

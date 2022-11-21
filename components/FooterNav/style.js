@@ -18,6 +18,7 @@ export const Wrapper = styled.div`
 
 export const Nav = styled.div`
   margin: ${({ theme }) => theme.margin.medium};
+  margin-bottom: 4rem;
   display: flex;
   //   gap: 2rem;
   flex-direction: column;

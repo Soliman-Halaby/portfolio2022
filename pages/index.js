@@ -1,7 +1,7 @@
 import Layout from "../layout/Default";
 import { useState, useRef, useEffect } from "react";
 
-import image from "../public/project2-img.png";
+import image from "../public/index-hero.png";
 
 import CustomCursor from "@/components/Cursor";
 import Hero from "@/components/HeroHome";
@@ -30,7 +30,7 @@ export default function Home() {
   }, [timer]);
 
   return (
-    <Layout display="wide">
+    <Layout number="03">
       {/* {loader ? (
         <div className="loader-wrapper absolute">
           <h1>Loader</h1>

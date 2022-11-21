@@ -20,7 +20,7 @@ export const ContainerWrapper = styled.div`
   object-position: center;
 `;
 export const Container = styled.div`
-  background: #e3e3e3;
+  background: ${({ color }) => (color ? color : "#e3e3e3")};
   /* height: 105vh; */
   display: flex;
   justify-content: center;
@@ -35,9 +35,17 @@ export const ImageContainer = styled.div`
   height: 100%;
   width: 100%;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 export const Image = styled.img`
-  width: 100%;
+  /* width: 100%; */
   object-fit: cover;
   height: 100%;
+  max-height: 64rem;
+
+  ${maxMedia.md} {
+    width: 100%;
+  }
 `;

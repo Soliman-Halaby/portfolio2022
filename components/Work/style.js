@@ -33,9 +33,11 @@ export const Title = styled.h2`
   bottom: 0;
 
   ${maxMedia.small} {
-    font-size: 6rem;
+    font-size: 9rem;
+    text-align: center;
+    line-height: 100%;
     position: sticky;
-    top: 100px;
+    top: 35vh;
   }
 `;
 

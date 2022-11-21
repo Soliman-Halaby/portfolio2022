@@ -24,6 +24,8 @@ export const Container = styled.div`
   margin: ${({ theme }) => theme.margin.medium};
 `;
 
+export const TitleContainer = styled.div``;
+
 export const Title = styled.h2`
   ${TitleSection()}
 
@@ -43,6 +45,7 @@ export const TagWrapper = styled.div`
   display: flex;
   flex-direction: row;
   margin-top: 4rem;
+  position: relative;
   justify-content: space-between;
   margin-bottom: 2rem;
   ${maxMedia.md} {
@@ -64,7 +67,7 @@ export const TagContainer = styled.div`
 
   &:nth-of-type(2) {
     ${maxMedia.small} {
-      margin-top: 10rem;
+      margin-top: 8rem;
     }
   }
 `;
@@ -79,6 +82,7 @@ export const TagSubContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  flex-wrap: wrap;
   gap: 0.75rem;
 
   ${ButtonStyle} {
@@ -94,6 +98,7 @@ export const TagSubContainer = styled.div`
     &:nth-of-type(2) {
       flex-direction: row;
       justify-content: space-between;
+      row-gap: 2rem;
     }
     ${ButtonStyle} {
       margin-left: 0;
@@ -111,10 +116,12 @@ export const Text = styled.span`
 
 export const Content = styled.p`
   ${Paragraph()}
+  position: absolute;
 
   align-self: flex-end;
   ${maxMedia.small} {
     align-self: flex-start;
+    position: inherit;
   }
 `;
 
@@ -124,7 +131,7 @@ export const ImageContainer = styled.div`
   overflow: hidden;
 
   ${maxMedia.small} {
-    height: 70vh;
+    height: 60vh;
   }
 `;
 

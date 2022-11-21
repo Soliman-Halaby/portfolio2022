@@ -32,7 +32,9 @@ const HeroProject = ({
   return (
     <Wrapper data-scroll-section>
       <Container>
-        <Title>{title}</Title>
+        <TitleContainer>
+          <Title>{title}</Title>
+        </TitleContainer>
         <TagWrapper>
           <TagContainer>
             <TagSubContainer>

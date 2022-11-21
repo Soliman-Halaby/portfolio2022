@@ -1,5 +1,4 @@
 import React, { useState, useRef } from "react";
-// import Image from "next/image";
 
 import TitleSection from "@/components/Popup/SectionTitle";
 import Button from "@/components/Buttons/Button";
@@ -22,7 +21,7 @@ import {
   ButtonContainer,
 } from "./style.js";
 
-const Footer = () => {
+const Footer = ({ number }) => {
   const [activeMessage, setActiveMessage] = useState(false);
 
   const isMobile = useIsMobile();
@@ -60,7 +59,7 @@ const Footer = () => {
           label="get in touch"
         />
       </TitleContainer>
-      <TitleSection top="23" left="20" number="01" title="Contact" />
+      <TitleSection top="23" left="20" number={number} title="Contact" />
       <Container>
         <SubContainer>
           <FooterNav>
@@ -68,9 +67,9 @@ const Footer = () => {
             <RowContainer>
               <Content>Contact</Content>
               <ButtonContainer onClick={copyToClipboard}>
-                <Button label="contact@solimanalhalaby.fr" />
+                <Button email={true} label="contact@solimanalhalaby.fr" />
                 {activeMessage && (
-                  <Pin top="0" left="45" colored label="Copied"></Pin>
+                  <Pin top="-1" left="11" colored label="Copied"></Pin>
                 )}
               </ButtonContainer>
             </RowContainer>

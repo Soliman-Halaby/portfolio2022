@@ -75,7 +75,7 @@ export const Nav = styled.nav`
   width: 100%;
   position: fixed;
   padding: ${({ theme }) => theme.margin.medium};
-  top: 20px;
+  top: 0px;
   width: 100%;
   mix-blend-mode: exclusion;
 `;

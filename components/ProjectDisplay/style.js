@@ -67,7 +67,7 @@ export const Number = styled.span`
 `;
 
 export const Title = styled.h3`
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   text-transform: uppercase;
   font-weight: 400;
   font-family: ${({ theme }) => theme.fonts.sansSerif};

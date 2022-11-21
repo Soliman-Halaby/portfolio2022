@@ -36,12 +36,14 @@ const ProjectDisplay = ({ col, row, title, to, image = [], index }) => {
   const resetDisplay = () => {
     setLearnMoreCta(false);
     clearInterval(timerRef.current);
-    setCount(0);
+    // setCount(0);
     setCursorDisplay("simple");
   };
 
   return (
     <Wrapper
+      data-scroll
+      data-scroll-speed={index % 2 === 0 ? "-0.5" : "0.5"}
       onMouseMove={() => console.log("coucou")}
       onClick={() => router.push(`/project/${to}`)}
       col={col}
@@ -55,8 +57,8 @@ const ProjectDisplay = ({ col, row, title, to, image = [], index }) => {
         {image && (
           <ImageContainer>
             <Image
-              data-scroll
-              data-scroll-speed={index % 2 === 0 ? "-0.5" : "0.5"}
+              // data-scroll
+              // data-scroll-speed={index % 2 === 0 ? "-0.5" : "0.5"}
               src={image[count % image.length]}
             />
           </ImageContainer>
