@@ -33,7 +33,7 @@ const Header = () => {
 
   const displayMenu = () => {
     // console.log("menu");
-    console.log(scroll.scroll);
+    // console.log(scroll.scroll);
     scroll.scroll.stop();
     if (menuDisplay === "hidden") {
       setMenuDisplay("opened");
@@ -139,10 +139,8 @@ const Header = () => {
         <SubNavItemsContainer>
           <ItemsContainer>
             <SectionTitle number="01" title="Menu"></SectionTitle>
-            <MainLink>
-              <NavLink onClick={() => subnavSelected()} href="/">
-                Home
-              </NavLink>
+            <MainLink onClick={() => subnavSelected()}>
+              <NavLink href="/">Home</NavLink>
             </MainLink>
             {navDatas.map((data, index) => {
               return (
