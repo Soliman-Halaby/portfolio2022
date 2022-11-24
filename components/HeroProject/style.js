@@ -55,6 +55,9 @@ export const TagWrapper = styled.div`
   }
 `;
 
+export const TagElementsContainer = styled.div`
+  overflow: hidden;
+`;
 export const TagContainer = styled.div`
   display: flex;
   gap: 7.5px;
@@ -65,6 +68,9 @@ export const TagContainer = styled.div`
     justify-content: flex-start;
   }
 
+  &:nth-of-type(1) {
+    overflow: hidden;
+  }
   &:nth-of-type(2) {
     ${maxMedia.small} {
       margin-top: 8rem;
@@ -114,15 +120,21 @@ export const Text = styled.span`
   font-weight: 300;
 `;
 
-export const Content = styled.p`
-  ${Paragraph()}
+export const ContentContainer = styled.div`
+  overflow: hidden;
   position: absolute;
-
-  align-self: flex-end;
+  /* width: 100%; */
+  right: 10rem;
   ${maxMedia.small} {
     align-self: flex-start;
     position: inherit;
+    right: inherit;
   }
+`;
+export const Content = styled.p`
+  ${Paragraph()}
+
+  align-self: flex-end;
 `;
 
 export const ImageContainer = styled.div`

@@ -5,9 +5,10 @@ import { useLocomotiveScroll } from "react-locomotive-scroll";
 import TitleSection from "@/components/Popup/SectionTitle";
 import Pin from "@/components/Popup/Pin";
 
+import useOnScreen from "hook/index.js";
 import { handleEnter } from "./animation.js";
 
-import useIsMobile from "hook/index.js";
+import { useIsMobile } from "hook/index.js";
 
 import {
   Wrapper,
@@ -22,37 +23,48 @@ import {
 const HeroHome = ({ title, subtitle, sectionTitle, label, image }) => {
   const { scroll } = useLocomotiveScroll();
 
+  const titleRef = useRef(null);
+  const subtitleRef = useRef(null);
+
   const isMobile = useIsMobile();
-  const _subtitle = useRef(null);
-  const _el = useRef(null);
-  const _pin = useRef(null);
+  const onScreenTitle = useOnScreen(titleRef);
+  const [reveal, setReveal] = useState(false);
+
+  useEffect(() => {
+    if (onScreenTitle) setReveal(onScreenTitle);
+  }, [onScreenTitle]);
+
   const scrollToBottom = () => {
     window.scrollTo(0, document.body.scrollHeight);
   };
 
-  const titleRef = useRef(null);
-
   useEffect(() => {
-    handleEnter({
-      el: _el,
-      subtitle: _subtitle,
-      text: titleRef,
-      //  pin: _pin,
-      display: "center",
-      animText: false,
-    });
-    handleEnter({
-      el: _el,
-      subtitle: _subtitle,
-      text: _subtitle,
-      //  pin: _pin,
-      display: "left",
-      animText: false,
-    });
-  }, []);
+    if (reveal) {
+      handleEnter({
+        text: titleRef,
+        display: "center",
+      });
+      handleEnter({
+        text: subtitleRef,
+        display: "center",
+        animText: false,
+      });
+    }
+  }, [reveal]);
+
+  // useOnScreen({
+  //   el: _el,
+  //   action: () =>
+  //     handleEnter({
+  //       el: _el,
+  //       text: titleRef,
+  //       display: "center",
+  //       animText: false,
+  //     }),
+  // });
 
   return (
-    <Wrapper data-scroll-section ref={_el}>
+    <Wrapper data-scroll-section>
       <TitleSection
         top={isMobile ? "11.5" : "25"}
         number="01"
@@ -60,15 +72,19 @@ const HeroHome = ({ title, subtitle, sectionTitle, label, image }) => {
       />
       <Container>
         <Title
+          data-scroll
+          data-scroll-repeat
           // data-scroll
           // data-scroll-speed="3"
           ref={titleRef}
           dangerouslySetInnerHTML={{ __html: title }}
         />
         <Title
-          ref={_subtitle}
+          data-scroll
+          data-scroll-repeat
           alignRight
           dangerouslySetInnerHTML={{ __html: subtitle }}
+          ref={subtitleRef}
         />
         {/* {subtitle} */}
         <Pin
@@ -77,7 +93,6 @@ const HeroHome = ({ title, subtitle, sectionTitle, label, image }) => {
           action={scrollToBottom}
           className="hero_pin-section"
           label={label}
-          ref={_pin}
         />
         <Text>
           Scroll
