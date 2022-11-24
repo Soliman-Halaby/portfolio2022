@@ -11,7 +11,7 @@ import FooterReduced from "components/FooterReduced";
 import Cursor from "@/components/Cursor";
 
 import Loader from "@/components/Loader";
-import useIsMobile from "hook";
+import { useIsMobile } from "hook";
 
 import { SwitchTransition, Transition } from "react-transition-group";
 
@@ -109,10 +109,10 @@ export default function Layout({
                 ) : (
                   <Footer number={number} />
                 )}
-                {!isMobile && <Cursor />}
               </App>
             </Transition>
           </SwitchTransition>
+          {!isMobile && <Cursor />}
         </Container>
       </main>
     </LocomotiveScrollProvider>

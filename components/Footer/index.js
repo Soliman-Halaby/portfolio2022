@@ -5,7 +5,7 @@ import Button from "@/components/Buttons/Button";
 import CircularButton from "@/components/Buttons/CircularButton";
 import Pin from "@/components/Popup/Pin";
 
-import useIsMobile from "hook";
+import { useIsMobile } from "hook";
 
 import {
   Wrapper,

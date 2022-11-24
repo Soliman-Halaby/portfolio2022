@@ -5,7 +5,7 @@ import { maxMedia, TitleSection } from "styles/mixins";
 
 export const Wrapper = styled.div`
   width: 100vw;
-  padding: 0px 20px;
+  padding: 0px 2rem;
   display: flex;
   gap: 0rem;
   margin: 10rem 0;
@@ -27,8 +27,10 @@ export const Container = styled.div`
 
 export const Title = styled.h2`
   ${TitleSection()}
-  font-size: 10rem;
+  font-size: 16rem;
   margin-bottom: 5rem;
+  line-height: 16rem;
+  opacity: 0;
   position: absolute;
   bottom: 0;
 

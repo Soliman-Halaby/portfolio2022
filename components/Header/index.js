@@ -9,7 +9,7 @@ import FooterNav from "@/components/FooterNav/index.js";
 import { cursorHover } from "recoil/cursorState.js";
 import { useSetRecoilState, useResetRecoilState } from "recoil";
 
-import useIsMobile from "hook";
+import { useIsMobile } from "hook";
 
 import {
   Logo,
