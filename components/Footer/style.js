@@ -32,6 +32,8 @@ export const SubWrapper = styled(Wrapper)`
   margin-bottom: 0;
 `;
 export const Title = styled.h3`
+  line-height: 16rem;
+  opacity: 0;
   /* font-size: clamp(42px, 11.15vw, 220px); */
   font-size: 16rem;
   font-family: ${({ theme }) => theme.fonts.serif};
@@ -86,13 +88,38 @@ export const SubContainer = styled.div`
       object-fit: cover;
 
       ${maxMedia.xs} {
-        max-height: auto;
-        height: 45vh;
+        max-height: inherit;
+        height: 100%;
       }
+    }
+    ${maxMedia.xs} {
+      /* height: ${({ display }) =>
+        display === "normal" ? "40vh" : "90vh"}; */
+      height: 40vh;
     }
   }
 `;
-export const Image = styled.img``;
+
+export const ImageContainer = styled.div`
+  overflow: hidden;
+  width: 100%;
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 97%);
+  transition: all 0.2s linear;
+`;
+
+export const ImgWrapper = styled.div`
+  width: 100%;
+`;
+export const Image = styled.img`
+  /* clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 97%);
+  transition: 0.4s linear;
+
+  &.is-inview {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    transform: scale(1.2);
+    transition: 0.4s linear;
+  } */
+`;
 
 export const FooterNav = styled.div`
   //   background: red;
@@ -117,7 +144,9 @@ export const Text = styled.h3`
 
 export const RowContainer = styled.div`
   display: flex;
+  overflow: hidden;
   gap: 1rem;
+  opacity: 0;
 `;
 
 export const Content = styled(Text)`
