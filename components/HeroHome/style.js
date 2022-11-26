@@ -46,6 +46,7 @@ export const TitleContainer = styled.div`
 export const Title = styled.h2`
   ${TitleSection()}
   margin: 2.5rem 0;
+  line-height: 6.5rem;
 
   position: relative;
   text-align: ${({ alignRight }) => (alignRight ? `right` : `initial`)};

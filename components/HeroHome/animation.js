@@ -1,5 +1,7 @@
 import { gsap } from "vendor/gsap";
 import SplitText from "vendor/gsap/SplitText";
+import { useRecoilValue } from "recoil";
+import { loaderState } from "recoil/loaderState";
 
 gsap.registerPlugin(SplitText);
 
@@ -16,7 +18,7 @@ export const handleEnter = (props) => {
   }
 };
 
-function handleEnterLeft({ text }) {
+function handleEnterLeft({ text, animText }) {
   const splitText = new SplitText(text.current, {
     type: "lines,words",
     wordsClass: "word",
@@ -39,7 +41,7 @@ function handleEnterLeft({ text }) {
   tl.add("anim");
   gsap.set(text.current, { opacity: 1 });
 
-  const textDelay = 0.1;
+  const textDelay = animText ? 10 : 0.09;
 
   splitText.lines.forEach((line, index) => {
     const words = line.children;
@@ -73,7 +75,7 @@ function handleEnterLeft({ text }) {
   });
 }
 
-function handleEnterRegular({ text }) {
+function handleEnterRegular({ text, animText }) {
   const splitText = new SplitText(text.current, {
     type: "lines,words",
     wordsClass: "word",
@@ -81,15 +83,18 @@ function handleEnterRegular({ text }) {
     linesClass: "line",
   });
 
+  console.log("anim", animText);
+
   const tl = gsap.timeline();
 
   tl.add("anim");
   gsap.set(text.current, { opacity: 1 });
 
-  const textDelay = 0.09;
+  const textDelay = animText ? 2.48 : 0.09;
 
   splitText.lines.forEach((line, index) => {
     const words = line.children;
+    console.log("index", index);
 
     tl.fromTo(
       words,
@@ -99,7 +104,7 @@ function handleEnterRegular({ text }) {
       {
         opacity: 1,
         duration: 0.6,
-        delay: textDelay * index,
+        delay: animText ? textDelay : textDelay * index,
       },
       "anim"
     );
@@ -111,7 +116,7 @@ function handleEnterRegular({ text }) {
       {
         y: 0,
         duration: 0.6,
-        delay: textDelay * index,
+        delay: animText ? textDelay * 1.25 : textDelay * index,
       },
       "anim"
     );

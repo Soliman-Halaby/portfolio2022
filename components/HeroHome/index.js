@@ -5,6 +5,9 @@ import { useLocomotiveScroll } from "react-locomotive-scroll";
 import TitleSection from "@/components/Popup/SectionTitle";
 import Pin from "@/components/Popup/Pin";
 
+import { useRecoilValue } from "recoil";
+import { loaderState } from "recoil/loaderState";
+
 import useOnScreen from "hook/index.js";
 import { handleEnter } from "./animation.js";
 
@@ -22,6 +25,7 @@ import {
 
 const HeroHome = ({ title, subtitle, sectionTitle, label, image }) => {
   const { scroll } = useLocomotiveScroll();
+  const loaderDisplay = useRecoilValue(loaderState);
 
   const titleRef = useRef(null);
   const subtitleRef = useRef(null);
@@ -43,11 +47,12 @@ const HeroHome = ({ title, subtitle, sectionTitle, label, image }) => {
       handleEnter({
         text: titleRef,
         display: "center",
+        animText: loaderDisplay,
       });
       handleEnter({
         text: subtitleRef,
         display: "center",
-        animText: false,
+        animText: loaderDisplay,
       });
     }
   }, [reveal]);
