@@ -8,33 +8,24 @@ gsap.registerPlugin(SplitText);
 export const handleEnter = (props) => {
   const { display } = props;
 
+  console.log(display);
   switch (display) {
-    case "left":
-      handleEnterLeft(props);
+    case "text":
+      handleEnterTitle(props);
       break;
-    default:
-      handleEnterRegular(props);
+    case "tag":
+      handleEnterPin(props);
       break;
   }
 };
 
-function handleEnterLeft({ text, animText }) {
+function handleEnterTitle({ text, animText }) {
   const splitText = new SplitText(text.current, {
     type: "lines,words",
     wordsClass: "word",
     charsClass: "char",
     linesClass: "line",
   });
-
-  const lines = text.current.querySelectorAll(".line");
-
-  for (const line of lines) {
-    const tags = line.querySelectorAll("*");
-
-    for (const tag of tags) {
-      tag.classList.add("word");
-    }
-  }
 
   const tl = gsap.timeline();
 
@@ -53,7 +44,7 @@ function handleEnterLeft({ text, animText }) {
       },
       {
         opacity: 1,
-        duration: 0.7,
+        duration: 0.6,
         delay: textDelay * index,
       },
       "anim"
@@ -62,12 +53,10 @@ function handleEnterLeft({ text, animText }) {
       words,
       {
         y: "100%",
-        // x: "100px",
       },
       {
         y: 0,
-        // x: 0,
-        duration: 2 / 3,
+        duration: 0.6,
         delay: textDelay * index,
       },
       "anim"
@@ -75,50 +64,31 @@ function handleEnterLeft({ text, animText }) {
   });
 }
 
-function handleEnterRegular({ text, animText }) {
-  const splitText = new SplitText(text.current, {
-    type: "lines,words",
-    wordsClass: "word",
-    charsClass: "char",
-    linesClass: "line",
-  });
-
-  console.log("anim", animText);
-
+function handleEnterPin({ el, delay, animText }) {
   const tl = gsap.timeline();
-
-  tl.add("anim");
-  gsap.set(text.current, { opacity: 1 });
-
-  const textDelay = animText ? 2.48 : 0.09;
-
-  splitText.lines.forEach((line, index) => {
-    const words = line.children;
-    console.log("index", index);
-
-    tl.fromTo(
-      words,
-      {
-        opacity: 0,
-      },
-      {
-        opacity: 1,
-        duration: 0.6,
-        delay: animText ? textDelay : textDelay * index,
-      },
-      "anim"
-    );
-    tl.fromTo(
-      words,
-      {
-        y: "100%",
-      },
-      {
-        y: 0,
-        duration: 0.6,
-        delay: animText ? textDelay * 1.25 : textDelay * index,
-      },
-      "anim"
-    );
-  });
+  const elDelay = 0.09;
+  tl.fromTo(
+    el.current,
+    {
+      opacity: 0,
+    },
+    {
+      opacity: 1,
+      duration: 0.15,
+      delay: elDelay + delay,
+    },
+    "anim"
+  );
+  tl.fromTo(
+    el.current,
+    {
+      rotation: 40,
+    },
+    {
+      rotation: 0,
+      duration: 0.15,
+      delay: elDelay + delay,
+    },
+    "anim"
+  );
 }

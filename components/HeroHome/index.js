@@ -30,6 +30,7 @@ const HeroHome = ({ title, subtitle, sectionTitle, label, image }) => {
   const titleRef = useRef(null);
   const subtitleRef = useRef(null);
 
+  const pinRef = useRef(null);
   const isMobile = useIsMobile();
   const onScreenTitle = useOnScreen(titleRef);
   const [reveal, setReveal] = useState(false);
@@ -46,27 +47,22 @@ const HeroHome = ({ title, subtitle, sectionTitle, label, image }) => {
     if (reveal) {
       handleEnter({
         text: titleRef,
-        display: "center",
+        display: "text",
         animText: loaderDisplay,
       });
       handleEnter({
         text: subtitleRef,
-        display: "center",
+        display: "text",
         animText: loaderDisplay,
+      });
+      handleEnter({
+        el: pinRef,
+        display: "tag",
+        delay: 0.7,
+        // animText: loaderDisplay,
       });
     }
   }, [reveal]);
-
-  // useOnScreen({
-  //   el: _el,
-  //   action: () =>
-  //     handleEnter({
-  //       el: _el,
-  //       text: titleRef,
-  //       display: "center",
-  //       animText: false,
-  //     }),
-  // });
 
   return (
     <Wrapper data-scroll-section>
@@ -93,10 +89,11 @@ const HeroHome = ({ title, subtitle, sectionTitle, label, image }) => {
         />
         {/* {subtitle} */}
         <Pin
+          ref={pinRef}
           top="30"
           left="90"
           action={scrollToBottom}
-          className="hero_pin-section"
+          // className="hero_pin-section"
           label={label}
         />
         <Text>
