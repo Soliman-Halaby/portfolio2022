@@ -17,6 +17,7 @@ export const Wrapper = styled.div`
 
 export const ProjectContainer = styled.div`
   /* position: relative; */
+  overflow: hidden;
 `;
 
 export const Container = styled.div`
@@ -27,6 +28,7 @@ export const Container = styled.div`
 export const ImageContainer = styled.div`
   height: 154px;
   width: 100%;
+  opacity: 0;
   overflow: hidden;
   position: relative;
 `;

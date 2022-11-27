@@ -40,6 +40,7 @@ export const Title = styled.h2`
     line-height: 100%;
     position: sticky;
     top: 35vh;
+    width: 100%;
   }
 `;
 
