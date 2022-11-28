@@ -5,9 +5,13 @@ import { useLocomotiveScroll } from "react-locomotive-scroll";
 import TitleSection from "@/components/Popup/SectionTitle";
 import Pin from "@/components/Popup/Pin";
 
+import { useRecoilValue } from "recoil";
+import { loaderState } from "recoil/loaderState";
+
+import useOnScreen from "hook/index.js";
 import { handleEnter } from "./animation.js";
 
-import useIsMobile from "hook/index.js";
+import { useIsMobile } from "hook/index.js";
 
 import {
   Wrapper,
@@ -21,63 +25,86 @@ import {
 
 const HeroHome = ({ title, subtitle, sectionTitle, label, image }) => {
   const { scroll } = useLocomotiveScroll();
+  const loaderDisplay = useRecoilValue(loaderState);
+
+  const titleRef = useRef(null);
+  const subtitleRef = useRef(null);
+  const sectionTitleRef = useRef(null);
+  const sectionNumberRef = useRef(null);
+  const pinRef = useRef(null);
 
   const isMobile = useIsMobile();
-  const _subtitle = useRef(null);
-  const _el = useRef(null);
-  const _pin = useRef(null);
+  const onScreenTitle = useOnScreen(titleRef);
+  const [reveal, setReveal] = useState(false);
+
+  console.log(sectionNumberRef);
+  useEffect(() => {
+    if (onScreenTitle) setReveal(onScreenTitle);
+  }, [onScreenTitle]);
+
   const scrollToBottom = () => {
     window.scrollTo(0, document.body.scrollHeight);
   };
 
-  const titleRef = useRef(null);
-
   useEffect(() => {
-    handleEnter({
-      el: _el,
-      subtitle: _subtitle,
-      text: titleRef,
-      //  pin: _pin,
-      display: "center",
-      animText: false,
-    });
-    handleEnter({
-      el: _el,
-      subtitle: _subtitle,
-      text: _subtitle,
-      //  pin: _pin,
-      display: "left",
-      animText: false,
-    });
-  }, []);
+    if (reveal) {
+      handleEnter({
+        text: titleRef,
+        display: "text",
+        animText: loaderDisplay,
+      });
+      handleEnter({
+        text: sectionTitleRef,
+        display: "text",
+        animText: loaderDisplay,
+      });
+      handleEnter({
+        text: subtitleRef,
+        display: "text",
+        animText: loaderDisplay,
+      });
+      handleEnter({
+        el: pinRef,
+        display: "tag",
+        delay: 0.7,
+        // animText: loaderDisplay,
+      });
+    }
+  }, [reveal]);
 
   return (
-    <Wrapper data-scroll-section ref={_el}>
+    <Wrapper data-scroll-section>
       <TitleSection
+        ref={sectionTitleRef}
+        ref2={sectionNumberRef}
         top={isMobile ? "11.5" : "25"}
         number="01"
         title={sectionTitle}
       />
       <Container>
         <Title
+          data-scroll
+          data-scroll-repeat
           // data-scroll
           // data-scroll-speed="3"
           ref={titleRef}
           dangerouslySetInnerHTML={{ __html: title }}
         />
         <Title
-          ref={_subtitle}
+          data-scroll
+          data-scroll-repeat
           alignRight
           dangerouslySetInnerHTML={{ __html: subtitle }}
+          ref={subtitleRef}
         />
         {/* {subtitle} */}
         <Pin
+          ref={pinRef}
           top="30"
           left="90"
           action={scrollToBottom}
-          className="hero_pin-section"
+          // className="hero_pin-section"
           label={label}
-          ref={_pin}
         />
         <Text>
           Scroll

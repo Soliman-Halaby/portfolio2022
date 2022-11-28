@@ -42,7 +42,7 @@ export default function Home() {
       <Hero
         title={`Soliman Al Halaby,<br/>creative developer`}
         subtitle={`Looking for an <br/>internship`}
-        sectionTitle={`Based in paris, \nfrom cairo`}
+        sectionTitle={`Based in paris, <br/>from cairo`}
         image={image}
         label="Contact me"
       />

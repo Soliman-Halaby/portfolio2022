@@ -1,25 +1,55 @@
 import { gsap } from "vendor/gsap";
 import SplitText from "vendor/gsap/SplitText";
-import { useRecoilValue } from "recoil";
-import { loaderState } from "recoil/loaderState";
 
 gsap.registerPlugin(SplitText);
 
 export const handleEnter = (props) => {
   const { display } = props;
 
-  console.log(display);
   switch (display) {
-    case "text":
+    case "title":
       handleEnterTitle(props);
       break;
+    // default:
+    //   handleEnterRegular(props);
+    //   break;
     case "tag":
-      handleEnterPin(props);
+      handleEnterTag(props);
       break;
   }
 };
 
-function handleEnterTitle({ text, animText }) {
+function handleEnterTag({ el, delay }) {
+  const tl = gsap.timeline();
+  const elDelay = 0.09;
+
+  console.log("el", el);
+  tl.fromTo(
+    el.current,
+    {
+      opacity: 0,
+    },
+    {
+      opacity: 1,
+      duration: 0.6,
+      delay: elDelay + delay,
+    },
+    "anim"
+  );
+  tl.fromTo(
+    el.current,
+    {
+      y: "100%",
+    },
+    {
+      y: "0%",
+      duration: 0.6,
+      delay: elDelay + delay,
+    },
+    "anim"
+  );
+}
+function handleEnterTitle({ text }) {
   const splitText = new SplitText(text.current, {
     type: "lines,words",
     wordsClass: "word",
@@ -32,7 +62,7 @@ function handleEnterTitle({ text, animText }) {
   tl.add("anim");
   gsap.set(text.current, { opacity: 1 });
 
-  const textDelay = animText ? 10 : 0.09;
+  const textDelay = 0.09;
 
   splitText.lines.forEach((line, index) => {
     const words = line.children;
@@ -62,33 +92,4 @@ function handleEnterTitle({ text, animText }) {
       "anim"
     );
   });
-}
-
-function handleEnterPin({ el, delay, animText }) {
-  const tl = gsap.timeline();
-  const elDelay = 0.09;
-  tl.fromTo(
-    el.current,
-    {
-      opacity: 0,
-    },
-    {
-      opacity: 1,
-      duration: 0.15,
-      delay: elDelay + delay,
-    },
-    "anim"
-  );
-  tl.fromTo(
-    el.current,
-    {
-      rotation: 40,
-    },
-    {
-      rotation: 0,
-      duration: 0.15,
-      delay: elDelay + delay,
-    },
-    "anim"
-  );
 }

@@ -17,6 +17,7 @@ export const Wrapper = styled.div`
 
 export const ProjectContainer = styled.div`
   /* position: relative; */
+  overflow: hidden;
 `;
 
 export const Container = styled.div`
@@ -27,6 +28,7 @@ export const Container = styled.div`
 export const ImageContainer = styled.div`
   height: 154px;
   width: 100%;
+  opacity: 0;
   overflow: hidden;
   position: relative;
 `;
@@ -56,6 +58,8 @@ export const RowWrapper = styled.div`
 
 export const Number = styled.span`
   font-size: 1rem;
+  max-height: 1rem;
+  overflow: hidden;
   font-weight: 400;
   font-family: ${({ theme }) => theme.fonts.sansSerif};
   ${maxMedia.md} {
@@ -63,6 +67,10 @@ export const Number = styled.span`
   }
   ${maxMedia.small} {
     font-size: 1rem;
+  }
+
+  .word {
+    padding: 0;
   }
 `;
 
@@ -77,5 +85,9 @@ export const Title = styled.h3`
 
   ${maxMedia.small} {
     font-size: 1.15rem;
+  }
+
+  .word {
+    padding: 0;
   }
 `;

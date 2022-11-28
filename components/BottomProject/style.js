@@ -11,9 +11,10 @@ export const Wrapper = styled.div`
   min-height: 75vh;
   /* display: flex;
   align-items: center; */
-  padding-top: 15rem;
-  padding-bottom: 10rem;
+  /* padding-top: 15rem;
+  padding-bottom: 10rem; */
 
+  height: 80vh;
   ${maxMedia.xs} {
     margin-top: 4rem;
   }
@@ -32,10 +33,17 @@ export const Container = styled.div`
   margin-top: 0;
 `;
 
+export const TitleWrapper = styled.div`
+  margin-bottom: 4rem;
+  margin-top: 7rem;
+  overflow: hidden;
+`;
 export const TitleContainer = styled.div`
   display: flex;
+  overflow: hidden;
   align-items: center;
   gap: 4rem;
+  opacity: 0;
 
   ${maxMedia.xs} {
     gap: 2rem;
@@ -43,6 +51,11 @@ export const TitleContainer = styled.div`
 `;
 export const Title = styled.h2`
   ${TitleSection()}
+  margin-bottom: 0;
+  margin-top: 0;
+
+  line-height: 6.5rem;
+  margin-right: 4rem;
 
   position: relative;
   text-align: ${({ alignRight }) => (alignRight ? `right` : `initial`)};

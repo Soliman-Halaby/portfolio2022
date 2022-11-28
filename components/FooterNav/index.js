@@ -18,7 +18,7 @@ import {
 
 import { useLocomotiveScroll } from "react-locomotive-scroll";
 
-import useIsMobile from "hook";
+import { useIsMobile } from "hook";
 
 const Footer = () => {
   const [activeMessage, setActiveMessage] = useState(false);

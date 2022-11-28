@@ -32,6 +32,8 @@ export const SubWrapper = styled(Wrapper)`
   margin-bottom: 0;
 `;
 export const Title = styled.h3`
+  line-height: 19rem;
+  opacity: 0;
   /* font-size: clamp(42px, 11.15vw, 220px); */
   font-size: 16rem;
   font-family: ${({ theme }) => theme.fonts.serif};
@@ -48,6 +50,9 @@ export const Title = styled.h3`
     letter-spacing: 1px;
   }
 
+  .word {
+    padding: 0;
+  }
   ${maxMedia.xs} {
     font-size: 9rem;
   }
@@ -75,31 +80,54 @@ export const SubContainer = styled.div`
     align-items: flex-end;
   }
   &:nth-of-type(2) {
+    height: 55vh;
     width: 80%;
     ${maxMedia.md} {
       width: 100%;
+      height: 60vh;
+    }
+    ${maxMedia.small} {
+      height: auto;
     }
     img {
       width: 100%;
       height: 100%;
-      max-height: 40rem;
+      /* max-height: 40rem; */
       object-fit: cover;
 
       ${maxMedia.xs} {
-        max-height: auto;
-        height: 45vh;
+        max-height: inherit;
+        height: 100%;
       }
+    }
+    ${maxMedia.xs} {
+      /* height: ${({ display }) =>
+        display === "normal" ? "40vh" : "90vh"}; */
+      height: 40vh;
     }
   }
 `;
-export const Image = styled.img``;
 
-export const FooterNav = styled.div`
-  //   background: red;
-  // padding-left: 5%;
-  // padding-bottom: 5%;
+export const ImageContainer = styled.div`
+  overflow: hidden;
   width: 100%;
-  margin-left: ${({ theme }) => theme.margin.medium};
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 97%);
+  transition: all 0.2s linear;
+`;
+
+export const ImgWrapper = styled.div`
+  width: 100%;
+  height: 100%;
+`;
+export const Image = styled.img`
+  /* clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 97%);
+  transition: 0.4s linear;
+
+  &.is-inview {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    transform: scale(1.2);
+    transition: 0.4s linear;
+  } */
 `;
 
 export const Text = styled.h3`
@@ -115,9 +143,29 @@ export const Text = styled.h3`
   }
 `;
 
+export const FooterNav = styled.div`
+  //   background: red;
+  // padding-left: 5%;
+  // padding-bottom: 5%;
+  width: 100%;
+  margin-left: ${({ theme }) => theme.margin.medium};
+
+  ${Text} {
+    &:nth-of-type(1) {
+      opacity: 0;
+    }
+  }
+`;
+
 export const RowContainer = styled.div`
   display: flex;
+  overflow: hidden;
   gap: 1rem;
+  opacity: 0;
+
+  &:nth-of-type(1) {
+    overflow: visible;
+  }
 `;
 
 export const Content = styled(Text)`

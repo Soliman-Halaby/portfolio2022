@@ -3,6 +3,10 @@ import { useRouter } from "next/router";
 import Button from "@/components/Buttons/Button";
 
 import { useSetRecoilState } from "recoil";
+import useOnScreen from "hook";
+
+import { handleEnter } from "./animation.js";
+
 import {
   Wrapper,
   ProjectContainer,
@@ -15,14 +19,47 @@ import {
 import { cursorState } from "recoil/cursorState";
 
 const ProjectDisplay = ({ col, row, title, to, image = [], index }) => {
-  const [learnMoreCta, setLearnMoreCta] = useState(false);
   const router = useRouter();
-
-  const setCursorDisplay = useSetRecoilState(cursorState);
 
   const buttonRef = useRef(null);
   const timerRef = useRef();
+  const imageRef = useRef(null);
+  const titleRef = useRef(null);
+  const numberRef = useRef(null);
+  const [learnMoreCta, setLearnMoreCta] = useState(false);
   const [count, setCount] = useState(0);
+  const onScreenImage = useOnScreen(imageRef, 0.35);
+
+  const [reveal, setReveal] = useState(false);
+
+  const setCursorDisplay = useSetRecoilState(cursorState);
+
+  useEffect(() => {
+    if (onScreenImage) setReveal(onScreenImage);
+  }, [onScreenImage]);
+
+  useEffect(() => {
+    if (reveal) {
+      handleEnter({
+        el: imageRef,
+        display: "image",
+        index: index,
+        delay: 0.35,
+      });
+      handleEnter({
+        text: titleRef,
+        display: "title",
+        // index: index,
+        delay: 0.85,
+      });
+      handleEnter({
+        text: numberRef,
+        display: "number",
+        // index: index,
+        delay: 0.85,
+      });
+    }
+  }, [reveal]);
 
   const updateDisplay = () => {
     setLearnMoreCta(true);
@@ -44,7 +81,7 @@ const ProjectDisplay = ({ col, row, title, to, image = [], index }) => {
     <Wrapper
       data-scroll
       data-scroll-speed={index % 2 === 0 ? "-0.5" : "0.5"}
-      onMouseMove={() => console.log("coucou")}
+      // onMouseMove={() => console.log("coucou")}
       onClick={() => router.push(`/project/${to}`)}
       col={col}
       row={row}
@@ -54,19 +91,19 @@ const ProjectDisplay = ({ col, row, title, to, image = [], index }) => {
         onMouseOver={updateDisplay}
         onMouseOut={resetDisplay}
       >
-        {image && (
-          <ImageContainer>
+        <ImageContainer ref={imageRef}>
+          {image && (
             <Image
               // data-scroll
               // data-scroll-speed={index % 2 === 0 ? "-0.5" : "0.5"}
               src={image[count % image.length]}
             />
-          </ImageContainer>
-        )}
+          )}
+        </ImageContainer>
         {title && (
           <RowWrapper>
-            <Number>0{index + 1}</Number>
-            <Title>{title}</Title>
+            <Number ref={numberRef}>0{index + 1}</Number>
+            <Title ref={titleRef}>{title}</Title>
           </RowWrapper>
         )}
       </ProjectContainer>

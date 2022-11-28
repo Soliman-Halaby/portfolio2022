@@ -1,11 +1,14 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 import { Wrapper, Container, Title, ContainerGrid } from "./style";
 
 import ProjectDisplay from "@/components/ProjectDisplay";
 import ProjectsData from "/utils/projects.json";
 
-import useIsMobile from "hook";
+import useOnScreen from "hook/index.js";
+import { handleEnter } from "./animation.js";
+
+import { useIsMobile } from "hook";
 
 const ProjectWork = ({}) => {
   const data = ProjectsData.map((data, i) => ({
@@ -19,12 +22,29 @@ const ProjectWork = ({}) => {
     colRow: data.mobileRow,
   }));
 
+  const titleRef = useRef(null);
+  const onScreenTitle = useOnScreen(titleRef, 0.7);
+  // const onScreenSubtitle = useOnScreen(subtitleRef);
+  const [reveal, setReveal] = useState(false);
   const isMobile = useIsMobile();
+
+  useEffect(() => {
+    if (onScreenTitle) setReveal(onScreenTitle);
+  }, [onScreenTitle]);
+
+  useEffect(() => {
+    if (reveal) {
+      handleEnter({
+        text: titleRef,
+        display: "title",
+      });
+    }
+  }, [reveal]);
   return (
     <Wrapper data-scroll-section>
       <Container>
-        <Title>Selected works</Title>
-        <ContainerGrid >
+        <Title ref={titleRef}>Selected works</Title>
+        <ContainerGrid>
           {data.map((data, i) => {
             return (
               <ProjectDisplay
@@ -33,6 +53,8 @@ const ProjectWork = ({}) => {
                 key={i}
                 col={isMobile ? data.colMob : data.col}
                 row={isMobile ? data.colRow : data.row}
+                // col={data.col}
+                // row={data.row}
                 title={data.title}
                 image={data.image}
               />

@@ -8,7 +8,7 @@ import Pin from "@/components/Popup/Pin";
 import { useSetRecoilState, useResetRecoilState } from "recoil";
 import { cursorHover } from "recoil/cursorState.js";
 
-import useIsMobile from "hook";
+import { useIsMobile } from "hook";
 
 import { Wrapper, Nav, NavElement, Text, Element, Image } from "./style.js";
 

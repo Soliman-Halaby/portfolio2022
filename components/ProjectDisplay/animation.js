@@ -1,25 +1,59 @@
 import { gsap } from "vendor/gsap";
 import SplitText from "vendor/gsap/SplitText";
-import { useRecoilValue } from "recoil";
-import { loaderState } from "recoil/loaderState";
 
 gsap.registerPlugin(SplitText);
 
 export const handleEnter = (props) => {
   const { display } = props;
 
-  console.log(display);
   switch (display) {
-    case "text":
+    case "title":
       handleEnterTitle(props);
       break;
-    case "tag":
-      handleEnterPin(props);
+    // default:
+    //   handleEnterRegular(props);
+    //   break;
+    case "image":
+      handleEnterImg(props);
+      break;
+
+    case "number":
+      handleEnterNumber(props);
       break;
   }
 };
 
-function handleEnterTitle({ text, animText }) {
+function handleEnterImg({ el, index, delay }) {
+  const tl = gsap.timeline();
+  const elDelay = 0.05;
+
+  tl.fromTo(
+    el.current,
+    {
+      opacity: 0,
+    },
+    {
+      opacity: 1,
+      duration: 0.6,
+      delay: elDelay * index + delay,
+    },
+    "anim"
+  );
+  tl.fromTo(
+    el.current,
+    {
+      y: "30%",
+    },
+    {
+      y: "0%",
+      duration: 0.6,
+      delay: elDelay * index + delay,
+    },
+    "anim"
+  );
+}
+
+function handleEnterTitle({ text, delay }) {
   const splitText = new SplitText(text.current, {
     type: "lines,words",
     wordsClass: "word",
@@ -27,16 +61,13 @@ function handleEnterTitle({ text, animText }) {
     linesClass: "line",
   });
 
+  console.log(splitText);
   const tl = gsap.timeline();
-
   tl.add("anim");
   gsap.set(text.current, { opacity: 1 });
-
-  const textDelay = animText ? 10 : 0.09;
-
+  const textDelay = 0.09;
   splitText.lines.forEach((line, index) => {
     const words = line.children;
-
     tl.fromTo(
       words,
       {
@@ -45,7 +76,7 @@ function handleEnterTitle({ text, animText }) {
       {
         opacity: 1,
         duration: 0.6,
-        delay: textDelay * index,
+        delay: textDelay * index + delay,
       },
       "anim"
     );
@@ -57,37 +88,38 @@ function handleEnterTitle({ text, animText }) {
       {
         y: 0,
         duration: 0.6,
-        delay: textDelay * index,
+        delay: textDelay * index + delay,
       },
       "anim"
     );
   });
 }
 
-function handleEnterPin({ el, delay, animText }) {
+function handleEnterNumber({ text, delay }) {
   const tl = gsap.timeline();
-  const elDelay = 0.09;
+  const textDelay = 0.09;
+
   tl.fromTo(
-    el.current,
+    text.current,
     {
       opacity: 0,
     },
     {
       opacity: 1,
-      duration: 0.15,
-      delay: elDelay + delay,
+      duration: 0.6,
+      delay: textDelay + delay,
     },
     "anim"
   );
   tl.fromTo(
-    el.current,
+    text.current,
     {
-      rotation: 40,
+      y: "100%",
     },
     {
-      rotation: 0,
-      duration: 0.15,
-      delay: elDelay + delay,
+      y: 0,
+      duration: 0.6,
+      delay: textDelay + delay,
     },
     "anim"
   );
