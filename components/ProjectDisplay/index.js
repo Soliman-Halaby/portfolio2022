@@ -25,10 +25,10 @@ const ProjectDisplay = ({ col, row, title, to, image = [], index }) => {
   const timerRef = useRef();
   const imageRef = useRef(null);
   const titleRef = useRef(null);
-
+  const numberRef = useRef(null);
   const [learnMoreCta, setLearnMoreCta] = useState(false);
   const [count, setCount] = useState(0);
-  const onScreenImage = useOnScreen(imageRef, 0.5);
+  const onScreenImage = useOnScreen(imageRef, 0.35);
 
   const [reveal, setReveal] = useState(false);
 
@@ -50,7 +50,13 @@ const ProjectDisplay = ({ col, row, title, to, image = [], index }) => {
         text: titleRef,
         display: "title",
         // index: index,
-        // delay: 0.35,
+        delay: 0.85,
+      });
+      handleEnter({
+        text: numberRef,
+        display: "number",
+        // index: index,
+        delay: 0.85,
       });
     }
   }, [reveal]);
@@ -96,7 +102,7 @@ const ProjectDisplay = ({ col, row, title, to, image = [], index }) => {
         </ImageContainer>
         {title && (
           <RowWrapper>
-            <Number>0{index + 1}</Number>
+            <Number ref={numberRef}>0{index + 1}</Number>
             <Title ref={titleRef}>{title}</Title>
           </RowWrapper>
         )}
