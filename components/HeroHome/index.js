@@ -29,12 +29,15 @@ const HeroHome = ({ title, subtitle, sectionTitle, label, image }) => {
 
   const titleRef = useRef(null);
   const subtitleRef = useRef(null);
-
+  const sectionTitleRef = useRef(null);
+  const sectionNumberRef = useRef(null);
   const pinRef = useRef(null);
+
   const isMobile = useIsMobile();
   const onScreenTitle = useOnScreen(titleRef);
   const [reveal, setReveal] = useState(false);
 
+  console.log(sectionNumberRef);
   useEffect(() => {
     if (onScreenTitle) setReveal(onScreenTitle);
   }, [onScreenTitle]);
@@ -47,6 +50,11 @@ const HeroHome = ({ title, subtitle, sectionTitle, label, image }) => {
     if (reveal) {
       handleEnter({
         text: titleRef,
+        display: "text",
+        animText: loaderDisplay,
+      });
+      handleEnter({
+        text: sectionTitleRef,
         display: "text",
         animText: loaderDisplay,
       });
@@ -67,6 +75,8 @@ const HeroHome = ({ title, subtitle, sectionTitle, label, image }) => {
   return (
     <Wrapper data-scroll-section>
       <TitleSection
+        ref={sectionTitleRef}
+        ref2={sectionNumberRef}
         top={isMobile ? "11.5" : "25"}
         number="01"
         title={sectionTitle}
