@@ -52,9 +52,9 @@ export const SuccessMessageContentContainer = styled.div`
   }
 `;
 export const SuccessMessage = styled.div`
-  opacity: 0;
+  opacity: ${({ colored }) => (colored ? 1 : 0)};
   position: absolute;
-  overflow: hidden;
+  overflow: ${({ colored }) => (colored ? "visible" : "hidden")};
   padding: 7.5px;
   top: ${({ top }) => `${top}rem`};
   left: ${({ left }) => `${left}rem`};

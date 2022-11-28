@@ -42,6 +42,10 @@ export const Title = styled.h2`
     top: 35vh;
     width: 100%;
   }
+
+  .word {
+    padding: 0;
+  }
 `;
 
 export const ContainerGrid = styled.div`

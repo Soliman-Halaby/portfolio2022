@@ -3,7 +3,7 @@ import { maxMedia, title } from "styles/mixins";
 
 import theme from "theme";
 
-export const Title = styled.p`
+export const Title = styled.div`
   font-size: 1.15rem;
   position: absolute;
   left: ${({ left }) => `${left}%`};
@@ -25,11 +25,18 @@ export const Title = styled.p`
   }
 `;
 
-export const Number = styled.span`
+export const Number = styled.p`
   font-size: 1rem;
   margin-right: 1rem;
 
   ${maxMedia.small} {
     font-size: 1.2rem;
+  }
+`;
+
+export const TitleContent = styled.span`
+  opacity: 0;
+  .word {
+    padding: 0;
   }
 `;
