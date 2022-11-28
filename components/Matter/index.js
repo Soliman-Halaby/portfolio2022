@@ -24,6 +24,7 @@ import {
   DetailContainer,
   Ground,
   Label,
+  DescriptionContainer,
   Description,
   OtherFactsContainer,
   ControlWrapper,
@@ -32,14 +33,44 @@ import {
   SceneContainer,
 } from "./style";
 
+import { handleEnter } from "./animation.js";
+import useOnScreen from "hook/index.js";
+
 const MatterComponent = ({}) => {
   const requestRef = useRef();
   const boxRef = useRef([]);
+  const descriptionRef = useRef(null);
+  const detailRef = useRef(null);
+  const otherFactRef = useRef(null);
 
   const [detail, setDetail] = useState("closed");
-  const detailRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [reveal, setReveal] = useState(false);
+
+  const onScreenDetail = useOnScreen(detailRef, 0.35);
   //   // Variables
+
+  console.log(descriptionRef);
+
+  useEffect(() => {
+    if (onScreenDetail) setReveal(onScreenDetail);
+    console.log("onScreenDetail", onScreenDetail);
+  }, [onScreenDetail]);
+
+  useEffect(() => {
+    if (reveal) {
+      handleEnter({
+        el: descriptionRef,
+        display: "description",
+        delay: 0.3,
+      });
+      handleEnter({
+        el: otherFactRef,
+        display: "description",
+        delay: 0.5,
+      });
+    }
+  }, [reveal]);
 
   const GRAVITY = 1;
 
@@ -260,6 +291,7 @@ const MatterComponent = ({}) => {
       requestRef.current = requestAnimationFrame(rerender);
     };
 
+    console.log("yo");
     rerender();
 
     return () => {
@@ -365,6 +397,7 @@ const MatterComponent = ({}) => {
       // console.log(datas.length);
     }
   };
+
   return (
     <MatterContainer>
       <SceneContainer ref={scene} />
@@ -391,8 +424,13 @@ const MatterComponent = ({}) => {
               ></CloseBtn>
             </CloseBtnContainer>
             <Label>{title}</Label>
-            <Description dangerouslySetInnerHTML={{ __html: content }} />
-            <OtherFactsContainer>
+            <DescriptionContainer>
+              <Description
+                ref={descriptionRef}
+                dangerouslySetInnerHTML={{ __html: content }}
+              />
+            </DescriptionContainer>
+            <OtherFactsContainer ref={otherFactRef}>
               Other facts
               <ControlWrapper>
                 <ControlContainer>

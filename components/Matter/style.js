@@ -127,6 +127,9 @@ export const Label = styled.h2`
   text-align: left;
 `;
 
+export const DescriptionContainer = styled.div`
+  /* overflow: hidden; */
+`;
 export const Description = styled.p`
   width: 60%;
   font-size: 1.2rem;
