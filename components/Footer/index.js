@@ -35,6 +35,8 @@ const Footer = ({ number }) => {
   const contactRef2 = useRef(null);
   const contactRef3 = useRef(null);
   const contactRef4 = useRef(null);
+  const pinRef = useRef(null);
+  const sectionTitleRef = useRef(null);
 
   const onScreenTitle = useOnScreen(titleRef, 0.7);
   const onScreenImage = useOnScreen(imageContainerRef, 0.7);
@@ -61,6 +63,16 @@ const Footer = ({ number }) => {
       handleEnter({
         text: titleRef,
         display: "title",
+      });
+      handleEnter({
+        text: sectionTitleRef,
+        display: "title",
+      });
+      handleEnter({
+        el: pinRef,
+        display: "pin",
+        delay: 0.7,
+        // animText: loaderDisplay,
       });
     }
   }, [reveal]);
@@ -97,7 +109,7 @@ const Footer = ({ number }) => {
       handleEnter({
         el: contactRef4,
         display: "tag",
-        delay: 0,
+        delay: 0.7,
       });
     }
   }, [revealNav]);
@@ -131,12 +143,19 @@ const Footer = ({ number }) => {
       <TitleContainer>
         <Title ref={titleRef}>Soliman Al Halaby</Title>
         <Pin
+          ref={pinRef}
           top={isMobile ? "14.5" : "13"}
           left={isMobile ? "10" : "75"}
           label="get in touch"
         />
       </TitleContainer>
-      <TitleSection top="23" left="20" number={number} title="Contact" />
+      <TitleSection
+        ref={sectionTitleRef}
+        top="23"
+        left="20"
+        number={number}
+        title="Contact"
+      />
       <Container>
         <SubContainer>
           <FooterNav ref={navRef}>

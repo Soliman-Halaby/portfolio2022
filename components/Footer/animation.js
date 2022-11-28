@@ -20,6 +20,8 @@ export const handleEnter = (props) => {
     case "tag":
       handleEnterTag(props);
       break;
+    case "pin":
+      handleEnterPin(props);
   }
 };
 
@@ -46,11 +48,11 @@ function handleEnterImg({ el, delay, image }) {
   tl.fromTo(
     image.current,
     {
-      scale: 1,
+      scale: 1.3,
     },
     {
-      scale: 1.3,
-      duration: 0.5,
+      scale: 1,
+      duration: 0.45,
       delay: elDelay + delay + 0.25,
     },
     "anim"
@@ -153,4 +155,33 @@ function handleEnterTag({ el, delay, image }) {
   //   },
   //   "anim"
   // );
+}
+
+function handleEnterPin({ el, delay, animText }) {
+  const tl = gsap.timeline();
+  const elDelay = 0.09;
+  tl.fromTo(
+    el.current,
+    {
+      opacity: 0,
+    },
+    {
+      opacity: 1,
+      duration: 0.15,
+      delay: elDelay + delay,
+    },
+    "anim"
+  );
+  tl.fromTo(
+    el.current,
+    {
+      rotation: 40,
+    },
+    {
+      rotation: 0,
+      duration: 0.15,
+      delay: elDelay + delay,
+    },
+    "anim"
+  );
 }
