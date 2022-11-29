@@ -9,7 +9,11 @@ import ProjectWork from "@/components/Work";
 
 export default function Home() {
   return (
-    <Layout number="03">
+    <Layout
+      title="Soliman Al Halaby - Home"
+      description="I'm Soliman, a twenty one years old fullstack developer currently based in Paris. Discover my different projects by visiting my Portfolio!"
+      number="03"
+    >
       {/* {loader ? (
         <div className="loader-wrapper absolute">
           <h1>Loader</h1>

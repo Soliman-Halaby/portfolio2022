@@ -44,7 +44,11 @@ export default function Projet({}) {
 
   if (slug && projectData) {
     return (
-      <Layout reducedFooter>
+      <Layout
+        title={`Portfolio - ${projectData.title} Project`}
+        description={`${projectData.description}`}
+        reducedFooter
+      >
         <Hero
           title={projectData.title}
           team={projectData.with}

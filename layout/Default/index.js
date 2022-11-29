@@ -1,7 +1,7 @@
 import { useRef, useEffect } from "react";
 import { useRouter } from "next/router";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
-
+import Head from "next/head";
 import { RecoilRoot, useRecoilValue } from "recoil";
 import { loaderState } from "recoil/loaderState";
 
@@ -26,6 +26,8 @@ export default function Layout({
   cursorWidth = 16,
   cursorHeight = 18,
   number = "01",
+  title,
+  description,
 }) {
   const containerRef = useRef(null);
 
@@ -72,6 +74,7 @@ export default function Layout({
 
   // console.log(route);
 
+  console.log("router", router);
   return (
     <LocomotiveScrollProvider
       options={{
@@ -87,6 +90,18 @@ export default function Layout({
       }
     >
       {loaderDisplay && <Loader />}
+      <Head>
+        <title>{title}</title>
+        <meta property="og:title" content={title} key="title" />
+        {/* <meta property="og:image" content="./assets/images/solimanImage.png"> */}
+        <meta property="og:description" content={description} />
+        <meta
+          property="og:url"
+          content={`https://www.solimanalhalaby.fr${router.asPath}`}
+        />
+        <meta property="og:site_name" content={title} />
+        <meta property="og:type" content="website" />
+      </Head>
       <main data-scroll-container ref={containerRef}>
         <Header />
         <Container>
