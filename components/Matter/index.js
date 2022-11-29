@@ -1,5 +1,7 @@
 import React, { useState, useRef, useEffect, Fragment } from "react";
 
+import { useRecoilValue } from "recoil";
+import { loaderState } from "recoil/loaderState";
 import {
   Engine,
   Render,
@@ -47,6 +49,7 @@ const MatterComponent = ({}) => {
   const titleRef = useRef(null);
   const engine = useRef(Engine.create({}));
 
+  const loaderDisplay = useRecoilValue(loaderState);
   console.log("datas", datas);
 
   const scene = useRef();
@@ -221,7 +224,10 @@ const MatterComponent = ({}) => {
         bodies[i].render();
       }
 
-      requestRef.current = requestAnimationFrame(rerender);
+      // Play RAF if loader is not displayed
+      if (loaderDisplay !== true) {
+        requestRef.current = requestAnimationFrame(rerender);
+      }
     };
 
     rerender();
@@ -232,7 +238,7 @@ const MatterComponent = ({}) => {
       Composite.clear(engine.current.world);
       cancelAnimationFrame(requestRef.current);
     };
-  }, []);
+  }, [loaderDisplay]);
 
   // Animation for detail box
   useEffect(() => {
