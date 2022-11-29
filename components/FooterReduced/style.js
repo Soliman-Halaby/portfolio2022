@@ -31,12 +31,13 @@ export const NavElement = styled.div`
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: 7rem;
   // background: lightblue;
   // border-top: 1px solid red;
 
-  ${maxMedia.xs} {
+  ${maxMedia.small} {
     padding: 1rem 0px;
+    gap: 1.5rem;
     border-top: 1px solid ${({ theme }) => theme.colors.grey1};
     flex-direction: column;
     align-items: flex-start;

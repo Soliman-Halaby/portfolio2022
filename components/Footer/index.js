@@ -48,6 +48,7 @@ const Footer = ({ number }) => {
   const [activeMessage, setActiveMessage] = useState(false);
   const [reveal, setReveal] = useState(false);
   const [revealNav, setRevealNav] = useState(false);
+  const [pressedButton, setPressedButton] = useState("");
   useEffect(() => {
     if (onScreenTitle) setReveal(onScreenTitle);
   }, [onScreenTitle]);
@@ -116,6 +117,7 @@ const Footer = ({ number }) => {
 
   const copyToClipboard = (_) => {
     setActiveMessage(true);
+    setPressedButton;
     navigator.clipboard.writeText("contact@solimanalhalaby.fr");
     setTimeout(() => {
       setActiveMessage(false);
@@ -126,14 +128,12 @@ const Footer = ({ number }) => {
     {
       label: "linkedin",
       link: "https://www.linkedin.com/in/soliman-al-halaby/",
+      target: "_blank",
     },
     {
-      label: "linkedin",
-      link: "https://www.linkedin.com/in/soliman-al-halaby/",
-    },
-    {
-      label: "linkedin",
-      link: "https://www.linkedin.com/in/soliman-al-halaby/",
+      label: "Github",
+      link: "https://github.com/Soliman-Halaby",
+      target: "_blank",
     },
   ];
 
@@ -172,7 +172,13 @@ const Footer = ({ number }) => {
               <Content>Find me on</Content>
               <ButtonContainer>
                 {socials.map((data, i) => (
-                  <Button to={data.link} key={i} index={i} label={data.label} />
+                  <Button
+                    target={data.target}
+                    to={data.link}
+                    key={i}
+                    index={i}
+                    label={data.label}
+                  />
                 ))}
               </ButtonContainer>
             </RowContainer>
