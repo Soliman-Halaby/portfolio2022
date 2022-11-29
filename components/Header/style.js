@@ -27,7 +27,8 @@ export const MainLink = styled.span`
   font-family: ${({ theme }) => theme.fonts.sansSerif};
   // color: ${({ theme }) => theme.colors.grey2} !important;
   font-weight: 300;
-  a {
+  a,
+  p {
     color: ${({ theme }) => theme.colors.grey2};
     text-decoration: none;
     position: relative;
@@ -66,6 +67,9 @@ export const NavLink = styled(Link)`
   cursor: none;
 `;
 
+export const NavElement = styled.p`
+  cursor: none;
+`;
 export const MenuDisplay = styled.p`
   color: ${({ theme }) => theme.colors.grey2};
 `;

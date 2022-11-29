@@ -19,6 +19,7 @@ import {
   MainLink,
   NavItem,
   NavLink,
+  NavElement,
   MenuDisplay,
   SubNav,
   SubNavItemsContainer,
@@ -131,7 +132,7 @@ const Header = () => {
               onMouseEnter={() => cursorRotation()}
               onClick={() => scrollToWork()}
             >
-              <NavLink href="">Work</NavLink>
+              <NavElement>Work</NavElement>
             </MainLink>
             <MainLink
               onMouseLeave={resetCursor}
