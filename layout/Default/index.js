@@ -78,7 +78,7 @@ export default function Layout({
         smooth: true,
         smartphone: { smooth: false },
         tablet: { smooth: true },
-        reloadOnContextChange: true,
+        // reloadOnContextChange: true,
       }}
       watch={[router.asPath]}
       containerRef={containerRef}
