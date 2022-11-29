@@ -151,8 +151,8 @@ const styles = ({ fonts }) => {
 
     html,
     body {
-      position: relative;
-      height: 100%;
+      /* position: relative; */
+      /* height: 100%; */
       margin: 0;
     }
   `;
