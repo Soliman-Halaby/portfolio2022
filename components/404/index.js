@@ -1,31 +1,49 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 import TitleSection from "@/components/Popup/SectionTitle";
-
 import Button from "@/components/Buttons/Button";
+
+import { handleEnter } from "./animation.js";
+import useOnScreen from "hook/index.js";
 
 import {
   Wrapper,
   Container,
-  LabelContainer,
-  Label,
-  Content,
+  TitleWrapper,
+  TitleContainer,
   Title,
   Subtitle,
 } from "./style.js";
 
 const FourOhFour = ({ title, subtitle, text1, text2, label }) => {
+  const titleRef = useRef(null);
+  const onScreen = useOnScreen(titleRef);
+
+  const [reveal, setReveal] = useState(false);
+
+  useEffect(() => {
+    if (onScreen) setReveal(onScreen);
+  }, [onScreen]);
+
+  useEffect(() => {
+    if (reveal) {
+      handleEnter({
+        text: titleRef,
+        display: "title",
+      });
+    }
+  }, [reveal]);
   return (
     <Wrapper>
       <Container>
-        <LabelContainer>
-          <Label>404</Label>
-          <Content>Error</Content>
-        </LabelContainer>
-        <Title>Looks like you’re lost</Title>
-        <Subtitle>
-          Sorry, the page you were looking for could not be found.
-        </Subtitle>
+        <TitleContainer>
+          <TitleWrapper ref={titleRef}>
+            <Title>Page</Title>
+            <Title>Not</Title>
+            <Title>Found</Title>
+          </TitleWrapper>
+          <Subtitle>404 error</Subtitle>
+        </TitleContainer>
         <Button to="/" rounded label="Go back home" />
       </Container>
     </Wrapper>
