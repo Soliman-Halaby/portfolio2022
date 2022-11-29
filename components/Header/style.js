@@ -34,6 +34,10 @@ export const MainLink = styled.span`
     cursor: none;
     padding-bottom: 3px;
 
+    ${maxMedia.small} {
+      padding-bottom: 0;
+    }
+
     &:after {
       content: "";
       position: absolute;
@@ -61,6 +65,7 @@ export const MainLink = styled.span`
 export const NavLink = styled(Link)`
   cursor: none;
 `;
+
 export const MenuDisplay = styled.p`
   color: ${({ theme }) => theme.colors.grey2};
 `;
@@ -103,8 +108,10 @@ export const SubNav = styled.div`
   background: ${({ theme }) => theme.colors.grey2};
   will-change: transform;
   transition: opacity 0.3s ease;
+  overflow: visible;
   &.opened {
     opacity: 1;
+    overflow: hidden;
     pointer-events: all;
   }
 `;
