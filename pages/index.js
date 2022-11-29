@@ -8,27 +8,6 @@ import Hero from "@/components/HeroHome";
 import ProjectWork from "@/components/Work";
 
 export default function Home() {
-  const [timer, setTimer] = useState(3);
-
-  const id = useRef(null);
-  const clear = () => {
-    window.clearInterval(id.current);
-    setLoader(false);
-  };
-
-  // useEffect(() => {
-  //   setLoaderDisplay(sessionStorage.getItem("loader"));
-  //   id.current = window.setInterval(() => {
-  //     setTimer((timer) => timer - 1);
-  //   }, 10000000);
-  // }, []);
-
-  useEffect(() => {
-    if (timer === 0) {
-      clear();
-    }
-  }, [timer]);
-
   return (
     <Layout number="03">
       {/* {loader ? (
