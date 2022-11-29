@@ -32,8 +32,9 @@ function handleEnterTitle({ text, animText }) {
   tl.add("anim");
   gsap.set(text.current, { opacity: 1 });
 
-  const textDelay = animText ? 10 : 0.09;
+  const textDelay = 0.09;
 
+  const displayDelay = animText === true ? 3.1 : 0;
   splitText.lines.forEach((line, index) => {
     const words = line.children;
 
@@ -45,7 +46,7 @@ function handleEnterTitle({ text, animText }) {
       {
         opacity: 1,
         duration: 0.6,
-        delay: textDelay * index,
+        delay: textDelay * index + displayDelay,
       },
       "anim"
     );
@@ -57,7 +58,7 @@ function handleEnterTitle({ text, animText }) {
       {
         y: 0,
         duration: 0.6,
-        delay: textDelay * index,
+        delay: textDelay * index + displayDelay,
       },
       "anim"
     );
@@ -66,7 +67,7 @@ function handleEnterTitle({ text, animText }) {
 
 function handleEnterPin({ el, delay, animText }) {
   const tl = gsap.timeline();
-  const elDelay = 0.09;
+  const elDelay = animText === true ? 3.1 : 0.09;
   tl.fromTo(
     el.current,
     {

@@ -1,5 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
 
+import { useRecoilValue } from "recoil";
+import { loaderState } from "recoil/loaderState.js";
+
 import TitleSection from "@/components/Popup/SectionTitle";
 import Button from "@/components/Buttons/Button";
 import CircularButton from "@/components/Buttons/CircularButton";
@@ -38,21 +41,16 @@ const Footer = ({ number }) => {
   const pinRef = useRef(null);
   const sectionTitleRef = useRef(null);
 
+  const loaderDisplay = useRecoilValue(loaderState);
   const onScreenTitle = useOnScreen(titleRef, 0.7);
-  const onScreenImage = useOnScreen(imageContainerRef, 0.7);
   const onScreenNav = useOnScreen(navRef, 0.7);
 
   const [activeMessage, setActiveMessage] = useState(false);
   const [reveal, setReveal] = useState(false);
-  const [revealImg, setRevealImg] = useState(false);
   const [revealNav, setRevealNav] = useState(false);
   useEffect(() => {
     if (onScreenTitle) setReveal(onScreenTitle);
   }, [onScreenTitle]);
-
-  useEffect(() => {
-    if (onScreenImage) setRevealImg(onScreenImage);
-  }, [onScreenImage]);
 
   useEffect(() => {
     if (onScreenNav) setRevealNav(onScreenNav);
@@ -63,31 +61,28 @@ const Footer = ({ number }) => {
       handleEnter({
         text: titleRef,
         display: "title",
+        animText: loaderDisplay,
       });
       handleEnter({
         text: sectionTitleRef,
         display: "title",
+        animText: loaderDisplay,
       });
       handleEnter({
         el: pinRef,
         display: "pin",
         delay: 0.7,
-        // animText: loaderDisplay,
+        animText: loaderDisplay,
       });
-    }
-  }, [reveal]);
-
-  useEffect(() => {
-    console.log(revealImg);
-    if (revealImg) {
       handleEnter({
         el: imagePathRef,
         image: imageRef,
         display: "image",
-        delay: 0,
+        delay: 0.09,
+        animText: loaderDisplay,
       });
     }
-  }, [revealImg]);
+  }, [reveal]);
 
   useEffect(() => {
     if (revealNav) {
@@ -95,21 +90,25 @@ const Footer = ({ number }) => {
         el: contactRef1,
         display: "tag",
         delay: 0.4,
+        animText: loaderDisplay,
       });
       handleEnter({
         el: contactRef2,
         display: "tag",
         delay: 0.5,
+        animText: loaderDisplay,
       });
       handleEnter({
         el: contactRef3,
         display: "tag",
         delay: 0.6,
+        animText: loaderDisplay,
       });
       handleEnter({
         el: contactRef4,
         display: "tag",
         delay: 0.7,
+        animText: loaderDisplay,
       });
     }
   }, [revealNav]);

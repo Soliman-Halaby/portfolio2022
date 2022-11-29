@@ -67,7 +67,7 @@ const HeroHome = ({ title, subtitle, sectionTitle, label, image }) => {
         el: pinRef,
         display: "tag",
         delay: 0.7,
-        // animText: loaderDisplay,
+        animText: loaderDisplay,
       });
     }
   }, [reveal]);
@@ -76,7 +76,7 @@ const HeroHome = ({ title, subtitle, sectionTitle, label, image }) => {
     <Wrapper data-scroll-section>
       <TitleSection
         ref={sectionTitleRef}
-        ref2={sectionNumberRef}
+        // ref2={sectionNumberRef}
         top={isMobile ? "11.5" : "25"}
         number="01"
         title={sectionTitle}

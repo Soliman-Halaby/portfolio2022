@@ -19,11 +19,11 @@ export const handleEnter = (props) => {
   }
 };
 
-function handleEnterTag({ el, delay }) {
+function handleEnterTag({ el, delay, animText }) {
   const tl = gsap.timeline();
+  const displayDelay = animText === true ? 3.1 : 0;
   const elDelay = 0.09;
 
-  console.log("el", el);
   tl.fromTo(
     el.current,
     {
@@ -32,7 +32,7 @@ function handleEnterTag({ el, delay }) {
     {
       opacity: 1,
       duration: 0.6,
-      delay: elDelay + delay,
+      delay: elDelay + delay + displayDelay,
     },
     "anim"
   );
@@ -44,12 +44,12 @@ function handleEnterTag({ el, delay }) {
     {
       y: "0%",
       duration: 0.6,
-      delay: elDelay + delay,
+      delay: elDelay + delay + displayDelay,
     },
     "anim"
   );
 }
-function handleEnterTitle({ text }) {
+function handleEnterTitle({ text, animText }) {
   const splitText = new SplitText(text.current, {
     type: "lines,words",
     wordsClass: "word",
@@ -63,6 +63,7 @@ function handleEnterTitle({ text }) {
   gsap.set(text.current, { opacity: 1 });
 
   const textDelay = 0.09;
+  const displayDelay = animText === true ? 3.1 : 0;
 
   splitText.lines.forEach((line, index) => {
     const words = line.children;
@@ -75,7 +76,7 @@ function handleEnterTitle({ text }) {
       {
         opacity: 1,
         duration: 0.6,
-        delay: textDelay * index,
+        delay: textDelay * index + displayDelay,
       },
       "anim"
     );
@@ -87,7 +88,7 @@ function handleEnterTitle({ text }) {
       {
         y: 0,
         duration: 0.6,
-        delay: textDelay * index,
+        delay: textDelay * index + displayDelay,
       },
       "anim"
     );
