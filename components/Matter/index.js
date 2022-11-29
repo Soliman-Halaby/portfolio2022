@@ -42,6 +42,7 @@ const MatterComponent = ({}) => {
   const descriptionRef = useRef(null);
   const detailRef = useRef(null);
   const otherFactRef = useRef(null);
+  const titleRef = useRef(null);
 
   const [detail, setDetail] = useState("closed");
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -58,20 +59,40 @@ const MatterComponent = ({}) => {
   }, [onScreenDetail]);
 
   useEffect(() => {
-    if (reveal) {
-      handleEnter({
-        el: descriptionRef,
-        display: "description",
-        delay: 0.3,
-      });
-      handleEnter({
-        el: otherFactRef,
-        display: "description",
-        delay: 0.5,
-      });
-    }
+    // if (reveal) {
+    //   handleEnter({
+    //     el: descriptionRef,
+    //     display: "description",
+    //     delay: 0.3,
+    //     reverse: onScreenDetail,
+    //   });
+    //   handleEnter({
+    //     el: otherFactRef,
+    //     display: "description",
+    //     delay: 0.5,
+    //     reverse: onScreenDetail,
+    //   });
+    // }
   }, [reveal]);
 
+  const animationEnterDetail = () => {
+    handleEnter({
+      el: descriptionRef,
+      display: "description",
+      delay: 0.8,
+    });
+    handleEnter({
+      el: otherFactRef,
+      display: "description",
+      delay: 1,
+    });
+
+    handleEnter({
+      el: titleRef,
+      display: "title",
+      delay: 0.5,
+    });
+  };
   const GRAVITY = 1;
 
   const WIREFRAMES = true;
@@ -179,6 +200,7 @@ const MatterComponent = ({}) => {
   function openDetail(index) {
     console.log("opened");
     setDetail("opened");
+    animationEnterDetail();
     console.log(index);
     setCurrentIndex(index);
 
@@ -423,7 +445,7 @@ const MatterComponent = ({}) => {
                 layout="fill"
               ></CloseBtn>
             </CloseBtnContainer>
-            <Label>{title}</Label>
+            <Label ref={titleRef}>{title}</Label>
             <DescriptionContainer>
               <Description
                 ref={descriptionRef}

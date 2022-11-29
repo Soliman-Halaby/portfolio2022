@@ -125,6 +125,7 @@ export const Label = styled.h2`
   border-radius: 8px;
   display: inline-block;
   text-align: left;
+  transform-origin: top left !important;
 `;
 
 export const DescriptionContainer = styled.div`
