@@ -80,7 +80,7 @@ const ProjectDisplay = ({ col, row, title, to, image = [], index }) => {
   return (
     <Wrapper
       data-scroll
-      data-scroll-speed={index % 2 === 0 ? "0" : "-0.5"}
+      data-scroll-speed={index % 2 === 0 ? "-1" : "0"}
       // onMouseMove={() => console.log("coucou")}
       onClick={() => router.push(`/project/${to}`)}
       col={col}
