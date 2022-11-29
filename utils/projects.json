@@ -5,6 +5,16 @@
     "mobileCol": "1",
     "rowPos": "1",
     "mobileRow": "1",
+    "with": [
+      {
+        "name": "Robin",
+        "url": "/coucou"
+      },
+      {
+        "name": "Chris",
+        "url": "/coucou"
+      }
+    ],
     "color": "#DDE3EF",
     "link": "https://www.google.com/",
     "title": "Vis ma ville",
