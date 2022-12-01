@@ -34,16 +34,18 @@ export const Title = styled.h2`
   ${TitleSection()}
 
   opacity: 0;
+  line-height: 6.5rem;
   position: relative;
   text-align: ${({ alignRight }) => (alignRight ? `right` : `initial`)};
   // white-space: pre-line;
 `;
 
 export const MadeWith = styled.div`
+  padding: 0.3rem;
   font-size: 1rem;
   color: ${({ theme }) => theme.colors.grey1};
   font-family: ${({ theme }) => theme.fonts.sansSerif};
-  max-width: 100px;
+  max-width: 110px;
   text-transform: uppercase;
 
   ${maxMedia.small} {
@@ -185,25 +187,24 @@ export const ImageContainer = styled.div`
   height: 90vh;
   overflow: hidden;
 
+  clip-path: polygon(35% 0px, 65% 0px, 65% 100%, 35% 100%);
+  transition: all 0.4s ease-in-out;
   ${maxMedia.small} {
     height: 60vh;
   }
 `;
-export const ImageBlock = styled.img`
-  position: absolute;
-  top: 0%;
-  right: 0%;
 
-  inset: 0;
+export const ImageWrapper = styled.div`
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: 90vh;
+  transform: scale(1.15);
+  transition: transform 0.3s ease-in-out;
+
   ${maxMedia.small} {
     height: 60vh;
   }
 `;
-
-// export const ImageBlock = styled(Image)`
+// export const ImageBlock = styled.img`
 //   position: absolute;
 //   top: 0%;
 //   right: 0%;
@@ -211,8 +212,23 @@ export const ImageBlock = styled.img`
 //   inset: 0;
 //   width: 100%;
 //   height: 100%;
-//   object-fit: cover !important;
+//   object-fit: cover;
 //   ${maxMedia.small} {
 //     height: 60vh;
 //   }
 // `;
+
+export const ImageBlock = styled(Image)`
+  /* position: absolute;
+  top: 0%;
+  right: 0%; */
+
+  /* inset: 0; */
+  /* transform: scale(1.3) !important; */
+  width: 100%;
+  height: 100%;
+  object-fit: cover !important;
+  ${maxMedia.small} {
+    height: 60vh;
+  }
+`;

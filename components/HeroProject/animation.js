@@ -10,11 +10,13 @@ export const handleEnter = (props) => {
     case "title":
       handleEnterTitle(props);
       break;
-    // default:
-    //   handleEnterRegular(props);
-    //   break;
+
     case "tag":
       handleEnterTag(props);
+      break;
+
+    case "image":
+      handleEnterImg(props);
       break;
   }
 };
@@ -93,4 +95,37 @@ function handleEnterTitle({ text, animText }) {
       "anim"
     );
   });
+}
+
+function handleEnterImg({ el, delay, image, animText }) {
+  console.log("enter img");
+  const tl = gsap.timeline();
+  const elDelay = 0;
+  const displayDelay = animText === true ? 3.2 : 0;
+
+  tl.fromTo(
+    el.current,
+    {
+      clipPath: "polygon(35% 0px, 65% 0px, 65% 100%, 35% 100%)",
+    },
+    {
+      clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+      duration: 0.2,
+      delay: elDelay + delay + displayDelay,
+    },
+    "anim"
+  );
+
+  tl.fromTo(
+    image.current,
+    {
+      scale: 1.15,
+    },
+    {
+      scale: 1,
+      duration: 0.12,
+      delay: elDelay + delay + 0.25 + displayDelay,
+    },
+    "anim"
+  );
 }

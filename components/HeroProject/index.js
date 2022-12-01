@@ -17,6 +17,7 @@ import {
   Title,
   MadeWith,
   MadeWithLink,
+  ImageWrapper,
   ImageContainer,
   ImageBlock,
   TagWrapper,
@@ -44,7 +45,8 @@ const HeroProject = ({
   const titleRef = useRef(null);
   const tagRef = useRef(null);
   const contentRef = useRef(null);
-
+  const imageBlockRef = useRef(null);
+  const imageRef = useRef(null);
   const loaderDisplay = useRecoilValue(loaderState);
   const onScreenTitle = useOnScreen(revealRef);
 
@@ -74,6 +76,13 @@ const HeroProject = ({
         delay: 0.6,
         animText: loaderDisplay,
       });
+      handleEnter({
+        el: imageBlockRef,
+        image: imageRef,
+        display: "image",
+        delay: 0.09,
+        animText: loaderDisplay,
+      });
     }
   }, [reveal]);
 
@@ -87,9 +96,10 @@ const HeroProject = ({
             <MadeWith>
               With <></>
               {team.map((member, index) => {
+                console.log(index);
                 return (
                   <MadeWithLink key={index} target="_blank" href={member.url}>
-                    {member.name} ,
+                    {member.name} {index !== team.length - 1 ? "," : ""}
                   </MadeWithLink>
                 );
               })}
@@ -130,17 +140,19 @@ const HeroProject = ({
             </ContentContainer>
           </TagContainer>
         </TagWrapper>
-        <ImageContainer>
-          <ImageBlock
-            // placeholder="blur"
-            // width={"100%"}
-            // height={isMobile ? "100vh" : "60vh"}
-            // layout="fill"
-            alt="Project Image"
-            data-scroll
-            data-scroll-speed="-2"
-            src={img}
-          ></ImageBlock>
+        <ImageContainer ref={imageBlockRef}>
+          <ImageWrapper ref={imageRef}>
+            <ImageBlock
+              // placeholder="blur"
+              // width={"100%"}
+              // height={isMobile ? "100vh" : "60vh"}
+              layout="fill"
+              alt="Project Image"
+              data-scroll
+              data-scroll-speed="-2"
+              src={img}
+            ></ImageBlock>
+          </ImageWrapper>
         </ImageContainer>
       </Container>
     </Wrapper>
