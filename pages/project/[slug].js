@@ -24,6 +24,7 @@ export default function Projet({}) {
     slug: data.slug,
     title: data.title,
     info: data.info,
+    with: data?.with,
     color: data?.color,
     link: data.link,
     description: data.description,
@@ -43,9 +44,14 @@ export default function Projet({}) {
 
   if (slug && projectData) {
     return (
-      <Layout reducedFooter>
+      <Layout
+        title={`Portfolio - ${projectData.title} Project`}
+        description={`${projectData.description}`}
+        reducedFooter
+      >
         <Hero
           title={projectData.title}
+          team={projectData.with}
           content="Using"
           ctaLabel="See it live"
           infos={projectData.info}
@@ -142,7 +148,7 @@ export default function Projet({}) {
 
   if (slug && !projectData) {
     return (
-      <Layout noFooter={false}>
+      <Layout noFooter={true}>
         <FourOhFour />
       </Layout>
     );

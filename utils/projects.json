@@ -5,6 +5,16 @@
     "mobileCol": "1",
     "rowPos": "1",
     "mobileRow": "1",
+    "with": [
+      {
+        "name": "Robin",
+        "url": "/coucou"
+      },
+      {
+        "name": "Valentin",
+        "url": "/coucou"
+      }
+    ],
     "color": "#DDE3EF",
     "link": "https://www.google.com/",
     "title": "Vis ma ville",
@@ -49,6 +59,12 @@
     "mobileCol": "2",
     "rowPos": "1",
     "mobileRow": "1",
+    "with": [
+      {
+        "name": "Ultranoir",
+        "url": "https://www.ultranoir.com/"
+      }
+    ],
     "color": "#E8EAE7",
     "link": "https://www.cloudybay.com/",
     "title": "Cloudy Bay",
@@ -149,6 +165,16 @@
     "mobileCol": "4",
     "rowPos": "1",
     "mobielRow": "2",
+    "with": [
+      {
+        "name": "Valentin",
+        "url": "/val"
+      },
+      {
+        "name": "Robin",
+        "url": "/robin"
+      }
+    ],
     "link": "https://www.google.com/",
     "title": "Canlink Me",
     "info": ["Front-end developer", "03/03/2018"],
@@ -185,6 +211,20 @@
     "mobileRow": "3",
     "link": "https://app.selfer.fr/projects",
     "title": "Selfer App",
+    "with": [
+      {
+        "name": "Valentin",
+        "url": "/val"
+      },
+      {
+        "name": "Robin",
+        "url": "/robin"
+      },
+      {
+        "name": "Leo",
+        "url": "/leo"
+      }
+    ],
     "info": ["Front-end developer", "03/03/2018"],
     "description": "Selfer is a web app designed using React JS for the front-end and Symfony for the back-end. This Web App is a kind of CMS based on the Notion API. Via Selfer it is possible to generate a static site. A back-office is set up to edit / update the content that will be updated directly on the site. This Web App has been realized in a 10 days project.  We are still working on Selfer and plan to implement different features in the future.",
     "techno": ["React JS", "TypeScript", "Symfony"],
@@ -217,24 +257,30 @@
     "mobileCol": "2",
     "rowPos": "2",
     "mobileRow": "4",
+    "with": [
+      {
+        "name": "Chris",
+        "url": "/chris"
+      }
+    ],
     "link": "https://ddalos.vercel.app/",
     "title": "D'Dalos",
     "info": ["Front-end developer", "03/03/2018"],
     "description": "Ddalos is an immersive website aiming to showcase several models of boats made on Blender. This site was produced using Three JS. You can lock your mouse and then use the keys to discover the different 3D models.",
     "techno": ["Three.js"],
     "content1": {
-      "title": "It's all about the light",
-      "subtitle": "Close to reality",
-      "label": "Light",
-      "text1": "To produce this rendering, we had to export the different 3D models which are then imported (the 3D model is not optimized, hence the long loading time). Then, classic scheme, the scene is setup, the model is imported, the lights are placed correctly and we navigate in the scene.",
-      "text2": "Unfortunately, due to lack of time, the collisions and shadows have not been implemented but is still planned as part of the improvement of this project. To avoid staying in a black screen during the loading time of the scene, in the background, a kind of sunrise is visible."
+      "title": "The birth of D'Dalos",
+      "subtitle": "The mixture of several know-hows",
+      "label": "New",
+      "text1": "This project was done as part of a school project where we had to choose 2 brands, merge them into one and find a new area of expertise related to both. We chose to take Bentley & Dior as references. Bentley for the power of their engine as well as their knowledge in engineering and Dior to represent the elegant and luxurious side.",
+      "text2": "The mixture of these 2 brands gave birth to D'Dalos, a luxury yacht builder. During this project we created our own graphic identity (logo, graphic charter) as well as a fictitious story to explain the appearance of D'Dalos. The final goal was to present our yachts' realizations through a showroom, whatever it is."
     },
     "content2": {
-      "title": "Titre de la section",
-      "subtitle": "Sous-titre de la section",
-      "label": "Hire me",
-      "text1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
-      "text2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+      "title": "An immersive showroom",
+      "subtitle": "A new way to present your products",
+      "label": "Innovation",
+      "text1": "Following the different stages of conception of our brand and analysis. It was time to move on to the realization and to think how to present our boats through a showroom. It is thus here that we came up with the idea of presenting it through an interactive website where the user will be able to visit, as he wishes, the different models.",
+      "text2": "For the realization of the site we divided the task to two, Chris took care of all the modeling aspect of the various boats (some not being completely made from scratch). And I was in charge of creating the immersive site to present his models. Due to lack of time, collisions and shadows have not been added but still remains a track of improvement."
     },
     "images": {
       "hero": "/ddalos/hero-section.png",
@@ -249,6 +295,20 @@
     "slug": "eclipse",
     "colPos": "11",
     "mobileCol": "3",
+    "with": [
+      {
+        "name": "Ines",
+        "url": "/ines"
+      },
+      {
+        "name": "Robin",
+        "url": "/robin"
+      },
+      {
+        "name": "Valentin",
+        "url": "/val"
+      }
+    ],
     "rowPos": "2",
     "mobileRow": "4",
     "link": "https://eclipse-one.vercel.app/",

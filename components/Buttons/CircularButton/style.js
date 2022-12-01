@@ -4,7 +4,7 @@ import { css } from "@emotion/react";
 import { maxMedia, title } from "styles/mixins";
 
 export const Container = styled.div``;
-export const ButtonStyle = styled.span`
+export const ButtonStyle = styled.button`
   display: inline-block;
   padding: 0.5rem;
   cursor: none;
@@ -21,8 +21,19 @@ export const ButtonStyle = styled.span`
     background: ${({ theme }) => theme.colors.lime};
     color: ${({ theme }) => theme.colors.grey1};
     transition: all 0.3s ease-out;
+    border-style: dashed;
   }
 
+  &:focus {
+    background: ${({ theme }) => theme.colors.black};
+    color: ${({ theme }) => theme.colors.grey2};
+    border-color: ${({ theme }) => theme.colors.lime};
+
+    /* svg {
+        stroke: ${({ theme }) => theme.colors.grey2};
+        path: ${({ theme }) => theme.colors.grey2};
+      } */
+  }
   ${maxMedia.small} {
     font-size: 1.35rem;
     padding: 1rem;

@@ -1,5 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
 
+import { useRecoilValue } from "recoil";
+import { loaderState } from "recoil/loaderState.js";
+
 import TitleSection from "@/components/Popup/SectionTitle";
 import Button from "@/components/Buttons/Button";
 import CircularButton from "@/components/Buttons/CircularButton";
@@ -25,7 +28,7 @@ import {
   ButtonContainer,
 } from "./style.js";
 
-const Footer = ({ number }) => {
+const Footer = ({ number, contact }) => {
   const titleRef = useRef(null);
   const imageRef = useRef(null);
   const imageContainerRef = useRef(null);
@@ -38,21 +41,17 @@ const Footer = ({ number }) => {
   const pinRef = useRef(null);
   const sectionTitleRef = useRef(null);
 
+  const loaderDisplay = useRecoilValue(loaderState);
   const onScreenTitle = useOnScreen(titleRef, 0.7);
-  const onScreenImage = useOnScreen(imageContainerRef, 0.7);
   const onScreenNav = useOnScreen(navRef, 0.7);
 
   const [activeMessage, setActiveMessage] = useState(false);
   const [reveal, setReveal] = useState(false);
-  const [revealImg, setRevealImg] = useState(false);
   const [revealNav, setRevealNav] = useState(false);
+  const [pressedButton, setPressedButton] = useState("");
   useEffect(() => {
     if (onScreenTitle) setReveal(onScreenTitle);
   }, [onScreenTitle]);
-
-  useEffect(() => {
-    if (onScreenImage) setRevealImg(onScreenImage);
-  }, [onScreenImage]);
 
   useEffect(() => {
     if (onScreenNav) setRevealNav(onScreenNav);
@@ -63,31 +62,28 @@ const Footer = ({ number }) => {
       handleEnter({
         text: titleRef,
         display: "title",
+        animText: loaderDisplay,
       });
       handleEnter({
         text: sectionTitleRef,
         display: "title",
+        animText: loaderDisplay,
       });
       handleEnter({
         el: pinRef,
         display: "pin",
         delay: 0.7,
-        // animText: loaderDisplay,
+        animText: loaderDisplay,
       });
-    }
-  }, [reveal]);
-
-  useEffect(() => {
-    console.log(revealImg);
-    if (revealImg) {
       handleEnter({
         el: imagePathRef,
         image: imageRef,
         display: "image",
-        delay: 0,
+        delay: 0.09,
+        animText: loaderDisplay,
       });
     }
-  }, [revealImg]);
+  }, [reveal]);
 
   useEffect(() => {
     if (revealNav) {
@@ -95,21 +91,25 @@ const Footer = ({ number }) => {
         el: contactRef1,
         display: "tag",
         delay: 0.4,
+        animText: loaderDisplay,
       });
       handleEnter({
         el: contactRef2,
         display: "tag",
         delay: 0.5,
+        animText: loaderDisplay,
       });
       handleEnter({
         el: contactRef3,
         display: "tag",
         delay: 0.6,
+        animText: loaderDisplay,
       });
       handleEnter({
         el: contactRef4,
         display: "tag",
         delay: 0.7,
+        animText: loaderDisplay,
       });
     }
   }, [revealNav]);
@@ -117,6 +117,7 @@ const Footer = ({ number }) => {
 
   const copyToClipboard = (_) => {
     setActiveMessage(true);
+    setPressedButton;
     navigator.clipboard.writeText("contact@solimanalhalaby.fr");
     setTimeout(() => {
       setActiveMessage(false);
@@ -127,31 +128,33 @@ const Footer = ({ number }) => {
     {
       label: "linkedin",
       link: "https://www.linkedin.com/in/soliman-al-halaby/",
+      target: "_blank",
     },
     {
-      label: "linkedin",
-      link: "https://www.linkedin.com/in/soliman-al-halaby/",
-    },
-    {
-      label: "linkedin",
-      link: "https://www.linkedin.com/in/soliman-al-halaby/",
+      label: "Github",
+      link: "https://github.com/Soliman-Halaby",
+      target: "_blank",
     },
   ];
 
   return (
     <Wrapper data-scroll-section>
       <TitleContainer>
-        <Title ref={titleRef}>Soliman Al Halaby</Title>
+        <Title display={contact} ref={titleRef}>
+          Soliman Al Halaby
+        </Title>
         <Pin
           ref={pinRef}
           top={isMobile ? "14.5" : "13"}
           left={isMobile ? "10" : "75"}
           label="get in touch"
+          email={true}
+          // action={() => copyToClipboard()}
         />
       </TitleContainer>
       <TitleSection
         ref={sectionTitleRef}
-        top="23"
+        top="32"
         left="20"
         number={number}
         title="Contact"
@@ -173,7 +176,13 @@ const Footer = ({ number }) => {
               <Content>Find me on</Content>
               <ButtonContainer>
                 {socials.map((data, i) => (
-                  <Button to={data.link} key={i} index={i} label={data.label} />
+                  <Button
+                    target={data.target}
+                    to={data.link}
+                    key={i}
+                    index={i}
+                    label={data.label}
+                  />
                 ))}
               </ButtonContainer>
             </RowContainer>

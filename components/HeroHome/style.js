@@ -43,11 +43,12 @@ export const Container = styled.div`
 export const TitleContainer = styled.div`
   position: relative;
 `;
-export const Title = styled.h2`
+export const Title = styled.h1`
   ${TitleSection()}
   margin: 2.5rem 0;
   line-height: 6.5rem;
 
+  opacity: 0;
   position: relative;
   text-align: ${({ alignRight }) => (alignRight ? `right` : `initial`)};
 
@@ -63,17 +64,26 @@ export const Title = styled.h2`
 export const ImageWrapper = styled.div`
   width: 100%;
   max-height: 90vh;
+  height: 90vh;
   overflow: hidden;
   transform-origin: center;
+  position: relative;
 
+  clip-path: polygon(35% 0px, 65% 0px, 65% 100%, 35% 100%);
+  transition: all 0.4s ease-in-out;
   ${maxMedia.xs} {
     height: 60vh;
   }
+`;
 
-  span span {
-    ${maxMedia.xs} {
-      padding-top: 60vh !important;
-    }
+export const ImageContainer = styled.div`
+  width: 100%;
+  height: 90vh;
+  transform: scale(1.15);
+  transition: all 0.3s ease-in-out;
+
+  ${maxMedia.xs} {
+    height: 60vh;
   }
 `;
 export const BlockImage = styled(Image)`

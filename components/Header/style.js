@@ -27,12 +27,17 @@ export const MainLink = styled.span`
   font-family: ${({ theme }) => theme.fonts.sansSerif};
   // color: ${({ theme }) => theme.colors.grey2} !important;
   font-weight: 300;
-  a {
+  a,
+  p {
     color: ${({ theme }) => theme.colors.grey2};
     text-decoration: none;
     position: relative;
     cursor: none;
     padding-bottom: 3px;
+
+    ${maxMedia.small} {
+      padding-bottom: 0;
+    }
 
     &:after {
       content: "";
@@ -59,6 +64,10 @@ export const MainLink = styled.span`
 `;
 
 export const NavLink = styled(Link)`
+  cursor: none;
+`;
+
+export const NavElement = styled.p`
   cursor: none;
 `;
 export const MenuDisplay = styled.p`
@@ -103,8 +112,10 @@ export const SubNav = styled.div`
   background: ${({ theme }) => theme.colors.grey2};
   will-change: transform;
   transition: opacity 0.3s ease;
+  overflow: visible;
   &.opened {
     opacity: 1;
+    overflow: hidden;
     pointer-events: all;
   }
 `;

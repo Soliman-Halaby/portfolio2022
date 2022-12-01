@@ -41,7 +41,7 @@ const ProjectWork = ({}) => {
     }
   }, [reveal]);
   return (
-    <Wrapper data-scroll-section>
+    <Wrapper className="selected-work" data-scroll-section>
       <Container>
         <Title ref={titleRef}>Selected works</Title>
         <ContainerGrid>

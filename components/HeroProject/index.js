@@ -1,18 +1,25 @@
 import React, { useState, useRef, useEffect } from "react";
 
+import { useRecoilValue } from "recoil";
+import { loaderState } from "recoil/loaderState.js";
 import Tag from "@/components/Popup/Tag";
 import Button from "@/components/Buttons/Button";
 
 import useOnScreen from "hook/index.js";
+
+import { useIsMobile } from "hook/index.js";
 import { handleEnter } from "./animation.js";
 
 import {
   Wrapper,
   Container,
-  Title,
   TitleContainer,
+  Title,
+  MadeWith,
+  MadeWithLink,
+  ImageWrapper,
   ImageContainer,
-  Image,
+  ImageBlock,
   TagWrapper,
   TagContainer,
   TagElementsContainer,
@@ -27,6 +34,7 @@ const HeroProject = ({
   tags,
   title,
   content,
+  team,
   infos,
   description,
   to,
@@ -37,8 +45,12 @@ const HeroProject = ({
   const titleRef = useRef(null);
   const tagRef = useRef(null);
   const contentRef = useRef(null);
+  const imageBlockRef = useRef(null);
+  const imageRef = useRef(null);
+  const loaderDisplay = useRecoilValue(loaderState);
   const onScreenTitle = useOnScreen(revealRef);
 
+  const isMobile = useIsMobile();
   const [reveal, setReveal] = useState(false);
 
   useEffect(() => {
@@ -50,16 +62,26 @@ const HeroProject = ({
       handleEnter({
         text: titleRef,
         display: "title",
+        animText: loaderDisplay,
       });
       handleEnter({
         el: tagRef,
         display: "tag",
         delay: 0.3,
+        animText: loaderDisplay,
       });
       handleEnter({
         el: contentRef,
         display: "tag",
         delay: 0.6,
+        animText: loaderDisplay,
+      });
+      handleEnter({
+        el: imageBlockRef,
+        image: imageRef,
+        display: "image",
+        delay: 0.09,
+        animText: loaderDisplay,
       });
     }
   }, [reveal]);
@@ -70,6 +92,19 @@ const HeroProject = ({
       <Container>
         <TitleContainer>
           <Title ref={titleRef}>{title}</Title>
+          {team && (
+            <MadeWith>
+              With <></>
+              {team.map((member, index) => {
+                console.log(index);
+                return (
+                  <MadeWithLink key={index} target="_blank" href={member.url}>
+                    {member.name} {index !== team.length - 1 ? "," : ""}
+                  </MadeWithLink>
+                );
+              })}
+            </MadeWith>
+          )}
         </TitleContainer>
         <TagWrapper>
           <TagElementsContainer>
@@ -105,13 +140,19 @@ const HeroProject = ({
             </ContentContainer>
           </TagContainer>
         </TagWrapper>
-        <ImageContainer>
-          <Image
-            alt="Project Image"
-            data-scroll
-            data-scroll-speed="-2"
-            src={img}
-          ></Image>
+        <ImageContainer ref={imageBlockRef}>
+          <ImageWrapper ref={imageRef}>
+            <ImageBlock
+              // placeholder="blur"
+              // width={"100%"}
+              // height={isMobile ? "100vh" : "60vh"}
+              layout="fill"
+              alt="Project Image"
+              data-scroll
+              data-scroll-speed="-2"
+              src={img}
+            ></ImageBlock>
+          </ImageWrapper>
         </ImageContainer>
       </Container>
     </Wrapper>

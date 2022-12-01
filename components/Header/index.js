@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useRouter } from "next/router.js";
 import { useLocomotiveScroll } from "react-locomotive-scroll";
 
 // import Link from "next/link";
@@ -18,6 +19,7 @@ import {
   MainLink,
   NavItem,
   NavLink,
+  NavElement,
   MenuDisplay,
   SubNav,
   SubNavItemsContainer,
@@ -31,14 +33,13 @@ const Header = () => {
   const setCursorHover = useSetRecoilState(cursorHover);
   const resetCursor = useResetRecoilState(cursorHover);
 
+  const router = useRouter();
   const displayMenu = () => {
-    // console.log("menu");
-    // console.log(scroll.scroll);
     scroll.scroll.stop();
     if (menuDisplay === "hidden") {
       setMenuDisplay("opened");
       document.body.style.overflow = "hidden";
-      scroll.scroll.stop();
+      // scroll.scroll.stop();
 
       if (isMobile) {
         document.body.style.overflow = "hidden";
@@ -53,33 +54,16 @@ const Header = () => {
   };
 
   useEffect(() => {
-    document.body.style.overflow = "visible";
-  }, []);
-  useEffect(() => {
     if (!isMobile) {
       document.body.style.overflow = "visible";
       setMenuDisplay("hidden");
     }
   }, [isMobile]);
 
-  const navDatas = [
-    {
-      label: "About",
-      link: "/about",
-    },
-    {
-      label: "Work",
-      link: "../project/cloudy-bay",
-    },
-    {
-      label: "Contact",
-      link: "/contact",
-    },
-  ];
-
   const subnavSelected = () => {
-    console.log("subnav selected");
     document.body.style.overflow = "visible";
+    setMenuDisplay("hidden");
+    scroll.scroll.start();
   };
 
   const cursorRotation = () => {
@@ -90,6 +74,22 @@ const Header = () => {
     setCursorHover("");
   };
 
+  const scrollToWork = () => {
+    setMenuDisplay("hidden");
+    if (router.pathname === "/") {
+      const selectedWork = document.querySelector(".selected-work");
+      if (isMobile) {
+        document.body.style.overflow = "visible";
+        selectedWork.scrollIntoView(true);
+      } else {
+        scroll.scroll.scrollTo(selectedWork, {
+          offset: -selectedWork.offsetHeight / 2,
+        });
+      }
+    } else {
+      router.push("/");
+    }
+  };
   return (
     <HeaderContainer>
       <Nav>
@@ -121,17 +121,25 @@ const Header = () => {
           </NavItem>
         ) : (
           <NavItem>
-            {navDatas.map((data, index) => {
-              return (
-                <MainLink
-                  onMouseLeave={resetCursor}
-                  onMouseEnter={() => cursorRotation()}
-                  key={index}
-                >
-                  <NavLink href={data.link}>{data.label}</NavLink>
-                </MainLink>
-              );
-            })}
+            <MainLink
+              onMouseLeave={resetCursor}
+              onMouseEnter={() => cursorRotation()}
+            >
+              <NavLink href="/about">About</NavLink>
+            </MainLink>
+            <MainLink
+              onMouseLeave={resetCursor}
+              onMouseEnter={() => cursorRotation()}
+              onClick={() => scrollToWork()}
+            >
+              <NavElement>Work</NavElement>
+            </MainLink>
+            <MainLink
+              onMouseLeave={resetCursor}
+              onMouseEnter={() => cursorRotation()}
+            >
+              <NavLink href="/contact">Contact</NavLink>
+            </MainLink>
           </NavItem>
         )}
       </Nav>
@@ -142,13 +150,14 @@ const Header = () => {
             <MainLink onClick={() => subnavSelected()}>
               <NavLink href="/">Home</NavLink>
             </MainLink>
-            {navDatas.map((data, index) => {
-              return (
-                <MainLink onClick={() => subnavSelected()} key={index}>
-                  <NavLink href={data.link}>{data.label}</NavLink>
-                </MainLink>
-              );
-            })}
+            <MainLink onClick={() => subnavSelected()}>
+              <NavLink href="./about">About</NavLink>
+            </MainLink>
+            {/* <MainLink onClick={() => scrollToWork()}> */}
+            <MainLink onClick={() => scrollToWork()}>Work</MainLink>
+            <MainLink onClick={() => subnavSelected()}>
+              <NavLink href="./contact">Contact</NavLink>
+            </MainLink>
           </ItemsContainer>
           <FooterNav />
         </SubNavItemsContainer>

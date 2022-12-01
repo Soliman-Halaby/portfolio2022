@@ -20,6 +20,7 @@ import {
   TitleContainer,
   BlockImage,
   ImageWrapper,
+  ImageContainer,
   Text,
 } from "./style.js";
 
@@ -32,7 +33,8 @@ const HeroHome = ({ title, subtitle, sectionTitle, label, image }) => {
   const sectionTitleRef = useRef(null);
   const sectionNumberRef = useRef(null);
   const pinRef = useRef(null);
-
+  const imageBlockRef = useRef(null);
+  const imageRef = useRef(null);
   const isMobile = useIsMobile();
   const onScreenTitle = useOnScreen(titleRef);
   const [reveal, setReveal] = useState(false);
@@ -67,16 +69,34 @@ const HeroHome = ({ title, subtitle, sectionTitle, label, image }) => {
         el: pinRef,
         display: "tag",
         delay: 0.7,
-        // animText: loaderDisplay,
+        animText: loaderDisplay,
+      });
+      handleEnter({
+        el: imageBlockRef,
+        image: imageRef,
+        display: "image",
+        delay: 0.09,
+        animText: loaderDisplay,
       });
     }
   }, [reveal]);
 
+  const scrollToWork = () => {
+    const selectedWork = document.querySelector(".selected-work");
+    if (isMobile) {
+      document.body.style.overflow = "visible";
+      selectedWork.scrollIntoView(true);
+    } else {
+      scroll.scroll.scrollTo(selectedWork, {
+        offset: -selectedWork.offsetHeight / 2,
+      });
+    }
+  };
   return (
     <Wrapper data-scroll-section>
       <TitleSection
         ref={sectionTitleRef}
-        ref2={sectionNumberRef}
+        // ref2={sectionNumberRef}
         top={isMobile ? "11.5" : "25"}
         number="01"
         title={sectionTitle}
@@ -106,7 +126,7 @@ const HeroHome = ({ title, subtitle, sectionTitle, label, image }) => {
           // className="hero_pin-section"
           label={label}
         />
-        <Text>
+        <Text onClick={() => scrollToWork()}>
           Scroll
           <svg
             width={12}
@@ -120,17 +140,17 @@ const HeroHome = ({ title, subtitle, sectionTitle, label, image }) => {
             />
           </svg>
         </Text>
-        <ImageWrapper className="image-wrapper">
-          <BlockImage
-            data-scroll
-            data-scroll-speed="-2"
-            layout="responsive"
-            placeholder="blur"
-            width={"100%"}
-            height={"90vh"}
-            src={image}
-            alt="Img"
-          />
+        <ImageWrapper ref={imageBlockRef} className="image-wrapper">
+          <ImageContainer ref={imageRef}>
+            <BlockImage
+              data-scroll
+              data-scroll-speed="-2"
+              layout="fill"
+              placeholder="blur"
+              src={image}
+              alt="Img"
+            />
+          </ImageContainer>
         </ImageWrapper>
       </Container>
     </Wrapper>

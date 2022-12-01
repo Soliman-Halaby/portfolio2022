@@ -1,8 +1,8 @@
 import styled from "@emotion/styled";
 import { css } from "@emotion/react";
-
+import Image from "next/image";
 // import {Title as TitleSection} from "@/components/Popup/SectionTitle/style";
-
+import Link from "next/link";
 import { maxMedia, TitleSection, Paragraph } from "styles/mixins";
 import { ButtonStyle } from "../Buttons/Button/style";
 
@@ -24,18 +24,63 @@ export const Container = styled.div`
   margin: ${({ theme }) => theme.margin.medium};
 `;
 
-export const TitleContainer = styled.div``;
+export const TitleContainer = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+`;
 
 export const Title = styled.h2`
   ${TitleSection()}
 
+  opacity: 0;
+  line-height: 6.5rem;
   position: relative;
   text-align: ${({ alignRight }) => (alignRight ? `right` : `initial`)};
   // white-space: pre-line;
-  .hero_pin-section {
-    top: 30%;
-    right: 10%;
-    left: inherit;
+`;
+
+export const MadeWith = styled.div`
+  padding: 0.3rem;
+  font-size: 1rem;
+  color: ${({ theme }) => theme.colors.grey1};
+  font-family: ${({ theme }) => theme.fonts.sansSerif};
+  max-width: 110px;
+  text-transform: uppercase;
+
+  ${maxMedia.small} {
+    font-size: 1rem;
+  }
+`;
+
+export const MadeWithLink = styled.a`
+  cursor: none;
+  color: ${({ theme }) => theme.colors.grey1};
+
+  text-decoration: none;
+  position: relative;
+  cursor: none;
+  padding-bottom: 3px;
+
+  ${maxMedia.small} {
+    padding-bottom: 0;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 80%;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: ${({ theme }) => theme.colors.grey1};
+    transition: width ease-out 0.3s;
+  }
+
+  &:hover {
+    &:after {
+      width: 100%;
+    }
   }
 `;
 
@@ -142,19 +187,47 @@ export const ImageContainer = styled.div`
   height: 90vh;
   overflow: hidden;
 
+  clip-path: polygon(35% 0px, 65% 0px, 65% 100%, 35% 100%);
+  transition: all 0.4s ease-in-out;
   ${maxMedia.small} {
     height: 60vh;
   }
 `;
 
-export const Image = styled.img`
-  position: absolute;
+export const ImageWrapper = styled.div`
+  width: 100%;
+  height: 90vh;
+  transform: scale(1.15);
+  transition: transform 0.3s ease-in-out;
+
+  ${maxMedia.small} {
+    height: 60vh;
+  }
+`;
+// export const ImageBlock = styled.img`
+//   position: absolute;
+//   top: 0%;
+//   right: 0%;
+
+//   inset: 0;
+//   width: 100%;
+//   height: 100%;
+//   object-fit: cover;
+//   ${maxMedia.small} {
+//     height: 60vh;
+//   }
+// `;
+
+export const ImageBlock = styled(Image)`
+  /* position: absolute;
   top: 0%;
-  right: 0%;
-  inset: 0;
+  right: 0%; */
+
+  /* inset: 0; */
+  /* transform: scale(1.3) !important; */
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover !important;
   ${maxMedia.small} {
     height: 60vh;
   }

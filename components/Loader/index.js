@@ -56,7 +56,7 @@ const Loader = ({}) => {
           return Math.min(oldProgress + Math.round(diff), 100);
         }
       });
-    }, 200);
+    }, 150);
 
     return () => {
       clearInterval(timer);

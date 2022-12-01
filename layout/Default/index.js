@@ -1,7 +1,7 @@
 import { useRef, useEffect } from "react";
 import { useRouter } from "next/router";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
-
+import Head from "next/head";
 import { RecoilRoot, useRecoilValue } from "recoil";
 import { loaderState } from "recoil/loaderState";
 
@@ -26,16 +26,18 @@ export default function Layout({
   cursorWidth = 16,
   cursorHeight = 18,
   number = "01",
+  title,
+  description,
+  contact,
 }) {
   const containerRef = useRef(null);
 
   const router = useRouter();
-  console.log(router);
   const loaderDisplay = useRecoilValue(loaderState);
   const isMobile = useIsMobile();
 
   const onPageEnter = (element) => {
-    console.log("enter");
+    console.log("exit");
     gsap.fromTo(
       element,
       {
@@ -53,7 +55,7 @@ export default function Layout({
   };
 
   const onPageExit = (element) => {
-    console.log("exit");
+    // console.log("exit");
     gsap.fromTo(
       element,
       {
@@ -72,13 +74,14 @@ export default function Layout({
 
   // console.log(route);
 
+  console.log("router", router);
   return (
     <LocomotiveScrollProvider
       options={{
         smooth: true,
         smartphone: { smooth: false },
         tablet: { smooth: true },
-        reloadOnContextChange: true,
+        // reloadOnContextChange: true,
       }}
       watch={[router.asPath]}
       containerRef={containerRef}
@@ -87,13 +90,29 @@ export default function Layout({
       }
     >
       {loaderDisplay && <Loader />}
+      <Head>
+        <title>{title}</title>
+        <meta property="og:title" content={title} key="title" />
+        {/* <meta property="og:image" content="./assets/images/solimanImage.png"> */}
+        <meta property="og:description" content={description} />
+        <meta
+          property="og:url"
+          content={`https://www.solimanalhalaby.fr${router.asPath}`}
+        />
+        <meta property="og:site_name" content={title} />
+        <meta property="og:type" content="website" />
+        <link
+          rel="canonical"
+          href={`https://www.solimanalhalaby.fr${router.asPath}`}
+        />
+      </Head>
       <main data-scroll-container ref={containerRef}>
         <Header />
         <Container>
           <SwitchTransition>
             <Transition
               key={router.asPath}
-              timeout={500}
+              timeout={800}
               in={true}
               onEnter={onPageEnter}
               onExit={onPageExit}
@@ -107,7 +126,7 @@ export default function Layout({
                 {noFooter ? null : reducedFooter ? (
                   <FooterReduced />
                 ) : (
-                  <Footer number={number} />
+                  <Footer contact={contact} number={number} />
                 )}
               </App>
             </Transition>

@@ -8,29 +8,12 @@ import Hero from "@/components/HeroHome";
 import ProjectWork from "@/components/Work";
 
 export default function Home() {
-  const [timer, setTimer] = useState(3);
-
-  const id = useRef(null);
-  const clear = () => {
-    window.clearInterval(id.current);
-    setLoader(false);
-  };
-
-  // useEffect(() => {
-  //   setLoaderDisplay(sessionStorage.getItem("loader"));
-  //   id.current = window.setInterval(() => {
-  //     setTimer((timer) => timer - 1);
-  //   }, 10000000);
-  // }, []);
-
-  useEffect(() => {
-    if (timer === 0) {
-      clear();
-    }
-  }, [timer]);
-
   return (
-    <Layout number="03">
+    <Layout
+      title="Soliman Al Halaby - Home"
+      description="I'm Soliman, a twenty one years old fullstack developer currently based in Paris. Discover my different projects by visiting my Portfolio!"
+      number="03"
+    >
       {/* {loader ? (
         <div className="loader-wrapper absolute">
           <h1>Loader</h1>

@@ -27,7 +27,7 @@ const Footer = () => {
   const scroll = useLocomotiveScroll();
 
   useEffect(() => {
-    console.log(scroll);
+    // console.log(scroll);
   }, [scroll]);
 
   const copyToClipboard = (_) => {
