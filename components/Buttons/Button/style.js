@@ -3,7 +3,7 @@ import { css } from "@emotion/react";
 
 import { maxMedia, title } from "styles/mixins";
 
-export const ButtonStyle = styled.span`
+export const ButtonStyle = styled.button`
   display: inline-block;
   padding: 0.5rem;
   /* padding-top: 0.8rem; */
@@ -29,20 +29,27 @@ export const ButtonStyle = styled.span`
 
   &:hover {
     ${({ rounded }) => (rounded ? "33px" : "5px")};
-    background: ${({ emailBg, theme }) =>
-      emailBg ? theme.colors.black : theme.colors.lime};
-    border: 1px solid
-      ${({ emailBg, theme }) =>
-        emailBg ? theme.colors.lime : theme.colors.grey1};
+    background: ${({ theme }) => theme.colors.lime};
+    border: 1px solid ${({ theme }) => theme.colors.grey1};
     border-style: dashed;
-    color: ${({ emailBg, theme }) =>
-      emailBg ? theme.colors.grey2 : theme.colors.grey1};
+    color: ${({ theme }) => theme.colors.grey1};
     transition: background 0.3s ease;
 
     /* svg path {
       stroke: ${({ rounded, colored, theme }) =>
       rounded || colored ? `${theme.colors.grey1}` : `${theme.colors.grey2}`};
     } */
+
+    &:focus {
+      background: ${({ theme }) => theme.colors.black};
+      color: ${({ theme }) => theme.colors.grey2};
+      border-color: ${({ theme }) => theme.colors.lime};
+
+      /* svg {
+        stroke: ${({ theme }) => theme.colors.grey2};
+        path: ${({ theme }) => theme.colors.grey2};
+      } */
+    }
   }
 
   ${maxMedia.small} {
