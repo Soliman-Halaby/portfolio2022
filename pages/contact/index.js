@@ -5,6 +5,7 @@ export default function Contact() {
     <Layout
       title="Soliman Al Halaby - Contact"
       description="I am always available if you wish to get in touch."
+      contact
     ></Layout>
   );
 }

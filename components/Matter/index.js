@@ -330,6 +330,23 @@ const MatterComponent = ({}) => {
     }
   };
 
+  useEffect(() => {
+    // Detect if click outside detail box
+    function handleClickOutside(event) {
+      if (detailRef.current && !detailRef.current.contains(event.target)) {
+        if (detail === "opened") {
+          console.log("yo");
+          setDetail("closed");
+        }
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [detailRef, detail]);
+
   return (
     <MatterContainer ref={scene}>
       <SceneContainer />
@@ -346,6 +363,7 @@ const MatterComponent = ({}) => {
             </Box>
           );
         })}
+        {/* {detail === "opened" && ( */}
         <Detail className={detail} ref={detailRef}>
           <DetailContainer>
             <CloseBtnContainer>
@@ -385,6 +403,7 @@ const MatterComponent = ({}) => {
             </OtherFactsContainer>
           </DetailContainer>
         </Detail>
+        {/* )} */}
         <Ground />
       </Fragment>
       <Title>

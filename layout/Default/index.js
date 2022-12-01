@@ -28,16 +28,16 @@ export default function Layout({
   number = "01",
   title,
   description,
+  contact,
 }) {
   const containerRef = useRef(null);
 
   const router = useRouter();
-  console.log(router);
   const loaderDisplay = useRecoilValue(loaderState);
   const isMobile = useIsMobile();
 
   const onPageEnter = (element) => {
-    console.log("enter");
+    console.log("exit");
     gsap.fromTo(
       element,
       {
@@ -55,7 +55,7 @@ export default function Layout({
   };
 
   const onPageExit = (element) => {
-    console.log("exit");
+    // console.log("exit");
     gsap.fromTo(
       element,
       {
@@ -101,6 +101,10 @@ export default function Layout({
         />
         <meta property="og:site_name" content={title} />
         <meta property="og:type" content="website" />
+        <link
+          rel="canonical"
+          href={`https://www.solimanalhalaby.fr${router.asPath}`}
+        />
       </Head>
       <main data-scroll-container ref={containerRef}>
         <Header />
@@ -108,7 +112,7 @@ export default function Layout({
           <SwitchTransition>
             <Transition
               key={router.asPath}
-              timeout={500}
+              timeout={800}
               in={true}
               onEnter={onPageEnter}
               onExit={onPageExit}
@@ -122,7 +126,7 @@ export default function Layout({
                 {noFooter ? null : reducedFooter ? (
                   <FooterReduced />
                 ) : (
-                  <Footer number={number} />
+                  <Footer contact={contact} number={number} />
                 )}
               </App>
             </Transition>

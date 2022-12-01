@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 import { maxMedia } from "styles/mixins";
 
 import Image from "next/image";
-export const Box = styled.div`
+export const Box = styled.button`
   position: absolute;
   /* background: #111; */
   /* height: 40px;
@@ -14,6 +14,8 @@ export const Box = styled.div`
   background: ${({ theme }) => theme.colors.grey2};
   text-transform: uppercase;
   z-index: 2;
+  color: ${({ theme }) => theme.colors.grey1};
+
   font-family: ${({ theme }) => theme.fonts.sansSerif};
   font-weight: 300;
   border-radius: 8px;
@@ -28,6 +30,24 @@ export const Box = styled.div`
     padding: 5px 20px;
   }
 
+  &:hover {
+    background: ${({ theme }) => theme.colors.lime};
+    transition: background 0.3s ease-out;
+    border-style: dashed;
+  }
+
+  &:focus {
+    border-style: dashed;
+    background: ${({ theme }) => theme.colors.black};
+    color: ${({ theme }) => theme.colors.grey2};
+    border-color: ${({ theme }) => theme.colors.lime};
+
+    /* svg {
+        stroke: ${({ theme }) => theme.colors.grey2};
+        path: ${({ theme }) => theme.colors.grey2};
+      } */
+  }
+
   ${maxMedia.xs} {
     font-size: 7vw;
   }
@@ -36,9 +56,6 @@ export const Box = styled.div`
 export const SceneContainer = styled.div`
   width: 100vw;
   /* overflow: hidden; */
-  canvas {
-    opacity: 0;
-  }
 `;
 export const Ground = styled.div`
   position: absolute;
@@ -73,17 +90,17 @@ export const Title = styled.h2`
 
 export const Detail = styled.div`
   position: absolute;
-  bottom: 77.5px;
+  bottom: -100%;
   pointer-events: none;
   right: 0;
   user-select: none;
   /* display: none; */
   width: 50vw;
-  height: 60vh;
-  z-index: 9;
+  height: 0px;
+  z-index: 99;
   margin-right: 2rem;
-  padding: 3rem;
-  transform: translateY(100%);
+  /* padding: 3rem; */
+  /* transform: translateY(100%); */
   visibility: hidden;
   /* display: none; */
   /* opacity: 0; */
@@ -94,7 +111,11 @@ export const Detail = styled.div`
   &.opened {
     pointer-events: all;
     visibility: visible;
-    transform: translateY(0%);
+    padding: 3rem;
+
+    bottom: 0px;
+    height: 60vh;
+    /* transform: translateY(0%); */
     /* display: block; */
     /* opacity: 1; */
   }
@@ -115,10 +136,10 @@ export const Label = styled.h2`
   font-family: ${({ theme }) => theme.fonts.sansSerif};
   font-size: 3rem;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   border: 1px solid ${({ theme }) => theme.colors.grey1};
   border-style: dashed;
   background: ${({ theme }) => theme.colors.grey2};
@@ -151,6 +172,9 @@ export const OtherFactsContainer = styled.div`
   bottom: 0;
 `;
 export const MatterContainer = styled.div`
+  canvas {
+    opacity: 0;
+  }
   z-index: 1;
   width: 100vw;
   height: 100vh;

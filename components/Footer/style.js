@@ -41,6 +41,7 @@ export const Title = styled.h3`
   font-weight: 400;
   text-align: center;
   margin: 2.5rem 0;
+  margin-top: ${({ display }) => (display ? "4rem" : "0")};
   // margin-left: ${({ theme }) => theme.margin.medium};
   letter-spacing: 0.15rem;
   ${maxMedia.small} {
@@ -103,7 +104,7 @@ export const SubContainer = styled.div`
     ${maxMedia.xs} {
       /* height: ${({ display }) =>
         display === "normal" ? "40vh" : "90vh"}; */
-      height: 40vh;
+      height: 36vh;
     }
   }
 `;
@@ -148,12 +149,21 @@ export const FooterNav = styled.div`
   // padding-left: 5%;
   // padding-bottom: 5%;
   width: 100%;
-  margin-left: ${({ theme }) => theme.margin.medium};
+  padding-left: ${({ theme }) => theme.margin.medium};
+  padding-bottom: ${({ theme }) => theme.margin.medium};
 
   ${Text} {
     &:nth-of-type(1) {
       opacity: 0;
     }
+  }
+`;
+
+export const Content = styled(Text)`
+  width: 100px;
+
+  ${maxMedia.xs} {
+    width: 120px;
   }
 `;
 
@@ -166,13 +176,11 @@ export const RowContainer = styled.div`
   &:nth-of-type(1) {
     overflow: visible;
   }
-`;
 
-export const Content = styled(Text)`
-  width: 100px;
-
-  ${maxMedia.xs} {
-    width: 120px;
+  &:nth-of-type(3) {
+    ${Content} {
+      margin-bottom: 0;
+    }
   }
 `;
 export const TitleContainer = styled.div`

@@ -28,7 +28,7 @@ import {
   ButtonContainer,
 } from "./style.js";
 
-const Footer = ({ number }) => {
+const Footer = ({ number, contact }) => {
   const titleRef = useRef(null);
   const imageRef = useRef(null);
   const imageContainerRef = useRef(null);
@@ -140,17 +140,21 @@ const Footer = ({ number }) => {
   return (
     <Wrapper data-scroll-section>
       <TitleContainer>
-        <Title ref={titleRef}>Soliman Al Halaby</Title>
+        <Title display={contact} ref={titleRef}>
+          Soliman Al Halaby
+        </Title>
         <Pin
           ref={pinRef}
           top={isMobile ? "14.5" : "13"}
           left={isMobile ? "10" : "75"}
           label="get in touch"
+          email={true}
+          // action={() => copyToClipboard()}
         />
       </TitleContainer>
       <TitleSection
         ref={sectionTitleRef}
-        top="23"
+        top="32"
         left="20"
         number={number}
         title="Contact"
