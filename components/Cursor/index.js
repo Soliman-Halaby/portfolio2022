@@ -12,7 +12,6 @@ export default function CustomCursor(width, height, custom = false) {
   const cursorDisplay = useRecoilValue(cursorState);
   const cursorRotation = useRecoilValue(cursorHover);
 
-  console.log(cursorDisplay);
   function onMouseMove(e) {
     const cursor = cursorRef.current;
     if (!cursor) return;
@@ -22,21 +21,8 @@ export default function CustomCursor(width, height, custom = false) {
   }
   useEffect(() => {
     document.addEventListener("mousemove", onMouseMove);
-    // if (cursorRef.current == null || cursorRef == null) return;
-
-    // document.addEventListener("mousemove", (e) => {
-    //   if (cursorRef.current == null) return;
-    //   cursorRef.current.setAttribute(
-    //     "style",
-    //     "top: " + e.pageY + "px; left: " + e.clientX + "px;"
-    //   );
-    // });
     document.addEventListener("scroll", (e) => {
       if (cursorRef.current == null) return;
-      //  cursorRef.current.setAttribute(
-      //    "style",
-      //    "top: " + e.pageY + "px; left: " + e.clientX + "px;"
-      //  );
     });
     document.addEventListener("click", () => {
       if (cursorRef.current == null) return;
@@ -70,8 +56,6 @@ export default function CustomCursor(width, height, custom = false) {
           <ProjectButton className={cursorDisplay} label="Learn more" />
         </CursorContainer>
       </CursorWrapper>
-
-      {/* </CursorWrapper> */}
     </Cursor>
   );
 }

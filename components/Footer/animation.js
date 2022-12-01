@@ -30,9 +30,6 @@ function handleEnterImg({ el, delay, image, animText }) {
   const elDelay = 0;
   const displayDelay = animText === true ? 3.2 : 0;
 
-  console.log("enter");
-
-  console.log("el", el);
   tl.fromTo(
     el.current,
     {

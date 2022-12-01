@@ -1,11 +1,11 @@
 /**
- * Loader Recoil store
- */
+  Loader Recoil
+**/
 import { atom } from "recoil";
 
 export const LOADER_KEY = "LoaderManager";
 
 export const loaderState = atom({
   key: LOADER_KEY,
-  default: true,
+  default: false,
 });
