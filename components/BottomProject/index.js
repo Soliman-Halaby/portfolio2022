@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 
 import { handleEnter } from "./animation.js";
 import useOnScreen from "hook/index.js";
+import Icon from "utils/Icon.js";
 import {
   Wrapper,
   Container,
@@ -36,19 +37,7 @@ const BottomProject = ({ title, projects }) => {
         <TitleWrapper>
           <TitleContainer ref={titleRef}>
             <Title>{title}</Title>
-            {title && (
-              <svg
-                width={48}
-                height={48}
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M48 24C35.443 24 25.263 13.255 25.263 0M48 24c-12.557 0-22.737 10.745-22.737 24M48 24H0"
-                  stroke="#1E1E1E"
-                />
-              </svg>
-            )}
+            {title && <Icon size={48} icon="left-arrow-48" />}
           </TitleContainer>
         </TitleWrapper>
         <ProjectsContainer>
