@@ -5,6 +5,8 @@ import { loaderState } from "recoil/loaderState";
 
 import TitleSection from "@/components/Popup/SectionTitle";
 
+import { handleEnter } from "./animation";
+import useOnScreen from "hook/index.js";
 import {
   Wrapper,
   Container,
@@ -18,7 +20,25 @@ const Loader = ({}) => {
   const setLoaderDisplay = useSetRecoilState(loaderState);
   const loaderDisplay = useRecoilValue(loaderState);
   const containerRef = useRef(null);
+  const pinRef = useRef(null);
 
+  const onScreen = useOnScreen(pinRef);
+
+  const [reveal, setReveal] = useState(false);
+
+  useEffect(() => {
+    if (onScreen) setReveal(onScreen);
+  }, [onScreen]);
+
+  useEffect(() => {
+    if (reveal) {
+      handleEnter({
+        text: pinRef,
+        display: "text",
+        animText: loaderDisplay,
+      });
+    }
+  }, [reveal]);
   function handleMouse(e) {
     const container = containerRef.current;
     if (!container) return;
@@ -74,7 +94,9 @@ const Loader = ({}) => {
       <Container className={loaderDisplay}>
         <TitleSection
           // top={isMobile ? "11.5" : "25"}
+          ref={pinRef}
           number="01"
+          loader={true}
           title="Soliman Al Halaby Creative Developer"
         />
         <ImgContainer ref={containerRef} className={loaderDisplay}>
