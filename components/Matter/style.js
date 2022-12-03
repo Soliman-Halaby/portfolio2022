@@ -13,7 +13,7 @@ export const Box = styled.button`
   cursor: pointer;
   background: ${({ theme }) => theme.colors.grey2};
   text-transform: uppercase;
-  z-index: 2;
+  z-index: 5;
   color: ${({ theme }) => theme.colors.grey1};
 
   font-family: ${({ theme }) => theme.fonts.sansSerif};

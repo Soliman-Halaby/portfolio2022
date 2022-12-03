@@ -329,11 +329,16 @@ const MatterComponent = ({}) => {
       setTitle(datas[currentIndex].label);
     }
   };
+  console.log(boxRef);
 
   useEffect(() => {
     // Detect if click outside detail box
     function handleClickOutside(event) {
-      if (detailRef.current && !detailRef.current.contains(event.target)) {
+      if (
+        detailRef.current &&
+        !detailRef.current.contains(event.target) &&
+        !event.target.classList.contains("box")
+      ) {
         if (detail === "opened") {
           console.log("yo");
           setDetail("closed");
@@ -354,7 +359,7 @@ const MatterComponent = ({}) => {
         {datas.map((data, i) => {
           return (
             <Box
-              className={i % 2 !== 0 ? "rounded" : ""}
+              className={(i % 2 !== 0 ? "rounded" : "", "box")}
               key={i}
               ref={(el) => (boxRef.current[i] = el)}
               onClick={() => openDetail(i)}
