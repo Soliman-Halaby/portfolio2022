@@ -40,9 +40,13 @@ export const Title = styled.h2`
   // white-space: pre-line;
 `;
 
+export const MadeWithContainer = styled.div`
+  /* overflow: hidden; */
+`;
 export const MadeWith = styled.div`
   padding: 0.3rem;
   font-size: 1rem;
+  /* overflow: hidden; */
   color: ${({ theme }) => theme.colors.grey1};
   font-family: ${({ theme }) => theme.fonts.sansSerif};
   max-width: 110px;
@@ -55,6 +59,8 @@ export const MadeWith = styled.div`
 
 export const MadeWithLink = styled.a`
   cursor: none;
+  /* opacity: 0; */
+
   color: ${({ theme }) => theme.colors.grey1};
 
   text-decoration: none;
