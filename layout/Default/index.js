@@ -5,6 +5,7 @@ import Head from "next/head";
 import { RecoilRoot, useRecoilValue } from "recoil";
 import { loaderState } from "recoil/loaderState";
 
+import { NextSeo } from "next-seo";
 import Header from "components/Header";
 import Footer from "components/Footer";
 import FooterReduced from "components/FooterReduced";
@@ -90,22 +91,32 @@ export default function Layout({
       }
     >
       {loaderDisplay && <Loader />}
-      <Head>
-        <title>{title}</title>
-        <meta property="og:title" content={title} key="title" />
-        {/* <meta property="og:image" content="./assets/images/solimanImage.png"> */}
-        <meta property="og:description" content={description} />
-        <meta
-          property="og:url"
-          content={`https://www.solimanalhalaby.fr${router.asPath}`}
-        />
-        <meta property="og:site_name" content={title} />
-        <meta property="og:type" content="website" />
-        <link
-          rel="canonical"
-          href={`https://www.solimanalhalaby.fr${router.asPath}`}
-        />
-      </Head>
+      <NextSeo
+        title={title}
+        description={description}
+        canonical={`https://www.solimanalhalaby.fr${router.asPath}`}
+        openGraph={{
+          url: `https://www.solimanalhalaby.fr${router.asPath}`,
+          title: title,
+          description: description,
+          images: [
+            {
+              url: "https://portfolio2023-mu.vercel.app/thumbnail.jpg",
+              width: 830,
+              height: 500,
+              alt: "Thumbnail",
+              type: "image/jpg",
+            },
+          ],
+          siteName: title,
+        }}
+        twitter={{
+          handle: "@handle",
+          site: "@site",
+          cardType: "summary_large_image",
+        }}
+      />
+
       <main data-scroll-container ref={containerRef}>
         <Header />
         <Container>
