@@ -7,9 +7,11 @@ export const ButtonStyle = styled.button`
   display: inline-block;
   padding: 0.5rem;
   /* padding-top: 0.8rem; */
+  cursor: none;
   height: clamp(30px, 3rem, 3rem);
   border: 1px solid ${({ theme }) => theme.colors.grey1};
   color: ${({ theme }) => theme.colors.grey1};
+  background: ${({ theme }) => theme.colors.grey2};
   border-radius: ${({ rounded }) => (rounded ? "33px" : "5px")};
   font-size: clamp(13px, 100%, 1.15rem);
   display: flex;
@@ -25,6 +27,7 @@ export const ButtonStyle = styled.button`
   text-decoration: none;
   gap: 0.5rem;
   border-style: solid;
+  background: ${({ theme }) => theme.colors.grey2};
   transition: background 0.3s ease;
 
   &:hover {

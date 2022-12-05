@@ -11,6 +11,8 @@ export const ButtonStyle = styled.button`
   border: 1px solid ${({ theme }) => theme.colors.grey1};
   border-radius: 50%;
   font-size: 1.15rem;
+  color: ${({ theme }) => theme.colors.grey1};
+  background: ${({ theme }) => theme.colors.grey2};
   font-family: ${({ theme }) => theme.fonts.sansSerif};
   font-weight: 300;
   text-transform: uppercase;
