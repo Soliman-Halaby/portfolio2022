@@ -53,7 +53,7 @@ export const SuccessMessageContentContainer = styled.div`
 `;
 export const SuccessMessage = styled.div`
   opacity: ${({ colored }) => (colored ? 1 : 0)};
-  position: absolute;
+  /* position: absolute; */
   overflow: hidden;
   padding: 7.5px;
   top: ${({ top }) => `${top}rem`};
@@ -76,3 +76,23 @@ export const SuccessMessage = styled.div`
     font-size: ${({ colored }) => (colored ? `1.2` : `1.25rem`)};
   }
 `;
+
+export const CopiedEmail = styled(SuccessMessage)`
+  position: absolute;
+  top: -2rem;
+  opacity: 1;
+  font-size: 1rem;
+  left: 3rem;
+  z-index: 10;
+
+  background: ${({ theme }) => theme.colors.lime};
+  border-radius: 39px;
+`;
+
+export const ContainerPin = styled.div`
+  position: absolute;
+  top: ${({ top }) => `${top}rem`};
+  left: ${({ left }) => `${left}rem`};
+`;
+
+export const Wrapper = styled.div``;
