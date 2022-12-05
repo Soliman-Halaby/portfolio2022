@@ -25,6 +25,7 @@ import {
   ImageContainer,
   TextContainer,
   TextWrapper,
+  TextContent,
   Text,
 } from "./style.js";
 
@@ -121,25 +122,25 @@ const HeroHome = ({ title, subtitle, sectionTitle, label, image }) => {
           dangerouslySetInnerHTML={{ __html: subtitle }}
           ref={subtitleRef}
         />
-        {/* {subtitle} */}
         <Pin
           ref={pinRef}
           top="30"
           left="90"
           action={scrollToBottom}
-          // className="hero_pin-section"
           label={label}
         />
-        <TextWrapper>
-          <Text onClick={() => scrollToWork()}>
-            Scroll
-            <Icon size={12} icon="bottom-arrow-16" />
-          </Text>
-          {/* <Text>
-            Scroll
-            <Icon size={12} icon="bottom-arrow-16" />
-          </Text> */}
-        </TextWrapper>
+        <TextContainer onClick={() => scrollToWork()}>
+          <TextWrapper>
+            <TextContent>
+              Scroll <Icon size={12} icon="bottom-arrow-16" />
+            </TextContent>
+          </TextWrapper>
+          <TextWrapper>
+            <TextContent>
+              Scroll <Icon size={12} icon="bottom-arrow-16" />
+            </TextContent>
+          </TextWrapper>
+        </TextContainer>
         <ImageWrapper ref={imageBlockRef} className="image-wrapper">
           <ImageContainer ref={imageRef}>
             <BlockImage

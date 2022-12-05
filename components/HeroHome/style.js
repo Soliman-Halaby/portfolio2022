@@ -5,7 +5,7 @@ import { css } from "@emotion/react";
 import Image from "next/image";
 // import {Title as TitleSection} from "@/components/Popup/SectionTitle/style";
 
-import { SuccessMessage } from "../Popup/Pin/style";
+import { ContainerPin } from "../Popup/Pin/style";
 import { maxMedia, TitleSection } from "styles/mixins";
 
 export const Wrapper = styled.div`
@@ -29,7 +29,7 @@ export const Container = styled.div`
     transform-origin: center;
   }
 
-  ${SuccessMessage} {
+  ${ContainerPin} {
     top: 30rem;
     right: 15rem;
     left: inherit;
@@ -135,4 +135,74 @@ export const Text = styled.p`
   animation-timeline: auto;
 `;
 
-export const TextWrapper = styled.div``;
+export const TextContent = styled.p`
+  @keyframes up {
+    0% {
+      transform: translateY(0);
+    }
+    4% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+
+  /* padding: 7.5px; */
+  animation-name: up;
+  animation-duration: 7s;
+  animation-timing-function: ease;
+  animation-delay: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-play-state: running;
+  animation-timeline: auto;
+`;
+
+export const TextWrapper = styled.div`
+  overflow: hidden;
+
+  display: flex;
+
+  &:nth-of-type(1) {
+    ${TextContent} {
+      will-change: transform;
+      transform-style: preserve-3d;
+      transition: 0.2s;
+    }
+  }
+  &:nth-of-type(2) {
+    ${TextContent} {
+       {
+        position: absolute;
+        will-change: transform;
+        transition: 0.3s;
+        /* display: inline-block; */
+        transform: translateY(100%);
+      }
+    }
+  }
+`;
+export const TextContainer = styled.div`
+  overflow: hidden;
+  padding: 7.5px 0;
+  display: inline-block;
+  text-transform: uppercase;
+  font-family: ${({ theme }) => theme.fonts.sansSerif};
+  /* font-size: 16px; */
+  margin-bottom: 8px;
+  will-change: transform;
+  transform-style: preserve-3d;
+  transition: 0.2s;
+  font-weight: 300;
+  color: ${({ theme }) => theme.colors.grey1};
+
+  ${maxMedia.small} {
+    font-size: ${({ colored }) => (colored ? `1.2` : `1.25rem`)};
+  }
+`;
