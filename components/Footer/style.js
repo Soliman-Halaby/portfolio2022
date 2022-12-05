@@ -47,7 +47,7 @@ export const Title = styled.h3`
   ${maxMedia.small} {
     font-size: 9rem;
     text-align: center;
-    line-height: 100%;
+    line-height: 11rem;
     letter-spacing: 1px;
   }
 

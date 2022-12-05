@@ -145,7 +145,15 @@ const Footer = ({ number, contact }) => {
         </Title>
         <Pin
           ref={pinRef}
-          top={isMobile ? "14.5" : "13"}
+          top={
+            isMobile && !contact
+              ? "15"
+              : isMobile && contact
+              ? "14.5"
+              : !isMobile && !contact
+              ? "9.5"
+              : "12.5"
+          }
           left={isMobile ? "10" : "75"}
           label="get in touch"
           email={true}
@@ -189,7 +197,11 @@ const Footer = ({ number, contact }) => {
             <RowContainer ref={contactRef4}>
               <Content>Download my resume</Content>
               <ButtonContainer>
-                <CircularButton to="/" label="CV" />
+                <CircularButton
+                  to="/CV-Soliman-Al-Halaby.pdf"
+                  target="_blank"
+                  label="CV"
+                />
               </ButtonContainer>
             </RowContainer>
           </FooterNav>
