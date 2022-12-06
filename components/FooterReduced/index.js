@@ -96,7 +96,7 @@ const Footer = ({}) => {
             <Text>Contact</Text>
             <Button label="contact@solimanalhalaby.fr" />
             {activeMessage && (
-              <Pin top="0" left="55" colored label="copied"></Pin>
+              <Pin top="-1.5" left="15" colored label="copied"></Pin>
             )}
           </Element>
           <Element>
