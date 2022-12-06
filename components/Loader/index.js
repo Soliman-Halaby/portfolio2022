@@ -65,6 +65,7 @@ const Loader = ({}) => {
       setProgress((oldProgress) => {
         if (oldProgress === 100) {
           document.body.style.overflow = "visible";
+          document.body.style.height = "100%";
           // setLoaderDisplay(localStorage.getItem("loader"));
           setLoaderDisplay("false");
           return 100;
@@ -73,6 +74,7 @@ const Loader = ({}) => {
         const diff = Math.random() * 10;
         if (oldProgress <= 100) {
           document.body.style.overflow = "hidden";
+          document.body.style.height = "100vh";
           return Math.min(oldProgress + Math.round(diff), 100);
         }
       });
