@@ -17,7 +17,7 @@ import { useIsMobile } from "hook";
 import { SwitchTransition, Transition } from "react-transition-group";
 
 import gsap from "gsap";
-import { App, Container } from "./style";
+import { App, Wrapper, Container } from "./style";
 
 export default function Layout({
   children,
@@ -117,7 +117,7 @@ export default function Layout({
         }}
       />
 
-      <main data-scroll-container ref={containerRef}>
+      <Wrapper data-scroll-container ref={containerRef}>
         <Header />
         <Container>
           <SwitchTransition>
@@ -144,7 +144,7 @@ export default function Layout({
           </SwitchTransition>
           {!isMobile && <Cursor />}
         </Container>
-      </main>
+      </Wrapper>
     </LocomotiveScrollProvider>
   );
 }

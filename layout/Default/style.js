@@ -14,8 +14,10 @@ export const App = styled.div`
   flex-direction: column;
 `;
 
+export const Wrapper = styled.div``;
 export const Container = styled.div`
   width: 100%;
+  overflow: hidden;
   background: ${({ theme }) => {
     theme.colors.grey2;
   }};
