@@ -16,6 +16,7 @@ import {
   TitleContainer,
   Title,
   MadeWith,
+  MadeWithContainer,
   MadeWithLink,
   ImageWrapper,
   ImageContainer,
@@ -47,6 +48,8 @@ const HeroProject = ({
   const contentRef = useRef(null);
   const imageBlockRef = useRef(null);
   const imageRef = useRef(null);
+  const madeWithRef = useRef(null);
+
   const loaderDisplay = useRecoilValue(loaderState);
   const onScreenTitle = useOnScreen(revealRef);
 
@@ -64,6 +67,11 @@ const HeroProject = ({
         display: "title",
         animText: loaderDisplay,
       });
+      // handleEnter({
+      //   text: madeWithRef,
+      //   display: "title",
+      //   animText: loaderDisplay,
+      // });
       handleEnter({
         el: tagRef,
         display: "tag",
@@ -94,15 +102,16 @@ const HeroProject = ({
           <Title ref={titleRef}>{title}</Title>
           {team && (
             <MadeWith>
-              With <></>
-              {team.map((member, index) => {
-                console.log(index);
-                return (
-                  <MadeWithLink key={index} target="_blank" href={member.url}>
-                    {member.name} {index !== team.length - 1 ? "," : ""}
-                  </MadeWithLink>
-                );
-              })}
+              <MadeWithContainer>
+                With {""}
+                {team.map((member, index) => {
+                  return (
+                    <MadeWithLink key={index} target="_blank" href={member.url}>
+                      {member.name} {index !== team.length - 1 ? "," : ""}
+                    </MadeWithLink>
+                  );
+                })}
+              </MadeWithContainer>
             </MadeWith>
           )}
         </TitleContainer>

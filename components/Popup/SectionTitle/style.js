@@ -14,6 +14,7 @@ export const Title = styled.div`
   /* white-space: break-spaces; */
   margin-left: ${({ theme }) => theme.margin.medium};
   margin-top: 48px;
+  align-items: center;
   ${maxMedia.md} {
     /* top: 20%;
     left: 0; */
@@ -28,6 +29,7 @@ export const Title = styled.div`
 export const Number = styled.p`
   font-size: 1rem;
   margin-right: 1rem;
+  opacity: 0;
 
   ${maxMedia.small} {
     font-size: 1.2rem;

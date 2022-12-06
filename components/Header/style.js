@@ -22,6 +22,7 @@ export const MainLink = styled.span`
   align-items: center;
   text-transform: uppercase;
   color: ${({ theme }) => theme.colors.grey2};
+
   mix-blend-mode: difference;
   font-size: 1.15rem;
   font-family: ${({ theme }) => theme.fonts.sansSerif};
@@ -80,7 +81,6 @@ export const Nav = styled.nav`
   position: relative;
   align-items: center;
   z-index: 99999;
-  //   background: red;
   width: 100%;
   position: fixed;
   padding: ${({ theme }) => theme.margin.medium};

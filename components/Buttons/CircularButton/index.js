@@ -5,7 +5,7 @@ import { Container, ButtonStyle } from "./style.js";
 
 import { useSetRecoilState, useResetRecoilState } from "recoil";
 import { cursorHover } from "recoil/cursorState.js";
-const CircularButton = ({ label, to }) => {
+const CircularButton = ({ label, to, target }) => {
   const setCursorHover = useSetRecoilState(cursorHover);
   const resetCursor = useResetRecoilState(cursorHover);
 
@@ -15,12 +15,17 @@ const CircularButton = ({ label, to }) => {
 
   return (
     <Container onMouseEnter={() => cursorRotation()} onMouseLeave={resetCursor}>
-      {to && (
+      {to && !target && (
         <Link href={to}>
           <ButtonStyle>{label}</ButtonStyle>
         </Link>
       )}
       {!to && <ButtonStyle>{label}</ButtonStyle>}
+      {to && target && (
+        <a href={to} target={target}>
+          <ButtonStyle>{label}</ButtonStyle>
+        </a>
+      )}
     </Container>
   );
 };

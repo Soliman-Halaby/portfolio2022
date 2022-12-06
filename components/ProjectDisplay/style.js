@@ -17,6 +17,7 @@ export const Wrapper = styled.div`
 
 export const ProjectContainer = styled.div`
   /* position: relative; */
+
   overflow: hidden;
 `;
 
@@ -27,6 +28,7 @@ export const Container = styled.div`
 
 export const ImageContainer = styled.div`
   height: 154px;
+
   width: 100%;
   opacity: 0;
   overflow: hidden;
@@ -40,7 +42,7 @@ export const Image = styled.img`
   width: 100%;
   /* max-width: 106px; */
   object-fit: cover;
-  height: 140%;
+  height: 100%;
   will-change: transform;
   transition: filter 0.2s ease-in-out;
 
@@ -59,6 +61,7 @@ export const RowWrapper = styled.div`
 export const Number = styled.span`
   font-size: 1rem;
   max-height: 1rem;
+
   overflow: hidden;
   font-weight: 400;
   font-family: ${({ theme }) => theme.fonts.sansSerif};
@@ -76,6 +79,7 @@ export const Number = styled.span`
 
 export const Title = styled.h3`
   font-size: 1.1rem;
+
   text-transform: uppercase;
   font-weight: 400;
   font-family: ${({ theme }) => theme.fonts.sansSerif};

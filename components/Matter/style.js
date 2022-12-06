@@ -8,12 +8,14 @@ export const Box = styled.button`
   /* background: #111; */
   /* height: 40px;
       width: 40px; */
+  top: -7rem;
   white-space: nowrap;
+  pointer-events: all;
   user-select: none;
   cursor: pointer;
   background: ${({ theme }) => theme.colors.grey2};
   text-transform: uppercase;
-  z-index: 2;
+  z-index: 5;
   color: ${({ theme }) => theme.colors.grey1};
 
   font-family: ${({ theme }) => theme.fonts.sansSerif};
@@ -62,7 +64,8 @@ export const Ground = styled.div`
 
   bottom: 77.5px;
   height: 1px;
-  width: 100%;
+  width: 0%;
+  transition: all 0.3s ease-out;
   left: 0;
   background: #666;
 `;

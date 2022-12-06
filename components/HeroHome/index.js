@@ -5,6 +5,8 @@ import { useLocomotiveScroll } from "react-locomotive-scroll";
 import TitleSection from "@/components/Popup/SectionTitle";
 import Pin from "@/components/Popup/Pin";
 
+import Icon from "utils/Icon.js";
+
 import { useRecoilValue } from "recoil";
 import { loaderState } from "recoil/loaderState";
 
@@ -21,6 +23,9 @@ import {
   BlockImage,
   ImageWrapper,
   ImageContainer,
+  TextContainer,
+  TextWrapper,
+  TextContent,
   Text,
 } from "./style.js";
 
@@ -117,29 +122,25 @@ const HeroHome = ({ title, subtitle, sectionTitle, label, image }) => {
           dangerouslySetInnerHTML={{ __html: subtitle }}
           ref={subtitleRef}
         />
-        {/* {subtitle} */}
         <Pin
           ref={pinRef}
           top="30"
           left="90"
           action={scrollToBottom}
-          // className="hero_pin-section"
           label={label}
         />
-        <Text onClick={() => scrollToWork()}>
-          Scroll
-          <svg
-            width={12}
-            height={12}
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M6 12c0-3.14 2.686-5.684 6-5.684M6 12c0-3.14-2.686-5.684-6-5.684M6 12V0"
-              stroke="#1E1E1E"
-            />
-          </svg>
-        </Text>
+        <TextContainer onClick={() => scrollToWork()}>
+          <TextWrapper>
+            <TextContent>
+              Scroll <Icon size={12} icon="bottom-arrow-16" />
+            </TextContent>
+          </TextWrapper>
+          <TextWrapper>
+            <TextContent>
+              Scroll <Icon size={12} icon="bottom-arrow-16" />
+            </TextContent>
+          </TextWrapper>
+        </TextContainer>
         <ImageWrapper ref={imageBlockRef} className="image-wrapper">
           <ImageContainer ref={imageRef}>
             <BlockImage

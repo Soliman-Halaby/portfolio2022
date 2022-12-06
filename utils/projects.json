@@ -18,7 +18,7 @@
     "color": "#DDE3EF",
     "link": "https://www.google.com/",
     "title": "Vis ma ville",
-    "info": ["Front-end developer", "03/03/2018"],
+    "info": ["Full-stack developer", "15/03/2022"],
     "description": "A React app that allows users to search for movies and view details about them.",
     "techno": ["React native", "Node.js"],
     "content1": {
@@ -45,12 +45,10 @@
       "right2": "/vis-ma-ville/img-4-col.png"
     },
     "image": [
-      "/project-display.png",
-      "/moviereact-image.png",
-      "/project-img-1.png",
-      "/project-img-2.png",
-      "/project-img-3.png",
-      "/project-img-1.png"
+      "/vis-ma-ville/outline/outline-1.jpg",
+      "/vis-ma-ville/outline/outline-2.jpg",
+      "/vis-ma-ville/outline/outline-3.jpg",
+      "/vis-ma-ville/outline/outline-4.jpg"
     ]
   },
   {
@@ -68,7 +66,7 @@
     "color": "#E8EAE7",
     "link": "https://www.cloudybay.com/",
     "title": "Cloudy Bay",
-    "info": ["Front-end developer", "03/03/2018"],
+    "info": ["Front-end developer", "15/09/2022"],
     "description": "Cloudy Bay is an e-commerce website designed in React JS / Gatsby using Drupal as a back-office. This site is produced for a subsidiary of the Moet Hennesy group. You can buy different exceptional wines. It is also possible to book your place for the numerous events organized by Cloudy Bay, in their 2 different locations. I contributed to the development of this site during my internship at ultranoir with the different devs of the team.",
     "techno": ["React JS", "Gatsby"],
     "content1": {
@@ -96,20 +94,10 @@
       "fullwidth3": "/cloudy-bay/full-width-3.png"
     },
     "image": [
-      "/project-img-1.png",
-      "/project-img-1.png",
-      "/project-img-1.png",
-      "/project-img-1.png",
-      "/project-img-1.png",
-      "/project-img-1.png",
-      "/project-img-1.png",
-      "/project-img-1.png",
-      "/project-img-1.png",
-      "/selfer-image.png",
-      "/moviereact-image.png",
-      "/project-img-2.png",
-      "/project-img-3.png",
-      "/project-img-1.png"
+      "/cloudy-bay/outline/outline-1.jpg",
+      "/cloudy-bay/outline/outline-2.jpg",
+      "/cloudy-bay/outline/outline-3.jpg",
+      "/cloudy-bay/outline/outline-4.jpg"
     ]
   },
   {
@@ -120,7 +108,7 @@
     "mobileRow": "2",
     "link": "https://www.solimanalhalaby.fr/",
     "title": "Portfolio 2021",
-    "info": ["Front-end developer", "03/03/2018"],
+    "info": ["Front-end developer", "12/03/2022"],
     "description": "My old portfolio, 2021 was designed in html / css / js with Vite set up as dev environment. It was my first big personal project where I already had several challenges that I wanted to execute. I used GSAP to design the different animations.",
     "techno": ["HTML", "CSS", "JS"],
     "content1": {
@@ -177,9 +165,9 @@
     ],
     "link": "https://www.google.com/",
     "title": "Canlink Me",
-    "info": ["Front-end developer", "03/03/2018"],
+    "info": ["Full-stack developer", "17/03/2021"],
     "description": "A React app that allows users to search for movies and view details about them.",
-    "techno": ["PHP", "HTML", "CSS", "Javascript"],
+    "techno": ["PHP", "CSS", "Javascript"],
     "content1": {
       "title": "Titre de la section",
       "subtitle": "Sous-titre de la section",
@@ -196,12 +184,16 @@
     },
     "images": {
       "hero": "/canlink-me/hero-section.png",
-      "fullwidth": "/project-img-1.png",
-      "left": "/project-img-2.png",
-      "right": "/project-img-3.png",
-      "fullwidth2": "/project-img-1.png"
+      "fullwidth": "/canlink-me/full-width-1.jpg",
+      "left": "/canlink-me/img-1-col.jpg",
+      "right": "/canlink-me/img-2-col.jpg"
     },
-    "image": ["/gta-image.png", "/moviereact-image.png"]
+    "image": [
+      "/canlink-me/outline/outline-1.jpg",
+      "/canlink-me/outline/outline-2.jpg",
+      "/canlink-me/outline/outline-3.jpg",
+      "/canlink-me/outline/outline-4.jpg"
+    ]
   },
   {
     "slug": "selfer-app",
@@ -225,7 +217,7 @@
         "url": "/leo"
       }
     ],
-    "info": ["Front-end developer", "03/03/2018"],
+    "info": ["Back-end developer", "16/12/2020"],
     "description": "Selfer is a web app designed using React JS for the front-end and Symfony for the back-end. This Web App is a kind of CMS based on the Notion API. Via Selfer it is possible to generate a static site. A back-office is set up to edit / update the content that will be updated directly on the site. This Web App has been realized in a 10 days project.  We are still working on Selfer and plan to implement different features in the future.",
     "techno": ["React JS", "TypeScript", "Symfony"],
     "content1": {
@@ -263,9 +255,10 @@
         "url": "/chris"
       }
     ],
+    "color": "#ECE8E3",
     "link": "https://ddalos.vercel.app/",
     "title": "D'Dalos",
-    "info": ["Front-end developer", "03/03/2018"],
+    "info": ["Front-end developer", "25/02/2021"],
     "description": "Ddalos is an immersive website aiming to showcase several models of boats made on Blender. This site was produced using Three JS. You can lock your mouse and then use the keys to discover the different 3D models.",
     "techno": ["Three.js"],
     "content1": {
@@ -289,7 +282,12 @@
       "fullwidth2": "/ddalos/full-width-2.png",
       "left2": "/ddalos/img-col-3.png"
     },
-    "image": ["/canlinkme-image.png", "/moviereact-image.png"]
+    "image": [
+      "/ddalos/outline/outline-1.jpg",
+      "/ddalos/outline/outline-2.jpg",
+      "/ddalos/outline/outline-3.jpg",
+      "/ddalos/outline/outline-4.jpg"
+    ]
   },
   {
     "slug": "eclipse",
@@ -313,7 +311,7 @@
     "mobileRow": "4",
     "link": "https://eclipse-one.vercel.app/",
     "title": "Eclipse",
-    "info": ["Front-end developer", "03/03/2018"],
+    "info": ["Front-end developer", "08/11/2021"],
     "description": "A React app that allows users to search for movies and view details about them.",
     "techno": ["HTML", "CSS", "JS", "Three.js"],
     "content1": {
@@ -332,10 +330,16 @@
     },
     "images": {
       "hero": "/eclipse/hero-section.png",
-      "fullwidth": "/project-img-1.png",
-      "left": "/project-img-2.png",
-      "right": "/project-img-3.png"
+      "fullwidth": "/eclipse/full-width-1.jpg",
+      "left": "/eclipse/img-1-col.jpg",
+      "right": "/eclipse/img-2-col.jpg",
+      "fullwidth2": "/eclipse/full-width-2.jpg"
     },
-    "image": ["/moviereact-image.png", "/moviereact-image.png"]
+    "image": [
+      "/eclipse/outline/outline-1.jpg",
+      "/eclipse/outline/outline-2.jpg",
+      "/eclipse/outline/outline-3.jpg",
+      "/eclipse/outline/outline-4.jpg"
+    ]
   }
 ]
