@@ -184,10 +184,9 @@
     },
     "images": {
       "hero": "/canlink-me/hero-section.png",
-      "fullwidth": "/project-img-1.png",
-      "left": "/project-img-2.png",
-      "right": "/project-img-3.png",
-      "fullwidth2": "/project-img-1.png"
+      "fullwidth": "/canlink-me/full-width-1.jpg",
+      "left": "/canlink-me/img-1-col.jpg",
+      "right": "/canlink-me/img-2-col.jpg"
     },
     "image": [
       "/canlink-me/outline/outline-1.jpg",
