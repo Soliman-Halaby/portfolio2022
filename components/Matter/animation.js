@@ -19,9 +19,30 @@ export const handleEnter = (props) => {
     case "description":
       handleEnterDescription(props);
       break;
+    case "ground":
+      handleEnterGround(props);
+      break;
   }
 };
 
+function handleEnterGround({ el, delay, image, reverse }) {
+  const tl = gsap.timeline();
+  const elDelay = 0.09;
+
+  console.log("ground", el);
+  tl.fromTo(
+    el.current,
+    {
+      width: 0,
+    },
+    {
+      width: "100%",
+      duration: 0.6,
+      delay: elDelay + delay,
+    },
+    "anim"
+  );
+}
 function handleEnterTitle({ el, delay, reverse }) {
   const tl = gsap.timeline();
   const elDelay = 0.09;

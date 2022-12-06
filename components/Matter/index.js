@@ -47,10 +47,10 @@ const MatterComponent = ({}) => {
   const detailRef = useRef(null);
   const otherFactRef = useRef(null);
   const titleRef = useRef(null);
+  const groundRef = useRef(null);
   const engine = useRef(Engine.create({}));
 
   const loaderDisplay = useRecoilValue(loaderState);
-  console.log("datas", datas);
 
   const scene = useRef();
 
@@ -60,14 +60,35 @@ const MatterComponent = ({}) => {
   const [title, setTitle] = useState(datas[0].label);
   const [content, setContent] = useState(datas[0].description);
 
-  const onScreenDetail = useOnScreen(detailRef, 0.35);
+  const [count, setCount] = useState(10);
 
+  const onScreenDetail = useOnScreen(scene);
   let bodies = [];
+
+  // Utilisez useEffect pour mettre à jour le compteur toutes les secondes
+  useEffect(() => {
+    // Si le compteur est supérieur à 0, décrémentez-le de 1
+    if (count > 0) {
+      setTimeout(() => {
+        setCount(count - 1);
+      }, 1000);
+    }
+  }, [count]);
 
   useEffect(() => {
     if (onScreenDetail) setReveal(onScreenDetail);
     console.log("onScreenDetail", onScreenDetail);
   }, [onScreenDetail]);
+
+  useEffect(() => {
+    if (reveal) {
+      handleEnter({
+        el: groundRef,
+        display: "ground",
+        delay: 0.65,
+      });
+    }
+  }, [reveal]);
 
   const animationEnterDetail = () => {
     handleEnter({
@@ -114,13 +135,13 @@ const MatterComponent = ({}) => {
   };
 
   const closeDetail = () => {
-    console.log("close");
     setDetail("closed");
   };
 
   // Function to display detail box, title and content
   function openDetail(index) {
     console.log("opened");
+
     if (detail === "closed") {
       // Trigger animation if detail box is closed
       animationEnterDetail();
@@ -139,23 +160,22 @@ const MatterComponent = ({}) => {
   useEffect(() => {
     let clientWidth = document.body.clientWidth;
 
-    console.log(clientWidth);
     let clientHeight = document.body.clientHeight;
 
-    // const render = Render.create({
-    //   element: scene.current,
-    //   engine: engine.current,
-    //   options: {
-    //     width: clientWidth,
-    //     height: clientHeight,
-    //     wireframes: WIREFRAMES,
-    //     background: "transparent",
-    //   },
-    // });
+    const render = Render.create({
+      element: scene.current,
+      engine: engine.current,
+      options: {
+        width: clientWidth,
+        height: clientHeight,
+        wireframes: WIREFRAMES,
+        background: "transparent",
+      },
+    });
 
-    // render.options.showPerformance = true;
+    render.options.showPerformance = true;
 
-    // Render.run(render);
+    Render.run(render);
 
     // Create a new box for each data in datas array and add it to the world
     for (let i = 0; i < datas.length; i++) {
@@ -225,12 +245,12 @@ const MatterComponent = ({}) => {
       }
 
       // Play RAF if loader is not displayed
-      if (loaderDisplay !== true) {
-        requestRef.current = requestAnimationFrame(rerender);
-      }
+      requestRef.current = requestAnimationFrame(rerender);
     };
 
-    rerender();
+    if (count === 0) {
+      rerender();
+    }
 
     // Clean up
     return () => {
@@ -238,7 +258,7 @@ const MatterComponent = ({}) => {
       Composite.clear(engine.current.world);
       cancelAnimationFrame(requestRef.current);
     };
-  }, [loaderDisplay]);
+  }, [loaderDisplay, count]);
 
   // Animation for detail box
   useEffect(() => {
@@ -288,17 +308,13 @@ const MatterComponent = ({}) => {
         // });
         // Body.update(detailBox.body);
         // World.remove(engine.current.world, detailBox.body);
-        // console.log("yo");
       }
 
-      console.log(detail);
       // Engine.update(engine.current);
     };
 
     controlDetail();
-
-    console.log(detail);
-  }, [detail]);
+  }, [detail, count]);
 
   // Previous box detail
   const previousDetail = () => {
@@ -329,7 +345,6 @@ const MatterComponent = ({}) => {
       setTitle(datas[currentIndex].label);
     }
   };
-  console.log(boxRef);
 
   useEffect(() => {
     // Detect if click outside detail box
@@ -340,7 +355,6 @@ const MatterComponent = ({}) => {
         !event.target.classList.contains("box")
       ) {
         if (detail === "opened") {
-          console.log("yo");
           setDetail("closed");
         }
       }
@@ -355,62 +369,62 @@ const MatterComponent = ({}) => {
   return (
     <MatterContainer ref={scene}>
       <SceneContainer />
-      <Fragment>
-        {datas.map((data, i) => {
-          return (
-            <Box
-              className={(i % 2 !== 0 ? "rounded" : "", "box")}
-              key={i}
-              ref={(el) => (boxRef.current[i] = el)}
-              onClick={() => openDetail(i)}
-            >
-              {data.label}
-            </Box>
-          );
-        })}
-        {/* {detail === "opened" && ( */}
-        <Detail className={detail} ref={detailRef}>
-          <DetailContainer>
-            <CloseBtnContainer>
-              <CloseBtn
-                onClick={() => closeDetail()}
-                src="/close.svg"
-                layout="fill"
-              ></CloseBtn>
-            </CloseBtnContainer>
-            <Label ref={titleRef}>{title}</Label>
-            <DescriptionContainer>
-              <Description
-                ref={descriptionRef}
-                dangerouslySetInnerHTML={{ __html: content }}
-              />
-            </DescriptionContainer>
-            <OtherFactsContainer ref={otherFactRef}>
-              Other facts
-              <ControlWrapper>
-                <ControlContainer>
-                  <Control
-                    onClick={() => previousDetail()}
-                    src="/facts-prev.svg"
-                    width="24px"
-                    height="24px"
-                  ></Control>
-                </ControlContainer>
-                <ControlContainer>
-                  <Control
-                    onClick={() => nextDetail()}
-                    src="/facts-next.svg"
-                    width="24px"
-                    height="24px"
-                  ></Control>
-                </ControlContainer>
-              </ControlWrapper>
-            </OtherFactsContainer>
-          </DetailContainer>
-        </Detail>
-        {/* )} */}
-        <Ground />
-      </Fragment>
+      {/* <Fragment> */}
+      {datas.map((data, i) => {
+        return (
+          <Box
+            className={`box ${i % 2 !== 0 ? "rounded" : ""}`}
+            key={i}
+            ref={(el) => (boxRef.current[i] = el)}
+            onClick={() => openDetail(i)}
+          >
+            {data.label}
+          </Box>
+        );
+      })}
+      {/* {detail === "opened" && ( */}
+      <Detail className={detail} ref={detailRef}>
+        <DetailContainer>
+          <CloseBtnContainer>
+            <CloseBtn
+              onClick={() => closeDetail()}
+              src="/close.svg"
+              layout="fill"
+            ></CloseBtn>
+          </CloseBtnContainer>
+          <Label ref={titleRef}>{title}</Label>
+          <DescriptionContainer>
+            <Description
+              ref={descriptionRef}
+              dangerouslySetInnerHTML={{ __html: content }}
+            />
+          </DescriptionContainer>
+          <OtherFactsContainer ref={otherFactRef}>
+            Other facts
+            <ControlWrapper>
+              <ControlContainer>
+                <Control
+                  onClick={() => previousDetail()}
+                  src="/facts-prev.svg"
+                  width="24px"
+                  height="24px"
+                ></Control>
+              </ControlContainer>
+              <ControlContainer>
+                <Control
+                  onClick={() => nextDetail()}
+                  src="/facts-next.svg"
+                  width="24px"
+                  height="24px"
+                ></Control>
+              </ControlContainer>
+            </ControlWrapper>
+          </OtherFactsContainer>
+        </DetailContainer>
+      </Detail>
+      {/* )} */}
+      <Ground ref={groundRef} />
+      {/* </Fragment> */}
       <Title>
         Get to know
         <br />
