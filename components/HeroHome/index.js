@@ -50,7 +50,11 @@ const HeroHome = ({ title, subtitle, sectionTitle, label, image }) => {
   }, [onScreenTitle]);
 
   const scrollToBottom = () => {
-    window.scrollTo(0, document.body.scrollHeight);
+    if (isMobile) {
+      window.scrollTo(0, document.body.scrollHeight);
+    } else {
+      scroll.scroll.scrollTo(document.body.scrollHeight, {});
+    }
   };
 
   useEffect(() => {
@@ -102,7 +106,7 @@ const HeroHome = ({ title, subtitle, sectionTitle, label, image }) => {
       <TitleSection
         ref={sectionTitleRef}
         // ref2={sectionNumberRef}
-        top={isMobile ? "11.5" : "25"}
+        top={isMobile ? "18" : "25"}
         number="01"
         title={sectionTitle}
       />
@@ -124,7 +128,7 @@ const HeroHome = ({ title, subtitle, sectionTitle, label, image }) => {
         />
         <Pin
           ref={pinRef}
-          top="30"
+          top="50"
           left="90"
           action={scrollToBottom}
           label={label}

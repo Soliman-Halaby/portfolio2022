@@ -8,12 +8,13 @@ export const ButtonStyle = styled.button`
   padding: 0.5rem;
   /* padding-top: 0.8rem; */
   cursor: none;
-  height: clamp(30px, 3rem, 3rem);
+  height: 3rem;
   border: 1px solid ${({ theme }) => theme.colors.grey1};
   color: ${({ theme }) => theme.colors.grey1};
   background: ${({ theme }) => theme.colors.grey2};
   border-radius: ${({ rounded }) => (rounded ? "33px" : "5px")};
-  font-size: clamp(13px, 100%, 1.15rem);
+  font-size: 1.05rem;
+
   display: flex;
   align-items: center;
   font-family: ${({ theme }) => theme.fonts.sansSerif};
@@ -56,7 +57,8 @@ export const ButtonStyle = styled.button`
   }
 
   ${maxMedia.small} {
-    font-size: 1.35rem;
+    font-size: 1.05rem;
+    padding: 0.75rem;
   }
 `;
 

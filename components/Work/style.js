@@ -23,6 +23,8 @@ export const Wrapper = styled.div`
 
 export const Container = styled.div`
   width: 100%;
+  background: ${({ theme }) => theme.colors.grey2};
+  /* mix-blend-mode: exclusion; */
 `;
 
 export const Title = styled.h2`
@@ -43,6 +45,11 @@ export const Title = styled.h2`
     width: 100%;
   }
 
+  .line {
+    ${maxMedia.small} {
+      text-align: center !important;
+    }
+  }
   .word {
     padding: 0;
   }

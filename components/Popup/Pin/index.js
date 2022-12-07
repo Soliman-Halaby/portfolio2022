@@ -33,7 +33,7 @@ const Pin = forwardRef(
       }, 1500);
     };
     return (
-      <ContainerPin top={top} left={left}>
+      <ContainerPin onClick={() => action()} top={top} left={left}>
         {copied && <CopiedEmail>Copied</CopiedEmail>}
         <Wrapper>
           <SuccessMessage

@@ -175,7 +175,7 @@ export const ContentContainer = styled.div`
   overflow: hidden;
   position: absolute;
   /* width: 100%; */
-  right: 10rem;
+  right: 20rem;
   ${maxMedia.small} {
     align-self: flex-start;
     position: inherit;

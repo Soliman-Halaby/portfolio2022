@@ -40,12 +40,13 @@ import useOnScreen from "hook/index.js";
 
 import datas from "/utils/about.json";
 
-const MatterComponent = ({}) => {
+const MatterComponent = ({ pageTitle }) => {
   const requestRef = useRef();
   const boxRef = useRef([]);
   const descriptionRef = useRef(null);
   const detailRef = useRef(null);
   const otherFactRef = useRef(null);
+  const tagTitleRef = useRef(null);
   const titleRef = useRef(null);
   const groundRef = useRef(null);
   const engine = useRef(Engine.create({}));
@@ -60,7 +61,7 @@ const MatterComponent = ({}) => {
   const [title, setTitle] = useState(datas[0].label);
   const [content, setContent] = useState(datas[0].description);
 
-  const [count, setCount] = useState(10);
+  const [count, setCount] = useState(2);
 
   const onScreenDetail = useOnScreen(scene);
   let bodies = [];
@@ -87,6 +88,11 @@ const MatterComponent = ({}) => {
         display: "ground",
         delay: 0.65,
       });
+      handleEnter({
+        el: titleRef,
+        display: "title",
+        // delay: 0.65,
+      });
     }
   }, [reveal]);
 
@@ -103,8 +109,8 @@ const MatterComponent = ({}) => {
     });
 
     handleEnter({
-      el: titleRef,
-      display: "title",
+      el: tagTitleRef,
+      display: "tag-title",
       delay: 0.35,
     });
   };
@@ -392,7 +398,7 @@ const MatterComponent = ({}) => {
               layout="fill"
             ></CloseBtn>
           </CloseBtnContainer>
-          <Label ref={titleRef}>{title}</Label>
+          <Label ref={tagTitleRef}>{title}</Label>
           <DescriptionContainer>
             <Description
               ref={descriptionRef}
@@ -425,11 +431,10 @@ const MatterComponent = ({}) => {
       {/* )} */}
       <Ground ref={groundRef} />
       {/* </Fragment> */}
-      <Title>
-        Get to know
-        <br />
-        me better
-      </Title>
+      <Title
+        ref={titleRef}
+        dangerouslySetInnerHTML={{ __html: pageTitle }}
+      ></Title>
     </MatterContainer>
   );
 };
