@@ -29,6 +29,7 @@ export default function Layout({
   number = "01",
   title,
   description,
+  fullPage,
   contact,
 }) {
   const containerRef = useRef(null);
@@ -119,7 +120,7 @@ export default function Layout({
 
       <Wrapper data-scroll-container ref={containerRef}>
         <Header />
-        <Container>
+        <Container fullPage={fullPage}>
           <SwitchTransition>
             <Transition
               key={router.asPath}

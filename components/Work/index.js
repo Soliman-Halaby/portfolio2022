@@ -23,10 +23,11 @@ const ProjectWork = ({}) => {
   }));
 
   const titleRef = useRef(null);
-  const onScreenTitle = useOnScreen(titleRef, 0.7);
+  const isMobile = useIsMobile();
+
+  const onScreenTitle = useOnScreen(titleRef, isMobile ? 0.7 : 0.3);
   // const onScreenSubtitle = useOnScreen(subtitleRef);
   const [reveal, setReveal] = useState(false);
-  const isMobile = useIsMobile();
 
   useEffect(() => {
     if (onScreenTitle) setReveal(onScreenTitle);
@@ -40,10 +41,24 @@ const ProjectWork = ({}) => {
       });
     }
   }, [reveal]);
+
+  let attributes = [];
+
+  if (isMobile) {
+    attributes["data-scroll-target"] = ".selected-work";
+  }
+
   return (
     <Wrapper className="selected-work" data-scroll-section>
       <Container>
-        <Title ref={titleRef}>Selected works</Title>
+        <Title
+          data-scroll={isMobile && true}
+          data-scroll-sticky
+          {...attributes}
+          ref={titleRef}
+        >
+          Selected works
+        </Title>
         <ContainerGrid>
           {data.map((data, i) => {
             return (
