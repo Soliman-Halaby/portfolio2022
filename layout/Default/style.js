@@ -17,7 +17,7 @@ export const App = styled.div`
 export const Wrapper = styled.div``;
 export const Container = styled.div`
   width: 100%;
-  overflow: hidden;
+  overflow: ${({ fullPage }) => (fullPage ? "hidden" : "visible")};
   background: ${({ theme }) => {
     theme.colors.grey2;
   }};

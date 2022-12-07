@@ -34,7 +34,7 @@ export const Container = styled.div`
     right: 15rem;
     left: inherit;
     ${maxMedia.small} {
-      top: 28rem;
+      top: 32rem;
       right: 10rem;
     }
   }
@@ -55,6 +55,9 @@ export const Title = styled.h1`
   ${maxMedia.xs} {
     margin: 4rem 0;
 
+    font-size: 40px;
+    font-size: 4.6rem;
+    line-height: 4.6rem;
     :nth-of-type(1) {
       margin-top: 1rem;
     }
