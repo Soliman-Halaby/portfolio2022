@@ -10,7 +10,7 @@ export const ButtonStyle = styled.button`
   cursor: none;
   border: 1px solid ${({ theme }) => theme.colors.grey1};
   border-radius: 50%;
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   color: ${({ theme }) => theme.colors.grey1};
   background: ${({ theme }) => theme.colors.grey2};
   font-family: ${({ theme }) => theme.fonts.sansSerif};
@@ -37,7 +37,7 @@ export const ButtonStyle = styled.button`
       } */
   }
   ${maxMedia.small} {
-    font-size: 1.35rem;
-    padding: 1rem;
+    font-size: 1.05rem;
+    padding: 0.75rem;
   }
 `;
