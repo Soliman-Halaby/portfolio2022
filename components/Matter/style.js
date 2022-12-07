@@ -75,6 +75,7 @@ export const Title = styled.h2`
   text-align: center;
   font-family: ${({ theme }) => theme.fonts.serif};
   font-weight: 400;
+  opacity: 0;
   user-select: none;
   font-size: 20rem;
   line-height: 19rem;
@@ -83,8 +84,9 @@ export const Title = styled.h2`
   transform: translate(-50%, -50%);
 
   ${maxMedia.small} {
-    font-size: 10rem;
-    line-height: 10rem;
+    font-size: 7.5rem;
+
+    line-height: 7.5rem;
   }
   ${maxMedia.xs} {
     /* font-size: 20vw; */
