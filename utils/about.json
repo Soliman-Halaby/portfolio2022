@@ -1,11 +1,11 @@
 [
   {
     "label": "Paris",
-    "description": "I arrived in Paris in 2019 for my higher education and I don't regret this choice! I like this city very much because it is possible to find a balance on several points, between sports, activities and work atmosphere."
+    "description": "I arrived in Paris in 2019 as part of my graduate studies and do not regret this choice! I really like this city because it is possible to find a balance between sports, activities and work. It also allowed me to really settle in France."
   },
   {
     "label": "Ultranoir",
-    "description": "In May 2022, a new adventure began at Ultranoir during a 6 month internship. I had the opportunity to work on various projects and to deepen my knowledge of React.</br>This internship was very formative and is one of the reasons why I decided to do my portfolio in Next. The whole dev team was there to coach me and train me on the different topics. It was my first 'real' experience in an agency, since my previous internship was in full remote."
+    "description": "In May 2022, a new adventure began at Ultranoir during a 6 month internship. I had the opportunity to work on various projects and to deepen my knowledge in React. This internship was very formative and is one of the reasons why I decided to do my portfolio in Next.js. The whole dev team was there to guide me and train me on the different topics. It was my first 'real' experience in an agency, since my first internship was in full remote."
   },
   {
     "label": "Football",
@@ -17,15 +17,15 @@
   },
   {
     "label": "Dreamline Studio",
-    "description": "From June to September 2021, I did an internship at Dreamline Studio. It was my first professional experience because I had not done an internship before. I had the opportunity to deepen my knowledge on WordPress and to master this tool as it should be. The internship was full remote."
+    "description": "From June to September 2021, I did an internship at Dreamline Studio. It was my first professional experience because I had not done an internship before. I had the opportunity to deepen my knowledge on WordPress and to master this tool. The internship was full remote, but went very well, that's why I continue to work as a freelancer with Dreamline."
   },
   {
     "label": "Cairo",
-    "description": "Until I was 18, I was born and raised in Cairo. I did all my schooling at the French Lycée in Cairo. I often return to Egypt during the year when possible to meet up with my family and friends.</br></br>Growing up in Egypt and traveling whenever I could, allowed me to become fluent in Arabic and to adapt to any kind of environment."
+    "description": "I was born and raised in Cairo until I was 18. All my schooling was spent at the French Lycée in Cairo. I often return to Egypt during the year when possible to meet up with my family and friends. Growing up in Egypt and traveling whenever I could, has allowed me to become fluent in Arabic and to adapt to all types of environments."
   },
   {
     "label": "Karate",
-    "description": "From the age of 5 to 17 I practiced karate in Egypt with the same Sensai. With time and training, this allowed me to obtain my first dan black belt. Karate was a big part of my daily life when I was in Egypt as I trained 2 to 3 times a week in addition to other sports. "
+    "description": "From the age of 5 to 17 I practiced karate in Egypt with the same Sensai. With time and training, this allowed me to obtain my first dan black belt. Karate was a big part of my daily life when I was in Egypt as I trained 2 to 3 times a week."
   },
   {
     "label": "HETIC",
@@ -33,18 +33,18 @@
   },
   {
     "label": "New York",
-    "description": "New York is one of the cities I want to discover the most. I also want to go there to improve my English and discover a new continent.</br>So why not do it if I can do it while working in the field I love.</br>It would be a great opportunity for me to go there, especially since I have never been to America."
+    "description": "New York is one of the cities I want to discover the most. I also want to go there to improve my English and discover a new continent. So why not do it if I can do it while working in the field I love.<br/>It would be a great opportunity for me to go there, especially since I have never been to America."
   },
   {
     "label": "Piano",
-    "description": "I always wanted to learn the piano and the guitar since I was a child. I made a choice and turned to the piano which I practiced for several years at the Russian cultural center in Egypt. For those who are looking for it, you can find a video on youtube of little Soliman playing the piano! "
+    "description": "I always wanted to learn the piano and the guitar since I was a child. I made a choice and turned to the piano which I practiced for several years at the Russian cultural center in Egypt. For those who are looking for it, you can find a video on youtube of little Soliman playing the piano!"
   },
   {
     "label": "Aikido",
-    "description": "In addition to karate, I wanted to learn a new philosophy. With the same Sensai, I had the chance to learn Aikido, the art of using the power of the other to defend oneself. It was a very important complement for me and very interesting in the way of thinking and in the application. Although I don't practice it anymore, all my learning is not forgotten and is still present. "
+    "description": "In addition to karate, I wanted to learn a new philosophy. With the same Sensai, I had the chance to learn Aikido, the art of using the power of the other to defend oneself. It was a very important complement for me and very interesting in the way of thinking and in the application. Although I don't practice it anymore, I still have a very good experience."
   },
   {
     "label": "Three.js Journey",
-    "description": "Threejs"
+    "description": "In parallel to my different activities, I was able to almost finish the enriching Three Js Journey training which allowed me to acquire solid bases in Three JS and thus to launch me in the creation of sites in Three JS."
   }
 ]

@@ -16,24 +16,24 @@
       }
     ],
     "color": "#DDE3EF",
-    "link": "https://www.google.com/",
+    "link": "https://github.com/Soliman-Halaby/civic-app-back",
     "title": "Vis ma ville",
     "info": ["Full-stack developer", "15/03/2022"],
-    "description": "A React app that allows users to search for movies and view details about them.",
-    "techno": ["React native", "Node.js"],
+    "description": "Vis ma ville is a mobile application that allows users to report damage / lack of security they see in public places. This application aims to connect a whole community and allows citizens to contribute to the life of their city.",
+    "techno": ["React native", "Expo", "Node.js", "GraphQL", "Apollo"],
     "content1": {
-      "title": "Titre de la section",
-      "subtitle": "Sous-titre de la section",
-      "label": "Hire me",
-      "text1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
-      "text2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+      "title": "Setting up the back-end",
+      "subtitle": "A back-end based on Firestore",
+      "label": "Cloud",
+      "text1": "Vis ma ville is divided in 2 big parts linked together. The back-end is entirely based on Firestore. To do this, we have set up the GraphQL playground with Apollo to facilitate our different queries in the suite. After that, each entity is created with the appropriate structure to be sent to the front-end. The different queries are based on ids in order to produce a dynamic application.",
+      "text2": "In this back-end, the entities are divided into two sub-parts, the queries and the mutations. Our queries consist of the requests we make in the database to retrieve a user, a post for example. The mutations allow us to update certain data or to rewrite them in the database such as the user's information."
     },
     "content2": {
-      "title": "Titre de la section",
-      "subtitle": "Sous-titre de la section",
-      "label": "Hire me",
-      "text1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
-      "text2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+      "title": "A front based on Expo",
+      "subtitle": "Make our app usable on IOS and Android",
+      "label": "Universal",
+      "text1": "In order to make our application universal, we used Expo as a base. The display information on the application. Before making our application dynamic with the back-end, we set up a json with the structure we wanted to be able to advance back-end and front-end simultaneously.  Then to retrieve the data from the back-end, we perform GraphQL queries for the appropriate element with its ID. To navigate between the tabs dynamically, we keep the same principle, send a parameter to the tab change to retrieve the corresponding post / content.",
+      "text2": "To display the different pins on our map, we use the native React elements (MapView, Market, LatLng).  When a user makes a post, and authorizes us to access its location, we retrieve its position with a custom hook (useLocation) that we then send to our database. At the map level, for each existing post, we retrieve the latitude / longitude and the content, and then generate the corresponding pin. To allow the user to take a picture of the reported element, we used expo-camera which allows us to have access (if the user authorizes it) to the front and back camera."
     },
     "images": {
       "hero": "/vis-ma-ville/hero-section.png",
@@ -67,21 +67,14 @@
     "link": "https://www.cloudybay.com/",
     "title": "Cloudy Bay",
     "info": ["Front-end developer", "15/09/2022"],
-    "description": "Cloudy Bay is an e-commerce website designed in React JS / Gatsby using Drupal as a back-office. This site is produced for a subsidiary of the Moet Hennesy group. You can buy different exceptional wines. It is also possible to book your place for the numerous events organized by Cloudy Bay, in their 2 different locations. I contributed to the development of this site during my internship at ultranoir with the different devs of the team.",
-    "techno": ["React JS", "Gatsby"],
+    "description": "Cloudy Bay is an e-commerce website designed in React JS / Gatsby using Drupal as a back-office. This site is produced for a subsidiary of the Moet Hennesy group. You can buy different exceptional wines. It is also possible to book your place for the many events set up by Cloudy Bay, in their 2 different locations. I contributed to the development of this site during my internship at ultranoir with the different devs of the team.",
+    "techno": ["React JS", "Gatsby", "Drupal", "GraphQL"],
     "content1": {
       "title": "Some of the features",
       "subtitle": "Sous-titre de la section",
       "label": "Hire me",
       "text1": "As you browse the site you will be able to discover the different e-retailers / partner stores selling Cloudy Bay wines. It is also possible to follow the Instagram news of this site and choose the different wines according to the year. Another complexity of this site is the fact of dealing with the different markets, while displaying / hiding some elements according to the chosen market.",
-      "text2": "For those who are hesitant, it is possible to use the Wine Finder (produced by a dev of ultranoir) which will allow you to choose the ideal wine according to the different criteria that you give it. The purchase of wines is not done on the platform, it is connected to WineDirect which will allow you to buy the selected wines. "
-    },
-    "content2": {
-      "title": "Titre de la section",
-      "subtitle": "Sous-titre de la section",
-      "label": "Hire me",
-      "text1": "As you browse the site you will be able to discover the different e-retailers / partner stores selling Cloudy Bay wines. It is also possible to follow the Instagram news of this site and choose the different wines according to the year.",
-      "text2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+      "text2": "For those who are hesitant, it is possible to use the Wine Finder (produces one of the developers of ultranoir) which will allow you to choose the ideal wine according to the different criteria you give it. The purchase of wines is not done on the platform, it is connected to WineDirect which will allow you to buy the selected wines."
     },
     "images": {
       "hero": "/cloudy-bay/hero-section.png",
@@ -109,28 +102,21 @@
     "link": "https://www.solimanalhalaby.fr/",
     "title": "Portfolio 2021",
     "info": ["Front-end developer", "12/03/2022"],
-    "description": "My old portfolio, 2021 was designed in html / css / js with Vite set up as dev environment. It was my first big personal project where I already had several challenges that I wanted to execute. I used GSAP to design the different animations.",
+    "description": "My portfolio for the year 2021 was designed in html / css / js with Vite set up as a dev environment. It was my first personal project where I already had several challenges that I wanted to execute. I used GSAP to design the different animations.",
     "techno": ["HTML", "CSS", "JS"],
     "content1": {
-      "title": "Titre de la section",
-      "subtitle": "Sous-titre de la section",
-      "label": "Hire me",
-      "text1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
-      "text2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+      "title": "New portfolio, new idea",
+      "subtitle": "A radical change",
+      "label": "Challenge",
+      "text1": "My 2021 portfolio was an opportunity for me to take on several challenges and to push my limits. The first portfolio I made was several years ago only to discover React and not to showcase my front-end development skills. For this portfolio, it was different, I liked several feature ideas and I wanted to implement them.",
+      "text2": "First of all I wanted a portfolio in dark mode because I liked it and I had been thinking about it for a while. I also wanted my portfolio to be as easy to use as possible and to access the information and my projects as easily as possible. I also saw the horizontal scroll on different sites and wanted to implement it on this one, using GSAP, it also allowed me to make some effects."
     },
     "content2": {
-      "title": "Titre de la section",
-      "subtitle": "Sous-titre de la section",
-      "label": "Hire me",
-      "text1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
-      "text2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
-    },
-    "content3": {
-      "title": "Titre de la section",
-      "subtitle": "Sous-titre de la section",
-      "label": "Hire me",
-      "text1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
-      "text2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+      "title": "The horizontal scroll",
+      "subtitle": "A base that I wanted to put in place",
+      "label": "Gsap",
+      "text1": "One of the features I wanted to implement on my site was horizontal scrolling. Moreover, I wanted to learn how to use GSAP so what better way than to learn with a goal. I was able to go deeper into this subject, by animating the different sections with scroll. For those who have the eye, I also added a skew according to the velocity of the scroll on the sections to bring more dynamism.",
+      "text2": "Linking the horizontal and vertical scroll (on the project page) was also another challenge I wanted to tackle and that I managed to implement. The different animations of the cursor, the fade-in, fade-out was also designed with the help of GSAP. The about page was totally designed using mostly CSS animations and attribute data to link the content according to the hovered section in JS. "
     },
     "images": {
       "hero": "/moviereact-image.png",
@@ -163,25 +149,19 @@
         "url": "/robin"
       }
     ],
-    "link": "https://www.google.com/",
+    "link": "https://canlink.me/",
     "title": "Canlink Me",
     "info": ["Full-stack developer", "17/03/2021"],
-    "description": "A React app that allows users to search for movies and view details about them.",
+    "description": "Canlink me is a url shortener that we have set up during a school project. It is possible for the user to simply shorten his URL without creating an account, or, make an account and be able to manage his different URLs and access the statistics.",
     "techno": ["PHP", "CSS", "Javascript"],
     "content1": {
-      "title": "Titre de la section",
-      "subtitle": "Sous-titre de la section",
-      "label": "Hire me",
-      "text1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
-      "text2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+      "title": "The different choices",
+      "subtitle": "Several features available",
+      "label": "Stats",
+      "text1": "Canlink me offers its users to create an account with their email address, or if they want to connect directly with the Google API in order to speed up the registration. Once connected, it is possible to manage several parameters to the shortened urls like the activation of the url, the number of clicks, the date on which this URL was shortened.",
+      "text2": "We wanted to centralize everything on one page to facilitate the user experience. The logged in user accesses his dashboard with the different stats on the same page as the non logged in users, allowing to shorten his URL and manage them without changing page. All the operation / redirection is managed in native PHP."
     },
-    "content2": {
-      "title": "Titre de la section",
-      "subtitle": "Sous-titre de la section",
-      "label": "Hire me",
-      "text1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
-      "text2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
-    },
+
     "images": {
       "hero": "/canlink-me/hero-section.png",
       "fullwidth": "/canlink-me/full-width-1.jpg",
@@ -218,21 +198,21 @@
       }
     ],
     "info": ["Back-end developer", "16/12/2020"],
-    "description": "Selfer is a web app designed using React JS for the front-end and Symfony for the back-end. This Web App is a kind of CMS based on the Notion API. Via Selfer it is possible to generate a static site. A back-office is set up to edit / update the content that will be updated directly on the site. This Web App has been realized in a 10 days project.  We are still working on Selfer and plan to implement different features in the future.",
+    "description": "Selfer is a web app designed using React JS for the front-end and Symfony for the back-end. This Web App is a kind of CMS based on the Notion API. Via Selfer it is possible to generate a static site. A back-office is set up to edit / update the content that will be updated directly on the site. This Web App has been realized in a 10 days project.<br/>We are still working on Selfer and plan to implement different features in the future.",
     "techno": ["React JS", "TypeScript", "Symfony"],
     "content1": {
       "title": "Easy and customizable",
       "subtitle": "The Selfer Web App is very</br>easy to use and very scalable.",
       "label": "Flexible",
-      "text1": "In the available back-office, once connected to the Notion account, all the Workspaces you have authorized will be displayed, it will then be possible to retrieve the content of each Workspace / Page as well as the type of block to then update the color, style or font. Everything is managed with Context, this style is then sent back to our Database which will store it to return a static site corresponding to the back-office.",
-      "text2": "Selfer is easy to use, you just have to create a page in your Workspace, enter the content / image you want in the blocks Notions. On the front side we take care of everything, you just have to edit your content via our App, which will then propose to go live and put your static site online."
+      "text1": "In the available back-office, once connected to the Notion account, all the Workspaces you have authorized will be displayed, it will then be possible to retrieve the content of each Workspace / Page as well as the type of block to then update the color, the style or the font. Everything is managed through Context, this style is then returned to our Database which will store it to return a static site corresponding to the back-office.",
+      "text2": "Selfer is easy to use, to use it, you just have to create a page in your Workspace, enter the content you want in the Notion blocks (callout, image, text). We then retrieve these elements via the Notion API, we just have to edit its content via our App, which will then propose to go live and put online its static site."
     },
     "content2": {
       "title": "Code structure",
       "subtitle": "A code</br>fragmented in 2 parts",
       "label": "Code",
-      "text1": "For the back-end, to create and update the content, we used Symfony and a MySQL database. Different routes exist to communicate with the front-end. To update the DB, the data returned as parameters by the frontend are retrieved, processed (to check that there are no elements we don't want to return) and then sent to the database.",
-      "text2": "As for the front end, we used React with TypeScript. TypeScript seemed to be essential in our case, since we were going to manipulate several types of content and return them. The retrieval of information from the back is done using a call on the different routes created. To store and manipulate these variables properly, we have set up different context that we use on different components. "
+      "text1": "For the back-end, to create and update the content, we used Symfony and a MySQL database. Different routes exist to communicate with the front-end. To update the DB, the data returned as parameters by the front-end are retrieved, processed (to check that there are no elements we don't want to return) and then sent to the database.",
+      "text2": "As for the front end, we used React with TypeScript. TypeScript seemed to be essential, especially in our case, since we were going to manipulate several types of content and return them. The retrieval of information from the back end is done by calling on the different routes created. To store and manipulate these variables properly, we have setups of different contexts that we update through several components."
     },
     "images": {
       "hero": "/selfer/hero-section.png",
@@ -259,14 +239,14 @@
     "link": "https://ddalos.vercel.app/",
     "title": "D'Dalos",
     "info": ["Front-end developer", "25/02/2021"],
-    "description": "Ddalos is an immersive website aiming to showcase several models of boats made on Blender. This site was produced using Three JS. You can lock your mouse and then use the keys to discover the different 3D models.",
+    "description": "Ddalos is an immersive website aiming to showcase several models of boats made on Blender. This site was produced using Three JS. It is possible to lock the mouse and then use the keys to discover the different 3D models.",
     "techno": ["Three.js"],
     "content1": {
       "title": "The birth of D'Dalos",
       "subtitle": "The mixture of several know-hows",
       "label": "New",
       "text1": "This project was done as part of a school project where we had to choose 2 brands, merge them into one and find a new area of expertise related to both. We chose to take Bentley & Dior as references. Bentley for the power of their engine as well as their knowledge in engineering and Dior to represent the elegant and luxurious side.",
-      "text2": "The mixture of these 2 brands gave birth to D'Dalos, a luxury yacht builder. During this project we created our own graphic identity (logo, graphic charter) as well as a fictitious story to explain the appearance of D'Dalos. The final goal was to present our yachts' realizations through a showroom, whatever it is."
+      "text2": "The fusion of these 2 brands gave birth to D'Dalos, a luxury yacht builder. During this project we created our own graphic identity (logo, graphic charter) as well as a fictitious story to explain the appearance of D'Dalos. The final goal was to present our yachts' realizations through a showroom, whatever it is."
     },
     "content2": {
       "title": "An immersive showroom",
