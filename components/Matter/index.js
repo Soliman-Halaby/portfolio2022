@@ -61,7 +61,7 @@ const MatterComponent = ({ pageTitle }) => {
   const [title, setTitle] = useState(datas[0].label);
   const [content, setContent] = useState(datas[0].description);
 
-  const [count, setCount] = useState(2);
+  const [count, setCount] = useState(1);
 
   const onScreenDetail = useOnScreen(scene);
   let bodies = [];
@@ -78,7 +78,6 @@ const MatterComponent = ({ pageTitle }) => {
 
   useEffect(() => {
     if (onScreenDetail) setReveal(onScreenDetail);
-    console.log("onScreenDetail", onScreenDetail);
   }, [onScreenDetail]);
 
   useEffect(() => {
@@ -146,8 +145,6 @@ const MatterComponent = ({ pageTitle }) => {
 
   // Function to display detail box, title and content
   function openDetail(index) {
-    console.log("opened");
-
     if (detail === "closed") {
       // Trigger animation if detail box is closed
       animationEnterDetail();
@@ -324,10 +321,11 @@ const MatterComponent = ({ pageTitle }) => {
 
   // Previous box detail
   const previousDetail = () => {
-    setCurrentIndex(currentIndex - 1);
-
-    setContent(datas[currentIndex].description);
-    setTitle(datas[currentIndex].label);
+    if (currentIndex > 0) {
+      setCurrentIndex(currentIndex - 1);
+      setContent(datas[currentIndex].description);
+      setTitle(datas[currentIndex].label);
+    }
 
     if (currentIndex == 0) {
       setCurrentIndex(datas.length - 1);
@@ -338,6 +336,7 @@ const MatterComponent = ({ pageTitle }) => {
 
   // Next box detail
   const nextDetail = () => {
+    setCurrentIndex(currentIndex + 1);
     if (currentIndex === datas.length) {
       setContent(datas[currentIndex - 1].description);
       setTitle(datas[currentIndex - 1].label);
@@ -345,8 +344,6 @@ const MatterComponent = ({ pageTitle }) => {
     }
 
     if (currentIndex !== datas.length) {
-      setCurrentIndex(currentIndex + 1);
-
       setContent(datas[currentIndex].description);
       setTitle(datas[currentIndex].label);
     }
@@ -408,17 +405,15 @@ const MatterComponent = ({ pageTitle }) => {
           <OtherFactsContainer ref={otherFactRef}>
             Other facts
             <ControlWrapper>
-              <ControlContainer>
+              <ControlContainer onClick={() => previousDetail()}>
                 <Control
-                  onClick={() => previousDetail()}
                   src="/facts-prev.svg"
                   width="24px"
                   height="24px"
                 ></Control>
               </ControlContainer>
-              <ControlContainer>
+              <ControlContainer onClick={() => nextDetail()}>
                 <Control
-                  onClick={() => nextDetail()}
                   src="/facts-next.svg"
                   width="24px"
                   height="24px"
