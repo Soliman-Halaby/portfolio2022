@@ -146,7 +146,7 @@ const styles = ({ fonts }) => {
     }
 
     .word {
-      padding: 0.5rem 0;
+      padding-bottom: 0.5rem;
     }
 
     html,

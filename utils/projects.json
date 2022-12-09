@@ -225,7 +225,7 @@
   },
   {
     "slug": "ddalos",
-    "colPos": "10",
+    "colPos": "12",
     "mobileCol": "2",
     "rowPos": "2",
     "mobileRow": "4",
@@ -271,7 +271,7 @@
   },
   {
     "slug": "eclipse",
-    "colPos": "11",
+    "colPos": "13",
     "mobileCol": "3",
     "with": [
       {

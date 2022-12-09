@@ -6,6 +6,7 @@ import { maxMedia, TitleSection } from "styles/mixins";
 
 import { ButtonStyle } from "../Buttons/Button/style";
 
+import Image from "next/image";
 export const Wrapper = styled.div`
   max-width: 106px;
   z-index: 2;
@@ -34,7 +35,7 @@ export const ImageContainer = styled.div`
   overflow: hidden;
   position: relative;
 `;
-export const Image = styled.img`
+export const ImageBlock = styled(Image)`
   filter: grayscale(1);
   top: 0;
   left: 0;

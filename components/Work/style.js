@@ -8,12 +8,13 @@ export const Wrapper = styled.div`
   padding: 0px 2rem;
   display: flex;
   gap: 0rem;
-  margin: 10rem 0;
+  min-height: 100vh;
+  /* margin: 10rem 0; */
   /* padding-left: 28px; */
   position: relative;
   height: 100%;
-  margin-bottom: 20rem;
-  align-items: flex-end;
+  /* margin-bottom: 20rem; */
+  align-items: center;
 
   ${maxMedia.xs} {
     margin: 5rem 0;
@@ -25,12 +26,13 @@ export const Container = styled.div`
   width: 100%;
   background: ${({ theme }) => theme.colors.grey2};
   /* mix-blend-mode: exclusion; */
+  position: relative;
 `;
 
 export const Title = styled.h2`
   ${TitleSection()}
   font-size: 16rem;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
   line-height: 16rem;
   opacity: 0;
   position: absolute;
@@ -59,7 +61,7 @@ export const ContainerGrid = styled.div`
   width: 100%;
   display: grid;
   grid-gap: 1rem;
-  row-gap: 4rem;
+  row-gap: 6rem;
   grid-template-columns: repeat(auto-fill, minmax(106px, 1fr));
   grid-template-rows: 1fr 1fr;
   ${maxMedia.xs} {

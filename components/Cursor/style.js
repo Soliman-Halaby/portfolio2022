@@ -43,8 +43,8 @@ export const CursorContainer = styled.div`
   }
 
   &:nth-of-type(1){
-    width: 17px;
-  height: 20px;
+    width: 16px;
+  height: 16px;
   }
 
   @keyframes cursorAnim {
