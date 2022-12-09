@@ -90,7 +90,7 @@ function handleEnterPin({ el, delay, animText }) {
       rotation: 40,
     },
     {
-      rotation: 0,
+      rotation: -4.6,
       duration: 0.15,
       delay: elDelay + delay,
     },
@@ -111,7 +111,7 @@ function handleEnterImg({ el, delay, image, animText }) {
     },
     {
       clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
-      duration: 0.2,
+      duration: 0.5,
       delay: elDelay + delay + displayDelay,
     },
     "anim"
@@ -120,12 +120,12 @@ function handleEnterImg({ el, delay, image, animText }) {
   tl.fromTo(
     image.current,
     {
-      scale: 1.15,
+      scale: 1,
     },
     {
-      scale: 1,
-      duration: 0.12,
-      delay: elDelay + delay + 0.25 + displayDelay,
+      scale: 1.2,
+      duration: 0.6,
+      delay: elDelay + delay + 0.5 + displayDelay,
     },
     "anim"
   );

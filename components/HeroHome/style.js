@@ -30,8 +30,9 @@ export const Container = styled.div`
   }
 
   ${ContainerPin} {
-    top: 30rem;
-    right: 15rem;
+    top: 27.5rem;
+    right: 13rem;
+
     left: inherit;
     ${maxMedia.small} {
       top: 32rem;
@@ -49,6 +50,10 @@ export const Title = styled.h1`
   line-height: 6.5rem;
 
   opacity: 0;
+
+  .word {
+    padding-top: 0 !important;
+  }
   position: relative;
   text-align: ${({ alignRight }) => (alignRight ? `right` : `initial`)};
 
@@ -73,7 +78,7 @@ export const ImageWrapper = styled.div`
   position: relative;
 
   clip-path: polygon(35% 0px, 65% 0px, 65% 100%, 35% 100%);
-  transition: all 0.4s ease-in-out;
+  transition: all 0.6s ease;
   ${maxMedia.xs} {
     height: 60vh;
   }
@@ -82,8 +87,8 @@ export const ImageWrapper = styled.div`
 export const ImageContainer = styled.div`
   width: 100%;
   height: 90vh;
-  transform: scale(1.15);
-  transition: all 0.3s ease-in-out;
+  transform: scale(1);
+  /* transition: all 0.3s ease-in-out; */
 
   ${maxMedia.xs} {
     height: 60vh;

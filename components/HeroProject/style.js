@@ -194,7 +194,7 @@ export const ImageContainer = styled.div`
   overflow: hidden;
 
   clip-path: polygon(35% 0px, 65% 0px, 65% 100%, 35% 100%);
-  transition: all 0.4s ease-in-out;
+  transition: all 0.6s ease;
   ${maxMedia.small} {
     height: 60vh;
   }
@@ -203,8 +203,8 @@ export const ImageContainer = styled.div`
 export const ImageWrapper = styled.div`
   width: 100%;
   height: 90vh;
-  transform: scale(1.15);
-  transition: transform 0.3s ease-in-out;
+  transform: scale(1.2);
+  /* transition: transform 0.3s ease-in-out; */
 
   ${maxMedia.small} {
     height: 60vh;

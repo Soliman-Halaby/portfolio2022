@@ -124,7 +124,7 @@ function handleEnterTitle({ el, animText }) {
     const words = word;
 
     console.log();
-    let indexElem = index === splitText.words.length - 1 ? "18" : "0";
+    let indexElem = index === splitText.words.length - 1 ? "10" : "0";
     tl.fromTo(
       words,
       {

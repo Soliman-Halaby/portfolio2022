@@ -97,7 +97,7 @@ const HeroHome = ({ title, subtitle, sectionTitle, label, image }) => {
       selectedWork.scrollIntoView(true);
     } else {
       scroll.scroll.scrollTo(selectedWork, {
-        offset: -selectedWork.offsetHeight / 2,
+        offset: 0,
       });
     }
   };

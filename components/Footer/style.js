@@ -113,7 +113,7 @@ export const ImageContainer = styled.div`
   overflow: hidden;
   width: 100%;
   clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 97%);
-  transition: all 0.2s linear;
+  transition: all 0.5s ease;
 `;
 
 export const ImgWrapper = styled.div`

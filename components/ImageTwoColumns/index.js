@@ -10,7 +10,7 @@ const ImageTwoColumns = ({ color, src, src2 }) => {
         <Container color={color}>
           <Image
             data-scroll
-            data-scroll-speed="0.5"
+            data-scroll-speed="0.75"
             alt="Project Image"
             src={src}
           ></Image>

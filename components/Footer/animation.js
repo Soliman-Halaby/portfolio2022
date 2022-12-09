@@ -104,7 +104,7 @@ function handleEnterTitle({ text, animText }) {
 
 function handleEnterTag({ el, delay, image, animText }) {
   const tl = gsap.timeline();
-  const elDelay = 0.09;
+  const elDelay = 0.035;
   const displayDelay = animText === true ? 2.8 : 0;
 
   tl.fromTo(
