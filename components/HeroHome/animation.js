@@ -23,7 +23,7 @@ export const handleEnter = (props) => {
   }
 };
 
-function handleEnterTitle({ text, animText }) {
+function handleEnterTitle({ text, animText, delay }) {
   const splitText = new SplitText(text.current, {
     type: "lines,words",
     wordsClass: "word",
@@ -38,7 +38,7 @@ function handleEnterTitle({ text, animText }) {
 
   const textDelay = 0.09;
 
-  const displayDelay = animText === true ? 3.1 : 0;
+  const displayDelay = animText === true ? 3.2 : 0;
   splitText.lines.forEach((line, index) => {
     const words = line.children;
 
@@ -50,7 +50,7 @@ function handleEnterTitle({ text, animText }) {
       {
         opacity: 1,
         duration: 0.6,
-        delay: textDelay * index + displayDelay,
+        delay: textDelay * index + displayDelay + delay,
       },
       "anim"
     );
@@ -62,7 +62,7 @@ function handleEnterTitle({ text, animText }) {
       {
         y: 0,
         duration: 0.6,
-        delay: textDelay * index + displayDelay,
+        delay: textDelay * index + displayDelay + delay,
       },
       "anim"
     );
@@ -71,7 +71,7 @@ function handleEnterTitle({ text, animText }) {
 
 function handleEnterPin({ el, delay, animText }) {
   const tl = gsap.timeline();
-  const elDelay = animText === true ? 3.1 : 0.09;
+  const elDelay = animText === true ? 3.2 : 0;
   tl.fromTo(
     el.current,
     {
@@ -107,12 +107,36 @@ function handleEnterImg({ el, delay, image, animText }) {
   tl.fromTo(
     el.current,
     {
+      y: "10%",
+    },
+    {
+      y: 0,
+      duration: 0.2,
+      delay: elDelay + delay + displayDelay,
+    },
+    "anim"
+  );
+  tl.fromTo(
+    el.current,
+    {
+      opacity: 0,
+    },
+    {
+      opacity: 1,
+      duration: 0.2,
+      delay: elDelay + delay + displayDelay,
+    },
+    "anim"
+  );
+  tl.fromTo(
+    el.current,
+    {
       clipPath: "polygon(35% 0px, 65% 0px, 65% 100%, 35% 100%)",
     },
     {
       clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
       duration: 0.5,
-      delay: elDelay + delay + displayDelay,
+      delay: elDelay + delay + displayDelay + 0.3,
     },
     "anim"
   );
@@ -125,7 +149,7 @@ function handleEnterImg({ el, delay, image, animText }) {
     {
       scale: 1.2,
       duration: 0.6,
-      delay: elDelay + delay + 0.5 + displayDelay,
+      delay: elDelay + delay + 0.5 + displayDelay + 0.3,
     },
     "anim"
   );

@@ -60,7 +60,7 @@ export const RowWrapper = styled.div`
 `;
 
 export const Number = styled.span`
-  font-size: 1rem;
+  font-size: clamp(10px, 1rem, 10px);
   max-height: 1rem;
 
   overflow: hidden;

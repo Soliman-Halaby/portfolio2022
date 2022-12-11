@@ -41,7 +41,7 @@ function handleEnterTag({ el, delay, animText }) {
   tl.fromTo(
     el.current,
     {
-      y: "100%",
+      y: "20%",
     },
     {
       y: "0%",
@@ -51,7 +51,7 @@ function handleEnterTag({ el, delay, animText }) {
     "anim"
   );
 }
-function handleEnterTitle({ text, animText }) {
+function handleEnterTitle({ text, animText, delay }) {
   const splitText = new SplitText(text.current, {
     type: "lines,words",
     wordsClass: "word",
@@ -78,7 +78,7 @@ function handleEnterTitle({ text, animText }) {
       {
         opacity: 1,
         duration: 0.6,
-        delay: textDelay * index + displayDelay,
+        delay: textDelay * index + displayDelay + delay,
       },
       "anim"
     );
@@ -90,7 +90,7 @@ function handleEnterTitle({ text, animText }) {
       {
         y: 0,
         duration: 0.6,
-        delay: textDelay * index + displayDelay,
+        delay: textDelay * index + displayDelay + delay,
       },
       "anim"
     );
@@ -119,10 +119,10 @@ function handleEnterImg({ el, delay, image, animText }) {
   tl.fromTo(
     image.current,
     {
-      scale: 1.2,
+      scale: 1,
     },
     {
-      scale: 1,
+      scale: 1.2,
       duration: 0.6,
       delay: elDelay + delay + 0.5 + displayDelay,
     },

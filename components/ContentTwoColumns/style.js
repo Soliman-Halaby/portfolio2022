@@ -67,6 +67,7 @@ export const SubTitle = styled.h3`
   font-family: ${({ theme }) => theme.fonts.sansSerif};
   text-transform: uppercase;
   font-weight: 300;
+  max-width: 165px;
   font-size: 1.15rem;
 
   ${maxMedia.small} {

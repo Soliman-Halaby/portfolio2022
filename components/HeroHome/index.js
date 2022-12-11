@@ -63,21 +63,24 @@ const HeroHome = ({ title, subtitle, sectionTitle, label, image }) => {
         text: titleRef,
         display: "text",
         animText: loaderDisplay,
+        delay: 0.85,
       });
       handleEnter({
         text: sectionTitleRef,
         display: "text",
         animText: loaderDisplay,
+        delay: 1.65,
       });
       handleEnter({
         text: subtitleRef,
         display: "text",
         animText: loaderDisplay,
+        delay: 0.85,
       });
       handleEnter({
         el: pinRef,
         display: "tag",
-        delay: 0.7,
+        delay: 1.7,
         animText: loaderDisplay,
       });
       handleEnter({

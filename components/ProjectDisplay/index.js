@@ -44,19 +44,19 @@ const ProjectDisplay = ({ col, row, title, to, image = [], index }) => {
         el: imageRef,
         display: "image",
         index: index,
-        delay: 0.35,
+        delay: 1.05,
       });
       handleEnter({
         text: titleRef,
         display: "title",
         // index: index,
-        delay: 0.85,
+        delay: 1.55,
       });
       handleEnter({
         text: numberRef,
         display: "number",
         // index: index,
-        delay: 0.85,
+        delay: 1.55,
       });
     }
   }, [reveal]);

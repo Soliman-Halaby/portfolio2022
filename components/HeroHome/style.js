@@ -56,7 +56,6 @@ export const Title = styled.h1`
   }
   position: relative;
   text-align: ${({ alignRight }) => (alignRight ? `right` : `initial`)};
-
   ${maxMedia.xs} {
     margin: 4rem 0;
 
@@ -71,6 +70,8 @@ export const Title = styled.h1`
 
 export const ImageWrapper = styled.div`
   width: 100%;
+  transform: translateY(10%);
+  opacity: 0;
   max-height: 90vh;
   height: 90vh;
   overflow: hidden;

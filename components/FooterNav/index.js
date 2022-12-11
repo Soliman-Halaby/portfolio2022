@@ -71,7 +71,7 @@ const Footer = () => {
                 <Button
                   rounded
                   target="_blank"
-                  to="/ines"
+                  to="https://www.linkedin.com/in/in%C3%A8srichard/"
                   label="ines richard"
                 />
               </RowContainer>

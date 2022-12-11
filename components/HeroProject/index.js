@@ -66,22 +66,24 @@ const HeroProject = ({
         text: titleRef,
         display: "title",
         animText: loaderDisplay,
+        delay: 0.65,
       });
-      // handleEnter({
-      //   text: madeWithRef,
-      //   display: "title",
-      //   animText: loaderDisplay,
-      // });
+      handleEnter({
+        el: madeWithRef,
+        display: "tag",
+        delay: 1.5,
+        animText: loaderDisplay,
+      });
       handleEnter({
         el: tagRef,
         display: "tag",
-        delay: 0.3,
+        delay: 0.9,
         animText: loaderDisplay,
       });
       handleEnter({
         el: contentRef,
         display: "tag",
-        delay: 0.6,
+        delay: 1.3,
         animText: loaderDisplay,
       });
       handleEnter({
@@ -94,7 +96,7 @@ const HeroProject = ({
     }
   }, [reveal]);
 
-  // console.log(tags);
+  console.log(madeWithRef);
   return (
     <Wrapper ref={revealRef} data-scroll-section>
       <Container>
@@ -102,7 +104,7 @@ const HeroProject = ({
           <Title ref={titleRef}>{title}</Title>
           {team && (
             <MadeWith>
-              <MadeWithContainer>
+              <MadeWithContainer ref={madeWithRef}>
                 With {""}
                 {team.map((member, index) => {
                   return (

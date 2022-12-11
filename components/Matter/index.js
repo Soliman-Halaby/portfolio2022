@@ -61,7 +61,8 @@ const MatterComponent = ({ pageTitle }) => {
   const [title, setTitle] = useState(datas[0].label);
   const [content, setContent] = useState(datas[0].description);
 
-  const [count, setCount] = useState(1);
+  const [count, setCount] = useState(loaderDisplay === true ? 6 : 3);
+  console.log(count);
   const [displayBox, setDisplayBox] = useState(false);
   const onScreenDetail = useOnScreen(scene);
   let bodies = [];
@@ -89,11 +90,13 @@ const MatterComponent = ({ pageTitle }) => {
         el: groundRef,
         display: "ground",
         delay: 0.65,
+        animText: loaderDisplay,
       });
       handleEnter({
         el: titleRef,
         display: "title",
-        // delay: 0.65,
+        delay: 1.7,
+        animText: loaderDisplay,
       });
     }
   }, [reveal]);

@@ -31,7 +31,7 @@ function handleEnterTitle({ text, animText, loader }) {
 
   const textDelay = 0.09;
 
-  let displayDelay = animText === true ? 3.1 : 0;
+  let displayDelay = animText === true ? 3.1 : 1.2;
 
   if (loader) {
     displayDelay = 0;

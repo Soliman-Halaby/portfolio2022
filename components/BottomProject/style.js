@@ -42,17 +42,22 @@ export const TitleContainer = styled.div`
   display: flex;
   overflow: hidden;
   align-items: center;
-  gap: 4rem;
   opacity: 0;
 
   ${maxMedia.xs} {
     gap: 2rem;
+  }
+  .line {
+    display: flex !important;
+    align-items: center;
+    gap: 10rem;
   }
 `;
 export const Title = styled.h2`
   ${TitleSection()}
   margin-bottom: 0;
   margin-top: 0;
+  font-size: 5.75rem;
 
   line-height: 6.5rem;
   margin-right: 4rem;

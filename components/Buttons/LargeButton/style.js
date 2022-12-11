@@ -23,4 +23,6 @@ export const ButtonStyle = styled.span`
   }
 `;
 
-export const Container = styled.div``;
+export const Container = styled.div`
+  transform-origin: top left;
+`;

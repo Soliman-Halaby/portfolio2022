@@ -38,6 +38,7 @@ const ProjectWork = ({}) => {
       handleEnter({
         text: titleRef,
         display: "title",
+        delay: 0.3,
       });
     }
   }, [reveal]);

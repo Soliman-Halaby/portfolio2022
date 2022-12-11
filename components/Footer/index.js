@@ -68,6 +68,7 @@ const Footer = ({ number, contact }) => {
         text: sectionTitleRef,
         display: "title",
         animText: loaderDisplay,
+        delay: 1,
       });
       handleEnter({
         el: pinRef,

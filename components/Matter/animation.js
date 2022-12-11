@@ -28,9 +28,11 @@ export const handleEnter = (props) => {
   }
 };
 
-function handleEnterGround({ el, delay, image, reverse }) {
+function handleEnterGround({ el, delay, image, reverse, animText }) {
   const tl = gsap.timeline();
   const elDelay = 0.09;
+
+  const displayDelay = animText === true ? 3.1 : 0;
 
   tl.fromTo(
     el.current,
@@ -40,7 +42,7 @@ function handleEnterGround({ el, delay, image, reverse }) {
     {
       width: "100%",
       duration: 0.6,
-      delay: elDelay + delay,
+      delay: elDelay + delay + displayDelay,
     },
     "anim"
   );
@@ -104,7 +106,7 @@ function handleEnterDescription({ el, delay, image, reverse }) {
   );
 }
 
-function handleEnterTitle({ el, animText }) {
+function handleEnterTitle({ el, animText, delay }) {
   const splitText = new SplitText(el.current, {
     type: "words, lines",
     wordsClass: "word",
@@ -133,7 +135,7 @@ function handleEnterTitle({ el, animText }) {
       {
         opacity: 1,
         duration: 0.6,
-        delay: textDelay * indexElem + displayDelay,
+        delay: textDelay * indexElem + displayDelay + delay,
       },
       "anim"
     );
@@ -145,7 +147,7 @@ function handleEnterTitle({ el, animText }) {
       {
         y: 0,
         duration: 0.6,
-        delay: textDelay * indexElem + displayDelay,
+        delay: textDelay * indexElem + displayDelay + delay,
       },
       "anim"
     );

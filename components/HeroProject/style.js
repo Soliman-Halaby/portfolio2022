@@ -28,6 +28,7 @@ export const TitleContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 1rem;
+  margin: 2.5rem 0;
 `;
 
 export const Title = styled.h2`
@@ -36,6 +37,7 @@ export const Title = styled.h2`
   opacity: 0;
   line-height: 6.5rem;
   position: relative;
+  margin: 0;
   text-align: ${({ alignRight }) => (alignRight ? `right` : `initial`)};
   // white-space: pre-line;
 `;
@@ -47,6 +49,8 @@ export const MadeWith = styled.div`
   padding: 0.3rem;
   font-size: 1rem;
   /* overflow: hidden; */
+  display: flex;
+  align-self: flex-end;
   color: ${({ theme }) => theme.colors.grey1};
   font-family: ${({ theme }) => theme.fonts.sansSerif};
   max-width: 110px;
@@ -107,7 +111,7 @@ export const TagWrapper = styled.div`
 `;
 
 export const TagElementsContainer = styled.div`
-  overflow: hidden;
+  /* overflow: hidden; */
 `;
 export const TagContainer = styled.div`
   display: flex;
@@ -184,6 +188,7 @@ export const ContentContainer = styled.div`
 `;
 export const Content = styled.p`
   ${Paragraph()}
+  font-weight: 300;
 
   align-self: flex-end;
 `;

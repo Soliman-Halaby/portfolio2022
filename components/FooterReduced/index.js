@@ -9,15 +9,33 @@ import { useSetRecoilState, useResetRecoilState } from "recoil";
 import { cursorHover } from "recoil/cursorState.js";
 
 import { useIsMobile } from "hook";
-
+import useOnScreen from "hook";
+import { handleEnter } from "./animation.js";
 import { Wrapper, Nav, NavElement, Text, Element, Image } from "./style.js";
 
 const Footer = ({}) => {
   const [activeMessage, setActiveMessage] = useState(false);
   const isMobile = useIsMobile();
 
+  const navRef = useRef(null);
   const scroll = useLocomotiveScroll();
 
+  const onScreen = useOnScreen(navRef);
+  const [reveal, setReveal] = useState(false);
+
+  useEffect(() => {
+    if (onScreen) setReveal(onScreen);
+  }, [onScreen]);
+
+  useEffect(() => {
+    if (reveal) {
+      handleEnter({
+        el: navRef,
+        display: "footer",
+        delay: 0.15,
+      });
+    }
+  }, [reveal]);
   useEffect(() => {
     console.log(scroll);
   }, [scroll]);
@@ -60,7 +78,7 @@ const Footer = ({}) => {
 
   return (
     <Wrapper data-scroll-section>
-      <Nav>
+      <Nav ref={navRef}>
         <NavElement>
           <Element className="with-arrow">
             <Text>
@@ -88,7 +106,12 @@ const Footer = ({}) => {
         <NavElement>
           <Element>
             <Text>Designed by</Text>
-            <Button rounded target="_blank" to="/ines" label="ines richard" />
+            <Button
+              rounded
+              target="_blank"
+              to="https://www.linkedin.com/in/in%C3%A8srichard/"
+              label="ines richard"
+            />
           </Element>
         </NavElement>
         <NavElement>
@@ -117,7 +140,11 @@ const Footer = ({}) => {
               <br />
               my resume
             </Text>
-            <CircularButton to="/" label="CV" />
+            <CircularButton
+              to="/CV-Soliman-Al-Halaby.pdf"
+              target="_blank"
+              label="CV"
+            />
           </Element>
         </NavElement>
         {!isMobile && (
