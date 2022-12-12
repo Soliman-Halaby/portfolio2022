@@ -96,7 +96,6 @@ const HeroProject = ({
     }
   }, [reveal]);
 
-  console.log(madeWithRef);
   return (
     <Wrapper ref={revealRef} data-scroll-section>
       <Container>

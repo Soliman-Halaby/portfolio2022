@@ -44,7 +44,6 @@ const HeroHome = ({ title, subtitle, sectionTitle, label, image }) => {
   const onScreenTitle = useOnScreen(titleRef);
   const [reveal, setReveal] = useState(false);
 
-  console.log(sectionNumberRef);
   useEffect(() => {
     if (onScreenTitle) setReveal(onScreenTitle);
   }, [onScreenTitle]);

@@ -61,7 +61,6 @@ function handleEnterTitle({ text, delay }) {
     linesClass: "line",
   });
 
-  console.log(splitText);
   const tl = gsap.timeline();
   tl.add("anim");
   gsap.set(text.current, { opacity: 1 });
