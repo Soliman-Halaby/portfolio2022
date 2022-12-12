@@ -48,6 +48,7 @@ export const MadeWithContainer = styled.div`
 export const MadeWith = styled.div`
   padding: 0.3rem;
   font-size: 1rem;
+  margin-bottom: 1rem;
   /* overflow: hidden; */
   display: flex;
   align-self: flex-end;
@@ -198,6 +199,7 @@ export const ImageContainer = styled.div`
   height: 90vh;
   overflow: hidden;
 
+  opacity: 0;
   clip-path: polygon(35% 0px, 65% 0px, 65% 100%, 35% 100%);
   transition: all 0.6s ease;
   ${maxMedia.small} {

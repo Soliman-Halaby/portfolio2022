@@ -130,6 +130,21 @@ export default function Layout({
           site: "@site",
           cardType: "summary_large_image",
         }}
+        additionalLinkTags={[
+          {
+            rel: "icon",
+            href: "https://www.solimanalhalaby.fr/favicon.ico",
+          },
+          {
+            rel: "apple-touch-icon",
+            href: "https://www.solimanalhalaby.fr/icon/apple-touch-icon.png",
+            sizes: "76x76",
+          },
+          {
+            rel: "manifest",
+            href: "https://www.solimanalhalaby.fr/icon/site.webmanifest",
+          },
+        ]}
       />
 
       <Wrapper data-scroll-container ref={containerRef}>

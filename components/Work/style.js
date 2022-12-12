@@ -27,6 +27,7 @@ export const Container = styled.div`
   background: ${({ theme }) => theme.colors.grey2};
   /* mix-blend-mode: exclusion; */
   position: relative;
+  margin-top: 10rem;
 `;
 
 export const Title = styled.h2`

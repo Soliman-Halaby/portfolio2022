@@ -1,6 +1,6 @@
 import { gsap } from "vendor/gsap";
 import SplitText from "vendor/gsap/SplitText";
-
+import { CustomEase } from "vendor/gsap/CustomEase";
 gsap.registerPlugin(SplitText);
 
 export const handleEnter = (props) => {
@@ -48,6 +48,10 @@ function handleEnterGround({ el, delay, image, reverse, animText }) {
   );
 }
 function handleEnterTagTitle({ el, delay, reverse }) {
+  const customEase = CustomEase.create(
+    "custom",
+    "M0,0 C0.182,0.916 0.48,1.404 1,1 "
+  );
   const tl = gsap.timeline();
   const elDelay = 0.09;
 
@@ -58,20 +62,36 @@ function handleEnterTagTitle({ el, delay, reverse }) {
     },
     {
       opacity: 1,
-      duration: 0.4,
+      duration: 0.3,
       delay: elDelay + delay,
+      ease: customEase,
     },
     "anim"
   );
   tl.fromTo(
     el.current,
     {
-      rotation: 4.6,
+      y: "20%",
+    },
+    {
+      y: "0%",
+      duration: 0.3,
+      delay: elDelay + delay,
+      ease: customEase,
+    },
+    "anim"
+  );
+
+  tl.fromTo(
+    el.current,
+    {
+      rotate: "10",
     },
     {
       rotation: 0,
-      duration: 0.4,
+      duration: 0.3,
       delay: elDelay + delay,
+      ease: customEase,
     },
     "anim"
   );

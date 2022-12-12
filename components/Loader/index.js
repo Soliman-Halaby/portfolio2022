@@ -3,10 +3,12 @@ import Icon from "utils/Icon";
 
 import { useRecoilValue, useSetRecoilState } from "recoil";
 import { loaderState } from "recoil/loaderState";
+import { loaderAnim } from "recoil/loaderState";
 
 import TitleSection from "@/components/Popup/SectionTitle";
 
 import { handleEnter } from "./animation";
+import { handleExit } from "./animation";
 import useOnScreen from "hook/index.js";
 import {
   Wrapper,
@@ -20,26 +22,26 @@ const Loader = ({}) => {
   const [progress, setProgress] = useState(0);
   const setLoaderDisplay = useSetRecoilState(loaderState);
   const loaderDisplay = useRecoilValue(loaderState);
+
+  const loaderAnimState = useRecoilValue(loaderAnim);
+  const setLoaderAnim = useSetRecoilState(loaderAnim);
+
   const containerRef = useRef(null);
   const pinRef = useRef(null);
-
+  const wrapperRef = useRef(null);
+  const loaderNumberRef = useRef(null);
   const onScreen = useOnScreen(pinRef);
 
   const [reveal, setReveal] = useState(false);
 
   useEffect(() => {
-    if (onScreen) setReveal(onScreen);
-  }, [onScreen]);
+    handleEnter({
+      text: pinRef,
+      display: "pin",
+      animText: loaderDisplay,
+    });
+  }, []);
 
-  useEffect(() => {
-    if (reveal) {
-      handleEnter({
-        text: pinRef,
-        display: "text",
-        animText: loaderDisplay,
-      });
-    }
-  }, [reveal]);
   function handleMouse(e) {
     const container = containerRef.current;
     if (!container) return;
@@ -68,7 +70,8 @@ const Loader = ({}) => {
           document.body.style.overflow = "visible";
           document.body.style.height = "100%";
           // setLoaderDisplay(localStorage.getItem("loader"));
-          setLoaderDisplay("false");
+          // setLoaderDisplay(false);
+          setLoaderAnim(true);
           return 100;
         }
 
@@ -92,9 +95,37 @@ const Loader = ({}) => {
     }
   }, [progress]);
 
+  useEffect(() => {
+    if (loaderAnimState) {
+      setTimeout(() => {
+        setLoaderDisplay(false);
+      }, 2500);
+      console.log(pinRef.current);
+      handleExit({
+        display: "text",
+        text: loaderNumberRef,
+        animText: loaderDisplay,
+        delay: 0.6,
+      });
+
+      handleExit({
+        display: "image",
+        el: containerRef,
+        animText: loaderDisplay,
+        delay: 1.3,
+      });
+
+      handleExit({
+        display: "container",
+        el: wrapperRef,
+        animText: loaderDisplay,
+        delay: 1.5,
+      });
+    }
+  }, [loaderAnimState]);
   return (
-    <Wrapper className={loaderDisplay}>
-      <Container className={loaderDisplay}>
+    <Wrapper ref={wrapperRef} className={loaderDisplay}>
+      <Container anim={loaderAnimState} className={loaderDisplay}>
         <TitleSection
           // top={isMobile ? "11.5" : "25"}
           ref={pinRef}
@@ -117,7 +148,9 @@ const Loader = ({}) => {
           <Icon icon="loader" size={550} color="#1E1E1E" />
         </ImgContainer>
         <LoaderNumberContainer>
-          <LoaderNumber className={loaderDisplay}>{progress}%</LoaderNumber>
+          <LoaderNumber ref={loaderNumberRef} className={loaderDisplay}>
+            {progress}%
+          </LoaderNumber>
         </LoaderNumberContainer>
       </Container>
     </Wrapper>

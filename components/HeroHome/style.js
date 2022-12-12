@@ -49,10 +49,17 @@ export const Title = styled.h1`
   margin: 2.5rem 0;
   line-height: 6.5rem;
 
+  transition: all 0.7 cubic-bezier(0.01, 0.01, 0.31, 1.01);
   opacity: 0;
 
   .word {
     padding-top: 0 !important;
+  }
+
+  .line {
+    &:nth-of-type(2) {
+      margin-top: -1.5rem;
+    }
   }
   position: relative;
   text-align: ${({ alignRight }) => (alignRight ? `right` : `initial`)};
@@ -79,7 +86,7 @@ export const ImageWrapper = styled.div`
   position: relative;
 
   clip-path: polygon(35% 0px, 65% 0px, 65% 100%, 35% 100%);
-  transition: all 0.6s ease;
+  transition: all 0.7s cubic-bezier(0.01, 0.01, 0.31, 1.01);
   ${maxMedia.xs} {
     height: 60vh;
   }

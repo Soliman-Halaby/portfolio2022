@@ -58,7 +58,7 @@ const ContentTwoColumns = ({
         <SubContainer>
           <Title ref={titleRef}>
             {title}
-            <Pin ref={pinRef} top="1.5" left="15" label={label} />
+            <Pin ref={pinRef} top="3" left="15" label={label} />
           </Title>
           <ContentWrapper>
             <SubTitle dangerouslySetInnerHTML={{ __html: subtitle }} />

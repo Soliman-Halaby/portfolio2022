@@ -12,6 +12,7 @@ import {
   ProjectContainer,
   ImageContainer,
   ImageBlock,
+  ImageWrapper,
   RowWrapper,
   Number,
   Title,
@@ -44,19 +45,19 @@ const ProjectDisplay = ({ col, row, title, to, image = [], index }) => {
         el: imageRef,
         display: "image",
         index: index,
-        delay: 1.05,
+        delay: 1.15,
       });
       handleEnter({
         text: titleRef,
         display: "title",
         // index: index,
-        delay: 1.55,
+        delay: 2,
       });
       handleEnter({
         text: numberRef,
         display: "number",
         // index: index,
-        delay: 1.55,
+        delay: 2.2,
       });
     }
   }, [reveal]);
@@ -92,16 +93,18 @@ const ProjectDisplay = ({ col, row, title, to, image = [], index }) => {
         onMouseOut={resetDisplay}
       >
         <ImageContainer ref={imageRef}>
-          {image && (
-            <ImageBlock
-              layout="fill"
-              // placeholder="blur"
-              // blurDataURL={image[count % image.length]}
-              data-scroll
-              data-scroll-speed={index % 2 === 0 ? "-0.5" : "0"}
-              src={image[count % image.length]}
-            />
-          )}
+          <ImageWrapper>
+            {image && (
+              <ImageBlock
+                layout="fill"
+                // placeholder="blur"
+                // blurDataURL={image[count % image.length]}
+                data-scroll
+                data-scroll-speed={index % 2 === 0 ? "-0.5" : "0"}
+                src={image[count % image.length]}
+              />
+            )}
+          </ImageWrapper>
         </ImageContainer>
         {title && (
           <RowWrapper>

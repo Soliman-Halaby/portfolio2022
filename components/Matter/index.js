@@ -62,7 +62,7 @@ const MatterComponent = ({ pageTitle }) => {
   const [content, setContent] = useState(datas[0].description);
 
   const [count, setCount] = useState(loaderDisplay === true ? 6 : 3);
-  console.log(count);
+
   const [displayBox, setDisplayBox] = useState(false);
   const onScreenDetail = useOnScreen(scene);
   let bodies = [];

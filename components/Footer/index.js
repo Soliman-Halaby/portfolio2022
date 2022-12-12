@@ -62,6 +62,7 @@ const Footer = ({ number, contact }) => {
       handleEnter({
         text: titleRef,
         display: "title",
+        delay: 0.7,
         animText: loaderDisplay,
       });
       handleEnter({
@@ -73,14 +74,14 @@ const Footer = ({ number, contact }) => {
       handleEnter({
         el: pinRef,
         display: "pin",
-        delay: 0.7,
+        delay: 1.4,
         animText: loaderDisplay,
       });
       handleEnter({
         el: imagePathRef,
         image: imageRef,
         display: "image",
-        delay: 0.09,
+        delay: 0.05,
         animText: loaderDisplay,
       });
     }
@@ -91,25 +92,25 @@ const Footer = ({ number, contact }) => {
       handleEnter({
         el: contactRef1,
         display: "tag",
-        delay: 0.4,
+        delay: 1.45,
         animText: loaderDisplay,
       });
       handleEnter({
         el: contactRef2,
         display: "tag",
-        delay: 0.5,
+        delay: 1.55,
         animText: loaderDisplay,
       });
       handleEnter({
         el: contactRef3,
         display: "tag",
-        delay: 0.6,
+        delay: 1.65,
         animText: loaderDisplay,
       });
       handleEnter({
         el: contactRef4,
         display: "tag",
-        delay: 0.7,
+        delay: 1.75,
         animText: loaderDisplay,
       });
     }

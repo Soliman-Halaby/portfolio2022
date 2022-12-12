@@ -28,7 +28,7 @@ export default function Home() {
       <Hero
         title={
           isMobile
-            ? `Soliman Al<br/>Halaby,creative<br/>developer`
+            ? `Soliman Al<br/>Halaby, creative<br/>developer`
             : `Soliman Al Halaby,<br/>creative developer`
         }
         subtitle={`Looking for<br/>an internship`}

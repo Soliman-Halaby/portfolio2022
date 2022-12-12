@@ -29,11 +29,18 @@ export const Container = styled.div`
 
 export const ImageContainer = styled.div`
   height: 154px;
-
   width: 100%;
   opacity: 0;
   overflow: hidden;
   position: relative;
+`;
+
+export const ImageWrapper = styled.div`
+  height: 176px;
+
+  img {
+    min-height: 176px !important;
+  }
 `;
 export const ImageBlock = styled(Image)`
   filter: grayscale(1);

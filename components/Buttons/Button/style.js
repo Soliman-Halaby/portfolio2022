@@ -6,13 +6,13 @@ import { maxMedia, title } from "styles/mixins";
 export const ButtonStyle = styled.button`
   display: inline-block;
   padding: 0.5rem;
-  /* padding-top: 0.8rem; */
+  padding-top: 0.55rem;
   cursor: none;
   height: 3rem;
   border: 1px solid ${({ theme }) => theme.colors.grey1};
   color: ${({ theme }) => theme.colors.grey1};
   background: ${({ theme }) => theme.colors.grey2};
-  border-radius: ${({ rounded }) => (rounded ? "33px" : "5px")};
+  border-radius: ${({ rounded }) => (rounded ? "33px" : "4px")};
   font-size: 1.05rem;
 
   display: flex;
@@ -32,7 +32,7 @@ export const ButtonStyle = styled.button`
   transition: background 0.3s ease;
 
   &:hover {
-    ${({ rounded }) => (rounded ? "33px" : "5px")};
+    ${({ rounded }) => (rounded ? "33px" : "4px")};
     background: ${({ theme }) => theme.colors.lime};
     border: 1px solid ${({ theme }) => theme.colors.grey1};
     border-style: dashed;
