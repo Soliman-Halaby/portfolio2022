@@ -30,7 +30,7 @@ const customEase = CustomEase.create("custom", "M0,0 C0.04,0.646 0.15,1 1,1 ");
 function handleEnterImg({ el, delay, image, animText }) {
   const tl = gsap.timeline();
   const elDelay = 0;
-  const displayDelay = animText === true ? 3.2 : 0;
+  const displayDelay = animText === true ? 4.6 : 0;
 
   tl.fromTo(
     el.current,
@@ -87,7 +87,7 @@ function handleEnterTitle({ text, animText, delay }) {
   gsap.set(text.current, { opacity: 1 });
 
   const textDelay = 0.0;
-  const displayDelay = animText === true ? 2.9 : 0;
+  const displayDelay = animText === true ? 5 : 0;
 
   splitText.lines.forEach((line, index) => {
     console.log(index, delay);
@@ -125,7 +125,7 @@ function handleEnterTitle({ text, animText, delay }) {
 function handleEnterTag({ el, delay, image, animText }) {
   const tl = gsap.timeline();
   const elDelay = 0.035;
-  const displayDelay = animText === true ? 2.8 : 0;
+  const displayDelay = animText === true ? 5 : 0;
 
   tl.fromTo(
     el.current,
@@ -156,7 +156,7 @@ function handleEnterTag({ el, delay, image, animText }) {
 function handleEnterPin({ el, delay, animText }) {
   const tl = gsap.timeline();
   const elDelay = 0.09;
-  const displayDelay = animText === true ? 2.9 : 0;
+  const displayDelay = animText === true ? 5 : 0;
 
   tl.fromTo(
     el.current,

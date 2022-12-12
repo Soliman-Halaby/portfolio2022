@@ -32,7 +32,7 @@ function handleEnterGround({ el, delay, image, reverse, animText }) {
   const tl = gsap.timeline();
   const elDelay = 0.09;
 
-  const displayDelay = animText === true ? 3.1 : 0;
+  const displayDelay = animText === true ? 4.8 : 0;
 
   tl.fromTo(
     el.current,
@@ -141,7 +141,7 @@ function handleEnterTitle({ el, animText, delay }) {
 
   const textDelay = 0.09;
 
-  const displayDelay = animText === true ? 3.1 : 0;
+  const displayDelay = animText === true ? 4.8 : 0;
   splitText.words.forEach((word, index) => {
     const words = word;
 

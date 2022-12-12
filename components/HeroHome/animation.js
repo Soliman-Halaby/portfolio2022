@@ -45,7 +45,7 @@ function handleEnterTitle({ text, animText, delay }) {
 
   const textDelay = 0.09;
 
-  const displayDelay = animText === true ? 3.2 : 0;
+  const displayDelay = animText === true ? 4.6 : 0;
   splitText.lines.forEach((line, index) => {
     const words = line.children;
 
@@ -80,7 +80,7 @@ function handleEnterTitle({ text, animText, delay }) {
 
 function handleEnterPin({ el, delay, animText }) {
   const tl = gsap.timeline();
-  const elDelay = animText === true ? 3.2 : 0;
+  const elDelay = animText === true ? 4.6 : 0;
   tl.fromTo(
     el.current,
     {
@@ -112,7 +112,7 @@ function handleEnterPin({ el, delay, animText }) {
 function handleEnterImg({ el, delay, image, animText }) {
   const tl = gsap.timeline();
   const elDelay = 0;
-  const displayDelay = animText === true ? 3.2 : 0;
+  const displayDelay = animText === true ? 4.6 : 0;
 
   tl.fromTo(
     el.current,

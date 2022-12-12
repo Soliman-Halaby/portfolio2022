@@ -92,25 +92,25 @@ const Footer = ({ number, contact }) => {
       handleEnter({
         el: contactRef1,
         display: "tag",
-        delay: 1.45,
+        delay: 1.35,
         animText: loaderDisplay,
       });
       handleEnter({
         el: contactRef2,
         display: "tag",
-        delay: 1.55,
+        delay: 1.45,
         animText: loaderDisplay,
       });
       handleEnter({
         el: contactRef3,
         display: "tag",
-        delay: 1.65,
+        delay: 1.55,
         animText: loaderDisplay,
       });
       handleEnter({
         el: contactRef4,
         display: "tag",
-        delay: 1.75,
+        delay: 1.65,
         animText: loaderDisplay,
       });
     }

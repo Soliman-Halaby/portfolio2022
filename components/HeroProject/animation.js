@@ -33,7 +33,7 @@ const customEaseQuick = CustomEase.create(
 
 function handleEnterTag({ el, delay, animText }) {
   const tl = gsap.timeline();
-  const displayDelay = animText === true ? 3.1 : 0;
+  const displayDelay = animText === true ? 4.6 : 0;
   const elDelay = 0.09;
 
   tl.fromTo(
@@ -77,7 +77,7 @@ function handleEnterTitle({ text, animText, delay }) {
   gsap.set(text.current, { opacity: 1 });
 
   const textDelay = 0.09;
-  const displayDelay = animText === true ? 3.1 : 0;
+  const displayDelay = animText === true ? 4.6 : 0;
 
   splitText.lines.forEach((line, index) => {
     const words = line.children;
@@ -114,7 +114,7 @@ function handleEnterTitle({ text, animText, delay }) {
 function handleEnterImg({ el, delay, image, animText }) {
   const tl = gsap.timeline();
   const elDelay = 0;
-  const displayDelay = animText === true ? 3.2 : 0;
+  const displayDelay = animText === true ? 4.6 : 0;
 
   tl.fromTo(
     el.current,
