@@ -1,14 +1,11 @@
 import { gsap } from "vendor/gsap";
 import SplitText from "vendor/gsap/SplitText";
-import { useRecoilValue } from "recoil";
-import { loaderState } from "recoil/loaderState";
-
+import { CustomEase } from "vendor/gsap/all";
 gsap.registerPlugin(SplitText);
 
 export const handleEnter = (props) => {
   const { display } = props;
 
-  console.log(display);
   switch (display) {
     case "text":
       handleEnterTitle(props);
@@ -22,6 +19,16 @@ export const handleEnter = (props) => {
       break;
   }
 };
+
+const customEaseSlow = CustomEase.create(
+  "custom",
+  "M0,0 C0.04,0.646 0.15,1 1,1 "
+);
+
+const customEaseQuick = CustomEase.create(
+  "custom",
+  "M0,0 C0.182,0.916 0.48,1.404 1,1 "
+);
 
 function handleEnterTitle({ text, animText, delay }) {
   const splitText = new SplitText(text.current, {
@@ -49,8 +56,9 @@ function handleEnterTitle({ text, animText, delay }) {
       },
       {
         opacity: 1,
-        duration: 0.6,
+        duration: 0.7,
         delay: textDelay * index + displayDelay + delay,
+        ease: customEaseSlow,
       },
       "anim"
     );
@@ -61,8 +69,9 @@ function handleEnterTitle({ text, animText, delay }) {
       },
       {
         y: 0,
-        duration: 0.6,
+        duration: 0.7,
         delay: textDelay * index + displayDelay + delay,
+        ease: customEaseSlow,
       },
       "anim"
     );
@@ -81,6 +90,7 @@ function handleEnterPin({ el, delay, animText }) {
       opacity: 1,
       duration: 0.15,
       delay: elDelay + delay,
+      ease: customEaseQuick,
     },
     "anim"
   );
@@ -93,13 +103,13 @@ function handleEnterPin({ el, delay, animText }) {
       rotation: -4.6,
       duration: 0.15,
       delay: elDelay + delay,
+      ease: customEaseQuick,
     },
     "anim"
   );
 }
 
 function handleEnterImg({ el, delay, image, animText }) {
-  console.log("enter img");
   const tl = gsap.timeline();
   const elDelay = 0;
   const displayDelay = animText === true ? 3.2 : 0;
@@ -111,8 +121,9 @@ function handleEnterImg({ el, delay, image, animText }) {
     },
     {
       y: 0,
-      duration: 0.2,
+      duration: 0.3,
       delay: elDelay + delay + displayDelay,
+      ease: customEaseSlow,
     },
     "anim"
   );
@@ -123,8 +134,9 @@ function handleEnterImg({ el, delay, image, animText }) {
     },
     {
       opacity: 1,
-      duration: 0.2,
+      duration: 0.3,
       delay: elDelay + delay + displayDelay,
+      ease: customEaseSlow,
     },
     "anim"
   );
@@ -137,6 +149,7 @@ function handleEnterImg({ el, delay, image, animText }) {
       clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
       duration: 0.5,
       delay: elDelay + delay + displayDelay + 0.3,
+      ease: customEaseSlow,
     },
     "anim"
   );
@@ -150,6 +163,7 @@ function handleEnterImg({ el, delay, image, animText }) {
       scale: 1.2,
       duration: 0.6,
       delay: elDelay + delay + 0.5 + displayDelay + 0.3,
+      ease: customEaseSlow,
     },
     "anim"
   );

@@ -32,12 +32,12 @@ const Footer = ({}) => {
       handleEnter({
         el: navRef,
         display: "footer",
-        delay: 0.15,
+        delay: 0.45,
       });
     }
   }, [reveal]);
   useEffect(() => {
-    console.log(scroll);
+    // console.log(scroll);
   }, [scroll]);
 
   const copyToClipboard = (_) => {
