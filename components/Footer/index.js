@@ -84,35 +84,59 @@ const Footer = ({ number, contact }) => {
         delay: 0.05,
         animText: loaderDisplay,
       });
-    }
-  }, [reveal]);
-
-  useEffect(() => {
-    if (revealNav) {
       handleEnter({
         el: contactRef1,
         display: "tag",
-        delay: 1.35,
+        delay: 1.15,
         animText: loaderDisplay,
       });
       handleEnter({
         el: contactRef2,
         display: "tag",
-        delay: 1.45,
+        delay: 1.25,
         animText: loaderDisplay,
       });
       handleEnter({
         el: contactRef3,
         display: "tag",
-        delay: 1.55,
+        delay: 1.35,
         animText: loaderDisplay,
       });
       handleEnter({
         el: contactRef4,
         display: "tag",
-        delay: 1.65,
+        delay: 1.45,
         animText: loaderDisplay,
       });
+    }
+  }, [reveal]);
+
+  useEffect(() => {
+    if (revealNav) {
+      // handleEnter({
+      //   el: contactRef1,
+      //   display: "tag",
+      //   delay: 1.35,
+      //   animText: loaderDisplay,
+      // });
+      // handleEnter({
+      //   el: contactRef2,
+      //   display: "tag",
+      //   delay: 1.45,
+      //   animText: loaderDisplay,
+      // });
+      // handleEnter({
+      //   el: contactRef3,
+      //   display: "tag",
+      //   delay: 1.55,
+      //   animText: loaderDisplay,
+      // });
+      // handleEnter({
+      //   el: contactRef4,
+      //   display: "tag",
+      //   delay: 1.65,
+      //   animText: loaderDisplay,
+      // });
     }
   }, [revealNav]);
   const isMobile = useIsMobile();
