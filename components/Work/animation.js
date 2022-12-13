@@ -8,15 +8,12 @@ export const handleEnter = (props) => {
 
   switch (display) {
     case "title":
-      handleEnterRegular(props);
+      handleEnterTitle(props);
       break;
-    // default:
-    //   handleEnterRegular(props);
-    //   break;
   }
 };
 
-function handleEnterRegular({ text }) {
+function handleEnterTitle({ text, delay }) {
   const splitText = new SplitText(text.current, {
     type: "lines,words",
     wordsClass: "word",
@@ -42,7 +39,7 @@ function handleEnterRegular({ text }) {
       {
         opacity: 1,
         duration: 0.7,
-        delay: textDelay * index,
+        delay: textDelay * index + delay,
       },
       "anim"
     );
@@ -54,54 +51,9 @@ function handleEnterRegular({ text }) {
       {
         y: 0,
         duration: 0.7,
-        delay: textDelay * index,
+        delay: textDelay * index + delay,
       },
       "anim"
     );
   });
 }
-
-// function handleEnterTitle({ text }) {
-//   const splitText = new SplitText(text.current, {
-//     type: "lines,words",
-//     wordsClass: "word",
-//     charsClass: "char",
-//     linesClass: "line",
-//   });
-
-//   const tl = gsap.timeline();
-
-//   tl.add("anim");
-//   gsap.set(text.current, { opacity: 1 });
-
-//   const textDelay = 0.09;
-
-//   splitText.lines.forEach((line, index) => {
-//     const words = line.children;
-
-//     tl.fromTo(
-//       words,
-//       {
-//         opacity: 0,
-//       },
-//       {
-//         opacity: 1,
-//         duration: 0.6,
-//         delay: textDelay * index,
-//       },
-//       "anim"
-//     );
-//     tl.fromTo(
-//       words,
-//       {
-//         y: "100%",
-//       },
-//       {
-//         y: 0,
-//         duration: 0.6,
-//         delay: textDelay * index,
-//       },
-//       "anim"
-//     );
-//   });
-// }

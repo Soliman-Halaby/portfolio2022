@@ -11,7 +11,8 @@ import {
   Wrapper,
   ProjectContainer,
   ImageContainer,
-  Image,
+  ImageBlock,
+  ImageWrapper,
   RowWrapper,
   Number,
   Title,
@@ -44,19 +45,19 @@ const ProjectDisplay = ({ col, row, title, to, image = [], index }) => {
         el: imageRef,
         display: "image",
         index: index,
-        delay: 0.35,
+        delay: 1.15,
       });
       handleEnter({
         text: titleRef,
         display: "title",
         // index: index,
-        delay: 0.85,
+        delay: 2,
       });
       handleEnter({
         text: numberRef,
         display: "number",
         // index: index,
-        delay: 0.85,
+        delay: 2.2,
       });
     }
   }, [reveal]);
@@ -73,14 +74,14 @@ const ProjectDisplay = ({ col, row, title, to, image = [], index }) => {
   const resetDisplay = () => {
     setLearnMoreCta(false);
     clearInterval(timerRef.current);
-    // setCount(0);
+    setCount(0);
     setCursorDisplay("simple");
   };
 
   return (
     <Wrapper
       data-scroll
-      data-scroll-speed={index % 2 === 0 ? "-1" : "0"}
+      // data-scroll-speed={index % 2 === 0 ? "-1" : "0"}
       // onMouseMove={() => console.log("coucou")}
       onClick={() => router.push(`/project/${to}`)}
       col={col}
@@ -92,13 +93,18 @@ const ProjectDisplay = ({ col, row, title, to, image = [], index }) => {
         onMouseOut={resetDisplay}
       >
         <ImageContainer ref={imageRef}>
-          {image && (
-            <Image
-              // data-scroll
-              // data-scroll-speed={index % 2 === 0 ? "-0.5" : "0.5"}
-              src={image[count % image.length]}
-            />
-          )}
+          <ImageWrapper>
+            {image && (
+              <ImageBlock
+                layout="fill"
+                // placeholder="blur"
+                // blurDataURL={image[count % image.length]}
+                data-scroll
+                data-scroll-speed={index % 2 === 0 ? "-0.5" : "0"}
+                src={image[count % image.length]}
+              />
+            )}
+          </ImageWrapper>
         </ImageContainer>
         {title && (
           <RowWrapper>

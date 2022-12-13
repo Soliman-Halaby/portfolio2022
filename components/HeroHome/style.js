@@ -30,12 +30,13 @@ export const Container = styled.div`
   }
 
   ${ContainerPin} {
-    top: 30rem;
-    right: 15rem;
+    top: 27.5rem;
+    right: 13rem;
+
     left: inherit;
     ${maxMedia.small} {
-      top: 32rem;
-      right: 10rem;
+      top: 38rem;
+      right: 12rem;
     }
   }
 `;
@@ -48,24 +49,46 @@ export const Title = styled.h1`
   margin: 2.5rem 0;
   line-height: 6.5rem;
 
+  transition: all 0.7 cubic-bezier(0.01, 0.01, 0.31, 1.01);
   opacity: 0;
+
+  .word {
+    padding-top: 0 !important;
+  }
+
+  .line {
+    &:nth-of-type(2),
+    &:nth-of-type(3) {
+      margin-top: -1.5rem;
+
+      ${maxMedia.small} {
+        margin-top: -1rem;
+      }
+    }
+  }
   position: relative;
   text-align: ${({ alignRight }) => (alignRight ? `right` : `initial`)};
-
   ${maxMedia.xs} {
     margin: 4rem 0;
 
     font-size: 40px;
     font-size: 4.6rem;
     line-height: 4.6rem;
-    :nth-of-type(1) {
+    &:nth-of-type(1) {
       margin-top: 1rem;
+    }
+
+    &:nth-of-type(2) {
+      margin-top: 15rem;
+      margin-bottom: 8rem;
     }
   }
 `;
 
 export const ImageWrapper = styled.div`
   width: 100%;
+  transform: translateY(10%);
+  opacity: 0;
   max-height: 90vh;
   height: 90vh;
   overflow: hidden;
@@ -73,7 +96,7 @@ export const ImageWrapper = styled.div`
   position: relative;
 
   clip-path: polygon(35% 0px, 65% 0px, 65% 100%, 35% 100%);
-  transition: all 0.4s ease-in-out;
+  transition: all 0.7s cubic-bezier(0.01, 0.01, 0.31, 1.01);
   ${maxMedia.xs} {
     height: 60vh;
   }
@@ -82,8 +105,8 @@ export const ImageWrapper = styled.div`
 export const ImageContainer = styled.div`
   width: 100%;
   height: 90vh;
-  transform: scale(1.15);
-  transition: all 0.3s ease-in-out;
+  transform: scale(1);
+  /* transition: all 0.3s ease-in-out; */
 
   ${maxMedia.xs} {
     height: 60vh;

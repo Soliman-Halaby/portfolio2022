@@ -67,7 +67,8 @@ export const SuccessMessage = styled.div`
   font-family: ${({ theme }) => theme.fonts.sansSerif};
   font-weight: 300;
   text-transform: uppercase;
-  font-size: ${({ colored }) => (colored ? `1rem` : `1.25rem`)};
+
+  font-size: ${({ colored }) => (colored ? `1rem` : `1.12rem`)};
   line-height: initial;
   display: flex;
   flex-direction: column;

@@ -1,6 +1,6 @@
 import { gsap } from "vendor/gsap";
 import SplitText from "vendor/gsap/SplitText";
-
+import { CustomEase } from "vendor/gsap/all";
 gsap.registerPlugin(SplitText);
 
 export const handleEnter = (props) => {
@@ -25,11 +25,26 @@ export const handleEnter = (props) => {
   }
 };
 
+const customEase = CustomEase.create("custom", "M0,0 C0.04,0.646 0.15,1 1,1 ");
+
 function handleEnterImg({ el, delay, image, animText }) {
   const tl = gsap.timeline();
   const elDelay = 0;
-  const displayDelay = animText === true ? 3.2 : 0;
+  const displayDelay = animText === true ? 4.6 : 0;
 
+  tl.fromTo(
+    el.current,
+    {
+      opacity: 0,
+    },
+    {
+      opacity: 1,
+      duration: 0.2,
+      delay: elDelay + delay + displayDelay,
+      ease: customEase,
+    },
+    "anim"
+  );
   tl.fromTo(
     el.current,
     {
@@ -37,8 +52,9 @@ function handleEnterImg({ el, delay, image, animText }) {
     },
     {
       clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
-      duration: 0.4,
+      duration: 0.75,
       delay: elDelay + delay + displayDelay,
+      ease: customEase,
     },
     "anim"
   );
@@ -46,17 +62,18 @@ function handleEnterImg({ el, delay, image, animText }) {
   tl.fromTo(
     image.current,
     {
-      scale: 1.3,
+      scale: 1,
     },
     {
-      scale: 1,
-      duration: 0.45,
-      delay: elDelay + delay + 0.25 + displayDelay,
+      scale: 1.4,
+      duration: 0.75,
+      delay: elDelay + delay + displayDelay + 0.5,
+      ease: customEase,
     },
     "anim"
   );
 }
-function handleEnterTitle({ text, animText }) {
+function handleEnterTitle({ text, animText, delay }) {
   const splitText = new SplitText(text.current, {
     type: "lines,words",
     wordsClass: "word",
@@ -69,10 +86,11 @@ function handleEnterTitle({ text, animText }) {
   tl.add("anim");
   gsap.set(text.current, { opacity: 1 });
 
-  const textDelay = 0.09;
-  const displayDelay = animText === true ? 2.9 : 0;
+  const textDelay = 0.0;
+  const displayDelay = animText === true ? 5 : 0;
 
   splitText.lines.forEach((line, index) => {
+    console.log(index, delay);
     const words = line.children;
 
     tl.fromTo(
@@ -82,8 +100,9 @@ function handleEnterTitle({ text, animText }) {
       },
       {
         opacity: 1,
-        duration: 0.6,
-        delay: textDelay * index + displayDelay,
+        duration: 0.75,
+        delay: textDelay + displayDelay + delay,
+        ease: customEase,
       },
       "anim"
     );
@@ -94,8 +113,9 @@ function handleEnterTitle({ text, animText }) {
       },
       {
         y: 0,
-        duration: 0.6,
-        delay: textDelay * index + displayDelay,
+        duration: 0.75,
+        delay: textDelay + displayDelay + delay,
+        ease: customEase,
       },
       "anim"
     );
@@ -104,8 +124,8 @@ function handleEnterTitle({ text, animText }) {
 
 function handleEnterTag({ el, delay, image, animText }) {
   const tl = gsap.timeline();
-  const elDelay = 0.09;
-  const displayDelay = animText === true ? 2.8 : 0;
+  const elDelay = 0.035;
+  const displayDelay = animText === true ? 5 : 0;
 
   tl.fromTo(
     el.current,
@@ -136,7 +156,7 @@ function handleEnterTag({ el, delay, image, animText }) {
 function handleEnterPin({ el, delay, animText }) {
   const tl = gsap.timeline();
   const elDelay = 0.09;
-  const displayDelay = animText === true ? 2.9 : 0;
+  const displayDelay = animText === true ? 5 : 0;
 
   tl.fromTo(
     el.current,
@@ -156,7 +176,7 @@ function handleEnterPin({ el, delay, animText }) {
       rotation: 40,
     },
     {
-      rotation: 0,
+      rotation: -4.6,
       duration: 0.15,
       delay: elDelay + delay + displayDelay,
     },

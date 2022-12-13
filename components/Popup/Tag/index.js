@@ -11,7 +11,6 @@ const Tag = ({
   index,
   withDot = false,
 }) => {
-  console.log(index % 2);
   return (
     <Container>
       <TagStyle

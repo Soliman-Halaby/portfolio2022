@@ -48,7 +48,7 @@ function handleEnterTag({ el, delay }) {
     "anim"
   );
 }
-function handleEnterTitle({ text }) {
+function handleEnterTitle({ text, delay }) {
   const splitText = new SplitText(text.current, {
     type: "lines,words",
     wordsClass: "word",
@@ -71,7 +71,7 @@ function handleEnterTitle({ text }) {
     {
       opacity: 1,
       duration: 0.6,
-      delay: textDelay,
+      delay: textDelay + delay,
     },
     "anim"
   );
@@ -83,7 +83,7 @@ function handleEnterTitle({ text }) {
     {
       y: 0,
       duration: 0.6,
-      delay: textDelay,
+      delay: textDelay + delay,
     },
     "anim"
   );

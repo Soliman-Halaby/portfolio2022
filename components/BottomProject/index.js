@@ -28,6 +28,7 @@ const BottomProject = ({ title, projects }) => {
       handleEnter({
         text: titleRef,
         display: "title",
+        delay: 0.3,
       });
     }
   }, [reveal]);
@@ -44,6 +45,7 @@ const BottomProject = ({ title, projects }) => {
           {projects.map((data, i) => {
             return (
               <LinkProject
+                reveal={reveal}
                 to={data.slug}
                 index={i}
                 key={i}

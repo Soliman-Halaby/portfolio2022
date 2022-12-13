@@ -7,6 +7,9 @@ export const Container = styled.div``;
 export const ButtonStyle = styled.button`
   display: inline-block;
   padding: 0.5rem;
+  padding-top: 0.55rem;
+  height: 3rem;
+  width: 3rem;
   cursor: none;
   border: 1px solid ${({ theme }) => theme.colors.grey1};
   border-radius: 50%;

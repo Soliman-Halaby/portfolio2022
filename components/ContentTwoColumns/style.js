@@ -53,7 +53,7 @@ export const Title = styled.h2`
   white-space: preline;
 
   ${maxMedia.small} {
-    font-size: 3.25rem;
+    font-size: 3.7rem;
   }
 `;
 
@@ -67,10 +67,13 @@ export const SubTitle = styled.h3`
   font-family: ${({ theme }) => theme.fonts.sansSerif};
   text-transform: uppercase;
   font-weight: 300;
+  max-width: 165px;
   font-size: 1.15rem;
 
   ${maxMedia.small} {
-    font-size: 1.25rem;
+    font-size: 1.4rem;
+    max-width: 100%;
+    margin-bottom: 2rem;
   }
 `;
 
@@ -94,4 +97,9 @@ export const ContentContainer = styled.div`
 
 export const Content = styled.p`
   ${Paragraph()}
+
+  ${maxMedia.small} {
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+  }
 `;

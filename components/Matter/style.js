@@ -8,7 +8,7 @@ export const Box = styled.button`
   /* background: #111; */
   /* height: 40px;
       width: 40px; */
-  top: -7rem;
+  top: -15rem;
   white-space: nowrap;
   pointer-events: all;
   user-select: none;

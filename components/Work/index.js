@@ -25,7 +25,7 @@ const ProjectWork = ({}) => {
   const titleRef = useRef(null);
   const isMobile = useIsMobile();
 
-  const onScreenTitle = useOnScreen(titleRef, isMobile ? 0.7 : 0.3);
+  const onScreenTitle = useOnScreen(titleRef, isMobile ? 0.45 : 0.3);
   // const onScreenSubtitle = useOnScreen(subtitleRef);
   const [reveal, setReveal] = useState(false);
 
@@ -38,6 +38,7 @@ const ProjectWork = ({}) => {
       handleEnter({
         text: titleRef,
         display: "title",
+        delay: 0.3,
       });
     }
   }, [reveal]);

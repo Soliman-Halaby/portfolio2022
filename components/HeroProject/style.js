@@ -28,6 +28,7 @@ export const TitleContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 1rem;
+  margin: 2.5rem 0;
 `;
 
 export const Title = styled.h2`
@@ -36,6 +37,7 @@ export const Title = styled.h2`
   opacity: 0;
   line-height: 6.5rem;
   position: relative;
+  margin: 0;
   text-align: ${({ alignRight }) => (alignRight ? `right` : `initial`)};
   // white-space: pre-line;
 `;
@@ -46,7 +48,10 @@ export const MadeWithContainer = styled.div`
 export const MadeWith = styled.div`
   padding: 0.3rem;
   font-size: 1rem;
+  margin-bottom: 1rem;
   /* overflow: hidden; */
+  display: flex;
+  align-self: flex-end;
   color: ${({ theme }) => theme.colors.grey1};
   font-family: ${({ theme }) => theme.fonts.sansSerif};
   max-width: 110px;
@@ -107,7 +112,7 @@ export const TagWrapper = styled.div`
 `;
 
 export const TagElementsContainer = styled.div`
-  overflow: hidden;
+  /* overflow: hidden; */
 `;
 export const TagContainer = styled.div`
   display: flex;
@@ -127,12 +132,22 @@ export const TagContainer = styled.div`
       margin-top: 8rem;
     }
   }
+
+  ${maxMedia.small} {
+    gap: 1.5rem;
+  }
 `;
 
 export const TagRow = styled.div`
   display: flex;
   gap: 0.4rem;
   align-items: center;
+  flex-wrap: wrap;
+
+  ${maxMedia.small} {
+    gap: 1.1rem;
+    row-gap: 1.5rem;
+  }
 `;
 
 export const TagSubContainer = styled.div`
@@ -160,6 +175,8 @@ export const TagSubContainer = styled.div`
     ${ButtonStyle} {
       margin-left: 0;
     }
+
+    gap: 1.5rem;
   }
 `;
 
@@ -184,8 +201,13 @@ export const ContentContainer = styled.div`
 `;
 export const Content = styled.p`
   ${Paragraph()}
+  font-weight: 300;
 
   align-self: flex-end;
+
+  ${maxMedia.small} {
+    font-size: 1.5rem;
+  }
 `;
 
 export const ImageContainer = styled.div`
@@ -193,8 +215,9 @@ export const ImageContainer = styled.div`
   height: 90vh;
   overflow: hidden;
 
+  opacity: 0;
   clip-path: polygon(35% 0px, 65% 0px, 65% 100%, 35% 100%);
-  transition: all 0.4s ease-in-out;
+  transition: all 0.6s ease;
   ${maxMedia.small} {
     height: 60vh;
   }
@@ -203,8 +226,8 @@ export const ImageContainer = styled.div`
 export const ImageWrapper = styled.div`
   width: 100%;
   height: 90vh;
-  transform: scale(1.15);
-  transition: transform 0.3s ease-in-out;
+  transform: scale(1.2);
+  /* transition: transform 0.3s ease-in-out; */
 
   ${maxMedia.small} {
     height: 60vh;

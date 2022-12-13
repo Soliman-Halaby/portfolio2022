@@ -44,7 +44,6 @@ const HeroHome = ({ title, subtitle, sectionTitle, label, image }) => {
   const onScreenTitle = useOnScreen(titleRef);
   const [reveal, setReveal] = useState(false);
 
-  console.log(sectionNumberRef);
   useEffect(() => {
     if (onScreenTitle) setReveal(onScreenTitle);
   }, [onScreenTitle]);
@@ -63,21 +62,24 @@ const HeroHome = ({ title, subtitle, sectionTitle, label, image }) => {
         text: titleRef,
         display: "text",
         animText: loaderDisplay,
+        delay: 0.85,
       });
       handleEnter({
         text: sectionTitleRef,
         display: "text",
         animText: loaderDisplay,
+        delay: 1.65,
       });
       handleEnter({
         text: subtitleRef,
         display: "text",
         animText: loaderDisplay,
+        delay: 0.85,
       });
       handleEnter({
         el: pinRef,
         display: "tag",
-        delay: 0.7,
+        delay: 1.7,
         animText: loaderDisplay,
       });
       handleEnter({
@@ -97,7 +99,7 @@ const HeroHome = ({ title, subtitle, sectionTitle, label, image }) => {
       selectedWork.scrollIntoView(true);
     } else {
       scroll.scroll.scrollTo(selectedWork, {
-        offset: -selectedWork.offsetHeight / 2,
+        offset: 0,
       });
     }
   };

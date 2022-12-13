@@ -43,7 +43,10 @@ export const Title = styled.h3`
   margin: 2.5rem 0;
   margin-top: ${({ display }) => (display ? "4rem" : "0")};
   // margin-left: ${({ theme }) => theme.margin.medium};
+
   letter-spacing: 0.15rem;
+  transition: all 0.7s cubic-bezier(0.05, 0.56, 0.14, 0.99);
+
   ${maxMedia.small} {
     font-size: 9rem;
     text-align: center;
@@ -113,7 +116,7 @@ export const ImageContainer = styled.div`
   overflow: hidden;
   width: 100%;
   clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 97%);
-  transition: all 0.2s linear;
+  transition: all 0.7s cubic-bezier(0.05, 0.56, 0.14, 0.99);
 `;
 
 export const ImgWrapper = styled.div`
@@ -138,7 +141,6 @@ export const Text = styled.h3`
   margin: 1rem 0;
   text-transform: uppercase;
   color: ${({ theme }) => theme.colors.grey1};
-
   ${maxMedia.small} {
     font-size: 1rem;
   }
@@ -155,6 +157,7 @@ export const FooterNav = styled.div`
   ${Text} {
     &:nth-of-type(1) {
       opacity: 0;
+      margin-bottom: 4.5rem;
     }
   }
 `;

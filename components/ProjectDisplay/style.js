@@ -6,6 +6,7 @@ import { maxMedia, TitleSection } from "styles/mixins";
 
 import { ButtonStyle } from "../Buttons/Button/style";
 
+import Image from "next/image";
 export const Wrapper = styled.div`
   max-width: 106px;
   z-index: 2;
@@ -28,13 +29,20 @@ export const Container = styled.div`
 
 export const ImageContainer = styled.div`
   height: 154px;
-
   width: 100%;
   opacity: 0;
   overflow: hidden;
   position: relative;
 `;
-export const Image = styled.img`
+
+export const ImageWrapper = styled.div`
+  height: 176px;
+
+  img {
+    min-height: 176px !important;
+  }
+`;
+export const ImageBlock = styled(Image)`
   filter: grayscale(1);
   top: 0;
   left: 0;
@@ -59,7 +67,7 @@ export const RowWrapper = styled.div`
 `;
 
 export const Number = styled.span`
-  font-size: 1rem;
+  font-size: clamp(10px, 1rem, 10px);
   max-height: 1rem;
 
   overflow: hidden;

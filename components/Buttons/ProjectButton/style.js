@@ -6,7 +6,8 @@ import { maxMedia, title } from "styles/mixins";
 export const ButtonStyle = styled.span`
   display: inline-block;
   cursor: pointer;
-  padding: clamp(5px, 0.38rem, 0.38rem);
+  padding: 0.5rem 0.65rem;
+
   display: flex;
   align-items: center;
   height: clamp(30px, 3rem, 3rem);

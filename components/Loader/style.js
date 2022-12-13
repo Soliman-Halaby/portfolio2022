@@ -17,6 +17,7 @@ export const Wrapper = styled.div`
   justify-content: center;
   transition-delay: 1s;
   transition-property: visibility opacity;
+  transition: opacity 0.5s ease;
 
   background: ${({ theme }) => theme.colors.grey2};
   &.false {
@@ -51,7 +52,9 @@ export const Container = styled.div`
     }
     
     svg{
-        animation: cursorAnim 2.5s infinite;
+      
+      animation :${({ anim }) => (!anim ? "cursorAnim 2.5s infinite" : "none")};
+        
     }
     
     &.false{
@@ -103,11 +106,8 @@ export const LoaderNumber = styled.span`
   ${TitleSection()}
   color: ${({ theme }) => theme.colors.grey2};
   margin: 0;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
 
-  &.false {
-    transform: translateY(-100%);
-  }
   /* transform: ${({ display }) =>
     display === true ? "translateY(0)" : "translateY(-100%)"}; */
 `;

@@ -85,14 +85,16 @@ export default function Projet({}) {
             src={projectData.images.left}
           />
         )}
-        <Description
-          number="02"
-          title={projectData.content2.title}
-          label={projectData.content2.label}
-          subtitle={projectData.content2.subtitle}
-          text1={projectData.content2.text1}
-          text2={projectData.content2.text2}
-        />
+        {projectData.content2 && (
+          <Description
+            number="02"
+            title={projectData.content2.title}
+            label={projectData.content2.label}
+            subtitle={projectData.content2.subtitle}
+            text1={projectData.content2.text1}
+            text2={projectData.content2.text2}
+          />
+        )}
         {projectData.images.fullwidth2 && (
           <FullWidthImage
             color={projectData?.color}

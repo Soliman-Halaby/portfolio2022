@@ -5,6 +5,7 @@ import Head from "next/head";
 import { RecoilRoot, useRecoilValue } from "recoil";
 import { loaderState } from "recoil/loaderState";
 
+import Script from "next/script";
 import { NextSeo } from "next-seo";
 import Header from "components/Header";
 import Footer from "components/Footer";
@@ -39,7 +40,7 @@ export default function Layout({
   const isMobile = useIsMobile();
 
   const onPageEnter = (element) => {
-    console.log("exit");
+    // console.log("exit");
     gsap.fromTo(
       element,
       {
@@ -74,9 +75,6 @@ export default function Layout({
     );
   };
 
-  // console.log(route);
-
-  console.log("router", router);
   return (
     <LocomotiveScrollProvider
       options={{
@@ -92,6 +90,22 @@ export default function Layout({
       }
     >
       {loaderDisplay && <Loader />}
+      <Script
+        strategy="lazyOnload"
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+      />
+
+      <Script id="google-analytics-script" strategy="lazyOnload">
+        {`
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+        page_path: window.location.pathname,
+        });
+    `}
+      </Script>
+
       <NextSeo
         title={title}
         description={description}
@@ -116,6 +130,21 @@ export default function Layout({
           site: "@site",
           cardType: "summary_large_image",
         }}
+        additionalLinkTags={[
+          {
+            rel: "icon",
+            href: "https://www.solimanalhalaby.fr/favicon.ico",
+          },
+          {
+            rel: "apple-touch-icon",
+            href: "https://www.solimanalhalaby.fr/icon/apple-touch-icon.png",
+            sizes: "76x76",
+          },
+          {
+            rel: "manifest",
+            href: "https://www.solimanalhalaby.fr/icon/site.webmanifest",
+          },
+        ]}
       />
 
       <Wrapper data-scroll-container ref={containerRef}>

@@ -37,7 +37,7 @@ function handleEnterPin({ el, delay, animText }) {
       rotation: 40,
     },
     {
-      rotation: 0,
+      rotation: -4.6,
       duration: 0.15,
       delay: elDelay + delay,
     },

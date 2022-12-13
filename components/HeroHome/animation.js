@@ -1,14 +1,11 @@
 import { gsap } from "vendor/gsap";
 import SplitText from "vendor/gsap/SplitText";
-import { useRecoilValue } from "recoil";
-import { loaderState } from "recoil/loaderState";
-
+import { CustomEase } from "vendor/gsap/all";
 gsap.registerPlugin(SplitText);
 
 export const handleEnter = (props) => {
   const { display } = props;
 
-  console.log(display);
   switch (display) {
     case "text":
       handleEnterTitle(props);
@@ -23,7 +20,17 @@ export const handleEnter = (props) => {
   }
 };
 
-function handleEnterTitle({ text, animText }) {
+const customEaseSlow = CustomEase.create(
+  "custom",
+  "M0,0 C0.04,0.646 0.15,1 1,1 "
+);
+
+const customEaseQuick = CustomEase.create(
+  "custom",
+  "M0,0 C0.182,0.916 0.48,1.404 1,1 "
+);
+
+function handleEnterTitle({ text, animText, delay }) {
   const splitText = new SplitText(text.current, {
     type: "lines,words",
     wordsClass: "word",
@@ -38,7 +45,7 @@ function handleEnterTitle({ text, animText }) {
 
   const textDelay = 0.09;
 
-  const displayDelay = animText === true ? 3.1 : 0;
+  const displayDelay = animText === true ? 4.6 : 0;
   splitText.lines.forEach((line, index) => {
     const words = line.children;
 
@@ -49,8 +56,9 @@ function handleEnterTitle({ text, animText }) {
       },
       {
         opacity: 1,
-        duration: 0.6,
-        delay: textDelay * index + displayDelay,
+        duration: 0.7,
+        delay: textDelay * index + displayDelay + delay,
+        ease: customEaseSlow,
       },
       "anim"
     );
@@ -61,8 +69,9 @@ function handleEnterTitle({ text, animText }) {
       },
       {
         y: 0,
-        duration: 0.6,
-        delay: textDelay * index + displayDelay,
+        duration: 0.7,
+        delay: textDelay * index + displayDelay + delay,
+        ease: customEaseSlow,
       },
       "anim"
     );
@@ -71,7 +80,7 @@ function handleEnterTitle({ text, animText }) {
 
 function handleEnterPin({ el, delay, animText }) {
   const tl = gsap.timeline();
-  const elDelay = animText === true ? 3.1 : 0.09;
+  const elDelay = animText === true ? 4.6 : 0;
   tl.fromTo(
     el.current,
     {
@@ -81,6 +90,7 @@ function handleEnterPin({ el, delay, animText }) {
       opacity: 1,
       duration: 0.15,
       delay: elDelay + delay,
+      ease: customEaseQuick,
     },
     "anim"
   );
@@ -90,20 +100,46 @@ function handleEnterPin({ el, delay, animText }) {
       rotation: 40,
     },
     {
-      rotation: 0,
+      rotation: -4.6,
       duration: 0.15,
       delay: elDelay + delay,
+      ease: customEaseQuick,
     },
     "anim"
   );
 }
 
 function handleEnterImg({ el, delay, image, animText }) {
-  console.log("enter img");
   const tl = gsap.timeline();
   const elDelay = 0;
-  const displayDelay = animText === true ? 3.2 : 0;
+  const displayDelay = animText === true ? 4.6 : 0;
 
+  tl.fromTo(
+    el.current,
+    {
+      y: "10%",
+    },
+    {
+      y: 0,
+      duration: 0.3,
+      delay: elDelay + delay + displayDelay,
+      ease: customEaseSlow,
+    },
+    "anim"
+  );
+  tl.fromTo(
+    el.current,
+    {
+      opacity: 0,
+    },
+    {
+      opacity: 1,
+      duration: 0.3,
+      delay: elDelay + delay + displayDelay,
+      ease: customEaseSlow,
+    },
+    "anim"
+  );
   tl.fromTo(
     el.current,
     {
@@ -111,8 +147,9 @@ function handleEnterImg({ el, delay, image, animText }) {
     },
     {
       clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
-      duration: 0.2,
-      delay: elDelay + delay + displayDelay,
+      duration: 0.5,
+      delay: elDelay + delay + displayDelay + 0.3,
+      ease: customEaseSlow,
     },
     "anim"
   );
@@ -120,12 +157,13 @@ function handleEnterImg({ el, delay, image, animText }) {
   tl.fromTo(
     image.current,
     {
-      scale: 1.15,
+      scale: 1,
     },
     {
-      scale: 1,
-      duration: 0.12,
-      delay: elDelay + delay + 0.25 + displayDelay,
+      scale: 1.2,
+      duration: 0.6,
+      delay: elDelay + delay + 0.5 + displayDelay + 0.3,
+      ease: customEaseSlow,
     },
     "anim"
   );

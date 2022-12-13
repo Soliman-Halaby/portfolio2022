@@ -10,12 +10,12 @@ export const TagStyle = styled.span`
   border: 1px solid ${({ theme }) => theme.colors.grey1};
   border-style: ${({ borderStyle }) => (borderStyle ? "dashed" : "plain")};
   color: ${({ theme }) => theme.colors.grey1};
-  border-radius: ${({ rounded }) => (rounded ? "33px" : "5px")};
+  border-radius: ${({ rounded }) => (rounded ? "33px" : "4px")};
   font-size: 14px;
   font-family: ${({ theme }) => theme.fonts.sansSerif};
   font-weight: 300;
   margin: 0;
-  line-height: 21px;
+  line-height: 14px;
   display: ${({ borderStyle }) => (borderStyle ? "flex" : "")};
   align-items: center;
 
