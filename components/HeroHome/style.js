@@ -35,8 +35,8 @@ export const Container = styled.div`
 
     left: inherit;
     ${maxMedia.small} {
-      top: 32rem;
-      right: 10rem;
+      top: 38rem;
+      right: 12rem;
     }
   }
 `;
@@ -57,8 +57,13 @@ export const Title = styled.h1`
   }
 
   .line {
-    &:nth-of-type(2) {
+    &:nth-of-type(2),
+    &:nth-of-type(3) {
       margin-top: -1.5rem;
+
+      ${maxMedia.small} {
+        margin-top: -1rem;
+      }
     }
   }
   position: relative;
@@ -69,8 +74,13 @@ export const Title = styled.h1`
     font-size: 40px;
     font-size: 4.6rem;
     line-height: 4.6rem;
-    :nth-of-type(1) {
+    &:nth-of-type(1) {
       margin-top: 1rem;
+    }
+
+    &:nth-of-type(2) {
+      margin-top: 15rem;
+      margin-bottom: 8rem;
     }
   }
 `;

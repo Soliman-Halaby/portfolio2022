@@ -132,12 +132,22 @@ export const TagContainer = styled.div`
       margin-top: 8rem;
     }
   }
+
+  ${maxMedia.small} {
+    gap: 1.5rem;
+  }
 `;
 
 export const TagRow = styled.div`
   display: flex;
   gap: 0.4rem;
   align-items: center;
+  flex-wrap: wrap;
+
+  ${maxMedia.small} {
+    gap: 1.1rem;
+    row-gap: 1.5rem;
+  }
 `;
 
 export const TagSubContainer = styled.div`
@@ -165,6 +175,8 @@ export const TagSubContainer = styled.div`
     ${ButtonStyle} {
       margin-left: 0;
     }
+
+    gap: 1.5rem;
   }
 `;
 
@@ -192,6 +204,10 @@ export const Content = styled.p`
   font-weight: 300;
 
   align-self: flex-end;
+
+  ${maxMedia.small} {
+    font-size: 1.5rem;
+  }
 `;
 
 export const ImageContainer = styled.div`
