@@ -40,7 +40,7 @@ export const Box = styled.button`
 
   &:focus {
     border-style: dashed;
-    background: ${({ theme }) => theme.colors.black};
+    background: ${({ theme }) => theme.colors.grey1};
     color: ${({ theme }) => theme.colors.grey2};
     border-color: ${({ theme }) => theme.colors.lime};
 

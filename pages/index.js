@@ -1,7 +1,7 @@
 import Layout from "../layout/Default";
 import { useState, useRef, useEffect } from "react";
 
-import image from "../public/index-hero.png";
+import image from "../public/index-hero.jpg";
 
 import { useIsMobile } from "hook";
 import CustomCursor from "@/components/Cursor";
