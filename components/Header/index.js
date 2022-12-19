@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/router.js";
 import { useLocomotiveScroll } from "react-locomotive-scroll";
 
@@ -8,9 +8,13 @@ import SectionTitle from "@/components/Popup/SectionTitle";
 import FooterNav from "@/components/FooterNav/index.js";
 
 import { cursorHover } from "recoil/cursorState.js";
-import { useSetRecoilState, useResetRecoilState } from "recoil";
+import { useSetRecoilState, useResetRecoilState, useRecoilValue } from "recoil";
 
 import { useIsMobile } from "hook";
+
+import { loaderState } from "recoil/loaderState.js";
+import { handleEnter } from "./animation.js";
+import useOnScreen from "hook";
 
 import {
   Logo,
@@ -33,6 +37,9 @@ const Header = () => {
   const setCursorHover = useSetRecoilState(cursorHover);
   const resetCursor = useResetRecoilState(cursorHover);
 
+  const loaderDisplay = useRecoilValue(loaderState);
+
+  const containerRef = useRef(null);
   const router = useRouter();
   const displayMenu = () => {
     scroll.scroll.stop();
@@ -90,8 +97,26 @@ const Header = () => {
       router.push("/");
     }
   };
+
+  const onScreen = useOnScreen(containerRef);
+  const [reveal, setReveal] = useState(false);
+
+  useEffect(() => {
+    if (onScreen) setReveal(onScreen);
+  }, [onScreen]);
+
+  useEffect(() => {
+    if (reveal && loaderDisplay) {
+      handleEnter({
+        el: containerRef,
+        display: "header",
+        delay: 1.45,
+        animText: loaderDisplay,
+      });
+    }
+  }, [reveal]);
   return (
-    <HeaderContainer>
+    <HeaderContainer ref={containerRef}>
       <Nav>
         <MainLink
           onMouseEnter={() => cursorRotation()}
@@ -151,12 +176,12 @@ const Header = () => {
               <NavLink href="/">Home</NavLink>
             </MainLink>
             <MainLink onClick={() => subnavSelected()}>
-              <NavLink href="./about">About</NavLink>
+              <NavLink href="/about">About</NavLink>
             </MainLink>
             {/* <MainLink onClick={() => scrollToWork()}> */}
             <MainLink onClick={() => scrollToWork()}>Work</MainLink>
             <MainLink onClick={() => subnavSelected()}>
-              <NavLink href="./contact">Contact</NavLink>
+              <NavLink href="/contact">Contact</NavLink>
             </MainLink>
           </ItemsContainer>
           <FooterNav />

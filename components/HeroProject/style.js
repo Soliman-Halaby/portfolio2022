@@ -229,6 +229,7 @@ export const ImageWrapper = styled.div`
   transform: scale(1.2);
   /* transition: transform 0.3s ease-in-out; */
 
+  position: relative;
   ${maxMedia.small} {
     height: 60vh;
   }

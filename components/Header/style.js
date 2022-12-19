@@ -98,7 +98,10 @@ export const HeaderContainer = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
+  z-index: 10;
   position: relative;
+  mix-blend-mode: exclusion;
+  transition: all 0.75s ease;
 `;
 
 export const SubNav = styled.div`
