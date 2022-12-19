@@ -38,6 +38,7 @@ export const ImageContainer = styled.div`
 export const ImageWrapper = styled.div`
   height: 176px;
 
+  position: relative;
   img {
     min-height: 176px !important;
   }
