@@ -8,7 +8,6 @@ gsap.registerPlugin(SplitText);
 export const handleEnter = (props) => {
   const { display } = props;
 
-  console.log(display);
   switch (display) {
     case "pin":
       handleEnterPin(props);
