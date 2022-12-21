@@ -146,7 +146,7 @@ function handleEnterTitle({ el, animText, delay }) {
   splitText.words.forEach((word, index) => {
     const words = word;
 
-    console.log();
+    // console.log();
     let indexElem = index === splitText.words.length - 1 ? "10" : "0";
     tl.fromTo(
       words,

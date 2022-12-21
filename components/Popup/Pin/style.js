@@ -93,6 +93,7 @@ export const CopiedEmail = styled(SuccessMessage)`
 export const ContainerPin = styled.div`
   position: absolute;
   top: ${({ top }) => `${top}rem`};
+  user-select: none;
   left: ${({ left }) => `${left}rem`};
 `;
 
