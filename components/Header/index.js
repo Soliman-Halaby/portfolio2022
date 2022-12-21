@@ -138,6 +138,7 @@ const Header = () => {
             onMouseEnter={() => cursorRotation()}
             onMouseLeave={resetCursor}
             src="/Logo.svg"
+            alt="Logo"
           ></Logo>
         </NavLink>
         {isMobile ? (
