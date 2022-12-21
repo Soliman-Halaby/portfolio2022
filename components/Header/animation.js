@@ -38,17 +38,17 @@ function handleEnterHeader({ el, delay, animText }) {
     },
     "anim"
   );
-  tl.fromTo(
-    el.current,
-    {
-      y: "-20%",
-    },
-    {
-      y: 0,
-      duration: 0.75,
-      delay: elDelay + delay + displayDelay,
-      ease: customEase,
-    },
-    "anim"
-  );
+  // tl.fromTo(
+  //   el.current,
+  //   {
+  //     y: "-20%",
+  //   },
+  //   {
+  //     y: 0,
+  //     duration: 0.75,
+  //     delay: elDelay + delay + displayDelay,
+  //     ease: customEase,
+  //   },
+  //   "anim"
+  // );
 }

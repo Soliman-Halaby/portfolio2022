@@ -98,9 +98,9 @@ export const HeaderContainer = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  z-index: 10;
-  position: relative;
-  mix-blend-mode: exclusion;
+  /* z-index: 10; */
+  /* position: relative; */
+  /* mix-blend-mode: exclusion; */
   transition: all 0.75s ease;
 `;
 
@@ -116,6 +116,10 @@ export const SubNav = styled.div`
   will-change: transform;
   transition: opacity 0.3s ease;
   overflow: visible;
+
+  span {
+    opacity: 1;
+  }
   &.opened {
     opacity: 1;
     overflow: hidden;
