@@ -43,7 +43,7 @@ export const ImageWrapper = styled.div`
     min-height: 176px !important;
   }
 `;
-export const ImageBlock = styled(Image)`
+export const ImageBlock = styled.img`
   filter: grayscale(1);
   top: 0;
   left: 0;

@@ -157,7 +157,10 @@ const HeroProject = ({
               // width={"100%"}
               // height={isMobile ? "100vh" : "60vh"}
               layout="fill"
-              alt="Project Image"
+              priority
+              placeholder="blur"
+              blurDataURL="https://solimanalhalaby.fr/blurImage.png"
+              alt={`${title} Hero Image`}
               data-scroll
               data-scroll-speed="-2"
               src={img}

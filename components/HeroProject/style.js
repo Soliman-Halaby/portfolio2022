@@ -248,7 +248,10 @@ export const ImageWrapper = styled.div`
 //   }
 // `;
 
+/* export const ImageBlock = styled.img` */
 export const ImageBlock = styled(Image)`
+  /* width: 100%;
+  height: 100%; */
   /* position: absolute;
   top: 0%;
   right: 0%; */
