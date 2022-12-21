@@ -32,6 +32,8 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    height: 100%;
     position: relative;
     top: 0;
     left: 0;
@@ -67,15 +69,17 @@ export const Container = styled.div`
 
     ${Title}{
       width: 15rem;
-      top: -5rem;
+      top: 34rem;
       mix-blend-mode: exclusion;
       color: ${({ theme }) => theme.colors.grey2};
-      left: -35rem;
+      left: 37rem;
       z-index: 999;
 
       ${maxMedia.small}{
-        top: 0;
-        left: -10rem;
+        bottom: 10rem;
+        top: initial;
+        left: 50%;
+        transform: translateX(-90%);
       }
     }
 `;
@@ -84,9 +88,9 @@ export const ImgContainer = styled.div`
   transition: top left 0.1s ease;
   /* transition-delay: 1s; */
   position: absolute;
-  top: 50%;
+  /* top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
   /* transition-property: transform; */
   /* &.false {
     transform: rotate(180deg);

@@ -51,8 +51,8 @@ const Loader = ({}) => {
     if (!container) return;
 
     if (loaderDisplay) {
-      container.style.left = `${e.clientX - container.offsetWidth * 1.65}px`;
-      container.style.top = `${e.clientY - container.offsetHeight * 0.9}px`;
+      container.style.left = `${e.clientX - container.offsetWidth * 0.5}px`;
+      container.style.top = `${e.clientY - container.offsetHeight * 0.5}px`;
     }
   }
 
@@ -149,7 +149,7 @@ const Loader = ({}) => {
               fill="#1E1E1E"
             />
           </svg> */}
-          <Icon icon="loader" size={isMobile ? 330 : 550} color="#1E1E1E" />
+          <Icon icon="loader" size={isMobile ? 400 : 550} color="#1E1E1E" />
         </ImgContainer>
         <LoaderNumberContainer>
           <LoaderNumber ref={loaderNumberRef} className={loaderDisplay}>
