@@ -15,7 +15,7 @@ const FullWidthImage = ({ color, src = "/cc" }) => {
       <ContainerWrapper>
         <Container color={color}>
           <ImageContainer data-scroll data-scroll-speed="0.5">
-            <Image src={src}></Image>
+            <Image alt="Fullwith image" src={src}></Image>
           </ImageContainer>
         </Container>
       </ContainerWrapper>

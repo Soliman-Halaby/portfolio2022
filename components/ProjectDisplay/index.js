@@ -96,12 +96,13 @@ const ProjectDisplay = ({ col, row, title, to, image = [], index }) => {
           <ImageWrapper>
             {image && (
               <ImageBlock
-                layout="fill"
+                // layout="fill"
                 // placeholder="blur"
                 // blurDataURL={image[count % image.length]}
                 data-scroll
                 data-scroll-speed={index % 2 === 0 ? "-0.5" : "0"}
                 src={image[count % image.length]}
+                alt={`Project ${title} outline image`}
               />
             )}
           </ImageWrapper>

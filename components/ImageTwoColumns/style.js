@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { css } from "@emotion/react";
 
 import { maxMedia, title } from "styles/mixins";
-
+import Image from "next/image";
 export const Wrapper = styled.div`
   width: 100%;
   display: flex;
@@ -50,7 +50,12 @@ export const Container = styled.div`
   }
 `;
 
-export const Image = styled.img`
+export const ImageBlockContainer = styled.div`
+  height: 40rem;
+  position: relative;
+  width: 100%;
+`;
+export const ImageBlock = styled(Image)`
   /* width: 100%; */
   max-width: 100%;
   object-fit: contain;

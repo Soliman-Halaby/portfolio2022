@@ -2,6 +2,7 @@ import { gsap } from "vendor/gsap";
 import SplitText from "vendor/gsap/SplitText";
 import { CustomEase } from "vendor/gsap/all";
 gsap.registerPlugin(SplitText);
+gsap.registerPlugin(CustomEase);
 
 export const handleEnter = (props) => {
   const { display } = props;

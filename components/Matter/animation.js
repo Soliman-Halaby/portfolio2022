@@ -2,6 +2,7 @@ import { gsap } from "vendor/gsap";
 import SplitText from "vendor/gsap/SplitText";
 import { CustomEase } from "vendor/gsap/CustomEase";
 gsap.registerPlugin(SplitText);
+gsap.registerPlugin(CustomEase);
 
 export const handleEnter = (props) => {
   const { display } = props;
@@ -145,7 +146,7 @@ function handleEnterTitle({ el, animText, delay }) {
   splitText.words.forEach((word, index) => {
     const words = word;
 
-    console.log();
+    // console.log();
     let indexElem = index === splitText.words.length - 1 ? "10" : "0";
     tl.fromTo(
       words,

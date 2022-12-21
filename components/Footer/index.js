@@ -235,7 +235,7 @@ const Footer = ({ number, contact }) => {
         <SubContainer ref={imageContainerRef}>
           <ImageContainer ref={imagePathRef}>
             <ImgWrapper ref={imageRef}>
-              <Image src="/contact-image.png" />
+              <Image alt="Contact Section Img" src="/contact-image.jpg" />
             </ImgWrapper>
           </ImageContainer>
         </SubContainer>

@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "postbuild": "next-sitemap",
     "lint": "next lint",
     "deploy": "vercel --prod"
   },
@@ -20,6 +21,7 @@
     "next": "12.2.3",
     "next-fonts": "^1.5.1",
     "next-seo": "^5.15.0",
+    "next-sitemap": "^3.1.32",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icomoon": "^2.5.4",

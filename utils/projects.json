@@ -2,6 +2,7 @@
   {
     "slug": "vis-ma-ville",
     "colPos": "1",
+    "midColPos": "1",
     "mobileCol": "1",
     "rowPos": "1",
     "mobileRow": "1",
@@ -36,7 +37,7 @@
       "text2": "To display the different pins on our map, we use the native React elements (MapView, Market, LatLng).  When a user makes a post, and authorizes us to access its location, we retrieve its position with a custom hook (useLocation) that we then send to our database. At the map level, for each existing post, we retrieve the latitude / longitude and the content, and then generate the corresponding pin. To allow the user to take a picture of the reported element, we used expo-camera which allows us to have access (if the user authorizes it) to the front and back camera."
     },
     "images": {
-      "hero": "/vis-ma-ville/hero-section.png",
+      "hero": "/vis-ma-ville/hero-section.jpg",
       "fullwidth": "/vis-ma-ville/full-width-1.png",
       "left": "/vis-ma-ville/img-1-col.png",
       "right": "/vis-ma-ville/img-2-col.png",
@@ -54,6 +55,7 @@
   {
     "slug": "cloudy-bay",
     "colPos": "2",
+    "midColPos": "2",
     "mobileCol": "2",
     "rowPos": "1",
     "mobileRow": "1",
@@ -77,7 +79,7 @@
       "text2": "For those who are hesitant, it is possible to use the Wine Finder (produces one of the developers of ultranoir) which will allow you to choose the ideal wine according to the different criteria you give it. The purchase of wines is not done on the platform, it is connected to WineDirect which will allow you to buy the selected wines."
     },
     "images": {
-      "hero": "/cloudy-bay/hero-section.png",
+      "hero": "/cloudy-bay/hero-section.jpg",
       "fullwidth": "/cloudy-bay/full-width-1.png",
       "left": "/cloudy-bay/img-1-col.png",
       "right": "/cloudy-bay/img-2-col.png",
@@ -96,6 +98,7 @@
   {
     "slug": "portfolio-2021",
     "colPos": "4",
+    "midColPos": "4",
     "mobileCol": "3",
     "rowPos": "2",
     "mobileRow": "2",
@@ -119,7 +122,7 @@
       "text2": "Linking the horizontal and vertical scroll (on the project page) was also another challenge I wanted to tackle and that I managed to implement. The different animations of the cursor, the fade-in, fade-out was also designed with the help of GSAP. The about page was totally designed using mostly CSS animations and attribute data to link the content according to the hovered section in JS. "
     },
     "images": {
-      "hero": "/portfolio-2021/hero-section.png",
+      "hero": "/portfolio-2021/hero-section.jpg",
       "fullwidth": "/portfolio-2021/full-width-1.png",
       "left": "/portfolio-2021/img-1-col.png",
       "right": "/portfolio-2021/img-2-col.png",
@@ -132,15 +135,16 @@
       "fullwidth4": "/portfolio-2021/full-width-4.png"
     },
     "image": [
-      "/portfolio-2021/outline/outline-1.png",
-      "/portfolio-2021/outline/outline-2.png",
-      "/portfolio-2021/outline/outline-3.png",
-      "/portfolio-2021/outline/outline-4.png"
+      "/portfolio-2021/outline/outline-1.jpg",
+      "/portfolio-2021/outline/outline-2.jpg",
+      "/portfolio-2021/outline/outline-3.jpg",
+      "/portfolio-2021/outline/outline-4.jpg"
     ]
   },
   {
     "slug": "canlink-me",
     "colPos": "6",
+    "midColPos": "6",
     "mobileCol": "4",
     "rowPos": "1",
     "mobielRow": "2",
@@ -168,7 +172,7 @@
     },
 
     "images": {
-      "hero": "/canlink-me/hero-section.png",
+      "hero": "/canlink-me/hero-section.jpg",
       "fullwidth": "/canlink-me/full-width-1.jpg",
       "left": "/canlink-me/img-1-col.jpg",
       "right": "/canlink-me/img-2-col.jpg"
@@ -183,6 +187,7 @@
   {
     "slug": "selfer-app",
     "colPos": "8",
+    "midColPos": "8",
     "mobileCol": "1",
     "rowPos": "1",
     "mobileRow": "3",
@@ -202,12 +207,13 @@
         "url": "https://www.linkedin.com/in/leo-largillet/"
       }
     ],
+    "color": "#F3E7E7",
     "info": ["Back-end developer", "16/12/2020"],
     "description": "Selfer is a web app designed using React JS for the front-end and Symfony for the back-end. This Web App is a kind of CMS based on the Notion API. Via Selfer it is possible to generate a static site. A back-office is set up to edit / update the content that will be updated directly on the site. This Web App has been realized in a 10 days project.<br/>We are still working on Selfer and plan to implement different features in the future.",
     "techno": ["React JS", "TypeScript", "Symfony"],
     "content1": {
       "title": "Easy and customizable",
-      "subtitle": "The Selfer Web App is very</br>easy to use and very scalable.",
+      "subtitle": "The Selfer Web App is very easy to use and very scalable.",
       "label": "Flexible",
       "text1": "In the available back-office, once connected to the Notion account, all the Workspaces you have authorized will be displayed, it will then be possible to retrieve the content of each Workspace / Page as well as the type of block to then update the color, the style or the font. Everything is managed through Context, this style is then returned to our Database which will store it to return a static site corresponding to the back-office.",
       "text2": "Selfer is easy to use, to use it, you just have to create a page in your Workspace, enter the content you want in the Notion blocks (callout, image, text). We then retrieve these elements via the Notion API, we just have to edit its content via our App, which will then propose to go live and put online its static site."
@@ -220,18 +226,24 @@
       "text2": "As for the front end, we used React with TypeScript. TypeScript seemed to be essential, especially in our case, since we were going to manipulate several types of content and return them. The retrieval of information from the back end is done by calling on the different routes created. To store and manipulate these variables properly, we have setups of different contexts that we update through several components."
     },
     "images": {
-      "hero": "/selfer/hero-section.png",
-      "fullwidth": "/project-img-1.png",
-      "left": "/project-img-2.png",
-      "right": "/project-img-3.png",
-      "fullwidth2": "/project-img-1.png"
+      "hero": "/selfer/hero-section.jpg",
+      "fullwidth": "/selfer/full-width-1.jpg",
+      "left": "/selfer/img-1-col.jpg",
+      "right": "/selfer/img-2-col.jpg",
+      "fullwidth2": "/selfer/full-width-2.jpg"
     },
-    "image": ["/ddalos/outline/outline-1.jpg"]
+    "image": [
+      "/selfer/outline/outline-1.jpg",
+      "/selfer/outline/outline-2.jpg",
+      "/selfer/outline/outline-3.jpg",
+      "/selfer/outline/outline-4.jpg"
+    ]
   },
   {
     "slug": "ddalos",
-    "colPos": "11",
+    "colPos": "13",
     "mobileCol": "2",
+    "midColPos": "9",
     "rowPos": "2",
     "mobileRow": "4",
     "with": [
@@ -261,7 +273,7 @@
       "text2": "For the realization of the site we divided the task to two, Chris took care of all the modeling aspect of the various boats (some not being completely made from scratch). And I was in charge of creating the immersive site to present his models. Due to lack of time, collisions and shadows have not been added but still remains a track of improvement."
     },
     "images": {
-      "hero": "/ddalos/hero-section.png",
+      "hero": "/ddalos/hero-section.jpg",
       "fullwidth": "/ddalos/full-width-1.png",
       "left": "/ddalos/img-col-1.png",
       "fullwidth2": "/ddalos/full-width-2.png",
@@ -278,6 +290,7 @@
     "slug": "eclipse",
     "colPos": "12",
     "mobileCol": "3",
+    "midColPos": "10",
     "with": [
       {
         "name": "Ines",
@@ -307,7 +320,7 @@
       "text2": "We have also presented the different 3D models in a classic way through a slider but we wanted to put them in front of us so that they could be visualized as well as possible. The product page presents in an immersive way all the elements of the cabin, be it the exterior, the interior or even our storage logic with the crematorium. Finally, in order not to forget the martyrs and to value them, we imagined a tower of martyrs where all the urns containing the ashes would be deposited, becoming a place of remembrance."
     },
     "images": {
-      "hero": "/eclipse/hero-section.png",
+      "hero": "/eclipse/hero-section.jpg",
       "fullwidth": "/eclipse/full-width-1.jpg",
       "left": "/eclipse/img-1-col.jpg",
       "right": "/eclipse/img-2-col.jpg",

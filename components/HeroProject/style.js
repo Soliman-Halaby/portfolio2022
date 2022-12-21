@@ -229,6 +229,7 @@ export const ImageWrapper = styled.div`
   transform: scale(1.2);
   /* transition: transform 0.3s ease-in-out; */
 
+  position: relative;
   ${maxMedia.small} {
     height: 60vh;
   }
@@ -247,7 +248,10 @@ export const ImageWrapper = styled.div`
 //   }
 // `;
 
+/* export const ImageBlock = styled.img` */
 export const ImageBlock = styled(Image)`
+  /* width: 100%;
+  height: 100%; */
   /* position: absolute;
   top: 0%;
   right: 0%; */

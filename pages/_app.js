@@ -10,6 +10,7 @@ import "styles/globals.css";
 
 import globalStyles from "styles/global";
 export default function App({ Component, pageProps }) {
+  console.log("what are you looking for ? ( ͡◉ ͜ʖ ͡◉)");
   return (
     <RecoilRoot>
       <ThemeProvider theme={theme}>

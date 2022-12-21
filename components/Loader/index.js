@@ -10,6 +10,8 @@ import TitleSection from "@/components/Popup/SectionTitle";
 import { handleEnter } from "./animation";
 import { handleExit } from "./animation";
 import useOnScreen from "hook/index.js";
+
+import { useIsMobile } from "hook/index.js";
 import {
   Wrapper,
   Container,
@@ -25,6 +27,8 @@ const Loader = ({}) => {
 
   const loaderAnimState = useRecoilValue(loaderAnim);
   const setLoaderAnim = useSetRecoilState(loaderAnim);
+
+  const isMobile = useIsMobile();
 
   const containerRef = useRef(null);
   const pinRef = useRef(null);
@@ -47,8 +51,8 @@ const Loader = ({}) => {
     if (!container) return;
 
     if (loaderDisplay) {
-      container.style.left = `${e.clientX - container.offsetWidth * 1.65}px`;
-      container.style.top = `${e.clientY - container.offsetHeight * 0.9}px`;
+      container.style.left = `${e.clientX - container.offsetWidth * 0.5}px`;
+      container.style.top = `${e.clientY - container.offsetHeight * 0.5}px`;
     }
   }
 
@@ -100,7 +104,7 @@ const Loader = ({}) => {
       setTimeout(() => {
         setLoaderDisplay(false);
       }, 2500);
-      console.log(pinRef.current);
+
       handleExit({
         display: "text",
         text: loaderNumberRef,
@@ -145,7 +149,7 @@ const Loader = ({}) => {
               fill="#1E1E1E"
             />
           </svg> */}
-          <Icon icon="loader" size={550} color="#1E1E1E" />
+          <Icon icon="loader" size={isMobile ? 400 : 550} color="#1E1E1E" />
         </ImgContainer>
         <LoaderNumberContainer>
           <LoaderNumber ref={loaderNumberRef} className={loaderDisplay}>

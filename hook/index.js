@@ -45,6 +45,11 @@ export const useIsMobile = () => {
   return matches;
 };
 
+export const useIsSmallDesktop = () => {
+  const matches = useMediaQuery("(max-width: 1367px)");
+  return matches;
+};
+
 // export default useIsMobile;
 
 function useOnScreen(ref, threshold = 0.3) {

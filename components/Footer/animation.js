@@ -2,6 +2,7 @@ import { gsap } from "vendor/gsap";
 import SplitText from "vendor/gsap/SplitText";
 import { CustomEase } from "vendor/gsap/all";
 gsap.registerPlugin(SplitText);
+gsap.registerPlugin(CustomEase);
 
 export const handleEnter = (props) => {
   const { display } = props;
@@ -90,7 +91,6 @@ function handleEnterTitle({ text, animText, delay }) {
   const displayDelay = animText === true ? 5 : 0;
 
   splitText.lines.forEach((line, index) => {
-    console.log(index, delay);
     const words = line.children;
 
     tl.fromTo(

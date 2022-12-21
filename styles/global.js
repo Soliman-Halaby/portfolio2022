@@ -155,6 +155,16 @@ const styles = ({ fonts }) => {
       /* height: 100%; */
       margin: 0;
     }
+
+    ::selection {
+      background: #1e1e1e;
+      color: #d7ff39;
+      /* color: #1e1e1e; */
+    }
+
+    img {
+      user-select: none;
+    }
   `;
 };
 

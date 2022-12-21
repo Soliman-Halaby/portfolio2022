@@ -104,6 +104,7 @@ export const ImageWrapper = styled.div`
 
 export const ImageContainer = styled.div`
   width: 100%;
+  position: relative;
   height: 90vh;
   transform: scale(1);
   /* transition: all 0.3s ease-in-out; */

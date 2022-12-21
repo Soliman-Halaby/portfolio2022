@@ -9,7 +9,7 @@ import useOnScreen from "hook/index.js";
 import { handleEnter } from "./animation.js";
 
 import { useIsMobile } from "hook";
-
+import { useIsSmallDesktop } from "hook";
 const ProjectWork = ({}) => {
   const data = ProjectsData.map((data, i) => ({
     slug: data.slug,
@@ -18,12 +18,15 @@ const ProjectWork = ({}) => {
     image: data.image,
     col: data.colPos,
     colMob: data.mobileCol,
+    midColPos: data?.midColPos,
     row: data.rowPos,
     colRow: data.mobileRow,
   }));
 
   const titleRef = useRef(null);
   const isMobile = useIsMobile();
+  const useIsDesktop = useIsSmallDesktop();
+  // console.log(useIsDesktop);
 
   const onScreenTitle = useOnScreen(titleRef, isMobile ? 0.45 : 0.3);
   // const onScreenSubtitle = useOnScreen(subtitleRef);
@@ -67,7 +70,13 @@ const ProjectWork = ({}) => {
                 to={data.slug}
                 index={i}
                 key={i}
-                col={isMobile ? data.colMob : data.col}
+                col={
+                  isMobile
+                    ? data.colMob
+                    : useIsDesktop
+                    ? data.midColPos
+                    : data.col
+                }
                 row={isMobile ? data.colRow : data.row}
                 // col={data.col}
                 // row={data.row}

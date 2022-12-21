@@ -155,7 +155,7 @@ const HeroHome = ({ title, subtitle, sectionTitle, label, image }) => {
               layout="fill"
               placeholder="blur"
               src={image}
-              alt="Img"
+              alt="Hero Section Image"
             />
           </ImageContainer>
         </ImageWrapper>
