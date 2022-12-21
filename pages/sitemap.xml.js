@@ -16,7 +16,7 @@ function generateSiteMap(posts) {
      ${ProjectsData.map(({ slug }) => {
        return `
        <url>
-           <loc>${`${BASEURL}/${slug}`}</loc>
+           <loc>${`${BASEURL}/project/${slug}`}</loc>
        </url>
      `;
      }).join("")}
