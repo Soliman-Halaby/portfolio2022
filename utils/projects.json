@@ -2,6 +2,7 @@
   {
     "slug": "vis-ma-ville",
     "colPos": "1",
+    "midColPos": "1",
     "mobileCol": "1",
     "rowPos": "1",
     "mobileRow": "1",
@@ -54,6 +55,7 @@
   {
     "slug": "cloudy-bay",
     "colPos": "2",
+    "midColPos": "2",
     "mobileCol": "2",
     "rowPos": "1",
     "mobileRow": "1",
@@ -96,6 +98,7 @@
   {
     "slug": "portfolio-2021",
     "colPos": "4",
+    "midColPos": "4",
     "mobileCol": "3",
     "rowPos": "2",
     "mobileRow": "2",
@@ -132,15 +135,16 @@
       "fullwidth4": "/portfolio-2021/full-width-4.png"
     },
     "image": [
-      "/portfolio-2021/outline/outline-1.png",
-      "/portfolio-2021/outline/outline-2.png",
-      "/portfolio-2021/outline/outline-3.png",
-      "/portfolio-2021/outline/outline-4.png"
+      "/portfolio-2021/outline/outline-1.jpg",
+      "/portfolio-2021/outline/outline-2.jpg",
+      "/portfolio-2021/outline/outline-3.jpg",
+      "/portfolio-2021/outline/outline-4.jpg"
     ]
   },
   {
     "slug": "canlink-me",
     "colPos": "6",
+    "midColPos": "6",
     "mobileCol": "4",
     "rowPos": "1",
     "mobielRow": "2",
@@ -183,6 +187,7 @@
   {
     "slug": "selfer-app",
     "colPos": "8",
+    "midColPos": "8",
     "mobileCol": "1",
     "rowPos": "1",
     "mobileRow": "3",
@@ -202,12 +207,13 @@
         "url": "https://www.linkedin.com/in/leo-largillet/"
       }
     ],
+    "color": "#F3E7E7",
     "info": ["Back-end developer", "16/12/2020"],
     "description": "Selfer is a web app designed using React JS for the front-end and Symfony for the back-end. This Web App is a kind of CMS based on the Notion API. Via Selfer it is possible to generate a static site. A back-office is set up to edit / update the content that will be updated directly on the site. This Web App has been realized in a 10 days project.<br/>We are still working on Selfer and plan to implement different features in the future.",
     "techno": ["React JS", "TypeScript", "Symfony"],
     "content1": {
       "title": "Easy and customizable",
-      "subtitle": "The Selfer Web App is very</br>easy to use and very scalable.",
+      "subtitle": "The Selfer Web App is very easy to use and very scalable.",
       "label": "Flexible",
       "text1": "In the available back-office, once connected to the Notion account, all the Workspaces you have authorized will be displayed, it will then be possible to retrieve the content of each Workspace / Page as well as the type of block to then update the color, the style or the font. Everything is managed through Context, this style is then returned to our Database which will store it to return a static site corresponding to the back-office.",
       "text2": "Selfer is easy to use, to use it, you just have to create a page in your Workspace, enter the content you want in the Notion blocks (callout, image, text). We then retrieve these elements via the Notion API, we just have to edit its content via our App, which will then propose to go live and put online its static site."
@@ -221,17 +227,23 @@
     },
     "images": {
       "hero": "/selfer/hero-section.jpg",
-      "fullwidth": "/selfer/hero-section.jpg",
-      "left": "/selfer/hero-section.jpg",
-      "right": "/selfer/hero-section.jpg",
-      "fullwidth2": "/selfer/hero-section.jpg"
+      "fullwidth": "/selfer/full-width-1.jpg",
+      "left": "/selfer/img-1-col.jpg",
+      "right": "/selfer/img-2-col.jpg",
+      "fullwidth2": "/selfer/full-width-2.jpg"
     },
-    "image": ["/ddalos/outline/outline-1.jpg"]
+    "image": [
+      "/selfer/outline/outline-1.jpg",
+      "/selfer/outline/outline-2.jpg",
+      "/selfer/outline/outline-3.jpg",
+      "/selfer/outline/outline-4.jpg"
+    ]
   },
   {
     "slug": "ddalos",
-    "colPos": "11",
+    "colPos": "13",
     "mobileCol": "2",
+    "midColPos": "9",
     "rowPos": "2",
     "mobileRow": "4",
     "with": [
@@ -278,6 +290,7 @@
     "slug": "eclipse",
     "colPos": "12",
     "mobileCol": "3",
+    "midColPos": "10",
     "with": [
       {
         "name": "Ines",
