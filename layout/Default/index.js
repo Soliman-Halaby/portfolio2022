@@ -4,7 +4,6 @@ import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import Head from "next/head";
 import { RecoilRoot, useRecoilValue } from "recoil";
 import { loaderState } from "recoil/loaderState";
-
 import Script from "next/script";
 import { NextSeo } from "next-seo";
 import Header from "components/Header";
@@ -32,6 +31,7 @@ export default function Layout({
   description,
   fullPage,
   contact,
+  thumbnail = "https://solimanalhalaby.fr/thumbnail.jpg",
 }) {
   const containerRef = useRef(null);
 
@@ -103,6 +103,7 @@ export default function Layout({
         gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
         page_path: window.location.pathname,
         });
+        
     `}
       </Script>
 
@@ -116,7 +117,7 @@ export default function Layout({
           description: description,
           images: [
             {
-              url: "https://portfolio2023-mu.vercel.app/thumbnail.jpg",
+              url: thumbnail,
               width: 830,
               height: 500,
               alt: "Thumbnail",
