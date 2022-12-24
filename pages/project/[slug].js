@@ -13,13 +13,13 @@ import BottomProject from "@/components/BottomProject";
 import ProjectsData from "/utils/projects.json";
 import { useRouter } from "next/router";
 
-export default function Projet({}) {
+function Projet({ data }) {
   // Get parameters of url
   const router = useRouter();
   const { slug } = router.query;
 
   // Structure returned array with all projects informations
-  const data = ProjectsData.map((data, i) => ({
+  const dataproj = ProjectsData.map((data, i) => ({
     index: i,
     slug: data.slug,
     title: data.title,
@@ -37,10 +37,10 @@ export default function Projet({}) {
   }));
 
   // Get the right array of datas
-  const projectData = data.find((project) => project.slug === slug);
+  const projectData = dataproj.find((project) => project.slug === slug);
 
   // Get projects - Next project section
-  const allProjects = data.filter((project) => project.slug !== slug);
+  const allProjects = dataproj.filter((project) => project.slug !== slug);
 
   if (slug && projectData) {
     return (
@@ -48,6 +48,7 @@ export default function Projet({}) {
         title={`Portfolio - ${projectData.title} Project`}
         description={`${projectData.description}`}
         reducedFooter
+        thumbnail={projectData.images.hero}
       >
         <Hero
           title={projectData.title}
@@ -156,3 +157,15 @@ export default function Projet({}) {
     );
   }
 }
+
+// This gets called on every request
+export async function getServerSideProps() {
+  // Fetch data from external API
+  const res = await ProjectsData;
+  const data = await res;
+
+  // Pass data to the page via props
+  return { props: { data } };
+}
+
+export default Projet;
