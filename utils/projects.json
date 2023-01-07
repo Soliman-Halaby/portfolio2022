@@ -70,7 +70,7 @@
     "title": "Cloudy Bay",
     "info": ["Front-end developer", "15/09/2022"],
     "description": "Cloudy Bay is an e-commerce website designed in React JS / Gatsby using Drupal as a back-office. This site is produced for a subsidiary of the Moet Hennesy group. You can buy different exceptional wines. It is also possible to book your place for the many events set up by Cloudy Bay, in their 2 different locations. I contributed to the development of this site during my internship at ultranoir with the different devs of the team.",
-    "techno": ["React JS", "Gatsby", "Drupal", "GraphQL"],
+    "techno": ["Gatsby", "Drupal", "GraphQL"],
     "content1": {
       "title": "Some of the features",
       "subtitle": "Sous-titre de la section",
