@@ -52,7 +52,7 @@ export const ImageBlock = styled.img`
   /* max-width: 106px; */
   object-fit: cover;
   height: 100%;
-  will-change: transform;
+  /* will-change: transform; */
   transition: filter 0.2s ease-in-out;
 
   &:hover {

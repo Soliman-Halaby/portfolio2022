@@ -70,11 +70,11 @@
     "title": "Cloudy Bay",
     "info": ["Front-end developer", "15/09/2022"],
     "description": "Cloudy Bay is an e-commerce website designed in React JS / Gatsby using Drupal as a back-office. This site is produced for a subsidiary of the Moet Hennesy group. You can buy different exceptional wines. It is also possible to book your place for the many events set up by Cloudy Bay, in their 2 different locations. I contributed to the development of this site during my internship at ultranoir with the different devs of the team.",
-    "techno": ["React JS", "Gatsby", "Drupal", "GraphQL"],
+    "techno": ["Gatsby", "Drupal", "GraphQL"],
     "content1": {
       "title": "Some of the features",
-      "subtitle": "Sous-titre de la section",
-      "label": "Hire me",
+      "subtitle": "Many features available",
+      "label": "Wine",
       "text1": "As you browse the site you will be able to discover the different e-retailers / partner stores selling Cloudy Bay wines. It is also possible to follow the Instagram news of this site and choose the different wines according to the year. Another complexity of this site is the fact of dealing with the different markets, while displaying / hiding some elements according to the chosen market.",
       "text2": "For those who are hesitant, it is possible to use the Wine Finder (produces one of the developers of ultranoir) which will allow you to choose the ideal wine according to the different criteria you give it. The purchase of wines is not done on the platform, it is connected to WineDirect which will allow you to buy the selected wines."
     },

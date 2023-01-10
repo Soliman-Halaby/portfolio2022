@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <Layout
       title="Soliman Al Halaby - Home"
-      description="I'm Soliman, a twenty one years old fullstack developer currently based in Paris. Discover my different projects by visiting my Portfolio!"
+      description="I'm Soliman, a twenty one years old fullstack developer currently based in Paris. I'm a 4th year student at HETIC. Discover my different projects by visiting my Portfolio!"
       number="03"
     >
       {/* {loader ? (

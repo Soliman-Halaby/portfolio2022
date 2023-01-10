@@ -41,17 +41,12 @@ const Footer = () => {
   const socials = [
     {
       label: "linkedin",
-      link: "https://www.linkedin.com/in/soliman-al-halaby/",
+      link: "https://www.linkedin.com/in/soliman-al-halaby",
       target: "_blank",
     },
     {
       label: "Github",
-      link: "https://www.linkedin.com/in/soliman-al-halaby/",
-      target: "_blank",
-    },
-    {
-      label: "Twitter",
-      link: "https://www.linkedin.com/in/soliman-al-halaby/",
+      link: "https://github.com/Soliman-Halaby",
       target: "_blank",
     },
   ];

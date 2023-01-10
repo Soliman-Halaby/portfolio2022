@@ -3,7 +3,7 @@ import { css } from "@emotion/react";
 
 import { maxMedia, title } from "styles/mixins";
 
-export const ButtonStyle = styled.span`
+export const ButtonStyle = styled.button`
   display: inline-block;
   padding: 0.5rem 1rem;
   padding-top: 0.75rem;
@@ -23,6 +23,31 @@ export const ButtonStyle = styled.span`
     /* font-size: 1.15rem; */
     padding: 0.5rem 0.75rem;
   }
+
+
+  &:hover {
+    ${({ rounded }) => (rounded ? "33px" : "4px")};
+    background: ${({ theme }) => theme.colors.lime};
+    border: 1px solid ${({ theme }) => theme.colors.grey1};
+    border-style: dashed;
+    color: ${({ theme }) => theme.colors.grey1};
+    transition: all 0.3s ease;
+
+    /* svg path {
+      stroke: ${({ rounded, colored, theme }) =>
+        rounded || colored ? `${theme.colors.grey1}` : `${theme.colors.grey2}`};
+    } */
+
+    &:focus {
+      background: ${({ theme }) => theme.colors.black};
+      color: ${({ theme }) => theme.colors.grey2};
+      border-color: ${({ theme }) => theme.colors.lime};
+
+      /* svg {
+        stroke: ${({ theme }) => theme.colors.grey2};
+        path: ${({ theme }) => theme.colors.grey2};
+      } */
+    }
 `;
 
 export const Container = styled.div`

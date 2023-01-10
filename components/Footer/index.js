@@ -153,7 +153,7 @@ const Footer = ({ number, contact }) => {
   const socials = [
     {
       label: "linkedin",
-      link: "https://www.linkedin.com/in/soliman-al-halaby/",
+      link: "https://www.linkedin.com/in/soliman-al-halaby",
       target: "_blank",
     },
     {
