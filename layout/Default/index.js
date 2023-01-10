@@ -31,7 +31,7 @@ export default function Layout({
   description,
   fullPage,
   contact,
-  thumbnail = "https://solimanalhalaby.fr/thumbnail.jpg",
+  thumbnail = "/thumbnail.jpg",
 }) {
   const containerRef = useRef(null);
 
