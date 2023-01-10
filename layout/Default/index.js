@@ -2,8 +2,9 @@ import { useRef, useEffect } from "react";
 import { useRouter } from "next/router";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import Head from "next/head";
-import { RecoilRoot, useRecoilValue } from "recoil";
+import { RecoilRoot, useRecoilValue, useSetRecoilState } from "recoil";
 import { loaderState } from "recoil/loaderState";
+import { cursorState } from "recoil/cursorState";
 import Script from "next/script";
 import { NextSeo } from "next-seo";
 import Header from "components/Header";
@@ -37,6 +38,8 @@ export default function Layout({
 
   const router = useRouter();
   const loaderDisplay = useRecoilValue(loaderState);
+  const setCursorDisplay = useSetRecoilState(cursorState);
+
   const isMobile = useIsMobile();
 
   const onPageEnter = (element) => {
@@ -73,6 +76,7 @@ export default function Layout({
         ease: "power3.inOut",
       }
     );
+    setCursorDisplay("simple");
   };
 
   return (
