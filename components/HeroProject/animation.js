@@ -44,7 +44,7 @@ function handleEnterTag({ el, delay, animText }) {
     },
     {
       opacity: 1,
-      duration: 0.7,
+      duration: 2,
       delay: elDelay + delay + displayDelay,
       ease: customEaseSlow,
     },
@@ -57,7 +57,7 @@ function handleEnterTag({ el, delay, animText }) {
     },
     {
       y: "0%",
-      duration: 0.7,
+      duration: 2,
       delay: elDelay + delay + displayDelay,
       ease: customEaseSlow,
     },
