@@ -1,7 +1,9 @@
 import React, { useState, useRef, useEffect, Fragment } from "react";
 
 import { useRecoilValue } from "recoil";
+import { useSetRecoilState, useResetRecoilState } from "recoil";
 import { loaderState } from "recoil/loaderState";
+import { cursorHover } from "recoil/cursorState";
 import {
   Engine,
   Render,
@@ -50,6 +52,13 @@ const MatterComponent = ({ pageTitle }) => {
   const titleRef = useRef(null);
   const groundRef = useRef(null);
   const engine = useRef(Engine.create({}));
+
+  const setCursorHover = useSetRecoilState(cursorHover);
+  const resetCursor = useResetRecoilState(cursorHover);
+
+  const cursorRotation = () => {
+    setCursorHover("expand");
+  };
 
   const loaderDisplay = useRecoilValue(loaderState);
 
@@ -387,6 +396,8 @@ const MatterComponent = ({ pageTitle }) => {
             key={i}
             ref={(el) => (boxRef.current[i] = el)}
             onClick={() => openDetail(i)}
+            onMouseEnter={() => cursorRotation()}
+            onMouseLeave={() => resetCursor()}
           >
             {data.label}
           </Box>
