@@ -58,7 +58,7 @@ function handleEnterTitle({ text, animText, delay }) {
       {
         opacity: 1,
         duration: 0.7,
-        delay: textDelay * index + displayDelay + delay,
+        delay: textDelay + displayDelay + delay,
         ease: customEaseSlow,
       },
       "anim"
@@ -71,7 +71,7 @@ function handleEnterTitle({ text, animText, delay }) {
       {
         y: 0,
         duration: 0.7,
-        delay: textDelay * index + displayDelay + delay,
+        delay: textDelay + displayDelay + delay,
         ease: customEaseSlow,
       },
       "anim"

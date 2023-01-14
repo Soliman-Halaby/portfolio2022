@@ -12,7 +12,7 @@ import { handleEnter } from "./animation.js";
 
 import {
   Wrapper,
-  Container,
+  HeroContainer,
   TitleContainer,
   Title,
   MadeWith,
@@ -98,7 +98,7 @@ const HeroProject = ({
 
   return (
     <Wrapper ref={revealRef} data-scroll-section>
-      <Container>
+      <HeroContainer>
         <TitleContainer>
           <Title ref={titleRef}>{title}</Title>
           {team && (
@@ -167,7 +167,7 @@ const HeroProject = ({
             ></ImageBlock>
           </ImageWrapper>
         </ImageContainer>
-      </Container>
+      </HeroContainer>
     </Wrapper>
   );
 };
