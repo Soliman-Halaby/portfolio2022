@@ -1,6 +1,6 @@
 import { gsap } from "vendor/gsap";
 import SplitText from "vendor/gsap/SplitText";
-import { CustomEase } from "vendor/gsap/all";
+import { CustomEase } from "vendor/gsap/CustomEase";
 gsap.registerPlugin(SplitText);
 gsap.registerPlugin(CustomEase);
 
