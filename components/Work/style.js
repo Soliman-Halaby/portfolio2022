@@ -17,7 +17,7 @@ export const Wrapper = styled.div`
   align-items: center;
 
   ${maxMedia.xs} {
-    margin: 5rem 0;
+    margin: ${({ display }) => (display === "work" ? "0" : "5rem 0")};
     padding: 0px 10px;
   }
 `;
@@ -27,7 +27,7 @@ export const Container = styled.div`
   background: ${({ theme }) => theme.colors.grey2};
   /* mix-blend-mode: exclusion; */
   position: relative;
-  margin-top: 10rem;
+  margin-top: ${({ display }) => (display === "work" ? "0" : "10rem")};
 `;
 
 export const Title = styled.h2`
@@ -38,13 +38,15 @@ export const Title = styled.h2`
   opacity: 0;
   position: absolute;
   bottom: 0;
+  z-index: 1;
 
   ${maxMedia.small} {
     font-size: 9rem;
     text-align: center;
     line-height: 100%;
     position: sticky;
-    top: 35vh;
+    top: ${({ display }) => (display === "work" ? "45vh" : "35vh")};
+
     width: 100%;
   }
 
@@ -65,7 +67,10 @@ export const ContainerGrid = styled.div`
   row-gap: 6rem;
   grid-template-columns: repeat(auto-fill, minmax(106px, 1fr));
   grid-template-rows: 1fr 1fr;
+  position: relative;
+  z-index: 2;
   ${maxMedia.xs} {
+    top: ${({ display }) => (display === "work" ? "-15rem" : "0")};
     grid-template-columns: repeat(4, 80px);
   }
 `;

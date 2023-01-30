@@ -77,27 +77,6 @@ const Header = () => {
     setCursorHover("expand");
   };
 
-  const resetCursorHover = () => {
-    setCursorHover("");
-  };
-
-  const scrollToWork = () => {
-    setMenuDisplay("hidden");
-    if (router.pathname === "/") {
-      const selectedWork = document.querySelector(".selected-work");
-      if (isMobile) {
-        document.body.style.overflow = "visible";
-        selectedWork.scrollIntoView(true);
-      } else {
-        scroll.scroll.scrollTo(selectedWork, {
-          // offset: -selectedWork.offsetHeight / 2,
-        });
-      }
-    } else {
-      router.push("/");
-    }
-  };
-
   const onScreen = useOnScreen(containerRef);
   const [reveal, setReveal] = useState(false);
 
@@ -156,9 +135,8 @@ const Header = () => {
             <MainLink
               onMouseLeave={resetCursor}
               onMouseEnter={() => cursorRotation()}
-              onClick={() => scrollToWork()}
             >
-              <NavElement>Work</NavElement>
+              <NavLink href="/work">Work</NavLink>
             </MainLink>
             <MainLink
               onMouseLeave={resetCursor}
@@ -179,8 +157,9 @@ const Header = () => {
             <MainLink onClick={() => subnavSelected()}>
               <NavLink href="/about">About</NavLink>
             </MainLink>
-            {/* <MainLink onClick={() => scrollToWork()}> */}
-            <MainLink onClick={() => scrollToWork()}>Work</MainLink>
+            <MainLink onClick={() => subnavSelected()}>
+              <NavLink href="/work">Work</NavLink>
+            </MainLink>
             <MainLink onClick={() => subnavSelected()}>
               <NavLink href="/contact">Contact</NavLink>
             </MainLink>

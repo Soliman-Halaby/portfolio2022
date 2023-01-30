@@ -10,7 +10,7 @@ import { handleEnter } from "./animation.js";
 
 import { useIsMobile } from "hook";
 import { useIsSmallDesktop } from "hook";
-const ProjectWork = ({}) => {
+const ProjectWork = ({ page }) => {
   const data = ProjectsData.map((data, i) => ({
     slug: data.slug,
     title: data.title,
@@ -53,17 +53,18 @@ const ProjectWork = ({}) => {
   }
 
   return (
-    <Wrapper className="selected-work" data-scroll-section>
-      <Container>
+    <Wrapper display={page} className="selected-work" data-scroll-section>
+      <Container display={page}>
         <Title
           data-scroll={isMobile && true}
           data-scroll-sticky
           {...attributes}
           ref={titleRef}
+          display={page}
         >
           Selected works
         </Title>
-        <ContainerGrid>
+        <ContainerGrid display={page}>
           {data.map((data, i) => {
             return (
               <ProjectDisplay
