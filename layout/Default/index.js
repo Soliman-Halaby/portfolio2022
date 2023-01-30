@@ -83,8 +83,9 @@ export default function Layout({
     <LocomotiveScrollProvider
       options={{
         smooth: true,
+        tablet: { breakpoint: 880, smooth: true },
         smartphone: { smooth: false },
-        tablet: { smooth: true },
+
         // reloadOnContextChange: true,
       }}
       watch={[router.asPath]}

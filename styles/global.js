@@ -131,9 +131,6 @@ const styles = ({ fonts }) => {
       white-space: pre-line;
       cursor: none;
       font-family: ${fonts.sansSerif};
-      background: ${({ theme }) => {
-        theme.colors.grey2;
-      }};
       margin: 0;
       background: #f2f2f2;
       ${maxMedia.small} {

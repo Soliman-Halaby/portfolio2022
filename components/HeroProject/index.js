@@ -12,7 +12,7 @@ import { handleEnter } from "./animation.js";
 
 import {
   Wrapper,
-  Container,
+  HeroContainer,
   TitleContainer,
   Title,
   MadeWith,
@@ -66,24 +66,24 @@ const HeroProject = ({
         text: titleRef,
         display: "title",
         animText: loaderDisplay,
-        delay: 0.65,
+        delay: 1.05,
       });
       handleEnter({
         el: madeWithRef,
         display: "tag",
-        delay: 1.5,
+        delay: 1.9,
         animText: loaderDisplay,
       });
       handleEnter({
         el: tagRef,
         display: "tag",
-        delay: 0.9,
+        delay: 1.45,
         animText: loaderDisplay,
       });
       handleEnter({
         el: contentRef,
         display: "tag",
-        delay: 1.3,
+        delay: 1.6,
         animText: loaderDisplay,
       });
       handleEnter({
@@ -98,7 +98,7 @@ const HeroProject = ({
 
   return (
     <Wrapper ref={revealRef} data-scroll-section>
-      <Container>
+      <HeroContainer>
         <TitleContainer>
           <Title ref={titleRef}>{title}</Title>
           {team && (
@@ -167,7 +167,7 @@ const HeroProject = ({
             ></ImageBlock>
           </ImageWrapper>
         </ImageContainer>
-      </Container>
+      </HeroContainer>
     </Wrapper>
   );
 };

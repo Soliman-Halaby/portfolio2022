@@ -1,6 +1,6 @@
 import { gsap } from "vendor/gsap";
 import SplitText from "vendor/gsap/SplitText";
-import { CustomEase } from "vendor/gsap/all";
+import { CustomEase } from "vendor/gsap/CustomEase";
 gsap.registerPlugin(SplitText);
 gsap.registerPlugin(CustomEase);
 
@@ -58,7 +58,7 @@ function handleEnterTitle({ text, animText, delay }) {
       {
         opacity: 1,
         duration: 0.7,
-        delay: textDelay * index + displayDelay + delay,
+        delay: textDelay + displayDelay + delay,
         ease: customEaseSlow,
       },
       "anim"
@@ -71,7 +71,7 @@ function handleEnterTitle({ text, animText, delay }) {
       {
         y: 0,
         duration: 0.7,
-        delay: textDelay * index + displayDelay + delay,
+        delay: textDelay + displayDelay + delay,
         ease: customEaseSlow,
       },
       "anim"

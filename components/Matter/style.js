@@ -12,7 +12,7 @@ export const Box = styled.button`
   white-space: nowrap;
   pointer-events: all;
   user-select: none;
-  cursor: pointer;
+  cursor: none;
   background: ${({ theme }) => theme.colors.grey2};
   text-transform: uppercase;
   z-index: 5;

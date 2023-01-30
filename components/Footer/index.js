@@ -161,6 +161,11 @@ const Footer = ({ number, contact }) => {
       link: "https://github.com/Soliman-Halaby",
       target: "_blank",
     },
+    {
+      label: "Twitter",
+      link: "https://twitter.com/SolimanHalaby",
+      target: "_blank",
+    },
   ];
 
   return (

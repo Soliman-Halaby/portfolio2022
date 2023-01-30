@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { maxMedia, TitleSection, Paragraph } from "styles/mixins";
 import { ButtonStyle } from "../Buttons/Button/style";
-
+import { Container } from "../Buttons/Button/style";
 export const Wrapper = styled.div`
   width: 100%;
   position: relative;
@@ -17,7 +17,7 @@ export const Wrapper = styled.div`
   }
 `;
 
-export const Container = styled.div`
+export const HeroContainer = styled.div`
   width: auto;
   display: flex;
   flex-direction: column;
@@ -160,6 +160,9 @@ export const TagSubContainer = styled.div`
   ${ButtonStyle} {
     display: flex;
     align-content: center;
+  }
+
+  ${Container} {
     margin-left: 12rem;
   }
 
@@ -172,7 +175,7 @@ export const TagSubContainer = styled.div`
       justify-content: space-between;
       row-gap: 2rem;
     }
-    ${ButtonStyle} {
+    ${Container} {
       margin-left: 0;
     }
 

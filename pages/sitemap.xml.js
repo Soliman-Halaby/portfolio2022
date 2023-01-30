@@ -13,6 +13,9 @@ function generateSiteMap(posts) {
      <url>
        <loc>https://solimanalhalaby.fr/contact</loc>
      </url>
+     <url>
+       <loc>https://solimanalhalaby.fr/work</loc>
+     </url>
      ${ProjectsData.map(({ slug }) => {
        return `
        <url>

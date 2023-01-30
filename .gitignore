@@ -8,6 +8,7 @@
 # testing
 /coverage
 
+/styles/mixins.js
 # next.js
 /.next/
 /out/

@@ -16,17 +16,16 @@ export const fonts = {
   serif: "Romie",
 };
 
-
 export const fontSizes = {
   title: {
-    small: '4rem',
-    large: '6rem'
+    small: "4rem",
+    large: "6rem",
   },
-}
+};
 
 export default {
   colors,
   margin,
   fonts,
-  fontSizes
+  fontSizes,
 };
