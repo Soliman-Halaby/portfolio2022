@@ -40,6 +40,10 @@ export const Title = styled.h2`
   margin: 0;
   text-align: ${({ alignRight }) => (alignRight ? `right` : `initial`)};
   // white-space: pre-line;
+
+  ${maxMedia.small} {
+    font-size: 4.65rem;
+  }
 `;
 
 export const MadeWithContainer = styled.div`
@@ -58,7 +62,8 @@ export const MadeWith = styled.div`
   text-transform: uppercase;
 
   ${maxMedia.small} {
-    font-size: 1rem;
+    font-size: 1.2rem;
+    margin-bottom: 0.25rem;
   }
 `;
 
@@ -145,7 +150,7 @@ export const TagRow = styled.div`
   flex-wrap: wrap;
 
   ${maxMedia.small} {
-    gap: 1.1rem;
+    gap: 0.25rem;
     row-gap: 1.5rem;
   }
 `;
@@ -189,6 +194,11 @@ export const Text = styled.span`
   color: ${({ theme }) => theme.colors.grey1};
   text-transform: uppercase;
   font-weight: 300;
+
+  ${maxMedia.small} {
+    margin-right: 0.25rem;
+    font-size: 1.4rem;
+  }
 `;
 
 export const ContentContainer = styled.div`
@@ -209,7 +219,7 @@ export const Content = styled.p`
   align-self: flex-end;
 
   ${maxMedia.small} {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 `;
 

@@ -23,6 +23,7 @@ export const Title = styled.div`
     /* top: 15%; */
     /* top: 10rem;
     font-size: 1.35rem; */
+    font-size: 1.4rem;
   }
 `;
 

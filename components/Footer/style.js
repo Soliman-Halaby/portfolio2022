@@ -21,9 +21,10 @@ export const Wrapper = styled.div`
     left: 15%;
   } */
 
-  ${maxMedia.xs} {
+  ${maxMedia.small} {
     /* min-height: 110vh; */
     /* height: 120vh; */
+    gap: 15rem;
   }
 `;
 
@@ -68,6 +69,10 @@ export const Container = styled.div`
   gap: 3rem;
   ${maxMedia.md} {
     flex-direction: column;
+  }
+
+  ${maxMedia.small} {
+    gap: 5rem;
   }
 `;
 
@@ -142,7 +147,7 @@ export const Text = styled.h3`
   text-transform: uppercase;
   color: ${({ theme }) => theme.colors.grey1};
   ${maxMedia.small} {
-    font-size: 1rem;
+    font-size: 1.4rem;
   }
 `;
 
@@ -184,6 +189,10 @@ export const RowContainer = styled.div`
     ${Content} {
       margin-bottom: 0;
     }
+  }
+
+  ${maxMedia.small} {
+    margin-bottom: 0.75rem;
   }
 `;
 export const TitleContainer = styled.div`

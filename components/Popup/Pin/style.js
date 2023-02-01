@@ -25,6 +25,10 @@ export const SuccessMessageContent = styled.p`
   animation-fill-mode: none;
   animation-play-state: running;
   animation-timeline: auto;
+
+  ${maxMedia.small} {
+    font-size: 1.4rem;
+  }
 `;
 
 export const SuccessMessageContentContainer = styled.div`

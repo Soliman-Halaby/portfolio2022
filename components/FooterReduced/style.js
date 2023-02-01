@@ -68,6 +68,10 @@ export const Text = styled.p`
   font-weight: 300;
   text-transform: uppercase;
   color: ${({ theme }) => theme.colors.grey1};
+
+  ${maxMedia.small} {
+    font-size: 1.4rem;
+  }
 `;
 
 export const Image = styled.img``;

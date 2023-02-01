@@ -23,6 +23,10 @@ export const Number = styled.p`
   margin-top: 1.2rem;
   font-family: ${({ theme }) => theme.fonts.serif};
   font-weight: 300;
+
+  ${maxMedia.small} {
+    font-size: 1.85rem;
+  }
 `;
 export const Container = styled.div`
   width: 100%;
