@@ -189,6 +189,10 @@ export const TextContent = styled.p`
   animation-fill-mode: none;
   animation-play-state: running;
   animation-timeline: auto;
+  ${maxMedia.small} {
+    font-size: 1.6rem;
+    /* font-size: 14px; */
+  }
 `;
 
 export const TextWrapper = styled.div`

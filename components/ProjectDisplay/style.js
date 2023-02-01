@@ -33,6 +33,10 @@ export const ImageContainer = styled.div`
   opacity: 0;
   overflow: hidden;
   position: relative;
+
+  ${maxMedia.small} {
+    height: 116px;
+  }
 `;
 
 export const ImageWrapper = styled.div`
@@ -40,7 +44,9 @@ export const ImageWrapper = styled.div`
 
   position: relative;
   img {
-    min-height: 176px !important;
+    min-height: 200px !important;
+    position: relative;
+    top: -8%;
   }
 `;
 export const ImageBlock = styled.img`
@@ -98,6 +104,7 @@ export const Title = styled.h3`
 
   ${maxMedia.small} {
     font-size: 1.15rem;
+    font-size: 12px;
   }
 
   .word {

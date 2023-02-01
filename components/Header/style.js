@@ -59,7 +59,7 @@ export const MainLink = styled.span`
   }
 
   ${maxMedia.small} {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     /* font-size: 16px; */
   }
 `;

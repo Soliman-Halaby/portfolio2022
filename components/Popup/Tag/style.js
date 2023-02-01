@@ -26,4 +26,8 @@ export const TagStyle = styled.span`
   svg {
     margin-right: 0.25rem;
   }
+
+  ${maxMedia.small} {
+    font-size: 1.2rem;
+  }
 `;

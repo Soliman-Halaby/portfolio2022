@@ -57,8 +57,10 @@ export const ButtonStyle = styled.button`
   }
 
   ${maxMedia.small} {
-    font-size: 1.05rem;
-    padding: 0.75rem;
+    font-size: 1.4rem;
+    height: 3.5rem;
+    padding: 0.9rem;
+    padding-top: 1rem;
   }
 `;
 

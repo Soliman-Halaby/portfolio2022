@@ -193,7 +193,7 @@ const Footer = ({ number, contact }) => {
       </TitleContainer>
       <TitleSection
         ref={sectionTitleRef}
-        top="32"
+        top={isMobile ? "25" : "32"}
         left="20"
         number={number}
         title="Contact"

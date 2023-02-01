@@ -40,7 +40,9 @@ export const ButtonStyle = styled.button`
       } */
   }
   ${maxMedia.small} {
-    font-size: 1.05rem;
+    font-size: 1.4rem;
+    width: 3.5rem;
+    height: 3.5rem;
     padding: 0.75rem;
   }
 `;

@@ -138,12 +138,20 @@ const HeroHome = ({ title, subtitle, sectionTitle, label, image }) => {
         <TextContainer onClick={() => scrollToWork()}>
           <TextWrapper>
             <TextContent>
-              Scroll <Icon size={12} icon="bottom-arrow-16" />
+              Scroll{" "}
+              <Icon
+                size={isMobile ? "1.5rem" : "1.25rem"}
+                icon="bottom-arrow-16"
+              />
             </TextContent>
           </TextWrapper>
           <TextWrapper>
             <TextContent>
-              Scroll <Icon size={12} icon="bottom-arrow-16" />
+              Scroll{" "}
+              <Icon
+                size={isMobile ? "1.5rem" : "1.25rem"}
+                icon="bottom-arrow-16"
+              />
             </TextContent>
           </TextWrapper>
         </TextContainer>
