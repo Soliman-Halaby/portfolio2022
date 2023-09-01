@@ -98,19 +98,35 @@ export const ImgContainer = styled.div`
 `;
 
 export const LoaderNumberContainer = styled.div`
-  overflow: hidden;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   mix-blend-mode: exclusion;
+  overflow: hidden;
+  text-align: center;
+  height: 6rem;
 `;
 
+export const LoaderNumberMask = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  height: 6rem;
+`;
 export const LoaderNumber = styled.span`
   ${TitleSection()}
   color: ${({ theme }) => theme.colors.grey2};
   margin: 0;
-  transition: all 0.3s ease;
+
+  /* transition: all 0.3s ease; */
+
+  padding: 0px 24px;
+  &:nth-of-type(2) {
+    /* position: absolute; */
+    /* left: 0;
+    transform: translateY(100%); */
+  }
 
   /* transform: ${({ display }) =>
     display === true ? "translateY(0)" : "translateY(-100%)"}; */
