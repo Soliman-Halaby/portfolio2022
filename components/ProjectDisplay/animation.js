@@ -27,27 +27,29 @@ function handleEnterImg({ el, index, delay }) {
   const tl = gsap.timeline();
   const elDelay = 0.05;
 
+  // tl.fromTo(
+  //   el.current,
+  //   {
+  //     // opacity: 0,
+  //   },
+  //   {
+  //     // opacity: 1,
+  //     duration: 0.6,
+  //     delay: elDelay * index + delay,
+  //   },
+  //   "anim"
+  // );
   tl.fromTo(
     el.current,
     {
-      opacity: 0,
+      clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)",
     },
     {
-      opacity: 1,
+      clipPath: "polygon(0 100%, 100% 100%, 100% 0, 0 0)",
+      // clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)",
       duration: 0.6,
-      delay: elDelay * index + delay,
-    },
-    "anim"
-  );
-  tl.fromTo(
-    el.current,
-    {
-      y: "30%",
-    },
-    {
-      y: "0%",
-      duration: 0.6,
-      delay: elDelay * index + delay,
+      ease: "power3.out",
+      delay: elDelay * index + delay + 0.35,
     },
     "anim"
   );

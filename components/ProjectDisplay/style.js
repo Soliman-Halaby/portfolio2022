@@ -28,10 +28,12 @@ export const Container = styled.div`
 `;
 
 export const ImageContainer = styled.div`
+  /* clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%); */
   height: 154px;
   width: 100%;
-  opacity: 0;
+  /* opacity: 0; */
   overflow: hidden;
+  transition: clip-path 0.6s ease-in-out;
   position: relative;
 
   ${maxMedia.small} {

@@ -45,7 +45,7 @@ const ProjectDisplay = ({ col, row, title, to, image = [], index }) => {
         el: imageRef,
         display: "image",
         index: index,
-        delay: 1.15,
+        delay: 0.85,
       });
       handleEnter({
         text: titleRef,
@@ -57,7 +57,7 @@ const ProjectDisplay = ({ col, row, title, to, image = [], index }) => {
         text: numberRef,
         display: "number",
         // index: index,
-        delay: 2.2,
+        delay: 1.9,
       });
     }
   }, [reveal]);

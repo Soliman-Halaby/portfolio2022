@@ -1,7 +1,7 @@
 import { gsap } from "vendor/gsap";
 import SplitText from "vendor/gsap/SplitText";
 import { useRecoilValue } from "recoil";
-import { loaderState } from "recoil/loaderState";
+import { loadingState } from "recoil/loaderState";
 
 gsap.registerPlugin(SplitText);
 

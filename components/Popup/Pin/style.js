@@ -32,7 +32,7 @@ export const SuccessMessageContent = styled.p`
 `;
 
 export const SuccessMessageContentContainer = styled.div`
-  overflow: hidden;
+  /* overflow: hidden; */
 
   display: flex;
 

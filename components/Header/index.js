@@ -12,7 +12,7 @@ import { useSetRecoilState, useResetRecoilState, useRecoilValue } from "recoil";
 
 import { useIsMobile } from "hook";
 
-import { loaderState } from "recoil/loaderState.js";
+import { loadingState } from "recoil/loaderState.js";
 import { handleEnter } from "./animation.js";
 import useOnScreen from "hook";
 
@@ -37,7 +37,7 @@ const Header = () => {
   const setCursorHover = useSetRecoilState(cursorHover);
   const resetCursor = useResetRecoilState(cursorHover);
 
-  const loaderDisplay = useRecoilValue(loaderState);
+  const loaderDisplay = useRecoilValue(loadingState);
 
   const containerRef = useRef(null);
   const router = useRouter();

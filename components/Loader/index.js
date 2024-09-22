@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import Icon from "utils/Icon";
 
 import { useRecoilValue, useSetRecoilState } from "recoil";
-import { loaderState } from "recoil/loaderState";
+import { loadingState } from "recoil/loaderState";
 import { loaderAnim } from "recoil/loaderState";
 
 import TitleSection from "@/components/Popup/SectionTitle";
@@ -18,12 +18,17 @@ import {
   LoaderNumberContainer,
   LoaderNumber,
   ImgContainer,
+  LoaderNumberMask,
 } from "./style";
 
+import gsap from "gsap";
+import ScrollTrigger from "vendor/gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 const Loader = ({}) => {
   const [progress, setProgress] = useState(0);
-  const setLoaderDisplay = useSetRecoilState(loaderState);
-  const loaderDisplay = useRecoilValue(loaderState);
+  const setLoaderDisplay = useSetRecoilState(loadingState);
+  const loaderDisplay = useRecoilValue(loadingState);
 
   const loaderAnimState = useRecoilValue(loaderAnim);
   const setLoaderAnim = useSetRecoilState(loaderAnim);
@@ -33,10 +38,61 @@ const Loader = ({}) => {
   const containerRef = useRef(null);
   const pinRef = useRef(null);
   const wrapperRef = useRef(null);
-  const loaderNumberRef = useRef(null);
+
   const onScreen = useOnScreen(pinRef);
 
   const [reveal, setReveal] = useState(false);
+  const [loaderNumbers, setLoaderNumbers] = useState([
+    0, 12, 27, 42, 69, 81, 100,
+  ]);
+
+  const [currentNumbersIndex, setCurrentNumbersIndex] = useState(0);
+
+  const [animationIndex, setAnimationIndex] = useState(0);
+
+  // Fonction pour animer le conteneur des LoaderNumber
+  const animateLoaderNumberContainer = () => {
+    if (animationIndex < loaderNumbers.length + 1) {
+      gsap.to(document.querySelector(".loader-number-mask"), {
+        yPercent: -(animationIndex * 100), // Déplacez le conteneur vers translateY(-100%) * indice actuel
+        duration: 0.8, // Durée de l'animation (1 seconde)
+        ease: "power2.inOut", // Type d'animation
+        onComplete: () => {
+          // Cette fonction est appelée lorsque l'animation est terminée
+          setAnimationIndex(animationIndex + 1); // Incrémentez l'indice d'animation
+        },
+      });
+    } else {
+      setLoaderAnim(true);
+
+      document.body.style.overflow = "visible";
+      document.body.style.height = "100%";
+      // localStorage.setItem("loader", "false")
+
+      setTimeout(() => {
+        setLoaderDisplay(false);
+      }, 2500);
+
+      console.log("loaderDisplay loader", loaderDisplay);
+    }
+  };
+
+  // Utilisez useEffect pour déclencher l'animation au changement de l'indice
+  useEffect(() => {
+    animateLoaderNumberContainer();
+  }, [animationIndex]);
+
+  // Utilisez setInterval pour mettre à jour l'indice d'animation chaque seconde
+  useEffect(() => {
+    const animationInterval = setInterval(() => {
+      setAnimationIndex(animationIndex + 1);
+    }, 800);
+
+    // Nettoyez l'intervalle lorsque le composant est démonté
+    return () => {
+      clearInterval(animationInterval);
+    };
+  }, [animationIndex]);
 
   useEffect(() => {
     handleEnter({
@@ -64,18 +120,12 @@ const Loader = ({}) => {
     });
   }, []);
   useEffect(() => {
-    // if (localStorage.getItem("loader") === null) {
-    //   setLoaderDisplay(localStorage.getItem("loader"));
-    // }
-
     const timer = setInterval(() => {
       setProgress((oldProgress) => {
         if (oldProgress === 100) {
           document.body.style.overflow = "visible";
           document.body.style.height = "100%";
-          // setLoaderDisplay(localStorage.getItem("loader"));
-          // setLoaderDisplay(false);
-          setLoaderAnim(true);
+
           return 100;
         }
 
@@ -95,19 +145,18 @@ const Loader = ({}) => {
 
   useEffect(() => {
     if (progress === 100) {
-      localStorage.setItem("loader", "false");
     }
   }, [progress]);
 
   useEffect(() => {
     if (loaderAnimState) {
       setTimeout(() => {
-        setLoaderDisplay(false);
+        // setLoaderDisplay(false);
       }, 2500);
 
       handleExit({
         display: "text",
-        text: loaderNumberRef,
+        text: document.querySelector(".loader-number-mask"),
         animText: loaderDisplay,
         delay: 0.6,
       });
@@ -151,10 +200,17 @@ const Loader = ({}) => {
           </svg> */}
           <Icon icon="loader" size={isMobile ? 400 : 550} color="#1E1E1E" />
         </ImgContainer>
-        <LoaderNumberContainer>
-          <LoaderNumber ref={loaderNumberRef} className={loaderDisplay}>
-            {progress}%
-          </LoaderNumber>
+        <LoaderNumberContainer className="">
+          <LoaderNumberMask className="loader-number-mask">
+            {loaderNumbers.map((number, index) => (
+              <LoaderNumber
+                key={index}
+                className={`loader-number ${loaderDisplay}`}
+              >
+                {number}%
+              </LoaderNumber>
+            ))}
+          </LoaderNumberMask>
         </LoaderNumberContainer>
       </Container>
     </Wrapper>

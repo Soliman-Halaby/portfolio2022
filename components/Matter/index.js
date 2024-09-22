@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect, Fragment } from "react";
 
 import { useRecoilValue } from "recoil";
 import { useSetRecoilState, useResetRecoilState } from "recoil";
-import { loaderState } from "recoil/loaderState";
+import { loadingState } from "recoil/loaderState";
 import { cursorHover } from "recoil/cursorState";
 import {
   Engine,
@@ -60,7 +60,7 @@ const MatterComponent = ({ pageTitle }) => {
     setCursorHover("expand");
   };
 
-  const loaderDisplay = useRecoilValue(loaderState);
+  const loaderDisplay = useRecoilValue(loadingState);
 
   const scene = useRef();
 

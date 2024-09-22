@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 
 import { useRecoilValue } from "recoil";
-import { loaderState } from "recoil/loaderState.js";
+import { loadingState } from "recoil/loaderState.js";
 import Tag from "@/components/Popup/Tag";
 import Button from "@/components/Buttons/Button";
 
@@ -50,7 +50,7 @@ const HeroProject = ({
   const imageRef = useRef(null);
   const madeWithRef = useRef(null);
 
-  const loaderDisplay = useRecoilValue(loaderState);
+  const loaderDisplay = useRecoilValue(loadingState);
   const onScreenTitle = useOnScreen(revealRef);
 
   const isMobile = useIsMobile();
@@ -146,7 +146,10 @@ const HeroProject = ({
           </TagElementsContainer>
           <TagContainer>
             <ContentContainer>
-              <Content ref={contentRef}>{description}</Content>
+              <Content
+                ref={contentRef}
+                dangerouslySetInnerHTML={{ __html: description }}
+              />
             </ContentContainer>
           </TagContainer>
         </TagWrapper>

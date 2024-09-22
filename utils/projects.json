@@ -95,6 +95,7 @@
       "/cloudy-bay/outline/outline-4.jpg"
     ]
   },
+
   {
     "slug": "portfolio-2021",
     "colPos": "4",
@@ -142,7 +143,7 @@
     ]
   },
   {
-    "slug": "canlink-me",
+    "slug": "bertrand-hospitality",
     "colPos": "6",
     "midColPos": "6",
     "mobileCol": "4",
@@ -150,40 +151,39 @@
     "mobileRow": "2",
     "with": [
       {
-        "name": "Valentin",
-        "url": "https://www.valentinhouplain.fr/"
-      },
-      {
-        "name": "Robin",
-        "url": "https://robinb-dev.github.io/"
+        "name": "Wiz",
+        "url": "https://wiz.fr/"
       }
     ],
-    "link": "https://canlink.me/",
-    "title": "Canlink Me",
-    "info": ["Full-stack developer", "17/03/2021"],
-    "description": "Canlink me is a url shortener that we have set up during a school project. It is possible for the user to simply shorten his URL without creating an account, or, make an account and be able to manage his different URLs and access the statistics.",
-    "techno": ["PHP", "CSS", "Javascript"],
+    "color": "#E3E3E3",
+    "link": "https://bertrand-hospitality.fr/",
+    "title": "Bertrand Hospitality",
+    "info": ["Front-end developer", "15/09/2022"],
+    "description": "Bertrand Hospitality now brings together exceptional venues, showcasing unique expertise. It stands as a benchmark for French art de vivre and hospitality. The website is developed using Next.js, styled with Tailwind, and integrates Storyblok as the CMS.",
+    "techno": ["Storyblok", "Next.js", "Tailwind CSS"],
     "content1": {
-      "title": "The different choices",
-      "subtitle": "Several features available",
-      "label": "Stats",
-      "text1": "Canlink me offers its users to create an account with their email address, or if they want to connect directly with the Google API in order to speed up the registration. Once connected, it is possible to manage several parameters to the shortened urls like the activation of the url, the number of clicks, the date on which this URL was shortened.",
-      "text2": "We wanted to centralize everything on one page to facilitate the user experience. The logged in user accesses his dashboard with the different stats on the same page as the non logged in users, allowing to shorten his URL and manage them without changing page. All the operation / redirection is managed in native PHP."
+      "title": "A refined presentation",
+      "subtitle": "Complete freedom",
+      "label": "Hospitality",
+      "text1": "The Bertrand Hospitality website delivers an immersive experience, allowing visitors to explore the various venues where they operate. Special attention has been given to micro-interactions to ensure the navigation feels as smooth and intuitive as possible. These subtle design elements enhance the user journey, making the browsing experience seamless and engaging.",
+      "text2": "he choice of Storyblok as the CMS was perfectly aligned with the client’s needs. It provides full control over the content they wish to display and highlight. The system’s flexibility allows for easy updates and content management. Additionally, the sidebar feature enables users to filter locations based on various criteria entered in the back-office, offering a tailored and efficient search experience."
     },
-
     "images": {
-      "hero": "/canlink-me/hero-section.jpg",
-      "fullwidth": "/canlink-me/full-width-1.jpg",
-      "left": "/canlink-me/img-1-col.jpg",
-      "right": "/canlink-me/img-2-col.jpg"
+      "hero": "/bertrand-hospitality/hero-section.jpg",
+      "fullwidth": "/bertrand-hospitality/full-width-1.jpg",
+      "left": "/bertrand-hospitality/img-1-col.jpg",
+      "right": "/bertrand-hospitality/img-2-col.jpg",
+      "fullwidth2": "/bertrand-hospitality/full-width-2.jpg",
+      "fullwidth3": "/bertrand-hospitality/full-width-3.jpg"
     },
     "image": [
-      "/canlink-me/outline/outline-1.jpg",
-      "/canlink-me/outline/outline-2.jpg",
-      "/canlink-me/outline/outline-3.jpg",
-      "/canlink-me/outline/outline-4.jpg"
+      "/bertrand-hospitality/outline/outline-1.jpg",
+      "/bertrand-hospitality/outline/outline-2.jpg",
+      "/bertrand-hospitality/outline/outline-3.jpg",
+      "/bertrand-hospitality/outline/outline-4.jpg"
     ]
   },
+
   {
     "slug": "selfer-app",
     "colPos": "8",
@@ -209,7 +209,7 @@
     ],
     "color": "#F3E7E7",
     "info": ["Back-end developer", "16/12/2020"],
-    "description": "Selfer is a web app designed using React JS for the front-end and Symfony for the back-end. This Web App is a kind of CMS based on the Notion API. Via Selfer it is possible to generate a static site. A back-office is set up to edit / update the content that will be updated directly on the site. This Web App has been realized in a 10 days project.<br/>We are still working on Selfer and plan to implement different features in the future.",
+    "description": "Selfer is a web app designed using React JS for the front-end and Symfony for the back-end. This Web App is a kind of CMS based on the Notion API. Via Selfer it is possible to generate a static site. A back-office is set up to edit / update the content that will be updated directly on the site. This Web App has been realized in a 10 days project. We are still working on Selfer and plan to implement different features in the future.",
     "techno": ["React JS", "TypeScript", "Symfony"],
     "content1": {
       "title": "Easy and customizable",
