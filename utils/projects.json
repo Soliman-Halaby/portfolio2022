@@ -158,7 +158,7 @@
     "color": "#E3E3E3",
     "link": "https://bertrand-hospitality.fr/",
     "title": "Bertrand Hospitality",
-    "info": ["Front-end developer", "15/09/2022"],
+    "info": ["Front-end developer", "05/10/2023"],
     "description": "Bertrand Hospitality now brings together exceptional venues, showcasing unique expertise. It stands as a benchmark for French art de vivre and hospitality. The website is developed using Next.js, styled with Tailwind, and integrates Storyblok as the CMS.",
     "techno": ["Storyblok", "Next.js", "Tailwind CSS"],
     "content1": {
@@ -185,58 +185,44 @@
   },
 
   {
-    "slug": "selfer-app",
+    "slug": "courchevel",
     "colPos": "8",
     "midColPos": "8",
     "mobileCol": "1",
     "rowPos": "1",
     "mobileRow": "3",
-    "link": "https://app.selfer.fr/projects",
-    "title": "Selfer App",
+    "link": "https://courchevel.com/",
+    "title": "Courchevel",
     "with": [
       {
-        "name": "Valentin",
-        "url": "https://www.valentinhouplain.fr/"
-      },
-      {
-        "name": "Robin",
-        "url": "https://robinb-dev.github.io/"
-      },
-      {
-        "name": "Leo",
-        "url": "https://www.linkedin.com/in/leo-largillet/"
+        "name": "Wiz",
+        "url": "https://wiz.fr/"
       }
     ],
-    "color": "#F3E7E7",
-    "info": ["Back-end developer", "16/12/2020"],
-    "description": "Selfer is a web app designed using React JS for the front-end and Symfony for the back-end. This Web App is a kind of CMS based on the Notion API. Via Selfer it is possible to generate a static site. A back-office is set up to edit / update the content that will be updated directly on the site. This Web App has been realized in a 10 days project. We are still working on Selfer and plan to implement different features in the future.",
-    "techno": ["React JS", "TypeScript", "Symfony"],
+    "color": "#F8FBFF",
+    "info": ["Full-stack developer", "20/09/2023"],
+    "description": "Courchevel is home to some of the most exclusive alpine destinations, offering a unique combination of luxury and adventure. It stands as a beacon of refined mountain living and world-class hospitality. The website is developed using Next.js, styled with Tailwind, and leverages Storyblok as the CMS, with Apidae API integration to provide dynamic, real-time content about the region.",
+    "techno": ["Storyblok", "Next.js", "Tailwind CSS"],
     "content1": {
-      "title": "Easy and customizable",
-      "subtitle": "The Selfer Web App is very easy to use and very scalable.",
-      "label": "Flexible",
-      "text1": "In the available back-office, once connected to the Notion account, all the Workspaces you have authorized will be displayed, it will then be possible to retrieve the content of each Workspace / Page as well as the type of block to then update the color, the style or the font. Everything is managed through Context, this style is then returned to our Database which will store it to return a static site corresponding to the back-office.",
-      "text2": "Selfer is easy to use, to use it, you just have to create a page in your Workspace, enter the content you want in the Notion blocks (callout, image, text). We then retrieve these elements via the Notion API, we just have to edit its content via our App, which will then propose to go live and put online its static site."
-    },
-    "content2": {
-      "title": "Code structure",
-      "subtitle": "A code</br>fragmented in 2 parts",
-      "label": "Code",
-      "text1": "For the back-end, to create and update the content, we used Symfony and a MySQL database. Different routes exist to communicate with the front-end. To update the DB, the data returned as parameters by the front-end are retrieved, processed (to check that there are no elements we don't want to return) and then sent to the database.",
-      "text2": "As for the front end, we used React with TypeScript. TypeScript seemed to be essential, especially in our case, since we were going to manipulate several types of content and return them. The retrieval of information from the back end is done by calling on the different routes created. To store and manipulate these variables properly, we have setups of different contexts that we update through several components."
+      "title": "A luxurious experience",
+      "subtitle": "Detailed and immersive",
+      "label": "Mountain",
+      "text1": "The Courchevel website is designed to provide visitors with a comprehensive overview of the region’s offerings. The site features detailed information about the various activities, accommodations, and services available in Courchevel. The design is clean and elegant, reflecting the luxury and sophistication of the destination.",
+      "text2": "The integration of the Apidae API allows for real-time updates on events, weather, and other information relevant to visitors. This ensures that the content is always up-to-date and accurate. The use of Storyblok as the CMS provides the client with full control over the content displayed on the site, allowing for easy updates and modifications as needed."
     },
     "images": {
-      "hero": "/selfer/hero-section.jpg",
-      "fullwidth": "/selfer/full-width-1.jpg",
-      "left": "/selfer/img-1-col.jpg",
-      "right": "/selfer/img-2-col.jpg",
-      "fullwidth2": "/selfer/full-width-2.jpg"
+      "hero": "/courchevel/hero-section.jpg",
+      "fullwidth": "/courchevel/full-width-1.jpg",
+      "left": "/courchevel/img-1-col.jpg",
+      "right": "/courchevel/img-2-col.jpg",
+      "fullwidth2": "/courchevel/full-width-2.jpg",
+      "fullwidth3": "/courchevel/full-width-3.jpg"
     },
     "image": [
-      "/selfer/outline/outline-1.jpg",
-      "/selfer/outline/outline-2.jpg",
-      "/selfer/outline/outline-3.jpg",
-      "/selfer/outline/outline-4.jpg"
+      "/courchevel/outline/outline-1.jpg",
+      "/courchevel/outline/outline-2.jpg",
+      "/courchevel/outline/outline-3.jpg",
+      "/courchevel/outline/outline-4.jpg"
     ]
   },
   {

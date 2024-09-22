@@ -19,7 +19,7 @@ export const Wrapper = styled.div`
 export const ProjectContainer = styled.div`
   /* position: relative; */
 
-  overflow: hidden;
+  /* overflow: hidden; */
 `;
 
 export const Container = styled.div`
@@ -75,9 +75,10 @@ export const RowWrapper = styled.div`
   gap: 0.5rem;
 `;
 
-export const Number = styled.span`
+export const Number = styled.p`
   font-size: clamp(10px, 1rem, 10px);
   max-height: 1rem;
+  min-width: 15px;
 
   overflow: hidden;
   font-weight: 400;
@@ -97,6 +98,9 @@ export const Number = styled.span`
 export const Title = styled.h3`
   font-size: 1.1rem;
 
+  // if the word is Courchevel, it will be split into 2 lines if it doesn't fit making it look like this: Courchev el
+
+  overflow-wrap: break-word;
   text-transform: uppercase;
   font-weight: 400;
   font-family: ${({ theme }) => theme.fonts.sansSerif};
