@@ -229,7 +229,7 @@ const Footer = ({ number, contact }) => {
               <Content>Download my resume</Content>
               <ButtonContainer>
                 <CircularButton
-                  to="/CV-Soliman-Al-Halaby.pdf"
+                  to="/CV_Soliman-Al-Halaby-EN.pdf"
                   target="_blank"
                   label="CV"
                 />
