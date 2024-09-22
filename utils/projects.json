@@ -1,6 +1,6 @@
 [
   {
-    "slug": "vis-ma-ville",
+    "slug": "gerald-charles",
     "colPos": "1",
     "midColPos": "1",
     "mobileCol": "1",
@@ -8,91 +8,78 @@
     "mobileRow": "1",
     "with": [
       {
-        "name": "Robin",
-        "url": "https://robinb-dev.github.io/"
-      },
-      {
-        "name": "Valentin",
-        "url": "https://www.valentinhouplain.fr/"
+        "name": "Wiz",
+        "url": "https://wiz.fr/"
       }
     ],
-    "color": "#DDE3EF",
-    "link": "https://github.com/Soliman-Halaby/civic-app-back",
-    "title": "Vis ma ville",
-    "info": ["Full-stack developer", "15/03/2022"],
-    "description": "Vis ma ville is a mobile application that allows users to report damage / lack of security they see in public places. This application aims to connect a whole community and allows citizens to contribute to the life of their city.",
-    "techno": ["React native", "Expo", "Node.js", "GraphQL", "Apollo"],
+    "color": "#000000",
+    "link": "https://www.geraldcharles.com/",
+    "title": "Gerald Charles",
+    "info": ["Full-stack developer", "20/08/2024"],
+    "description": "Gerald Charles is a luxury watch brand that offers a wide range of high-end timepieces. The website is designed to showcase the brand’s collection and provide visitors with an immersive experience. The site is built using Remix, and Shopify mainly with the new headless solution Hydrogen.",
+    "techno": ["Storyblok", "Remix", "Tailwind CSS", "Shopify", "Hydrogen"],
     "content1": {
-      "title": "Setting up the back-end",
-      "subtitle": "A back-end based on Firestore",
-      "label": "Cloud",
-      "text1": "Vis ma ville is divided in 2 big parts linked together. The back-end is entirely based on Firestore. To do this, we have set up the GraphQL playground with Apollo to facilitate our different queries in the suite. After that, each entity is created with the appropriate structure to be sent to the front-end. The different queries are based on ids in order to produce a dynamic application.",
-      "text2": "In this back-end, the entities are divided into two sub-parts, the queries and the mutations. Our queries consist of the requests we make in the database to retrieve a user, a post for example. The mutations allow us to update certain data or to rewrite them in the database such as the user's information."
-    },
-    "content2": {
-      "title": "A front based on Expo",
-      "subtitle": "Make our app usable on IOS and Android",
-      "label": "Universal",
-      "text1": "In order to make our application universal, we used Expo as a base. The display information on the application. Before making our application dynamic with the back-end, we set up a json with the structure we wanted to be able to advance back-end and front-end simultaneously.  Then to retrieve the data from the back-end, we perform GraphQL queries for the appropriate element with its ID. To navigate between the tabs dynamically, we keep the same principle, send a parameter to the tab change to retrieve the corresponding post / content.",
-      "text2": "To display the different pins on our map, we use the native React elements (MapView, Market, LatLng).  When a user makes a post, and authorizes us to access its location, we retrieve its position with a custom hook (useLocation) that we then send to our database. At the map level, for each existing post, we retrieve the latitude / longitude and the content, and then generate the corresponding pin. To allow the user to take a picture of the reported element, we used expo-camera which allows us to have access (if the user authorizes it) to the front and back camera."
+      "title": "A comprehensive overview",
+      "subtitle": "Luxury and sophistication",
+      "label": "Elegance",
+      "text1": "The Gerald Charles website is designed to reflect the brand’s values of luxury and sophistication. The site features a clean and elegant design that highlights the beauty of the watches. The use of high-quality images and videos provides visitors with a comprehensive overview of the collection, allowing them to explore the details of each timepiece.",
+      "text2": "The website also includes a store locator feature that allows users to find the nearest Gerald Charles boutique. The built-in e-commerce functionality enables visitors to purchase watches directly from the site. The product pages feature a frame-by-frame animation that showcases the intricate details of each watch, providing a unique and engaging experience for users."
     },
     "images": {
-      "hero": "/vis-ma-ville/hero-section.jpg",
-      "fullwidth": "/vis-ma-ville/full-width-1.png",
-      "left": "/vis-ma-ville/img-1-col.png",
-      "right": "/vis-ma-ville/img-2-col.png",
-      "fullwidth2": "/vis-ma-ville/full-width-2.png",
-      "left2": "/vis-ma-ville/img-3-col.png",
-      "right2": "/vis-ma-ville/img-4-col.png"
+      "hero": "/gerald-charles/hero-section.jpg",
+      "fullwidth": "/gerald-charles/full-width-1.jpg",
+      "left": "/gerald-charles/img-1-col.jpg",
+      "right": "/gerald-charles/img-2-col.jpg",
+      "fullwidth2": "/gerald-charles/full-width-2.jpg",
+      "fullwidth3": "/gerald-charles/full-width-3.jpg"
     },
     "image": [
-      "/vis-ma-ville/outline/outline-1.jpg",
-      "/vis-ma-ville/outline/outline-2.jpg",
-      "/vis-ma-ville/outline/outline-3.jpg",
-      "/vis-ma-ville/outline/outline-4.jpg"
+      "/gerald-charles/outline/outline-1.jpg",
+      "/gerald-charles/outline/outline-2.jpg",
+      "/gerald-charles/outline/outline-3.jpg",
+      "/gerald-charles/outline/outline-4.jpg"
     ]
   },
+
   {
-    "slug": "cloudy-bay",
+    "slug": "courchevel",
     "colPos": "2",
     "midColPos": "2",
     "mobileCol": "2",
     "rowPos": "1",
     "mobileRow": "1",
+    "link": "https://courchevel.com/",
+    "title": "Courchevel",
     "with": [
       {
-        "name": "Ultranoir",
-        "url": "https://www.ultranoir.com/"
+        "name": "Wiz",
+        "url": "https://wiz.fr/"
       }
     ],
-    "color": "#E8EAE7",
-    "link": "https://www.cloudybay.com/",
-    "title": "Cloudy Bay",
-    "info": ["Front-end developer", "15/09/2022"],
-    "description": "Cloudy Bay is an e-commerce website designed in React JS / Gatsby using Drupal as a back-office. This site is produced for a subsidiary of the Moet Hennesy group. You can buy different exceptional wines. It is also possible to book your place for the many events set up by Cloudy Bay, in their 2 different locations. I contributed to the development of this site during my internship at ultranoir with the different devs of the team.",
-    "techno": ["Gatsby", "Drupal", "GraphQL"],
+    "color": "#F8FBFF",
+    "info": ["Full-stack developer", "20/09/2023"],
+    "description": "Courchevel is home to some of the most exclusive alpine destinations, offering a unique combination of luxury and adventure. It stands as a beacon of refined mountain living and world-class hospitality. The website is developed using Next.js, styled with Tailwind, and leverages Storyblok as the CMS, with Apidae API integration to provide dynamic, real-time content about the region.",
+    "techno": ["Storyblok", "Next.js", "Tailwind CSS"],
     "content1": {
-      "title": "Some of the features",
-      "subtitle": "Many features available",
-      "label": "Wine",
-      "text1": "As you browse the site you will be able to discover the different e-retailers / partner stores selling Cloudy Bay wines. It is also possible to follow the Instagram news of this site and choose the different wines according to the year. Another complexity of this site is the fact of dealing with the different markets, while displaying / hiding some elements according to the chosen market.",
-      "text2": "For those who are hesitant, it is possible to use the Wine Finder (produces one of the developers of ultranoir) which will allow you to choose the ideal wine according to the different criteria you give it. The purchase of wines is not done on the platform, it is connected to WineDirect which will allow you to buy the selected wines."
+      "title": "A luxurious experience",
+      "subtitle": "Detailed and immersive",
+      "label": "Mountain",
+      "text1": "The Courchevel website is designed to provide visitors with a comprehensive overview of the region’s offerings. The site features detailed information about the various activities, accommodations, and services available in Courchevel. The design is clean and elegant, reflecting the luxury and sophistication of the destination.",
+      "text2": "The integration of the Apidae API allows for real-time updates on events, weather, and other information relevant to visitors. This ensures that the content is always up-to-date and accurate. The use of Storyblok as the CMS provides the client with full control over the content displayed on the site, allowing for easy updates and modifications as needed."
     },
     "images": {
-      "hero": "/cloudy-bay/hero-section.jpg",
-      "fullwidth": "/cloudy-bay/full-width-1.png",
-      "left": "/cloudy-bay/img-1-col.png",
-      "right": "/cloudy-bay/img-2-col.png",
-      "fullwidth2": "/cloudy-bay/full-width-2.png",
-      "left2": "/cloudy-bay/img-3-col.png",
-      "right2": "/cloudy-bay/img-4-col.png",
-      "fullwidth3": "/cloudy-bay/full-width-3.png"
+      "hero": "/courchevel/hero-section.jpg",
+      "fullwidth": "/courchevel/full-width-1.jpg",
+      "left": "/courchevel/img-1-col.jpg",
+      "right": "/courchevel/img-2-col.jpg",
+      "fullwidth2": "/courchevel/full-width-2.jpg",
+      "fullwidth3": "/courchevel/full-width-3.jpg"
     },
     "image": [
-      "/cloudy-bay/outline/outline-1.jpg",
-      "/cloudy-bay/outline/outline-2.jpg",
-      "/cloudy-bay/outline/outline-3.jpg",
-      "/cloudy-bay/outline/outline-4.jpg"
+      "/courchevel/outline/outline-1.jpg",
+      "/courchevel/outline/outline-2.jpg",
+      "/courchevel/outline/outline-3.jpg",
+      "/courchevel/outline/outline-4.jpg"
     ]
   },
 
@@ -185,93 +172,49 @@
   },
 
   {
-    "slug": "courchevel",
+    "slug": "cloudy-bay",
     "colPos": "8",
     "midColPos": "8",
     "mobileCol": "1",
     "rowPos": "1",
     "mobileRow": "3",
-    "link": "https://courchevel.com/",
-    "title": "Courchevel",
     "with": [
       {
-        "name": "Wiz",
-        "url": "https://wiz.fr/"
+        "name": "Ultranoir",
+        "url": "https://www.ultranoir.com/"
       }
     ],
-    "color": "#F8FBFF",
-    "info": ["Full-stack developer", "20/09/2023"],
-    "description": "Courchevel is home to some of the most exclusive alpine destinations, offering a unique combination of luxury and adventure. It stands as a beacon of refined mountain living and world-class hospitality. The website is developed using Next.js, styled with Tailwind, and leverages Storyblok as the CMS, with Apidae API integration to provide dynamic, real-time content about the region.",
-    "techno": ["Storyblok", "Next.js", "Tailwind CSS"],
+    "color": "#E8EAE7",
+    "link": "https://www.cloudybay.com/",
+    "title": "Cloudy Bay",
+    "info": ["Front-end developer", "15/09/2022"],
+    "description": "Cloudy Bay is an e-commerce website designed in React JS / Gatsby using Drupal as a back-office. This site is produced for a subsidiary of the Moet Hennesy group. You can buy different exceptional wines. It is also possible to book your place for the many events set up by Cloudy Bay, in their 2 different locations. I contributed to the development of this site during my internship at ultranoir with the different devs of the team.",
+    "techno": ["Gatsby", "Drupal", "GraphQL"],
     "content1": {
-      "title": "A luxurious experience",
-      "subtitle": "Detailed and immersive",
-      "label": "Mountain",
-      "text1": "The Courchevel website is designed to provide visitors with a comprehensive overview of the region’s offerings. The site features detailed information about the various activities, accommodations, and services available in Courchevel. The design is clean and elegant, reflecting the luxury and sophistication of the destination.",
-      "text2": "The integration of the Apidae API allows for real-time updates on events, weather, and other information relevant to visitors. This ensures that the content is always up-to-date and accurate. The use of Storyblok as the CMS provides the client with full control over the content displayed on the site, allowing for easy updates and modifications as needed."
+      "title": "Some of the features",
+      "subtitle": "Many features available",
+      "label": "Wine",
+      "text1": "As you browse the site you will be able to discover the different e-retailers / partner stores selling Cloudy Bay wines. It is also possible to follow the Instagram news of this site and choose the different wines according to the year. Another complexity of this site is the fact of dealing with the different markets, while displaying / hiding some elements according to the chosen market.",
+      "text2": "For those who are hesitant, it is possible to use the Wine Finder (produces one of the developers of ultranoir) which will allow you to choose the ideal wine according to the different criteria you give it. The purchase of wines is not done on the platform, it is connected to WineDirect which will allow you to buy the selected wines."
     },
     "images": {
-      "hero": "/courchevel/hero-section.jpg",
-      "fullwidth": "/courchevel/full-width-1.jpg",
-      "left": "/courchevel/img-1-col.jpg",
-      "right": "/courchevel/img-2-col.jpg",
-      "fullwidth2": "/courchevel/full-width-2.jpg",
-      "fullwidth3": "/courchevel/full-width-3.jpg"
+      "hero": "/cloudy-bay/hero-section.jpg",
+      "fullwidth": "/cloudy-bay/full-width-1.png",
+      "left": "/cloudy-bay/img-1-col.png",
+      "right": "/cloudy-bay/img-2-col.png",
+      "fullwidth2": "/cloudy-bay/full-width-2.png",
+      "left2": "/cloudy-bay/img-3-col.png",
+      "right2": "/cloudy-bay/img-4-col.png",
+      "fullwidth3": "/cloudy-bay/full-width-3.png"
     },
     "image": [
-      "/courchevel/outline/outline-1.jpg",
-      "/courchevel/outline/outline-2.jpg",
-      "/courchevel/outline/outline-3.jpg",
-      "/courchevel/outline/outline-4.jpg"
+      "/cloudy-bay/outline/outline-1.jpg",
+      "/cloudy-bay/outline/outline-2.jpg",
+      "/cloudy-bay/outline/outline-3.jpg",
+      "/cloudy-bay/outline/outline-4.jpg"
     ]
   },
-  {
-    "slug": "ddalos",
-    "colPos": "13",
-    "mobileCol": "2",
-    "midColPos": "9",
-    "rowPos": "2",
-    "mobileRow": "4",
-    "with": [
-      {
-        "name": "Chris",
-        "url": "https://www.linkedin.com/in/christophe-francisco-a758061a9/"
-      }
-    ],
-    "color": "#ECE8E3",
-    "link": "https://ddalos.vercel.app/",
-    "title": "D'Dalos",
-    "info": ["Front-end developer", "25/02/2021"],
-    "description": "Ddalos is an immersive website aiming to showcase several models of boats made on Blender. This site was produced using Three JS. It is possible to lock the mouse and then use the keys to discover the different 3D models.",
-    "techno": ["Three.js"],
-    "content1": {
-      "title": "The birth of D'Dalos",
-      "subtitle": "The mixture of several know-hows",
-      "label": "New",
-      "text1": "This project was done as part of a school project where we had to choose 2 brands, merge them into one and find a new area of expertise related to both. We chose to take Bentley & Dior as references. Bentley for the power of their engine as well as their knowledge in engineering and Dior to represent the elegant and luxurious side.",
-      "text2": "The fusion of these 2 brands gave birth to D'Dalos, a luxury yacht builder. During this project we created our own graphic identity (logo, graphic charter) as well as a fictitious story to explain the appearance of D'Dalos. The final goal was to present our yachts' realizations through a showroom, whatever it is."
-    },
-    "content2": {
-      "title": "An immersive showroom",
-      "subtitle": "A new way to present your products",
-      "label": "Innovation",
-      "text1": "Following the different stages of conception of our brand and analysis. It was time to move on to the realization and to think how to present our boats through a showroom. It is thus here that we came up with the idea of presenting it through an interactive website where the user will be able to visit, as he wishes, the different models.",
-      "text2": "For the realization of the site we divided the task to two, Chris took care of all the modeling aspect of the various boats (some not being completely made from scratch). And I was in charge of creating the immersive site to present his models. Due to lack of time, collisions and shadows have not been added but still remains a track of improvement."
-    },
-    "images": {
-      "hero": "/ddalos/hero-section.jpg",
-      "fullwidth": "/ddalos/full-width-1.png",
-      "left": "/ddalos/img-col-1.png",
-      "fullwidth2": "/ddalos/full-width-2.png",
-      "left2": "/ddalos/img-col-3.png"
-    },
-    "image": [
-      "/ddalos/outline/outline-1.jpg",
-      "/ddalos/outline/outline-2.jpg",
-      "/ddalos/outline/outline-3.jpg",
-      "/ddalos/outline/outline-4.jpg"
-    ]
-  },
+
   {
     "slug": "eclipse",
     "colPos": "12",
@@ -317,6 +260,48 @@
       "/eclipse/outline/outline-2.jpg",
       "/eclipse/outline/outline-3.jpg",
       "/eclipse/outline/outline-4.jpg"
+    ]
+  },
+  {
+    "slug": "table-food-hall",
+
+    "colPos": "13",
+    "mobileCol": "2",
+    "midColPos": "9",
+    "rowPos": "2",
+
+    "mobileRow": "4",
+    "with": [
+      {
+        "name": "LG2",
+        "url": "https://digital-xp.lg2.com/"
+      }
+    ],
+    "color": "#ffffff",
+    "link": "https://www.tablefoodhall.com/",
+    "title": "Table food Hall",
+    "info": ["Front-end developer", "15/08/2023"],
+    "description": "Table Food Hall is a food hall located in the heart of Toronto. The website is designed to showcase the different food vendors and provide visitors with information about the venue. The site is built using Nuxt.js, styled with Tailwind CSS, and integrates Dato as the CMS.",
+    "techno": ["Dato CMS", "Nuxt.js", "Tailwind CSS"],
+    "content1": {
+      "title": "A culinary experience",
+      "subtitle": "A taste of Toronto",
+      "label": "Food",
+      "text1": "The Table Food Hall website is designed to provide visitors with a taste of Toronto’s culinary scene. The site features information about the different food vendors located in the hall, as well as details about the venue itself. The design is clean and modern, reflecting the vibrant and diverse food offerings available at the food hall.",
+      "text2": "The integration of Dato CMS allows for easy content management, enabling the client to update the site with new vendors, menus, and events as needed. The site also includes a blog section where visitors can learn more about the food hall and its vendors. The use of Nuxt.js ensures a fast and responsive user experience, making it easy for visitors to navigate the site and find the information they need."
+    },
+    "images": {
+      "hero": "/table-food-hall/hero-section.jpg",
+      "fullwidth": "/table-food-hall/full-width-1.jpg",
+      "left": "/table-food-hall/img-1-col.jpg",
+      "right": "/table-food-hall/img-2-col.jpg",
+      "fullwidth2": "/table-food-hall/full-width-2.jpg"
+    },
+    "image": [
+      "/table-food-hall/outline/outline-1.jpg",
+      "/table-food-hall/outline/outline-2.jpg",
+      "/table-food-hall/outline/outline-3.jpg",
+      "/table-food-hall/outline/outline-4.jpg"
     ]
   }
 ]
