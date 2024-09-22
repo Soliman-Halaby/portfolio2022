@@ -72,8 +72,6 @@ const Loader = ({}) => {
       setTimeout(() => {
         setLoaderDisplay(false);
       }, 2500);
-
-      console.log("loaderDisplay loader", loaderDisplay);
     }
   };
 
