@@ -8,7 +8,7 @@ import Pin from "@/components/Popup/Pin";
 import Icon from "utils/Icon.js";
 
 import { useRecoilValue } from "recoil";
-import { loaderState } from "recoil/loaderState";
+import { loadingState } from "recoil/loaderState";
 
 import useOnScreen from "hook/index.js";
 import { handleEnter } from "./animation.js";
@@ -31,7 +31,7 @@ import {
 
 const HeroHome = ({ title, subtitle, sectionTitle, label, image }) => {
   const { scroll } = useLocomotiveScroll();
-  const loaderDisplay = useRecoilValue(loaderState);
+  const loaderDisplay = useRecoilValue(loadingState);
 
   const titleRef = useRef(null);
   const subtitleRef = useRef(null);

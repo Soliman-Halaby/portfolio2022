@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import Icon from "utils/Icon";
 
 import { useRecoilValue, useSetRecoilState } from "recoil";
-import { loaderState } from "recoil/loaderState";
+import { loadingState } from "recoil/loaderState";
 import { loaderAnim } from "recoil/loaderState";
 
 import TitleSection from "@/components/Popup/SectionTitle";
@@ -27,8 +27,8 @@ import ScrollTrigger from "vendor/gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 const Loader = ({}) => {
   const [progress, setProgress] = useState(0);
-  const setLoaderDisplay = useSetRecoilState(loaderState);
-  const loaderDisplay = useRecoilValue(loaderState);
+  const setLoaderDisplay = useSetRecoilState(loadingState);
+  const loaderDisplay = useRecoilValue(loadingState);
 
   const loaderAnimState = useRecoilValue(loaderAnim);
   const setLoaderAnim = useSetRecoilState(loaderAnim);
@@ -64,15 +64,16 @@ const Loader = ({}) => {
       });
     } else {
       setLoaderAnim(true);
+
       document.body.style.overflow = "visible";
       document.body.style.height = "100%";
-      localStorage.setItem("loader", "false");
+      // localStorage.setItem("loader", "false")
 
       setTimeout(() => {
         setLoaderDisplay(false);
       }, 2500);
 
-      // setLoaderDisplay(false);
+      console.log("loaderDisplay loader", loaderDisplay);
     }
   };
 
@@ -119,18 +120,12 @@ const Loader = ({}) => {
     });
   }, []);
   useEffect(() => {
-    if (localStorage.getItem("loader") === null) {
-      setLoaderDisplay(localStorage.getItem("loader"));
-    }
-
     const timer = setInterval(() => {
       setProgress((oldProgress) => {
         if (oldProgress === 100) {
           document.body.style.overflow = "visible";
           document.body.style.height = "100%";
-          // setLoaderDisplay(localStorage.getItem("loader"));
-          // setLoaderDisplay(false);
-          // setLoaderAnim(true);
+
           return 100;
         }
 

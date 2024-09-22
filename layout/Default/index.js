@@ -2,8 +2,8 @@ import { useRef, useEffect } from "react";
 import { useRouter } from "next/router";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import Head from "next/head";
-import { RecoilRoot, useRecoilValue, useSetRecoilState } from "recoil";
-import { loaderState } from "recoil/loaderState";
+import { useRecoilValue, useSetRecoilState, useRecoilState } from "recoil";
+import { loadingState } from "recoil/loaderState";
 import { cursorState } from "recoil/cursorState";
 import Script from "next/script";
 import { NextSeo } from "next-seo";
@@ -37,7 +37,8 @@ export default function Layout({
   const containerRef = useRef(null);
 
   const router = useRouter();
-  const loaderDisplay = useRecoilValue(loaderState);
+
+  const loaderDisplay = useRecoilValue(loadingState);
   const setCursorDisplay = useSetRecoilState(cursorState);
 
   const isMobile = useIsMobile();
@@ -94,7 +95,8 @@ export default function Layout({
         scroll.scrollTo(0, { duration: 0, disableLerp: true })
       }
     >
-      {loaderDisplay && <Loader />}
+      {/* {loaderDisplay && <Loader />} */}
+      <Loader />
       <Script
         strategy="lazyOnload"
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}

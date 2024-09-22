@@ -1,6 +1,6 @@
 import React, { useState, useRef, forwardRef, useEffect } from "react";
 import { useRecoilState } from "recoil";
-import { loaderState } from "recoil/loaderState.js";
+import { loadingState } from "recoil/loaderState.js";
 import { Title, Number, TitleContent } from "./style";
 
 import useOnScreen from "hook/index.js";
@@ -13,7 +13,7 @@ const SectionPart = forwardRef(
     const numberRef = useRef(null);
     const onScreen = useOnScreen(numberRef);
     const [reveal, setReveal] = useState(false);
-    const [loaderDisplay, setLoaderDisplay] = useRecoilState(loaderState);
+    const [loaderDisplay, setLoaderDisplay] = useRecoilState(loadingState);
 
     useEffect(() => {
       if (onScreen) setReveal(onScreen);

@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <Layout
       title="Soliman Al Halaby - Home"
-      description="I'm Soliman, a twenty one years old fullstack developer currently based in Paris. I'm a 4th year student at HETIC. Discover my different projects by visiting my Portfolio!"
+      description="Soliman Al Halaby is a creative developer based in Paris, France. He is available for freelance project."
       number="03"
     >
       {/* {loader ? (
@@ -31,7 +31,7 @@ export default function Home() {
             ? `Soliman Al<br/>Halaby, creative<br/>developer`
             : `Soliman Al Halaby,<br/>creative developer`
         }
-        subtitle={`Looking for<br/>an internship`}
+        subtitle={`Freelance developer,<br/>available for projects`}
         sectionTitle={`Based in paris, <br/>from cairo`}
         image={image}
         label="Contact me"

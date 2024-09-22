@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 
 import { useRecoilValue } from "recoil";
-import { loaderState } from "recoil/loaderState.js";
+import { loadingState } from "recoil/loaderState.js";
 
 import TitleSection from "@/components/Popup/SectionTitle";
 import Button from "@/components/Buttons/Button";
@@ -41,7 +41,7 @@ const Footer = ({ number, contact }) => {
   const pinRef = useRef(null);
   const sectionTitleRef = useRef(null);
 
-  const loaderDisplay = useRecoilValue(loaderState);
+  const loaderDisplay = useRecoilValue(loadingState);
   const onScreenTitle = useOnScreen(titleRef, 0.7);
   const onScreenNav = useOnScreen(navRef, 0.7);
 
