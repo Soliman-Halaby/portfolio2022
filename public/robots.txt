@@ -1,9 +1,3 @@
-# *
 User-agent: *
-Allow: /
+Disallow: /
 
-# Host
-Host: https://www.solimanalhalaby.fr/
-
-# Sitemaps
-Sitemap: https://www.solimanalhalaby.fr/sitemap.xml

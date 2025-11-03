@@ -1,5 +1,89 @@
 [
   {
+    "slug": "gerald-charles",
+    "colPos": "1",
+    "midColPos": "1",
+    "mobileCol": "1",
+    "rowPos": "1",
+    "mobileRow": "1",
+    "with": [
+      {
+        "name": "Wiz",
+        "url": "https://wiz.fr/"
+      }
+    ],
+    "color": "#000000",
+    "link": "https://www.geraldcharles.com/",
+    "title": "Gerald Charles",
+    "info": ["Full-stack developer", "20/08/2024"],
+    "description": "Gerald Charles is a luxury watch brand that offers a wide range of high-end timepieces. The website is designed to showcase the brand’s collection and provide visitors with an immersive experience. The site is built using Remix, and Shopify mainly with the new headless solution Hydrogen.",
+    "techno": ["Storyblok", "Remix", "Tailwind CSS", "Shopify", "Hydrogen"],
+    "content1": {
+      "title": "A comprehensive overview",
+      "subtitle": "Luxury and sophistication",
+      "label": "Elegance",
+      "text1": "The Gerald Charles website is designed to reflect the brand’s values of luxury and sophistication. The site features a clean and elegant design that highlights the beauty of the watches. The use of high-quality images and videos provides visitors with a comprehensive overview of the collection, allowing them to explore the details of each timepiece.",
+      "text2": "The website also includes a store locator feature that allows users to find the nearest Gerald Charles boutique. The built-in e-commerce functionality enables visitors to purchase watches directly from the site. The product pages feature a frame-by-frame animation that showcases the intricate details of each watch, providing a unique and engaging experience for users."
+    },
+    "images": {
+      "hero": "/gerald-charles/hero-section.jpg",
+      "fullwidth": "/gerald-charles/full-width-1.jpg",
+      "left": "/gerald-charles/img-1-col.jpg",
+      "right": "/gerald-charles/img-2-col.jpg",
+      "fullwidth2": "/gerald-charles/full-width-2.jpg",
+      "fullwidth3": "/gerald-charles/full-width-3.jpg"
+    },
+    "image": [
+      "/gerald-charles/outline/outline-1.jpg",
+      "/gerald-charles/outline/outline-2.jpg",
+      "/gerald-charles/outline/outline-3.jpg",
+      "/gerald-charles/outline/outline-4.jpg"
+    ]
+  },
+
+  {
+    "slug": "courchevel",
+    "colPos": "2",
+    "midColPos": "2",
+    "mobileCol": "2",
+    "rowPos": "1",
+    "mobileRow": "1",
+    "link": "https://courchevel.com/",
+    "title": "Courchevel",
+    "with": [
+      {
+        "name": "Wiz",
+        "url": "https://wiz.fr/"
+      }
+    ],
+    "color": "#F8FBFF",
+    "info": ["Full-stack developer", "20/09/2023"],
+    "description": "Courchevel is home to some of the most exclusive alpine destinations, offering a unique combination of luxury and adventure. It stands as a beacon of refined mountain living and world-class hospitality. The website is developed using Next.js, styled with Tailwind, and leverages Storyblok as the CMS, with Apidae API integration to provide dynamic, real-time content about the region.",
+    "techno": ["Storyblok", "Next.js", "Tailwind CSS"],
+    "content1": {
+      "title": "A luxurious experience",
+      "subtitle": "Detailed and immersive",
+      "label": "Mountain",
+      "text1": "The Courchevel website is designed to provide visitors with a comprehensive overview of the region’s offerings. The site features detailed information about the various activities, accommodations, and services available in Courchevel. The design is clean and elegant, reflecting the luxury and sophistication of the destination.",
+      "text2": "The integration of the Apidae API allows for real-time updates on events, weather, and other information relevant to visitors. This ensures that the content is always up-to-date and accurate. The use of Storyblok as the CMS provides the client with full control over the content displayed on the site, allowing for easy updates and modifications as needed."
+    },
+    "images": {
+      "hero": "/courchevel/hero-section.jpg",
+      "fullwidth": "/courchevel/full-width-1.jpg",
+      "left": "/courchevel/img-1-col.jpg",
+      "right": "/courchevel/img-2-col.jpg",
+      "fullwidth2": "/courchevel/full-width-2.jpg",
+      "fullwidth3": "/courchevel/full-width-3.jpg"
+    },
+    "image": [
+      "/courchevel/outline/outline-1.jpg",
+      "/courchevel/outline/outline-2.jpg",
+      "/courchevel/outline/outline-3.jpg",
+      "/courchevel/outline/outline-4.jpg"
+    ]
+  },
+
+  {
     "slug": "portfolio-2021",
     "colPos": "4",
     "midColPos": "4",
@@ -43,6 +127,47 @@
       "/portfolio-2021/outline/outline-2.jpg",
       "/portfolio-2021/outline/outline-3.jpg",
       "/portfolio-2021/outline/outline-4.jpg"
+    ]
+  },
+  {
+    "slug": "bertrand-hospitality",
+    "colPos": "6",
+    "midColPos": "6",
+    "mobileCol": "4",
+    "rowPos": "1",
+    "mobileRow": "2",
+    "with": [
+      {
+        "name": "Wiz",
+        "url": "https://wiz.fr/"
+      }
+    ],
+    "color": "#E3E3E3",
+    "link": "https://bertrand-hospitality.fr/",
+    "title": "Bertrand Hospitality",
+    "info": ["Front-end developer", "05/10/2023"],
+    "description": "Bertrand Hospitality now brings together exceptional venues, showcasing unique expertise. It stands as a benchmark for French art de vivre and hospitality. The website is developed using Next.js, styled with Tailwind, and integrates Storyblok as the CMS.",
+    "techno": ["Storyblok", "Next.js", "Tailwind CSS"],
+    "content1": {
+      "title": "A refined presentation",
+      "subtitle": "Complete freedom",
+      "label": "Hospitality",
+      "text1": "The Bertrand Hospitality website delivers an immersive experience, allowing visitors to explore the various venues where they operate. Special attention has been given to micro-interactions to ensure the navigation feels as smooth and intuitive as possible. These subtle design elements enhance the user journey, making the browsing experience seamless and engaging.",
+      "text2": "he choice of Storyblok as the CMS was perfectly aligned with the client’s needs. It provides full control over the content they wish to display and highlight. The system’s flexibility allows for easy updates and content management. Additionally, the sidebar feature enables users to filter locations based on various criteria entered in the back-office, offering a tailored and efficient search experience."
+    },
+    "images": {
+      "hero": "/bertrand-hospitality/hero-section.jpg",
+      "fullwidth": "/bertrand-hospitality/full-width-1.jpg",
+      "left": "/bertrand-hospitality/img-1-col.jpg",
+      "right": "/bertrand-hospitality/img-2-col.jpg",
+      "fullwidth2": "/bertrand-hospitality/full-width-2.jpg",
+      "fullwidth3": "/bertrand-hospitality/full-width-3.jpg"
+    },
+    "image": [
+      "/bertrand-hospitality/outline/outline-1.jpg",
+      "/bertrand-hospitality/outline/outline-2.jpg",
+      "/bertrand-hospitality/outline/outline-3.jpg",
+      "/bertrand-hospitality/outline/outline-4.jpg"
     ]
   },
 
