@@ -1,54 +1,66 @@
 [
   {
     "label": "Paris",
-    "description": "I arrived in Paris in 2019 as part of my graduate studies and do not regret this choice! I really like this city because it is possible to find a balance between sports, activities and work. It also allowed me to really settle in France."
+    "description": "I arrived in Paris in 2019 for my studies and never regretted it. I enjoy the balance between sports, activities, and work, and it helped me fully settle in France."
   },
   {
     "label": "Ultranoir",
-    "description": "In May 2022, a new adventure began at Ultranoir during a 6 month internship. I had the opportunity to work on various projects and to deepen my knowledge in React. This internship was very formative and is one of the reasons why I decided to do my portfolio in Next.js. The whole dev team was there to guide me and train me on the different topics. It was my first 'real' experience in an agency, since my first internship was in full remote."
+    "description": "In May 2022, I started a 6-month internship at Ultranoir. I worked on several projects and deepened my React skills. The team mentored me on production workflows—this experience partly inspired me to build my portfolio with Next.js."
   },
   {
     "label": "Football",
-    "description": "I'm a big soccer fan, I played pro football for a large part of my youth and now I only play soccer with friends (which is not bad)! I support PSG (this year will be the good one...)"
+    "description": "I'm a big soccer fan. I played competitively for much of my youth and now play with friends. I support PSG."
   },
   {
     "label": "Sailing",
-    "description": "Since I was 8 years old, until I was 18, I practiced sailing in Saint Raphael, in the South of France. I had the opportunity to sail on several boats (pico, catamaran, ludic). My goal was to be an instructor during the summer period but it was not done because of lack of time. I managed to reach the level 4 (there are 5 levels) certified by the FFV."
+    "description": "From age 8 to 18, I sailed in Saint-Raphaël (pico, catamaran, ludic). I reached FFV level 4 and almost became a summer instructor."
   },
   {
     "label": "Dreamline Studio",
-    "description": "From June to September 2021, I did an internship at Dreamline Studio. It was my first professional experience because I had not done an internship before. I had the opportunity to deepen my knowledge on WordPress and to master this tool. The internship was full remote, but went very well, that's why I continue to work as a freelancer with Dreamline."
+    "description": "From June to September 2021, I completed a remote internship at Dreamline Studio, strengthening my WordPress skills. I’ve continued collaborating as a freelancer since."
   },
   {
     "label": "Cairo",
-    "description": "I was born and raised in Cairo until I was 18. All my schooling was spent at the French Lycée in Cairo. I often return to Egypt during the year when possible to meet up with my family and friends. Growing up in Egypt and traveling whenever I could, has allowed me to become fluent in Arabic and to adapt to all types of environments."
+    "description": "I was born and raised in Cairo and studied at the French Lycée. I visit regularly and speak Arabic fluently, which helps me adapt to diverse environments."
   },
   {
     "label": "Karate",
-    "description": "From the age of 5 to 17 I practiced karate in Egypt with the same Sensai. With time and training, this allowed me to obtain my first dan black belt. Karate was a big part of my daily life when I was in Egypt as I trained 2 to 3 times a week."
+    "description": "From 5 to 17, I practiced karate in Egypt with the same sensei and earned my first-dan black belt, training 2–3 times a week."
   },
   {
     "label": "HETIC",
-    "description": "I am a 5th year student at Hetic where we learn web development, web design and communication. </br></br>Despite the fact that I have deepened the web development, in order to understand and be able to touch everything, I have not neglected the design as well as the communication, because in my point of vue it’s important to understand all the aspect of a project and to be able to discuss it with my teammates.</br></br>Moreover, I'm used to working in a team since Hetic trains us to do so by setting up many projects in groups."
-  },
-  {
-    "label": "New York",
-    "description": "New York is one of the cities I want to discover the most. I also want to go there to improve my English and discover a new continent. So why not do it if I can do it while working in the field I love.<br/>It would be a great opportunity for me to go there, especially since I have never been to America."
+    "description": "I’m a graduate of HETIC, where we combine web development, design, and communication. Even while specializing in development, I kept a strong focus on design and team projects to understand all aspects of a product."
   },
   {
     "label": "Piano",
-    "description": "I always wanted to learn the piano and the guitar since I was a child. I made a choice and turned to the piano which I practiced for several years at the Russian cultural center in Egypt. For those who are looking for it, you can find a video on youtube of little Soliman playing the piano!"
+    "description": "I studied piano for several years at the Russian Cultural Center in Egypt—and there’s a video of little Soliman playing on YouTube somewhere!"
   },
   {
     "label": "Aikido",
-    "description": "In addition to karate, I wanted to learn a new philosophy. With the same Sensai, I had the chance to learn Aikido, the art of using the power of the other to defend oneself. It was a very important complement for me and very interesting in the way of thinking and in the application. Although I don't practice it anymore, I still have a very good experience."
+    "description": "Alongside karate, I learned Aikido with the same sensei. The philosophy—using an opponent’s energy—shaped my mindset even though I no longer practice."
   },
   {
     "label": "Three.js Journey",
-    "description": "In parallel to my different activities, I was able to almost finish the enriching Three Js Journey training which allowed me to acquire solid bases in Three JS and thus to launch me in the creation of sites in Three JS."
+    "description": "I completed most of the Three.js Journey course, gaining solid foundations to create 3D experiences on the web."
   },
   {
     "label": "Canada",
-    "description": "I am passionate about the digital field and am excited at the prospect of gaining professional experience in Canada. This country is known for its advanced technology and innovative approach to problem-solving, and I believe that being part of a team here would allow me to grow and develop my skills in a meaningful way. I am looking forward to the opportunity to make a real contribution and be a part of something special."
+    "description": "I spent six months in Montréal in 2023 at LG2, focusing on UI architecture, animations, and high-performance frontend systems. This semester strengthened my foundations in software design and technical precision."
+  },
+  {
+    "label": "Languages",
+    "description": "Fluent in French (native), English, and Arabic—useful for collaborating with international teams and clients."
+  },
+  {
+    "label": "Sparkles AI",
+    "description": "In 2025, I co-founded Sparkles AI, an AI-driven web platform built with Next.js, Supabase, and Cloudflare. This project allowed me to explore system scalability, caching, and user memory architectures through vector search."
+  },
+  {
+    "label": "Travel & Exploration",
+    "description": "I love discovering new cultures and places. Traveling has always inspired me, and I’m open to relocating abroad—especially to the U.S.—to keep growing both personally and professionally."
+  },
+  {
+    "label": "Wiz",
+    "description": "Since 2024, I’ve been working at Wiz Media as a full-stack developer, contributing to both frontend and backend. I focus on performance optimization, scalable architectures, and API design using Next.js and Storyblok."
   }
 ]

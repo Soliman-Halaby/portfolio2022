@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <Layout
       title="Soliman Al Halaby - Home"
-      description="Soliman Al Halaby is a creative developer based in Paris, France. He is available for freelance project."
+      description="Soliman Al Halaby is a Software Engineer based in Paris, France. He is available for freelance project.  "
       number="03"
     >
       {/* {loader ? (
@@ -28,10 +28,10 @@ export default function Home() {
       <Hero
         title={
           isMobile
-            ? `Soliman Al<br/>Halaby, creative<br/>developer`
-            : `Soliman Al Halaby,<br/>creative developer`
+            ? `Soliman Al<br/>Halaby, software<br/>engineer`
+            : `Soliman Al Halaby,<br/>software engineer`
         }
-        subtitle={`Freelance developer,<br/>available for projects`}
+        subtitle={`Freelance engineer,<br/>available for projects`}
         sectionTitle={`Based in paris, <br/>from cairo`}
         image={image}
         label="Contact me"

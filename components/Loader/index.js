@@ -182,7 +182,7 @@ const Loader = ({}) => {
           ref={pinRef}
           number="01"
           loader={true}
-          title="Soliman Al Halaby Creative Developer"
+          title="Soliman Al Halaby Software Engineer"
         />
         <ImgContainer ref={containerRef} className={loaderDisplay}>
           {/* <svg
