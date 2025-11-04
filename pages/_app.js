@@ -10,9 +10,10 @@ import "styles/globals.css";
 
 import globalStyles from "styles/global";
 import { Analytics } from "@vercel/analytics/react";
+
 export default function App({ Component, pageProps }) {
   useEffect(() => {
-    console.log("what are you looking for ? ( ͡◉ ͜ʖ ͡◉)");
+    // console.log("what are you looking for ? ( ͡◉ ͜ʖ ͡◉)");
   }, []);
   return (
     <RecoilRoot>

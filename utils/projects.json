@@ -84,49 +84,49 @@
   },
 
   {
-    "slug": "portfolio-2021",
+    "slug": "ex-nihilo",
     "colPos": "4",
     "midColPos": "4",
     "mobileCol": "3",
     "rowPos": "2",
     "mobileRow": "2",
-    "link": "https://v2.solimanalhalaby.fr/",
-    "title": "Portfolio 2021",
-    "info": ["Front-end developer", "12/03/2022"],
-    "description": "My portfolio for the year 2021 was designed in html / css / js with Vite set up as a dev environment. It was my first personal project where I already had several challenges that I wanted to execute. I used GSAP to design the different animations.",
-    "techno": ["HTML", "CSS", "JS"],
+    "with": [
+      {
+        "name": "Wiz",
+        "url": "https://wiz.fr/"
+      }
+    ],
+    "link": "https://ex-nihilo-paris.com/",
+    "title": "Ex Nihilo Paris",
+    "info": ["Full-stack developer", "15/05/2025"],
+    "description": "Ex Nihilo Paris is a luxury boutique located in the heart of Paris. The website is designed to showcase the different products and services offered by the boutique. The site is built using Remix with Shopify Hydrogen, deployed on Shopify Oxygen for optimal performance and scalability.",
+    "techno": ["Remix", "Shopify", "Hydrogen", "Oxygen"],
     "content1": {
-      "title": "New portfolio, new idea",
-      "subtitle": "A radical change",
-      "label": "Challenge",
-      "text1": "My 2021 portfolio was an opportunity for me to take on several challenges and to push my limits. The first portfolio I made was several years ago only to discover React and not to showcase my front-end development skills. For this portfolio, it was different, I liked several feature ideas and I wanted to implement them.",
-      "text2": "First of all I wanted a portfolio in dark mode because I liked it and I had been thinking about it for a while. I also wanted my portfolio to be as easy to use as possible and to access the information and my projects as easily as possible. I also saw the horizontal scroll on different sites and wanted to implement it on this one, using GSAP, it also allowed me to make some effects."
+      "title": "A comprehensive overview",
+      "subtitle": "Luxury and sophistication",
+      "label": "Elegance",
+      "text1": "The Ex Nihilo Paris website is designed to reflect the brand's values of luxury and sophistication. Built with Remix and Shopify Hydrogen, the platform leverages Oxygen's edge computing capabilities to deliver exceptional performance and a seamless shopping experience. The architecture ensures fast page loads and optimal user experience across all devices.",
+      "text2": "A comprehensive customer account area has been implemented, providing users with full access to their order history, invoices, and account management features. This personalized space enhances the customer journey by offering transparent access to all purchase-related information, while maintaining the elegant and refined aesthetic that defines the brand."
     },
     "content2": {
-      "title": "The horizontal scroll",
-      "subtitle": "A base that I wanted to put in place",
-      "label": "Gsap",
-      "text1": "One of the features I wanted to implement on my site was horizontal scrolling. Moreover, I wanted to learn how to use GSAP so what better way than to learn with a goal. I was able to go deeper into this subject, by animating the different sections with scroll. For those who have the eye, I also added a skew according to the velocity of the scroll on the sections to bring more dynamism.",
-      "text2": "Linking the horizontal and vertical scroll (on the project page) was also another challenge I wanted to tackle and that I managed to implement. The different animations of the cursor, the fade-in, fade-out was also designed with the help of GSAP. The about page was totally designed using mostly CSS animations and attribute data to link the content according to the hovered section in JS. "
+      "title": "A unique design",
+      "subtitle": "A taste of Paris",
+      "label": "Paris",
+      "text1": "The Ex Nihilo Paris website provides visitors with an authentic representation of Parisian luxury and sophistication. The site features detailed information about the boutique's products and services, as well as insights into the venue itself. The design balances modern functionality with elegant aesthetics, creating an immersive experience that reflects the brand's refined identity.",
+      "text2": "The combination of Remix, Shopify Hydrogen, and Oxygen creates a robust e-commerce platform that handles complex functionalities while maintaining exceptional performance. The architecture supports the full range of features, from product discovery to order management, ensuring a cohesive and efficient shopping experience."
     },
     "images": {
-      "hero": "/portfolio-2021/hero-section.jpg",
-      "fullwidth": "/portfolio-2021/full-width-1.png",
-      "left": "/portfolio-2021/img-1-col.png",
-      "right": "/portfolio-2021/img-2-col.png",
-      "fullwidth2": "/portfolio-2021/full-width-2.png",
-      "left2": "/portfolio-2021/img-3-col.png",
-      "right2": "/portfolio-2021/img-4-col.png",
-      "fullwidth3": "/portfolio-2021/full-width-3.png",
-      "left3": "/portfolio-2021/img-5-col.png",
-      "right3": "/portfolio-2021/img-6-col.png",
-      "fullwidth4": "/portfolio-2021/full-width-4.png"
+      "hero": "/ex-nihilo/hero-section.png",
+      "fullwidth": "/ex-nihilo/full-width-1.png",
+      "fullwidth2": "/ex-nihilo/full-width-2.png",
+      "fullwidth3": "/ex-nihilo/full-width-3.png",
+      "fullwidth4": "/ex-nihilo/full-width-4.png"
     },
     "image": [
-      "/portfolio-2021/outline/outline-1.jpg",
-      "/portfolio-2021/outline/outline-2.jpg",
-      "/portfolio-2021/outline/outline-3.jpg",
-      "/portfolio-2021/outline/outline-4.jpg"
+      "/ex-nihilo/outline/outline-1.png",
+      "/ex-nihilo/outline/outline-2.png",
+      "/ex-nihilo/outline/outline-3.png",
+      "/ex-nihilo/outline/outline-4.png"
     ]
   },
   {
