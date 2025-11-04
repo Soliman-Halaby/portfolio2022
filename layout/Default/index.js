@@ -134,6 +134,8 @@ export default function Layout({
         title={title}
         description={description}
         canonical={`https://www.solimanalhalaby.fr${router.asPath}`}
+        noindex={true}
+        nofollow={true}
         openGraph={{
           url: `https://www.solimanalhalaby.fr${router.asPath}`,
           title: title,
