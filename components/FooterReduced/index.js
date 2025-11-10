@@ -146,7 +146,7 @@ const Footer = ({}) => {
               my resume
             </Text>
             <CircularButton
-              to="/CV-Soliman-Al-Halaby.pdf"
+              to="/CV_Soliman_Al-Halaby.pdf"
               target="_blank"
               label="CV"
             />

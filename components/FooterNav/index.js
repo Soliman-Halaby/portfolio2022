@@ -110,7 +110,11 @@ const Footer = () => {
               <br />
               my resume
             </Text>
-            <CircularButton to="/" label="CV" />
+            <CircularButton
+              to="/CV_Soliman_Al-Halaby.pdf"
+              target="_blank"
+              label="CV"
+            />
           </Element>
         </NavElement>
       </Nav>
