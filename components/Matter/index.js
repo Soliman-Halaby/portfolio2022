@@ -410,7 +410,7 @@ const MatterComponent = ({ pageTitle }) => {
             <CloseBtn
               onClick={() => closeDetail()}
               src="/close.svg"
-              layout="fill"
+              fill
             ></CloseBtn>
           </CloseBtnContainer>
           <Label ref={tagTitleRef}>{title}</Label>

@@ -1,66 +1,66 @@
 [
   {
     "label": "Paris",
-    "description": "I arrived in Paris in 2019 for my studies and never regretted it. I enjoy the balance between sports, activities, and work, and it helped me fully settle in France."
+    "description": "I moved to Paris in 2019 for my studies and quickly made it home. The city's pace and energy suit me well, balancing work, sports, and everyday life."
   },
   {
     "label": "Ultranoir",
-    "description": "In May 2022, I started a 6-month internship at Ultranoir. I worked on several projects and deepened my React skills. The team mentored me on production workflows—this experience partly inspired me to build my portfolio with Next.js."
+    "description": "In 2022, I joined Ultranoir for a 6-month internship where I worked on production-level projects and deepened my React expertise. The team's mentorship on professional workflows directly influenced my decision to build this portfolio with Next.js."
   },
   {
     "label": "Football",
-    "description": "I'm a big soccer fan. I played competitively for much of my youth and now play with friends. I support PSG."
+    "description": "Lifelong football fan. I played competitively throughout my youth and still play regularly with friends. PSG supporter."
   },
   {
     "label": "Sailing",
-    "description": "From age 8 to 18, I sailed in Saint-Raphaël (pico, catamaran, ludic). I reached FFV level 4 and almost became a summer instructor."
+    "description": "I sailed from age 8 to 18 in Saint-Raphael, progressing through pico, catamaran, and ludic classes. I reached FFV level 4 and nearly became a certified summer instructor."
   },
   {
     "label": "Dreamline Studio",
-    "description": "From June to September 2021, I completed a remote internship at Dreamline Studio, strengthening my WordPress skills. I’ve continued collaborating as a freelancer since."
+    "description": "In the summer of 2021, I completed a remote internship at Dreamline Studio, strengthening my WordPress skills. I've continued collaborating with them as a freelancer since."
   },
   {
     "label": "Cairo",
-    "description": "I was born and raised in Cairo and studied at the French Lycée. I visit regularly and speak Arabic fluently, which helps me adapt to diverse environments."
+    "description": "Born and raised in Cairo, I attended the French Lycee before moving to France. I visit regularly, speak Arabic fluently, and value the adaptability that comes from growing up across cultures."
   },
   {
     "label": "Karate",
-    "description": "From 5 to 17, I practiced karate in Egypt with the same sensei and earned my first-dan black belt, training 2–3 times a week."
+    "description": "I practiced karate from age 5 to 17 in Egypt under the same sensei, training two to three times a week. I earned my first-dan black belt."
   },
   {
     "label": "HETIC",
-    "description": "I’m a graduate of HETIC, where we combine web development, design, and communication. Even while specializing in development, I kept a strong focus on design and team projects to understand all aspects of a product."
+    "description": "Graduate of HETIC, a program combining web development, design, and communication. While specializing in development, I maintained a strong focus on design and cross-functional collaboration to understand every facet of a product."
   },
   {
     "label": "Piano",
-    "description": "I studied piano for several years at the Russian Cultural Center in Egypt—and there’s a video of little Soliman playing on YouTube somewhere!"
+    "description": "I studied piano for several years at the Russian Cultural Center in Egypt. Somewhere on YouTube, there's a video of little Soliman performing."
   },
   {
     "label": "Aikido",
-    "description": "Alongside karate, I learned Aikido with the same sensei. The philosophy—using an opponent’s energy—shaped my mindset even though I no longer practice."
+    "description": "Alongside karate, I trained in Aikido with the same sensei. Its core philosophy, redirecting an opponent's energy rather than opposing it, shaped my approach to problem-solving beyond the mat."
   },
   {
     "label": "Three.js Journey",
-    "description": "I completed most of the Three.js Journey course, gaining solid foundations to create 3D experiences on the web."
+    "description": "I completed most of the Three.js Journey course, building solid foundations in creating interactive 3D experiences for the web."
   },
   {
     "label": "Canada",
-    "description": "I spent six months in Montréal in 2023 at LG2, focusing on UI architecture, animations, and high-performance frontend systems. This semester strengthened my foundations in software design and technical precision."
+    "description": "In 2023, I spent six months in Montreal working at LG2, focusing on UI architecture, animations, and high-performance frontend systems. This experience sharpened my skills in software design and technical precision."
   },
   {
     "label": "Languages",
-    "description": "Fluent in French (native), English, and Arabic—useful for collaborating with international teams and clients."
+    "description": "Fluent in French (native), English, and Arabic. A natural asset for collaborating with international teams and clients across markets."
   },
   {
     "label": "Sparkles AI",
-    "description": "In 2025, I co-founded Sparkles AI, an AI-driven web platform built with Next.js, Supabase, and Cloudflare. This project allowed me to explore system scalability, caching, and user memory architectures through vector search."
+    "description": "In 2025, I co-founded Sparkles AI, an AI-driven web platform built with Next.js, Supabase, and Cloudflare. The project pushed me into system scalability, caching strategies, and user memory architectures powered by vector search."
   },
   {
     "label": "Travel & Exploration",
-    "description": "I love discovering new cultures and places. Traveling has always inspired me, and I’m open to relocating abroad—especially to the U.S.—to keep growing both personally and professionally."
+    "description": "Discovering new cultures and places has always fueled my creativity. I'm open to relocating abroad, especially to the U.S., to keep growing both personally and professionally."
   },
   {
     "label": "Wiz",
-    "description": "Since 2024, I’ve been working at Wiz Media as a full-stack developer, contributing to both frontend and backend. I focus on performance optimization, scalable architectures, and API design using Next.js and Storyblok."
+    "description": "Since 2024, I've been working at Wiz Media as a full-stack developer, contributing across frontend and backend. My focus areas include performance optimization, scalable architectures, and API design using Next.js and Storyblok."
   }
 ]

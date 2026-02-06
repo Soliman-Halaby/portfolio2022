@@ -159,7 +159,7 @@ const HeroProject = ({
               // placeholder="blur"
               // width={"100%"}
               // height={isMobile ? "100vh" : "60vh"}
-              layout="fill"
+              fill
               priority
               placeholder="blur"
               blurDataURL="https://solimanalhalaby.fr/blurImage.png"

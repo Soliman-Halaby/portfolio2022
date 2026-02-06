@@ -1,29 +1,260 @@
 [
   {
-    "slug": "portfolio-2021",
+    "slug": "courchevel",
+    "colPos": "1",
+    "midColPos": "1",
+    "mobileCol": "1",
+    "rowPos": "1",
+    "mobileRow": "1",
+    "link": "https://courchevel.com/",
+    "title": "Courchevel",
+    "with": [
+      {
+        "name": "Wiz",
+        "url": "https://wiz.fr/"
+      }
+    ],
+    "color": "#F8FBFF",
+    "info": ["Full-stack developer", "20/09/2023"],
+    "description": "Courchevel is one of the most prestigious alpine destinations, blending luxury with mountain adventure. The website is built with Next.js and Tailwind CSS, using Storyblok as the CMS and the Apidae API to deliver dynamic, real-time content about the resort and its surroundings.",
+    "techno": ["Storyblok", "Next.js", "Tailwind CSS"],
+    "content1": {
+      "title": "A premium digital experience",
+      "subtitle": "Refined and immersive",
+      "label": "Mountain",
+      "text1": "The website offers a comprehensive overview of everything Courchevel has to offer: activities, accommodations, dining, and services. The design mirrors the sophistication of the destination itself, with a clean and elegant aesthetic that guides visitors through the region's highlights.",
+      "text2": "The Apidae API integration ensures that events, weather conditions, and local information are always current and accurate. Combined with Storyblok, the client has full editorial control over every aspect of the site, enabling seamless content updates without developer intervention."
+    },
+    "images": {
+      "hero": "/courchevel/hero-section.jpg",
+      "fullwidth": "/courchevel/full-width-1.jpg",
+      "left": "/courchevel/img-1-col.jpg",
+      "right": "/courchevel/img-2-col.jpg",
+      "fullwidth2": "/courchevel/full-width-2.jpg",
+      "fullwidth3": "/courchevel/full-width-3.jpg"
+    },
+    "image": [
+      "/courchevel/outline/outline-1.jpg",
+      "/courchevel/outline/outline-2.jpg",
+      "/courchevel/outline/outline-3.jpg",
+      "/courchevel/outline/outline-4.jpg"
+    ]
+  },
+  {
+    "slug": "cloudy-bay",
+    "colPos": "2",
+    "midColPos": "2",
+    "mobileCol": "2",
+    "rowPos": "1",
+    "mobileRow": "1",
+    "with": [
+      {
+        "name": "Ultranoir",
+        "url": "https://www.ultranoir.com/"
+      }
+    ],
+    "color": "#E8EAE7",
+    "link": "https://www.cloudybay.com/",
+    "title": "Cloudy Bay",
+    "info": ["Front-end developer", "15/09/2022"],
+    "description": "Cloudy Bay is an e-commerce platform built with Gatsby and Drupal for a subsidiary of the Moet Hennessy group. The site showcases their premium wine collection, allows event bookings across two locations, and handles multi-market content delivery. I contributed to its development during my internship at Ultranoir.",
+    "techno": ["Gatsby", "Drupal", "GraphQL"],
+    "content1": {
+      "title": "Key features",
+      "subtitle": "A rich, multi-faceted platform",
+      "label": "Wine",
+      "text1": "The site connects visitors with e-retailers and partner stores carrying Cloudy Bay wines. Users can browse vintages by year and follow the brand's latest news via Instagram integration. A key technical challenge was managing multiple markets, dynamically showing or hiding content depending on the user's selected region.",
+      "text2": "For undecided visitors, the Wine Finder, developed by one of Ultranoir's engineers, recommends the ideal bottle based on personal preferences. Purchases are handled externally through WineDirect, keeping the platform focused on discovery and brand experience."
+    },
+    "images": {
+      "hero": "/cloudy-bay/hero-section.jpg",
+      "fullwidth": "/cloudy-bay/full-width-1.png",
+      "left": "/cloudy-bay/img-1-col.png",
+      "right": "/cloudy-bay/img-2-col.png",
+      "fullwidth2": "/cloudy-bay/full-width-2.png",
+      "left2": "/cloudy-bay/img-3-col.png",
+      "right2": "/cloudy-bay/img-4-col.png",
+      "fullwidth3": "/cloudy-bay/full-width-3.png"
+    },
+    "image": [
+      "/cloudy-bay/outline/outline-1.jpg",
+      "/cloudy-bay/outline/outline-2.jpg",
+      "/cloudy-bay/outline/outline-3.jpg",
+      "/cloudy-bay/outline/outline-4.jpg"
+    ]
+  },
+  {
+    "slug": "selfer-app",
     "colPos": "4",
     "midColPos": "4",
     "mobileCol": "3",
     "rowPos": "2",
     "mobileRow": "2",
+    "title": "Selfer App",
+    "with": [
+      {
+        "name": "Valentin",
+        "url": "https://www.valentinhouplain.fr/"
+      },
+      {
+        "name": "Robin",
+        "url": "https://robinb-dev.github.io/"
+      },
+      {
+        "name": "Leo",
+        "url": "https://www.linkedin.com/in/leo-largillet/"
+      }
+    ],
+    "color": "#F3E7E7",
+    "info": ["Back-end developer", "16/12/2020"],
+    "description": "Selfer is a CMS-like web application powered by the Notion API. Built with React and TypeScript on the front-end and Symfony on the back-end, it allows users to generate and publish static websites directly from their Notion workspaces. The entire project was developed in just 10 days.",
+    "techno": ["React JS", "TypeScript", "Symfony"],
+    "content1": {
+      "title": "Easy and customizable",
+      "subtitle": "An intuitive and scalable workflow",
+      "label": "Flexible",
+      "text1": "Once connected to a Notion account, the back-office displays all authorized workspaces. Users can browse their pages and blocks, then customize the styling: colors, fonts, and layout are all adjustable. The configuration is managed through React Context and persisted in the database, which generates the corresponding static site.",
+      "text2": "The workflow is straightforward: create a page in Notion, fill it with content blocks (callouts, images, text), and Selfer pulls everything through the Notion API. From there, users can fine-tune their content in the app and publish their static site with a single action."
+    },
+    "content2": {
+      "title": "Code architecture",
+      "subtitle": "A clean</br>two-layer structure",
+      "label": "Code",
+      "text1": "The back-end is built with Symfony backed by a MySQL database. API routes handle all communication with the front-end. Incoming data is validated and sanitized before being persisted, ensuring only expected content reaches the database.",
+      "text2": "The front-end uses React with TypeScript, a natural choice given the variety of content types being manipulated. Data is fetched through the API routes and managed via multiple React Contexts, which are shared and updated across components to keep the state consistent throughout the application."
+    },
+    "images": {
+      "hero": "/selfer/hero-section.jpg",
+      "fullwidth": "/selfer/full-width-1.jpg",
+      "left": "/selfer/img-1-col.jpg",
+      "right": "/selfer/img-2-col.jpg",
+      "fullwidth2": "/selfer/full-width-2.jpg"
+    },
+    "image": [
+      "/selfer/outline/outline-1.jpg",
+      "/selfer/outline/outline-2.jpg",
+      "/selfer/outline/outline-3.jpg",
+      "/selfer/outline/outline-4.jpg"
+    ]
+  },
+  {
+    "slug": "vis-ma-ville",
+    "colPos": "6",
+    "midColPos": "6",
+    "mobileCol": "4",
+    "rowPos": "1",
+    "mobileRow": "2",
+    "with": [
+      {
+        "name": "Robin",
+        "url": "https://robinb-dev.github.io/"
+      },
+      {
+        "name": "Valentin",
+        "url": "https://www.valentinhouplain.fr/"
+      }
+    ],
+    "color": "#DDE3EF",
+    "link": "https://github.com/Soliman-Halaby/civic-app-back",
+    "title": "Vis ma ville",
+    "info": ["Full-stack developer", "15/03/2022"],
+    "description": "Vis ma ville is a civic mobile application that empowers citizens to report infrastructure damage and safety concerns in public spaces. By connecting an entire community, it enables residents to actively contribute to improving their city's daily life.",
+    "techno": ["React native", "Expo", "Node.js", "GraphQL", "Apollo"],
+    "content1": {
+      "title": "Building the back-end",
+      "subtitle": "A cloud-native architecture on Firestore",
+      "label": "Cloud",
+      "text1": "The project is structured around two interconnected layers. The back-end relies entirely on Firestore, with a GraphQL playground powered by Apollo to streamline data operations. Each entity follows a well-defined schema, ensuring clean communication with the front-end. All queries are ID-based, enabling a fully dynamic application.",
+      "text2": "The back-end logic is split into two distinct parts: queries and mutations. Queries handle all read operations, fetching users, posts, and related content from the database. Mutations manage data updates, allowing users to modify their profile information and interact with the platform in real time."
+    },
+    "content2": {
+      "title": "A cross-platform front-end",
+      "subtitle": "Seamless on both iOS and Android",
+      "label": "Universal",
+      "text1": "To ensure cross-platform compatibility, we built the front-end with Expo. Before connecting the back-end, we designed a local JSON structure mirroring the API schema, allowing both teams to work in parallel. Data is fetched through GraphQL queries targeting specific elements by ID, and navigation between tabs follows the same dynamic pattern, passing parameters to load the corresponding content.",
+      "text2": "Map pins are rendered using React Native's MapView and Marker components. When a user submits a report and grants location access, their coordinates are captured via a custom useLocation hook and stored in the database. Each existing report is then plotted on the map by retrieving its latitude, longitude, and content. Users can also photograph the reported issue using expo-camera, with access to both front and rear cameras upon permission."
+    },
+    "images": {
+      "hero": "/vis-ma-ville/hero-section.jpg",
+      "fullwidth": "/vis-ma-ville/full-width-1.png",
+      "left": "/vis-ma-ville/img-1-col.png",
+      "right": "/vis-ma-ville/img-2-col.png",
+      "fullwidth2": "/vis-ma-ville/full-width-2.png",
+      "left2": "/vis-ma-ville/img-3-col.png",
+      "right2": "/vis-ma-ville/img-4-col.png"
+    },
+    "image": [
+      "/vis-ma-ville/outline/outline-1.jpg",
+      "/vis-ma-ville/outline/outline-2.jpg",
+      "/vis-ma-ville/outline/outline-3.jpg",
+      "/vis-ma-ville/outline/outline-4.jpg"
+    ]
+  },
+  {
+    "slug": "table-food-hall",
+    "colPos": "8",
+    "midColPos": "8",
+    "mobileCol": "1",
+    "rowPos": "1",
+    "mobileRow": "3",
+    "with": [
+      {
+        "name": "LG2",
+        "url": "https://digital-xp.lg2.com/"
+      }
+    ],
+    "color": "#ffffff",
+    "link": "https://www.tablefoodhall.com/",
+    "title": "Table food Hall",
+    "info": ["Front-end developer", "15/08/2023"],
+    "description": "Table Food Hall is a vibrant food destination in the heart of Toronto. The website highlights the diverse roster of food vendors and provides visitors with everything they need to plan their visit. Built with Nuxt.js and Tailwind CSS, it uses Dato CMS for content management.",
+    "techno": ["Dato CMS", "Nuxt.js", "Tailwind CSS"],
+    "content1": {
+      "title": "A culinary showcase",
+      "subtitle": "Toronto's food scene, online",
+      "label": "Food",
+      "text1": "The website captures the energy and diversity of Table Food Hall's culinary offerings. Each vendor is presented with dedicated content, alongside practical details about the venue. The design is modern and approachable, reflecting the lively atmosphere of the hall itself.",
+      "text2": "Dato CMS gives the client full autonomy over content updates, from adding new vendors and menus to promoting upcoming events. A blog section offers deeper stories about the food hall and its community. Nuxt.js powers a fast, responsive experience that keeps navigation smooth and intuitive across all devices."
+    },
+    "images": {
+      "hero": "/table-food-hall/hero-section.jpg",
+      "fullwidth": "/table-food-hall/full-width-1.jpg",
+      "left": "/table-food-hall/img-1-col.jpg",
+      "right": "/table-food-hall/img-2-col.jpg",
+      "fullwidth2": "/table-food-hall/full-width-2.jpg"
+    },
+    "image": [
+      "/table-food-hall/outline/outline-1.jpg",
+      "/table-food-hall/outline/outline-2.jpg",
+      "/table-food-hall/outline/outline-3.jpg",
+      "/table-food-hall/outline/outline-4.jpg"
+    ]
+  },
+  {
+    "slug": "portfolio-2021",
+    "colPos": "12",
+    "midColPos": "10",
+    "mobileCol": "2",
+    "rowPos": "2",
+    "mobileRow": "4",
     "link": "https://v2.solimanalhalaby.fr/",
     "title": "Portfolio 2021",
     "info": ["Front-end developer", "12/03/2022"],
-    "description": "My portfolio for the year 2021 was designed in html / css / js with Vite set up as a dev environment. It was my first personal project where I already had several challenges that I wanted to execute. I used GSAP to design the different animations.",
+    "description": "My 2021 portfolio was built with HTML, CSS and JavaScript using Vite as a development environment. It served as a personal playground to push my front-end skills further, with GSAP powering all the animations throughout the site.",
     "techno": ["HTML", "CSS", "JS"],
     "content1": {
-      "title": "New portfolio, new idea",
-      "subtitle": "A radical change",
+      "title": "New portfolio, new vision",
+      "subtitle": "A fresh creative direction",
       "label": "Challenge",
-      "text1": "My 2021 portfolio was an opportunity for me to take on several challenges and to push my limits. The first portfolio I made was several years ago only to discover React and not to showcase my front-end development skills. For this portfolio, it was different, I liked several feature ideas and I wanted to implement them.",
-      "text2": "First of all I wanted a portfolio in dark mode because I liked it and I had been thinking about it for a while. I also wanted my portfolio to be as easy to use as possible and to access the information and my projects as easily as possible. I also saw the horizontal scroll on different sites and wanted to implement it on this one, using GSAP, it also allowed me to make some effects."
+      "text1": "This portfolio marked a turning point in my approach to personal projects. Unlike my first attempt years prior, which was more of an experiment with React, this one was built with a clear intention: to showcase my front-end capabilities through deliberate design and interaction choices.",
+      "text2": "A dark mode aesthetic was a priority from the start, paired with an emphasis on usability, making projects and information instantly accessible. The horizontal scroll pattern, inspired by various creative websites, became the backbone of the navigation and allowed me to explore GSAP in depth."
     },
     "content2": {
-      "title": "The horizontal scroll",
-      "subtitle": "A base that I wanted to put in place",
+      "title": "Horizontal scrolling",
+      "subtitle": "A core interaction pattern",
       "label": "Gsap",
-      "text1": "One of the features I wanted to implement on my site was horizontal scrolling. Moreover, I wanted to learn how to use GSAP so what better way than to learn with a goal. I was able to go deeper into this subject, by animating the different sections with scroll. For those who have the eye, I also added a skew according to the velocity of the scroll on the sections to bring more dynamism.",
-      "text2": "Linking the horizontal and vertical scroll (on the project page) was also another challenge I wanted to tackle and that I managed to implement. The different animations of the cursor, the fade-in, fade-out was also designed with the help of GSAP. The about page was totally designed using mostly CSS animations and attribute data to link the content according to the hovered section in JS. "
+      "text1": "Implementing horizontal scrolling was both a design goal and a learning opportunity with GSAP. I dove deep into scroll-driven animations, triggering transitions for each section as the user navigates. A subtle skew effect tied to scroll velocity adds an extra layer of dynamism to the experience.",
+      "text2": "Bridging horizontal and vertical scroll on the project pages was another technical challenge I tackled successfully. Cursor animations, fade-in and fade-out transitions were all orchestrated through GSAP. The about page relies primarily on CSS animations combined with data attributes to dynamically link content to the hovered section."
     },
     "images": {
       "hero": "/portfolio-2021/hero-section.jpg",
@@ -45,56 +276,13 @@
       "/portfolio-2021/outline/outline-4.jpg"
     ]
   },
-
-  {
-    "slug": "cloudy-bay",
-    "colPos": "8",
-    "midColPos": "8",
-    "mobileCol": "1",
-    "rowPos": "1",
-    "mobileRow": "3",
-    "with": [
-      {
-        "name": "Ultranoir",
-        "url": "https://www.ultranoir.com/"
-      }
-    ],
-    "color": "#E8EAE7",
-    "link": "https://www.cloudybay.com/",
-    "title": "Cloudy Bay",
-    "info": ["Front-end developer", "15/09/2022"],
-    "description": "Cloudy Bay is an e-commerce website designed in React JS / Gatsby using Drupal as a back-office. This site is produced for a subsidiary of the Moet Hennesy group. You can buy different exceptional wines. It is also possible to book your place for the many events set up by Cloudy Bay, in their 2 different locations. I contributed to the development of this site during my internship at ultranoir with the different devs of the team.",
-    "techno": ["Gatsby", "Drupal", "GraphQL"],
-    "content1": {
-      "title": "Some of the features",
-      "subtitle": "Many features available",
-      "label": "Wine",
-      "text1": "As you browse the site you will be able to discover the different e-retailers / partner stores selling Cloudy Bay wines. It is also possible to follow the Instagram news of this site and choose the different wines according to the year. Another complexity of this site is the fact of dealing with the different markets, while displaying / hiding some elements according to the chosen market.",
-      "text2": "For those who are hesitant, it is possible to use the Wine Finder (produces one of the developers of ultranoir) which will allow you to choose the ideal wine according to the different criteria you give it. The purchase of wines is not done on the platform, it is connected to WineDirect which will allow you to buy the selected wines."
-    },
-    "images": {
-      "hero": "/cloudy-bay/hero-section.jpg",
-      "fullwidth": "/cloudy-bay/full-width-1.png",
-      "left": "/cloudy-bay/img-1-col.png",
-      "right": "/cloudy-bay/img-2-col.png",
-      "fullwidth2": "/cloudy-bay/full-width-2.png",
-      "left2": "/cloudy-bay/img-3-col.png",
-      "right2": "/cloudy-bay/img-4-col.png",
-      "fullwidth3": "/cloudy-bay/full-width-3.png"
-    },
-    "image": [
-      "/cloudy-bay/outline/outline-1.jpg",
-      "/cloudy-bay/outline/outline-2.jpg",
-      "/cloudy-bay/outline/outline-3.jpg",
-      "/cloudy-bay/outline/outline-4.jpg"
-    ]
-  },
-
   {
     "slug": "eclipse",
-    "colPos": "12",
+    "colPos": "13",
+    "midColPos": "9",
     "mobileCol": "3",
-    "midColPos": "10",
+    "rowPos": "2",
+    "mobileRow": "4",
     "with": [
       {
         "name": "Ines",
@@ -109,19 +297,17 @@
         "url": "https://www.valentinhouplain.fr/"
       }
     ],
-    "rowPos": "2",
-    "mobileRow": "4",
     "link": "https://eclipse-one.vercel.app/",
     "title": "Eclipse",
     "info": ["Front-end developer", "08/11/2021"],
-    "description": "Eclipse was born from a design fiction project where we imagined a dystopian future threatened by famine and overpopulation. To remedy this, the state sets up different capsules allowing people wishing to sacrifice themselves to reduce overpopulation and help their loved ones who would receive a sum of money according to the health and age of the person. These different capsules would be placed in various places in the city.",
+    "description": "Eclipse is a design fiction project set in a dystopian future threatened by famine and overpopulation. To address the crisis, the state deploys sacrifice capsules throughout the city, where volunteers can give their lives in exchange for financial compensation for their families, calculated based on health and age.",
     "techno": ["HTML", "CSS", "JS", "Three.js"],
     "content1": {
-      "title": "A unique design",
-      "subtitle": "A valued sacrifice",
+      "title": "An immersive narrative",
+      "subtitle": "Where fiction meets interaction",
       "label": "Eclipse",
-      "text1": " At the time of our restitution we wished to put forward the various achievements by setting up an immersive site to the topic of the Eclipse. Through the navigation, on the main page, different explanations of our conception. A booklet is also available to present the different explanatory diagrams of our idea. Detailed darkprints are also present to explain each element, which is in the cabins and their utility. Finally, we have also put forward the interface that the martyr would face if he had to enter the cabin to sacrifice himself.",
-      "text2": "We have also presented the different 3D models in a classic way through a slider but we wanted to put them in front of us so that they could be visualized as well as possible. The product page presents in an immersive way all the elements of the cabin, be it the exterior, the interior or even our storage logic with the crematorium. Finally, in order not to forget the martyrs and to value them, we imagined a tower of martyrs where all the urns containing the ashes would be deposited, becoming a place of remembrance."
+      "text1": "To present our concept, we designed an immersive website that walks visitors through the Eclipse universe. The main page introduces the project's narrative, while a digital booklet details the explanatory diagrams behind our vision. Darkprints break down each cabin component and its purpose, and a dedicated interface simulates the experience a volunteer would face upon entering.",
+      "text2": "The 3D models are showcased both in a traditional slider and through an immersive product page that explores the cabin in detail: exterior, interior, and the crematorium storage system. As a tribute to the volunteers, we also imagined a memorial tower where urns containing their ashes would be gathered, turning the space into a place of remembrance."
     },
     "images": {
       "hero": "/eclipse/hero-section.jpg",
@@ -135,48 +321,6 @@
       "/eclipse/outline/outline-2.jpg",
       "/eclipse/outline/outline-3.jpg",
       "/eclipse/outline/outline-4.jpg"
-    ]
-  },
-  {
-    "slug": "table-food-hall",
-
-    "colPos": "13",
-    "mobileCol": "2",
-    "midColPos": "9",
-    "rowPos": "2",
-
-    "mobileRow": "4",
-    "with": [
-      {
-        "name": "LG2",
-        "url": "https://digital-xp.lg2.com/"
-      }
-    ],
-    "color": "#ffffff",
-    "link": "https://www.tablefoodhall.com/",
-    "title": "Table food Hall",
-    "info": ["Front-end developer", "15/08/2023"],
-    "description": "Table Food Hall is a food hall located in the heart of Toronto. The website is designed to showcase the different food vendors and provide visitors with information about the venue. The site is built using Nuxt.js, styled with Tailwind CSS, and integrates Dato as the CMS.",
-    "techno": ["Dato CMS", "Nuxt.js", "Tailwind CSS"],
-    "content1": {
-      "title": "A culinary experience",
-      "subtitle": "A taste of Toronto",
-      "label": "Food",
-      "text1": "The Table Food Hall website is designed to provide visitors with a taste of Toronto’s culinary scene. The site features information about the different food vendors located in the hall, as well as details about the venue itself. The design is clean and modern, reflecting the vibrant and diverse food offerings available at the food hall.",
-      "text2": "The integration of Dato CMS allows for easy content management, enabling the client to update the site with new vendors, menus, and events as needed. The site also includes a blog section where visitors can learn more about the food hall and its vendors. The use of Nuxt.js ensures a fast and responsive user experience, making it easy for visitors to navigate the site and find the information they need."
-    },
-    "images": {
-      "hero": "/table-food-hall/hero-section.jpg",
-      "fullwidth": "/table-food-hall/full-width-1.jpg",
-      "left": "/table-food-hall/img-1-col.jpg",
-      "right": "/table-food-hall/img-2-col.jpg",
-      "fullwidth2": "/table-food-hall/full-width-2.jpg"
-    },
-    "image": [
-      "/table-food-hall/outline/outline-1.jpg",
-      "/table-food-hall/outline/outline-2.jpg",
-      "/table-food-hall/outline/outline-3.jpg",
-      "/table-food-hall/outline/outline-4.jpg"
     ]
   }
 ]

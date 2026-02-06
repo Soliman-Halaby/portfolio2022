@@ -160,7 +160,7 @@ const HeroHome = ({ title, subtitle, sectionTitle, label, image }) => {
             <BlockImage
               data-scroll
               data-scroll-speed="-2"
-              layout="fill"
+              fill
               placeholder="blur"
               src={image}
               alt="Hero Section Image"

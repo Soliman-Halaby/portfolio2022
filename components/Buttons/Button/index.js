@@ -38,24 +38,22 @@ const Button = forwardRef(
         onMouseLeave={resetCursor}
       >
         {to && target && (
-          <Link href={to} passHref>
-            <a target="_blank">
-              <ButtonStyle
-                className={className}
-                colored={colored}
-                rounded={index % 2 !== 0 ? rounded : !rounded}
-                emailBg={email}
-              >
-                {label}
-                {withArrow && (
-                  <Icon size={16} color="#1E1E1E" icon="right-arrow-16" />
-                )}{" "}
-              </ButtonStyle>
-            </a>
+          <Link href={to} target="_blank">
+            <ButtonStyle
+              className={className}
+              colored={colored}
+              rounded={index % 2 !== 0 ? rounded : !rounded}
+              emailBg={email}
+            >
+              {label}
+              {withArrow && (
+                <Icon size={16} color="#1E1E1E" icon="right-arrow-16" />
+              )}{" "}
+            </ButtonStyle>
           </Link>
         )}
         {to && !target && (
-          <Link href={to} passHref>
+          <Link href={to}>
             <ButtonStyle
               className={className}
               colored={colored}

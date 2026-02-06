@@ -17,7 +17,7 @@ const ImageTwoColumns = ({ color, src, src2 }) => {
           <ImageBlockContainer>
             <ImageBlock
               data-scroll
-              layout="fill"
+              fill
               data-scroll-speed="0.75"
               placeholder="blur"
               blurDataURL="https://solimanalhalaby.fr/blurImage.png"
@@ -35,7 +35,7 @@ const ImageTwoColumns = ({ color, src, src2 }) => {
               data-scroll
               placeholder="blur"
               blurDataURL="https://solimanalhalaby.fr/blurImage.png"
-              layout="fill"
+              fill
               data-scroll-speed="0.75"
               alt="Project Image"
               src={src2}
