@@ -16,14 +16,14 @@
     "link": "https://www.geraldcharles.com/",
     "title": "Gerald Charles",
     "info": ["Full-stack developer", "20/08/2024"],
-    "description": "Gerald Charles is a luxury watch brand that offers a wide range of high-end timepieces. The website is designed to showcase the brand’s collection and provide visitors with an immersive experience. The site is built using Remix, and Shopify mainly with the new headless solution Hydrogen.",
+    "description": "Gerald Charles is a luxury watch brand offering a curated selection of high-end timepieces. The website delivers an immersive brand experience, built with Remix and Shopify's headless solution Hydrogen for seamless e-commerce integration.",
     "techno": ["Storyblok", "Remix", "Tailwind CSS", "Shopify", "Hydrogen"],
     "content1": {
-      "title": "A comprehensive overview",
-      "subtitle": "Luxury and sophistication",
+      "title": "Crafted for detail",
+      "subtitle": "Luxury at every interaction",
       "label": "Elegance",
-      "text1": "The Gerald Charles website is designed to reflect the brand’s values of luxury and sophistication. The site features a clean and elegant design that highlights the beauty of the watches. The use of high-quality images and videos provides visitors with a comprehensive overview of the collection, allowing them to explore the details of each timepiece.",
-      "text2": "The website also includes a store locator feature that allows users to find the nearest Gerald Charles boutique. The built-in e-commerce functionality enables visitors to purchase watches directly from the site. The product pages feature a frame-by-frame animation that showcases the intricate details of each watch, providing a unique and engaging experience for users."
+      "text1": "The website reflects Gerald Charles's commitment to craftsmanship through a refined visual language. High-quality imagery and video give visitors an intimate look at the collection, allowing them to explore the intricate details of each timepiece.",
+      "text2": "A store locator helps users find the nearest boutique, while the integrated e-commerce flow lets them purchase directly online. Product pages feature frame-by-frame animations that bring each watch to life, creating an engaging and memorable browsing experience."
     },
     "images": {
       "hero": "/gerald-charles/hero-section.jpg",
@@ -58,14 +58,14 @@
     ],
     "color": "#F8FBFF",
     "info": ["Full-stack developer", "20/09/2023"],
-    "description": "Courchevel is home to some of the most exclusive alpine destinations, offering a unique combination of luxury and adventure. It stands as a beacon of refined mountain living and world-class hospitality. The website is developed using Next.js, styled with Tailwind, and leverages Storyblok as the CMS, with Apidae API integration to provide dynamic, real-time content about the region.",
+    "description": "Courchevel is one of the most prestigious alpine destinations, blending luxury with mountain adventure. The website is built with Next.js and Tailwind CSS, using Storyblok as the CMS and the Apidae API to deliver dynamic, real-time content about the resort and its surroundings.",
     "techno": ["Storyblok", "Next.js", "Tailwind CSS"],
     "content1": {
-      "title": "A luxurious experience",
-      "subtitle": "Detailed and immersive",
+      "title": "A premium digital experience",
+      "subtitle": "Refined and immersive",
       "label": "Mountain",
-      "text1": "The Courchevel website is designed to provide visitors with a comprehensive overview of the region’s offerings. The site features detailed information about the various activities, accommodations, and services available in Courchevel. The design is clean and elegant, reflecting the luxury and sophistication of the destination.",
-      "text2": "The integration of the Apidae API allows for real-time updates on events, weather, and other information relevant to visitors. This ensures that the content is always up-to-date and accurate. The use of Storyblok as the CMS provides the client with full control over the content displayed on the site, allowing for easy updates and modifications as needed."
+      "text1": "The website offers a comprehensive overview of everything Courchevel has to offer: activities, accommodations, dining, and services. The design mirrors the sophistication of the destination itself, with a clean and elegant aesthetic that guides visitors through the region's highlights.",
+      "text2": "The Apidae API integration ensures that events, weather conditions, and local information are always current and accurate. Combined with Storyblok, the client has full editorial control over every aspect of the site, enabling seamless content updates without developer intervention."
     },
     "images": {
       "hero": "/courchevel/hero-section.jpg",
@@ -99,21 +99,21 @@
     "link": "https://ex-nihilo-paris.com/",
     "title": "Ex Nihilo Paris",
     "info": ["Full-stack developer", "15/05/2025"],
-    "description": "Ex Nihilo Paris is a luxury boutique located in the heart of Paris. The website is designed to showcase the different products and services offered by the boutique. The site is built using Remix with Shopify Hydrogen, deployed on Shopify Oxygen for optimal performance and scalability.",
+    "description": "Ex Nihilo Paris is a luxury fragrance house in the heart of Paris. The website showcases their products and bespoke services through a refined e-commerce experience, built with Remix and Shopify Hydrogen, deployed on Shopify Oxygen for edge performance and scalability.",
     "techno": ["Remix", "Shopify", "Hydrogen", "Oxygen"],
     "content1": {
-      "title": "A comprehensive overview",
-      "subtitle": "Luxury and sophistication",
+      "title": "Performance at the edge",
+      "subtitle": "Speed meets elegance",
       "label": "Elegance",
-      "text1": "The Ex Nihilo Paris website is designed to reflect the brand's values of luxury and sophistication. Built with Remix and Shopify Hydrogen, the platform leverages Oxygen's edge computing capabilities to deliver exceptional performance and a seamless shopping experience. The architecture ensures fast page loads and optimal user experience across all devices.",
-      "text2": "A comprehensive customer account area has been implemented, providing users with full access to their order history, invoices, and account management features. This personalized space enhances the customer journey by offering transparent access to all purchase-related information, while maintaining the elegant and refined aesthetic that defines the brand."
+      "text1": "Built on Remix and Shopify Hydrogen, the platform leverages Oxygen's edge computing for exceptional load times and a seamless shopping experience across all devices. Every architectural decision prioritizes performance without compromising the brand's visual identity.",
+      "text2": "A full-featured customer account area gives users access to their order history, invoices, and account settings. This personalized space enhances the customer journey with transparent purchase tracking, while maintaining the refined aesthetic that defines Ex Nihilo."
     },
     "content2": {
-      "title": "A unique design",
-      "subtitle": "A taste of Paris",
+      "title": "Parisian identity",
+      "subtitle": "Luxury meets functionality",
       "label": "Paris",
-      "text1": "The Ex Nihilo Paris website provides visitors with an authentic representation of Parisian luxury and sophistication. The site features detailed information about the boutique's products and services, as well as insights into the venue itself. The design balances modern functionality with elegant aesthetics, creating an immersive experience that reflects the brand's refined identity.",
-      "text2": "The combination of Remix, Shopify Hydrogen, and Oxygen creates a robust e-commerce platform that handles complex functionalities while maintaining exceptional performance. The architecture supports the full range of features, from product discovery to order management, ensuring a cohesive and efficient shopping experience."
+      "text1": "The design strikes a balance between modern e-commerce functionality and the brand's elegant visual language. Every page reflects Ex Nihilo's refined identity, from product discovery to checkout, creating an immersive experience rooted in Parisian luxury.",
+      "text2": "The Remix, Hydrogen, and Oxygen stack powers a robust platform that handles complex e-commerce flows while maintaining peak performance. From product browsing to order management, the architecture ensures a cohesive and efficient experience at every step."
     },
     "images": {
       "hero": "/ex-nihilo/hero-section.png",
@@ -146,14 +146,14 @@
     "link": "https://bertrand-hospitality.fr/",
     "title": "Bertrand Hospitality",
     "info": ["Front-end developer", "05/10/2023"],
-    "description": "Bertrand Hospitality now brings together exceptional venues, showcasing unique expertise. It stands as a benchmark for French art de vivre and hospitality. The website is developed using Next.js, styled with Tailwind, and integrates Storyblok as the CMS.",
+    "description": "Bertrand Hospitality brings together exceptional venues under one identity, standing as a benchmark for French art de vivre. The website is built with Next.js and Tailwind CSS, powered by Storyblok for flexible content management.",
     "techno": ["Storyblok", "Next.js", "Tailwind CSS"],
     "content1": {
       "title": "A refined presentation",
-      "subtitle": "Complete freedom",
+      "subtitle": "Full editorial control",
       "label": "Hospitality",
-      "text1": "The Bertrand Hospitality website delivers an immersive experience, allowing visitors to explore the various venues where they operate. Special attention has been given to micro-interactions to ensure the navigation feels as smooth and intuitive as possible. These subtle design elements enhance the user journey, making the browsing experience seamless and engaging.",
-      "text2": "he choice of Storyblok as the CMS was perfectly aligned with the client’s needs. It provides full control over the content they wish to display and highlight. The system’s flexibility allows for easy updates and content management. Additionally, the sidebar feature enables users to filter locations based on various criteria entered in the back-office, offering a tailored and efficient search experience."
+      "text1": "The website delivers an immersive experience across Bertrand Hospitality's portfolio of venues. Careful attention to micro-interactions ensures the navigation feels smooth and intuitive, with subtle design details that enhance the user journey at every step.",
+      "text2": "Storyblok was chosen for its flexibility, giving the client full control over the content they display and highlight. A sidebar filtering system lets users explore locations based on criteria managed through the back-office, offering a tailored and efficient search experience."
     },
     "images": {
       "hero": "/bertrand-hospitality/hero-section.jpg",
@@ -188,14 +188,14 @@
     "link": "https://www.cloudybay.com/",
     "title": "Cloudy Bay",
     "info": ["Front-end developer", "15/09/2022"],
-    "description": "Cloudy Bay is an e-commerce website designed in React JS / Gatsby using Drupal as a back-office. This site is produced for a subsidiary of the Moet Hennesy group. You can buy different exceptional wines. It is also possible to book your place for the many events set up by Cloudy Bay, in their 2 different locations. I contributed to the development of this site during my internship at ultranoir with the different devs of the team.",
+    "description": "Cloudy Bay is an e-commerce platform built with Gatsby and Drupal for a subsidiary of the Moet Hennessy group. The site showcases their premium wine collection, allows event bookings across two locations, and handles multi-market content delivery. I contributed to its development during my internship at Ultranoir.",
     "techno": ["Gatsby", "Drupal", "GraphQL"],
     "content1": {
-      "title": "Some of the features",
-      "subtitle": "Many features available",
+      "title": "Key features",
+      "subtitle": "A rich, multi-faceted platform",
       "label": "Wine",
-      "text1": "As you browse the site you will be able to discover the different e-retailers / partner stores selling Cloudy Bay wines. It is also possible to follow the Instagram news of this site and choose the different wines according to the year. Another complexity of this site is the fact of dealing with the different markets, while displaying / hiding some elements according to the chosen market.",
-      "text2": "For those who are hesitant, it is possible to use the Wine Finder (produces one of the developers of ultranoir) which will allow you to choose the ideal wine according to the different criteria you give it. The purchase of wines is not done on the platform, it is connected to WineDirect which will allow you to buy the selected wines."
+      "text1": "The site connects visitors with e-retailers and partner stores carrying Cloudy Bay wines. Users can browse vintages by year and follow the brand's latest news via Instagram integration. A key technical challenge was managing multiple markets, dynamically showing or hiding content depending on the user's selected region.",
+      "text2": "For undecided visitors, the Wine Finder, developed by one of Ultranoir's engineers, recommends the ideal bottle based on personal preferences. Purchases are handled externally through WineDirect, keeping the platform focused on discovery and brand experience."
     },
     "images": {
       "hero": "/cloudy-bay/hero-section.jpg",
@@ -239,14 +239,14 @@
     "link": "https://eclipse-one.vercel.app/",
     "title": "Eclipse",
     "info": ["Front-end developer", "08/11/2021"],
-    "description": "Eclipse was born from a design fiction project where we imagined a dystopian future threatened by famine and overpopulation. To remedy this, the state sets up different capsules allowing people wishing to sacrifice themselves to reduce overpopulation and help their loved ones who would receive a sum of money according to the health and age of the person. These different capsules would be placed in various places in the city.",
+    "description": "Eclipse is a design fiction project set in a dystopian future threatened by famine and overpopulation. To address the crisis, the state deploys sacrifice capsules throughout the city, where volunteers can give their lives in exchange for financial compensation for their families, calculated based on health and age.",
     "techno": ["HTML", "CSS", "JS", "Three.js"],
     "content1": {
-      "title": "A unique design",
-      "subtitle": "A valued sacrifice",
+      "title": "An immersive narrative",
+      "subtitle": "Where fiction meets interaction",
       "label": "Eclipse",
-      "text1": " At the time of our restitution we wished to put forward the various achievements by setting up an immersive site to the topic of the Eclipse. Through the navigation, on the main page, different explanations of our conception. A booklet is also available to present the different explanatory diagrams of our idea. Detailed darkprints are also present to explain each element, which is in the cabins and their utility. Finally, we have also put forward the interface that the martyr would face if he had to enter the cabin to sacrifice himself.",
-      "text2": "We have also presented the different 3D models in a classic way through a slider but we wanted to put them in front of us so that they could be visualized as well as possible. The product page presents in an immersive way all the elements of the cabin, be it the exterior, the interior or even our storage logic with the crematorium. Finally, in order not to forget the martyrs and to value them, we imagined a tower of martyrs where all the urns containing the ashes would be deposited, becoming a place of remembrance."
+      "text1": "To present our concept, we designed an immersive website that walks visitors through the Eclipse universe. The main page introduces the project's narrative, while a digital booklet details the explanatory diagrams behind our vision. Darkprints break down each cabin component and its purpose, and a dedicated interface simulates the experience a volunteer would face upon entering.",
+      "text2": "The 3D models are showcased both in a traditional slider and through an immersive product page that explores the cabin in detail: exterior, interior, and the crematorium storage system. As a tribute to the volunteers, we also imagined a memorial tower where urns containing their ashes would be gathered, turning the space into a place of remembrance."
     },
     "images": {
       "hero": "/eclipse/hero-section.jpg",
@@ -281,14 +281,14 @@
     "link": "https://www.tablefoodhall.com/",
     "title": "Table food Hall",
     "info": ["Front-end developer", "15/08/2023"],
-    "description": "Table Food Hall is a food hall located in the heart of Toronto. The website is designed to showcase the different food vendors and provide visitors with information about the venue. The site is built using Nuxt.js, styled with Tailwind CSS, and integrates Dato as the CMS.",
+    "description": "Table Food Hall is a vibrant food destination in the heart of Toronto. The website highlights the diverse roster of food vendors and provides visitors with everything they need to plan their visit. Built with Nuxt.js and Tailwind CSS, it uses Dato CMS for content management.",
     "techno": ["Dato CMS", "Nuxt.js", "Tailwind CSS"],
     "content1": {
-      "title": "A culinary experience",
-      "subtitle": "A taste of Toronto",
+      "title": "A culinary showcase",
+      "subtitle": "Toronto's food scene, online",
       "label": "Food",
-      "text1": "The Table Food Hall website is designed to provide visitors with a taste of Toronto’s culinary scene. The site features information about the different food vendors located in the hall, as well as details about the venue itself. The design is clean and modern, reflecting the vibrant and diverse food offerings available at the food hall.",
-      "text2": "The integration of Dato CMS allows for easy content management, enabling the client to update the site with new vendors, menus, and events as needed. The site also includes a blog section where visitors can learn more about the food hall and its vendors. The use of Nuxt.js ensures a fast and responsive user experience, making it easy for visitors to navigate the site and find the information they need."
+      "text1": "The website captures the energy and diversity of Table Food Hall's culinary offerings. Each vendor is presented with dedicated content, alongside practical details about the venue. The design is modern and approachable, reflecting the lively atmosphere of the hall itself.",
+      "text2": "Dato CMS gives the client full autonomy over content updates, from adding new vendors and menus to promoting upcoming events. A blog section offers deeper stories about the food hall and its community. Nuxt.js powers a fast, responsive experience that keeps navigation smooth and intuitive across all devices."
     },
     "images": {
       "hero": "/table-food-hall/hero-section.jpg",

@@ -133,11 +133,11 @@ export default function Layout({
       <NextSeo
         title={title}
         description={description}
-        canonical={`https://www.solimanalhalaby.fr${router.asPath}`}
+        canonical={`https://2025.solimanalhalaby.fr${router.asPath}`}
         noindex={true}
         nofollow={true}
         openGraph={{
-          url: `https://www.solimanalhalaby.fr${router.asPath}`,
+          url: `https://2025.solimanalhalaby.fr${router.asPath}`,
           title: title,
           description: description,
           images: [
@@ -159,16 +159,16 @@ export default function Layout({
         additionalLinkTags={[
           {
             rel: "icon",
-            href: "https://www.solimanalhalaby.fr/favicon.ico",
+            href: "https://2025.solimanalhalaby.fr/favicon.ico",
           },
           {
             rel: "apple-touch-icon",
-            href: "https://www.solimanalhalaby.fr/icon/apple-touch-icon.png",
+            href: "https://2025.solimanalhalaby.fr/icon/apple-touch-icon.png",
             sizes: "76x76",
           },
           {
             rel: "manifest",
-            href: "https://www.solimanalhalaby.fr/icon/site.webmanifest",
+            href: "https://2025.solimanalhalaby.fr/icon/site.webmanifest",
           },
         ]}
       />
