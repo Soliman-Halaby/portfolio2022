@@ -426,15 +426,15 @@ const MatterComponent = ({ pageTitle }) => {
               <ControlContainer onClick={() => previousDetail()}>
                 <Control
                   src="/facts-prev.svg"
-                  width="24px"
-                  height="24px"
+                  width={24}
+                  height={24}
                 ></Control>
               </ControlContainer>
               <ControlContainer onClick={() => nextDetail()}>
                 <Control
                   src="/facts-next.svg"
-                  width="24px"
-                  height="24px"
+                  width={24}
+                  height={24}
                 ></Control>
               </ControlContainer>
             </ControlWrapper>

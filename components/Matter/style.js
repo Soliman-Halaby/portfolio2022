@@ -218,4 +218,6 @@ export const ControlContainer = styled.div`
   border: 1px solid ${({ theme }) => theme.colors.grey1};
 `;
 
-export const Control = styled(Image)``;
+export const Control = styled(Image)`
+margin: auto 0;
+`;
